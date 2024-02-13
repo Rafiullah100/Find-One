@@ -1,0 +1,42 @@
+PODS:
+  - Alamofire (5.0.5)
+  - IQKeyboardManager (6.5.11)
+  - SDWebImage (5.15.5):
+    - SDWebImage/Core (= 5.15.5)
+  - SDWebImage/Core (5.15.5)
+  - SideMenu (6.5.0)
+  - SpinKit (1.2.0)
+  - SwiftIcons (3.0)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0.0-rc.2)
+  - IQKeyboardManager
+  - SDWebImage (~> 5.0)
+  - SideMenu
+  - SpinKit
+  - SwiftIcons (~> 3.0)
+  - Toast-Swift (~> 5.0.1)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - IQKeyboardManager
+    - SDWebImage
+    - SideMenu
+    - SpinKit
+    - SwiftIcons
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  IQKeyboardManager: ef43ce1ba1e5aaf4adf222c0a46f39761f246879
+  SDWebImage: fd7e1a22f00303e058058278639bf6196ee431fe
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  SpinKit: 65906a8b534a4e14cbfd3f8b0b6c329131faef4a
+  SwiftIcons: 3b748e57d9eee0c7c8d3bdbf2d742c0b1b4c6172
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: 2ca95c4e75077adc8545cdbfa12acb2167058ef7
+
+COCOAPODS: 1.11.3
