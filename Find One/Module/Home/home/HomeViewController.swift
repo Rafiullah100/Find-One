@@ -12,7 +12,6 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .home
-        print("erfnerg")
     }
     
     override func viewWillAppear(_ animated: Bool) {
