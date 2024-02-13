@@ -12,6 +12,7 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .home
+        print("vnvev")
     }
     
     override func viewWillAppear(_ animated: Bool) {
