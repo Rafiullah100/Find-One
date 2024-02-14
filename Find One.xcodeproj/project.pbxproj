@@ -44,6 +44,14 @@
 		529834B82B7B612000A33DAD /* manrope-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 529834B12B7B612000A33DAD /* manrope-bold.otf */; };
 		529834B92B7B612000A33DAD /* manrope-medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 529834B22B7B612000A33DAD /* manrope-medium.otf */; };
 		529834BA2B7B612000A33DAD /* manrope-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 529834B32B7B612000A33DAD /* manrope-regular.otf */; };
+		52AD1C0E2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD1C0C2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift */; };
+		52AD1C0F2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AD1C0D2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib */; };
+		52AD1C122B7C997500E5EA4F /* FeatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD1C102B7C997500E5EA4F /* FeatureTableViewCell.swift */; };
+		52AD1C132B7C997500E5EA4F /* FeatureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AD1C112B7C997500E5EA4F /* FeatureTableViewCell.xib */; };
+		52AD1C1B2B7CC05F00E5EA4F /* BrowseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD1C192B7CC05F00E5EA4F /* BrowseCollectionViewCell.swift */; };
+		52AD1C1C2B7CC05F00E5EA4F /* BrowseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AD1C1A2B7CC05F00E5EA4F /* BrowseCollectionViewCell.xib */; };
+		52AD1C1F2B7CCE2100E5EA4F /* SustainableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD1C1D2B7CCE2100E5EA4F /* SustainableCollectionViewCell.swift */; };
+		52AD1C202B7CCE2100E5EA4F /* SustainableCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AD1C1E2B7CCE2100E5EA4F /* SustainableCollectionViewCell.xib */; };
 		52B6389D2B73750600AE8B7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6389C2B73750600AE8B7E /* AppDelegate.swift */; };
 		52B6389F2B73750600AE8B7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6389E2B73750600AE8B7E /* SceneDelegate.swift */; };
 		52B638A42B73750600AE8B7E /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B638A22B73750600AE8B7E /* Auth.storyboard */; };
@@ -91,6 +99,14 @@
 		529834B12B7B612000A33DAD /* manrope-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-bold.otf"; sourceTree = "<group>"; };
 		529834B22B7B612000A33DAD /* manrope-medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-medium.otf"; sourceTree = "<group>"; };
 		529834B32B7B612000A33DAD /* manrope-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-regular.otf"; sourceTree = "<group>"; };
+		52AD1C0C2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCollectionViewCell.swift; sourceTree = "<group>"; };
+		52AD1C0D2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureCollectionViewCell.xib; sourceTree = "<group>"; };
+		52AD1C102B7C997500E5EA4F /* FeatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTableViewCell.swift; sourceTree = "<group>"; };
+		52AD1C112B7C997500E5EA4F /* FeatureTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureTableViewCell.xib; sourceTree = "<group>"; };
+		52AD1C192B7CC05F00E5EA4F /* BrowseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCollectionViewCell.swift; sourceTree = "<group>"; };
+		52AD1C1A2B7CC05F00E5EA4F /* BrowseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowseCollectionViewCell.xib; sourceTree = "<group>"; };
+		52AD1C1D2B7CCE2100E5EA4F /* SustainableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SustainableCollectionViewCell.swift; sourceTree = "<group>"; };
+		52AD1C1E2B7CCE2100E5EA4F /* SustainableCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SustainableCollectionViewCell.xib; sourceTree = "<group>"; };
 		52B638992B73750600AE8B7E /* Find One.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find One.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B6389C2B73750600AE8B7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B6389E2B73750600AE8B7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -274,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				520538FE2B7A2A2200D81267 /* HomeViewController.swift */,
+				52AD1C0B2B7C959E00E5EA4F /* Cell */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -315,6 +332,21 @@
 				529834AE2B7B611F00A33DAD /* manrope-thin.otf */,
 			);
 			path = Manrope;
+			sourceTree = "<group>";
+		};
+		52AD1C0B2B7C959E00E5EA4F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				52AD1C0C2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift */,
+				52AD1C0D2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib */,
+				52AD1C102B7C997500E5EA4F /* FeatureTableViewCell.swift */,
+				52AD1C112B7C997500E5EA4F /* FeatureTableViewCell.xib */,
+				52AD1C192B7CC05F00E5EA4F /* BrowseCollectionViewCell.swift */,
+				52AD1C1A2B7CC05F00E5EA4F /* BrowseCollectionViewCell.xib */,
+				52AD1C1D2B7CCE2100E5EA4F /* SustainableCollectionViewCell.swift */,
+				52AD1C1E2B7CCE2100E5EA4F /* SustainableCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		52B638902B73750600AE8B7E = {
@@ -415,6 +447,7 @@
 				52B638A92B73750B00AE8B7E /* LaunchScreen.storyboard in Resources */,
 				52B638A62B73750B00AE8B7E /* Assets.xcassets in Resources */,
 				529834B72B7B612000A33DAD /* manrope-semibold.otf in Resources */,
+				52AD1C132B7C997500E5EA4F /* FeatureTableViewCell.xib in Resources */,
 				520538F32B7A23A500D81267 /* Outfit-SemiBold.ttf in Resources */,
 				529834B82B7B612000A33DAD /* manrope-bold.otf in Resources */,
 				520539012B7A2E0C00D81267 /* Menu.storyboard in Resources */,
@@ -422,11 +455,14 @@
 				520538F62B7A23A500D81267 /* Outfit-Regular.ttf in Resources */,
 				520538F52B7A23A500D81267 /* Outfit-Medium.ttf in Resources */,
 				520538F42B7A23A500D81267 /* Outfit-Light.ttf in Resources */,
+				52AD1C202B7CCE2100E5EA4F /* SustainableCollectionViewCell.xib in Resources */,
 				529834BA2B7B612000A33DAD /* manrope-regular.otf in Resources */,
 				529834B92B7B612000A33DAD /* manrope-medium.otf in Resources */,
 				520538FB2B7A29E900D81267 /* Home.storyboard in Resources */,
+				52AD1C0F2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib in Resources */,
 				529834B52B7B612000A33DAD /* manrope-thin.otf in Resources */,
 				529834B62B7B612000A33DAD /* manrope-light.otf in Resources */,
+				52AD1C1C2B7CC05F00E5EA4F /* BrowseCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,9 +527,11 @@
 				520538D32B79EE7600D81267 /* Route.swift in Sources */,
 				520538E22B79EE8000D81267 /* AutoSizingUiTableView.swift in Sources */,
 				520538CF2B79EE7600D81267 /* URLSession+Extension.swift in Sources */,
+				52AD1C122B7C997500E5EA4F /* FeatureTableViewCell.swift in Sources */,
 				529834A52B7B3B6F00A33DAD /* MyTabBar.swift in Sources */,
 				520538E52B79EE8000D81267 /* Helper.swift in Sources */,
 				520538D22B79EE7600D81267 /* ApiResponse.swift in Sources */,
+				52AD1C1F2B7CCE2100E5EA4F /* SustainableCollectionViewCell.swift in Sources */,
 				520538D02B79EE7600D81267 /* Networking.swift in Sources */,
 				520538CE2B79EE7600D81267 /* AppError.swift in Sources */,
 				520538E62B79EE8000D81267 /* Color.swift in Sources */,
@@ -503,8 +541,10 @@
 				52B6389F2B73750600AE8B7E /* SceneDelegate.swift in Sources */,
 				529834AB2B7B5C8100A33DAD /* CustomSearchViewController.swift in Sources */,
 				520538D12B79EE7600D81267 /* Method.swift in Sources */,
+				52AD1C1B2B7CC05F00E5EA4F /* BrowseCollectionViewCell.swift in Sources */,
 				520538DE2B79EE7F00D81267 /* Constants.swift in Sources */,
 				520538E02B79EE8000D81267 /* Extensions.swift in Sources */,
+				52AD1C0E2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
