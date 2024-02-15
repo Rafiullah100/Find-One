@@ -9,12 +9,25 @@ import UIKit
 
 class DetailViewController: BaseViewController {
 
+    lazy var browseVC: BrowseViewController = {
+        return UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "BrowseViewController") as! BrowseViewController
+    }()
+    
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var pageControl: CustomPageControl!
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .detail
-        
+        addChildVC()
         custompageContrl()
+    }
+    
+    private func addChildVC(){
+        addChild(browseVC)
+        self.add(browseVC, in: contentView)
+        browseVC.view.frame = contentView.bounds
+        contentView.addSubview(browseVC.view)
+        browseVC.didMove(toParent: self)
     }
 
     private func custompageContrl(){

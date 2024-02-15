@@ -16,7 +16,7 @@ open class Helper{
         var width = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells)
         width = (width - 155) / cellsAcross
         print(width)
-        return CGSize(width: width, height: 45)
+        return CGSize(width: width, height: width * 0.8)
     }
     
     class func attributedText(text1: String, text2: String)-> NSMutableAttributedString{
