@@ -22,7 +22,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="115"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVS-FF-IdH">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVS-FF-IdH">
                         <rect key="frame" x="2" y="2" width="96" height="93"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo (1)" translatesAutoresizingMaskIntoConstraints="NO" id="rRA-5F-iCL">
@@ -47,6 +47,11 @@
                             <constraint firstItem="rRA-5F-iCL" firstAttribute="top" secondItem="QVS-FF-IdH" secondAttribute="top" id="cbJ-Uz-t3E"/>
                             <constraint firstAttribute="bottom" secondItem="rRA-5F-iCL" secondAttribute="bottom" id="fsv-Oe-iKc"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>

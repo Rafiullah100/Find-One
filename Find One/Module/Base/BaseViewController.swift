@@ -9,6 +9,8 @@ import UIKit
 import SideMenu
 enum ViewControllerType {
     case home
+    case back
+    case detail
 }
 
 
@@ -25,6 +27,8 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
             switch type {
             case .home:
                 setupHomeButtons()
+            default:
+                break
             }
         }
     }
@@ -54,6 +58,8 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
         switch type {
         case .home:
             setupHomeButtons()
+        case .back, .detail:
+            setupDetailButtons()
         }
     }
     
@@ -63,7 +69,12 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
             let appearance = UINavigationBarAppearance()
             appearance.configureWithTransparentBackground()
            appearance.backgroundColor = color
-           
+           if type == .back{
+               appearance.backgroundColor = CustomColor.appColor.color
+           }
+           else{
+               appearance.backgroundColor = color
+           }
             navigationController?.navigationBar.standardAppearance = appearance
             navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
            navigationController?.navigationBar.frame = CGRect(x: navigationController?.navigationBar.frame.origin.x ?? 0, y: navigationController?.navigationBar.frame.origin.y ?? 0, width: navigationController?.navigationBar.frame.width ?? 0, height: (navigationController?.navigationBar.frame.height ?? 0) )
@@ -75,6 +86,8 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
             self.navigationController?.navigationBar.backgroundColor = .clear
             navigationController?.navigationBar.frame = CGRect(x: navigationController?.navigationBar.frame.origin.x ?? 0, y: navigationController?.navigationBar.frame.origin.y ?? 0, width: navigationController?.navigationBar.frame.width ?? 0, height: (navigationController?.navigationBar.frame.height ?? 0) )
         }
+        
+        
     }
     
     func setupHomeBarButtonItems() {
@@ -106,7 +119,14 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
     func setupDetailButtons() {
         navigationItem.rightBarButtonItems = []
         navigationItem.leftBarButtonItems = []
-//        addDetailButtons()
+        addDetailButtons()
+    }
+    
+    func addDetailButtons(isWhite: Bool = true) {
+        let leftButton = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(backButtonAction))
+        leftButton.image = type == .back ? UIImage(named: "back") : UIImage(named: "detail-back")
+        self.navigationController?.navigationItem.hidesBackButton = true
+        self.navigationItem.leftBarButtonItem = leftButton
     }
 
     

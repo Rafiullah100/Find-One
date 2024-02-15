@@ -13,6 +13,7 @@ enum Storyboard: String {
     case auth = "Auth"
     case home = "Home"
     case menu = "Menu"
+    case result = "Result"
 
     func instantiate<T>(identifier: T.Type) -> T {
         let storyboard = UIStoryboard(name: rawValue, bundle: nil)

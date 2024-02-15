@@ -44,6 +44,12 @@
 		529834B82B7B612000A33DAD /* manrope-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 529834B12B7B612000A33DAD /* manrope-bold.otf */; };
 		529834B92B7B612000A33DAD /* manrope-medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 529834B22B7B612000A33DAD /* manrope-medium.otf */; };
 		529834BA2B7B612000A33DAD /* manrope-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 529834B32B7B612000A33DAD /* manrope-regular.otf */; };
+		52987C5F2B7DDAA0006290F6 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52987C5E2B7DDAA0006290F6 /* Result.storyboard */; };
+		52987C632B7DDB29006290F6 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52987C622B7DDB29006290F6 /* ResultViewController.swift */; };
+		52987C662B7DE14F006290F6 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52987C642B7DE14F006290F6 /* ResultTableViewCell.swift */; };
+		52987C672B7DE14F006290F6 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52987C652B7DE14F006290F6 /* ResultTableViewCell.xib */; };
+		52987C6B2B7DF9E7006290F6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52987C6A2B7DF9E7006290F6 /* DetailViewController.swift */; };
+		52987C6E2B7E08A5006290F6 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52987C6D2B7E08A5006290F6 /* CustomPageControl.swift */; };
 		52AD1C0E2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD1C0C2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift */; };
 		52AD1C0F2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AD1C0D2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib */; };
 		52AD1C122B7C997500E5EA4F /* FeatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD1C102B7C997500E5EA4F /* FeatureTableViewCell.swift */; };
@@ -99,6 +105,12 @@
 		529834B12B7B612000A33DAD /* manrope-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-bold.otf"; sourceTree = "<group>"; };
 		529834B22B7B612000A33DAD /* manrope-medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-medium.otf"; sourceTree = "<group>"; };
 		529834B32B7B612000A33DAD /* manrope-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-regular.otf"; sourceTree = "<group>"; };
+		52987C5E2B7DDAA0006290F6 /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
+		52987C622B7DDB29006290F6 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		52987C642B7DE14F006290F6 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		52987C652B7DE14F006290F6 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
+		52987C6A2B7DF9E7006290F6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		52987C6D2B7E08A5006290F6 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
 		52AD1C0C2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCollectionViewCell.swift; sourceTree = "<group>"; };
 		52AD1C0D2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureCollectionViewCell.xib; sourceTree = "<group>"; };
 		52AD1C102B7C997500E5EA4F /* FeatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTableViewCell.swift; sourceTree = "<group>"; };
@@ -162,6 +174,7 @@
 				520538F72B7A27DF00D81267 /* Base */,
 				520538BB2B79EE3B00D81267 /* Auth */,
 				520538FC2B7A29FC00D81267 /* Home */,
+				52987C602B7DDAE0006290F6 /* SearchResult */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -186,6 +199,7 @@
 		520538BF2B79EE4500D81267 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52987C6C2B7E088C006290F6 /* CustomPageControl */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,6 +247,7 @@
 				52B638A22B73750600AE8B7E /* Auth.storyboard */,
 				520538FA2B7A29E900D81267 /* Home.storyboard */,
 				520539002B7A2E0C00D81267 /* Menu.storyboard */,
+				52987C5E2B7DDAA0006290F6 /* Result.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -332,6 +347,49 @@
 				529834AE2B7B611F00A33DAD /* manrope-thin.otf */,
 			);
 			path = Manrope;
+			sourceTree = "<group>";
+		};
+		52987C602B7DDAE0006290F6 /* SearchResult */ = {
+			isa = PBXGroup;
+			children = (
+				52987C692B7DF9D2006290F6 /* Detail */,
+				52987C612B7DDB06006290F6 /* Result */,
+			);
+			path = SearchResult;
+			sourceTree = "<group>";
+		};
+		52987C612B7DDB06006290F6 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				52987C622B7DDB29006290F6 /* ResultViewController.swift */,
+				52987C682B7DE156006290F6 /* Cell */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		52987C682B7DE156006290F6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				52987C642B7DE14F006290F6 /* ResultTableViewCell.swift */,
+				52987C652B7DE14F006290F6 /* ResultTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		52987C692B7DF9D2006290F6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				52987C6A2B7DF9E7006290F6 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		52987C6C2B7E088C006290F6 /* CustomPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				52987C6D2B7E08A5006290F6 /* CustomPageControl.swift */,
+			);
+			path = CustomPageControl;
 			sourceTree = "<group>";
 		};
 		52AD1C0B2B7C959E00E5EA4F /* Cell */ = {
@@ -450,12 +508,14 @@
 				52AD1C132B7C997500E5EA4F /* FeatureTableViewCell.xib in Resources */,
 				520538F32B7A23A500D81267 /* Outfit-SemiBold.ttf in Resources */,
 				529834B82B7B612000A33DAD /* manrope-bold.otf in Resources */,
+				52987C5F2B7DDAA0006290F6 /* Result.storyboard in Resources */,
 				520539012B7A2E0C00D81267 /* Menu.storyboard in Resources */,
 				52B638A42B73750600AE8B7E /* Auth.storyboard in Resources */,
 				520538F62B7A23A500D81267 /* Outfit-Regular.ttf in Resources */,
 				520538F52B7A23A500D81267 /* Outfit-Medium.ttf in Resources */,
 				520538F42B7A23A500D81267 /* Outfit-Light.ttf in Resources */,
 				52AD1C202B7CCE2100E5EA4F /* SustainableCollectionViewCell.xib in Resources */,
+				52987C672B7DE14F006290F6 /* ResultTableViewCell.xib in Resources */,
 				529834BA2B7B612000A33DAD /* manrope-regular.otf in Resources */,
 				529834B92B7B612000A33DAD /* manrope-medium.otf in Resources */,
 				520538FB2B7A29E900D81267 /* Home.storyboard in Resources */,
@@ -515,6 +575,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52987C6B2B7DF9E7006290F6 /* DetailViewController.swift in Sources */,
 				520538E32B79EE8000D81267 /* IBDesignableExtensions.swift in Sources */,
 				520538BE2B79EE3B00D81267 /* LoginViewController.swift in Sources */,
 				520538ED2B7A0B5900D81267 /* SignupViewController.swift in Sources */,
@@ -537,14 +598,17 @@
 				520538E62B79EE8000D81267 /* Color.swift in Sources */,
 				529834A32B7B3A9800A33DAD /* MyTabBarCtrl.swift in Sources */,
 				52B6389D2B73750600AE8B7E /* AppDelegate.swift in Sources */,
+				52987C662B7DE14F006290F6 /* ResultTableViewCell.swift in Sources */,
 				520538DF2B79EE7F00D81267 /* Switcher.swift in Sources */,
 				52B6389F2B73750600AE8B7E /* SceneDelegate.swift in Sources */,
 				529834AB2B7B5C8100A33DAD /* CustomSearchViewController.swift in Sources */,
 				520538D12B79EE7600D81267 /* Method.swift in Sources */,
 				52AD1C1B2B7CC05F00E5EA4F /* BrowseCollectionViewCell.swift in Sources */,
 				520538DE2B79EE7F00D81267 /* Constants.swift in Sources */,
+				52987C632B7DDB29006290F6 /* ResultViewController.swift in Sources */,
 				520538E02B79EE8000D81267 /* Extensions.swift in Sources */,
 				52AD1C0E2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift in Sources */,
+				52987C6E2B7E08A5006290F6 /* CustomPageControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

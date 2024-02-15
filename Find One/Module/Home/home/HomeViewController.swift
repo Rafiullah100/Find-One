@@ -44,6 +44,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: FeatureTableViewCell = tableView.dequeueReusableCell(withIdentifier: FeatureTableViewCell.cellReuseIdentifier()) as! FeatureTableViewCell
+        
+        cell.didTappedInstitute = { index in
+            Switcher.gotoResult(delegate: self)
+        }
         switch indexPath.row {
         case 0:
             cell.cellType = .feature

@@ -15,6 +15,20 @@ class Switcher {
         let vc = UIStoryboard(name: Storyboard.home.rawValue, bundle: nil).instantiateViewController(withIdentifier: "MyTabBarCtrl") as! MyTabBarCtrl
         vc.modalPresentationStyle = .fullScreen
         vc.hidesBottomBarWhenPushed = false
-        delegate.navigationController?.pushViewController(vc, animated: false)
+        delegate.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    static func gotoResult(delegate: UIViewController){
+        let vc = UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.hidesBottomBarWhenPushed = false
+        delegate.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    static func gotoDetail(delegate: UIViewController){
+        let vc = UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.hidesBottomBarWhenPushed = false
+        delegate.navigationController?.pushViewController(vc, animated: true)
     }
 }
