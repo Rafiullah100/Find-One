@@ -9,8 +9,8 @@ import UIKit
 
 class DetailViewController: BaseViewController {
 
-    lazy var browseVC: FeeStructureViewController = {
-        return UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "FeeStructureViewController") as! FeeStructureViewController
+    lazy var browseVC: GalleryViewController = {
+        return UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "GalleryViewController") as! GalleryViewController
     }()
     
     @IBOutlet weak var contentView: UIView!

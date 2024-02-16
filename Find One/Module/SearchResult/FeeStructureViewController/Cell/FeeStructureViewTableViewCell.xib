@@ -156,7 +156,7 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1O9-lb-sX2">
                                                                         <rect key="frame" x="0.0" y="0.0" width="225" height="13"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boys Fee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9c-6f-CdM">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Girls Fee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9c-6f-CdM">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="225" height="13"/>
                                                                                 <fontDescription key="fontDescription" name="Manrope-Light" family="Manrope" pointSize="12"/>
                                                                                 <nil key="textColor"/>

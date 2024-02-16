@@ -40,6 +40,11 @@
 		527F13952B7F46360055F424 /* FeeStructureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F13942B7F46360055F424 /* FeeStructureViewController.swift */; };
 		527F139A2B7F46670055F424 /* FeeStructureViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F13982B7F46670055F424 /* FeeStructureViewTableViewCell.swift */; };
 		527F139B2B7F46670055F424 /* FeeStructureViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527F13992B7F46670055F424 /* FeeStructureViewTableViewCell.xib */; };
+		529220812B7F6D9B00C0E396 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529220802B7F6D9A00C0E396 /* MapViewController.swift */; };
+		529220852B7F720D00C0E396 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529220842B7F720D00C0E396 /* LocationViewController.swift */; };
+		529220882B7F758F00C0E396 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529220872B7F758F00C0E396 /* GalleryViewController.swift */; };
+		529220922B7F76E900C0E396 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529220902B7F76E900C0E396 /* GalleryCollectionViewCell.swift */; };
+		529220932B7F76E900C0E396 /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529220912B7F76E900C0E396 /* GalleryCollectionViewCell.xib */; };
 		529834A32B7B3A9800A33DAD /* MyTabBarCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529834A22B7B3A9800A33DAD /* MyTabBarCtrl.swift */; };
 		529834A52B7B3B6F00A33DAD /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529834A42B7B3B6F00A33DAD /* MyTabBar.swift */; };
 		529834A82B7B4B5B00A33DAD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529834A72B7B4B5B00A33DAD /* SettingsViewController.swift */; };
@@ -111,6 +116,11 @@
 		527F13942B7F46360055F424 /* FeeStructureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeStructureViewController.swift; sourceTree = "<group>"; };
 		527F13982B7F46670055F424 /* FeeStructureViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeStructureViewTableViewCell.swift; sourceTree = "<group>"; };
 		527F13992B7F46670055F424 /* FeeStructureViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeeStructureViewTableViewCell.xib; sourceTree = "<group>"; };
+		529220802B7F6D9A00C0E396 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		529220842B7F720D00C0E396 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		529220872B7F758F00C0E396 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		529220902B7F76E900C0E396 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		529220912B7F76E900C0E396 /* GalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionViewCell.xib; sourceTree = "<group>"; };
 		529834A22B7B3A9800A33DAD /* MyTabBarCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarCtrl.swift; sourceTree = "<group>"; };
 		529834A42B7B3B6F00A33DAD /* MyTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
 		529834A72B7B4B5B00A33DAD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -374,6 +384,40 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		529220822B7F6DA800C0E396 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				529220802B7F6D9A00C0E396 /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		529220832B7F71F800C0E396 /* Locate */ = {
+			isa = PBXGroup;
+			children = (
+				529220842B7F720D00C0E396 /* LocationViewController.swift */,
+			);
+			path = Locate;
+			sourceTree = "<group>";
+		};
+		529220862B7F758200C0E396 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				529220892B7F765000C0E396 /* Cell */,
+				529220872B7F758F00C0E396 /* GalleryViewController.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		529220892B7F765000C0E396 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				529220902B7F76E900C0E396 /* GalleryCollectionViewCell.swift */,
+				529220912B7F76E900C0E396 /* GalleryCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		529834A12B7B3A7D00A33DAD /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,12 +460,15 @@
 		52987C602B7DDAE0006290F6 /* SearchResult */ = {
 			isa = PBXGroup;
 			children = (
+				529220862B7F758200C0E396 /* Gallery */,
+				529220832B7F71F800C0E396 /* Locate */,
 				527F138C2B7F3E330055F424 /* Review */,
 				523C294C2B7F30C000110C1D /* Information */,
 				52C208C42B7E29DA00FA6470 /* Browse */,
 				52987C692B7DF9D2006290F6 /* Detail */,
 				52987C612B7DDB06006290F6 /* Result */,
 				527F13962B7F463A0055F424 /* FeeStructureViewController */,
+				529220822B7F6DA800C0E396 /* Map */,
 			);
 			path = SearchResult;
 			sourceTree = "<group>";
@@ -539,6 +586,7 @@
 				52B638962B73750600AE8B7E /* Frameworks */,
 				52B638972B73750600AE8B7E /* Resources */,
 				61DB0001399336BA79C51579 /* [CP] Embed Pods Frameworks */,
+				8EC29F4CD63FAC218837626A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -604,6 +652,7 @@
 				52987C672B7DE14F006290F6 /* ResultTableViewCell.xib in Resources */,
 				529834BA2B7B612000A33DAD /* manrope-regular.otf in Resources */,
 				529834B92B7B612000A33DAD /* manrope-medium.otf in Resources */,
+				529220932B7F76E900C0E396 /* GalleryCollectionViewCell.xib in Resources */,
 				520538FB2B7A29E900D81267 /* Home.storyboard in Resources */,
 				52AD1C0F2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib in Resources */,
 				529834B52B7B612000A33DAD /* manrope-thin.otf in Resources */,
@@ -633,6 +682,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Find One/Pods-Find One-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EC29F4CD63FAC218837626A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Find One/Pods-Find One-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Find One/Pods-Find One-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Find One/Pods-Find One-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		92579766D45D36830C26C924 /* [CP] Check Pods Manifest.lock */ = {
@@ -675,9 +741,12 @@
 				520538C62B79EE6300D81267 /* Observable.swift in Sources */,
 				520538FF2B7A2A2200D81267 /* HomeViewController.swift in Sources */,
 				529834A82B7B4B5B00A33DAD /* SettingsViewController.swift in Sources */,
+				529220852B7F720D00C0E396 /* LocationViewController.swift in Sources */,
 				520538D32B79EE7600D81267 /* Route.swift in Sources */,
 				520538E22B79EE8000D81267 /* AutoSizingUiTableView.swift in Sources */,
+				529220812B7F6D9B00C0E396 /* MapViewController.swift in Sources */,
 				520538CF2B79EE7600D81267 /* URLSession+Extension.swift in Sources */,
+				529220922B7F76E900C0E396 /* GalleryCollectionViewCell.swift in Sources */,
 				52AD1C122B7C997500E5EA4F /* FeatureTableViewCell.swift in Sources */,
 				529834A52B7B3B6F00A33DAD /* MyTabBar.swift in Sources */,
 				523C294E2B7F30DA00110C1D /* InformationViewController.swift in Sources */,
@@ -695,6 +764,7 @@
 				52987C662B7DE14F006290F6 /* ResultTableViewCell.swift in Sources */,
 				520538DF2B79EE7F00D81267 /* Switcher.swift in Sources */,
 				52B6389F2B73750600AE8B7E /* SceneDelegate.swift in Sources */,
+				529220882B7F758F00C0E396 /* GalleryViewController.swift in Sources */,
 				529834AB2B7B5C8100A33DAD /* CustomSearchViewController.swift in Sources */,
 				520538D12B79EE7600D81267 /* Method.swift in Sources */,
 				52AD1C1B2B7CC05F00E5EA4F /* BrowseCollectionViewCell.swift in Sources */,

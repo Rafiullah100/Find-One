@@ -13,4 +13,6 @@ target 'Find One' do
   	pod 'Toast-Swift', '~> 5.0.1'
     pod "SideMenu"
     pod 'SwiftIcons', '~> 3.0'
+    pod 'GoogleMaps'
+
 end
