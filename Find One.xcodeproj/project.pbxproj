@@ -33,6 +33,13 @@
 		520538FB2B7A29E900D81267 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520538FA2B7A29E900D81267 /* Home.storyboard */; };
 		520538FF2B7A2A2200D81267 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520538FE2B7A2A2200D81267 /* HomeViewController.swift */; };
 		520539012B7A2E0C00D81267 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520539002B7A2E0C00D81267 /* Menu.storyboard */; };
+		523C294E2B7F30DA00110C1D /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523C294D2B7F30DA00110C1D /* InformationViewController.swift */; };
+		527F138E2B7F3E480055F424 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F138D2B7F3E480055F424 /* ReviewViewController.swift */; };
+		527F13922B7F3E650055F424 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F13902B7F3E650055F424 /* ReviewTableViewCell.swift */; };
+		527F13932B7F3E650055F424 /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527F13912B7F3E650055F424 /* ReviewTableViewCell.xib */; };
+		527F13952B7F46360055F424 /* FeeStructureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F13942B7F46360055F424 /* FeeStructureViewController.swift */; };
+		527F139A2B7F46670055F424 /* FeeStructureViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F13982B7F46670055F424 /* FeeStructureViewTableViewCell.swift */; };
+		527F139B2B7F46670055F424 /* FeeStructureViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527F13992B7F46670055F424 /* FeeStructureViewTableViewCell.xib */; };
 		529834A32B7B3A9800A33DAD /* MyTabBarCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529834A22B7B3A9800A33DAD /* MyTabBarCtrl.swift */; };
 		529834A52B7B3B6F00A33DAD /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529834A42B7B3B6F00A33DAD /* MyTabBar.swift */; };
 		529834A82B7B4B5B00A33DAD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529834A72B7B4B5B00A33DAD /* SettingsViewController.swift */; };
@@ -97,6 +104,13 @@
 		520538FA2B7A29E900D81267 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		520538FE2B7A2A2200D81267 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		520539002B7A2E0C00D81267 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		523C294D2B7F30DA00110C1D /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		527F138D2B7F3E480055F424 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		527F13902B7F3E650055F424 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
+		527F13912B7F3E650055F424 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
+		527F13942B7F46360055F424 /* FeeStructureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeStructureViewController.swift; sourceTree = "<group>"; };
+		527F13982B7F46670055F424 /* FeeStructureViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeStructureViewTableViewCell.swift; sourceTree = "<group>"; };
+		527F13992B7F46670055F424 /* FeeStructureViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeeStructureViewTableViewCell.xib; sourceTree = "<group>"; };
 		529834A22B7B3A9800A33DAD /* MyTabBarCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarCtrl.swift; sourceTree = "<group>"; };
 		529834A42B7B3B6F00A33DAD /* MyTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
 		529834A72B7B4B5B00A33DAD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -316,6 +330,50 @@
 			path = home;
 			sourceTree = "<group>";
 		};
+		523C294C2B7F30C000110C1D /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				523C294D2B7F30DA00110C1D /* InformationViewController.swift */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		527F138C2B7F3E330055F424 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				527F138F2B7F3E4D0055F424 /* Cell */,
+				527F138D2B7F3E480055F424 /* ReviewViewController.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		527F138F2B7F3E4D0055F424 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				527F13902B7F3E650055F424 /* ReviewTableViewCell.swift */,
+				527F13912B7F3E650055F424 /* ReviewTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		527F13962B7F463A0055F424 /* FeeStructureViewController */ = {
+			isa = PBXGroup;
+			children = (
+				527F13972B7F464D0055F424 /* Cell */,
+				527F13942B7F46360055F424 /* FeeStructureViewController.swift */,
+			);
+			path = FeeStructureViewController;
+			sourceTree = "<group>";
+		};
+		527F13972B7F464D0055F424 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				527F13982B7F46670055F424 /* FeeStructureViewTableViewCell.swift */,
+				527F13992B7F46670055F424 /* FeeStructureViewTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		529834A12B7B3A7D00A33DAD /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,9 +416,12 @@
 		52987C602B7DDAE0006290F6 /* SearchResult */ = {
 			isa = PBXGroup;
 			children = (
+				527F138C2B7F3E330055F424 /* Review */,
+				523C294C2B7F30C000110C1D /* Information */,
 				52C208C42B7E29DA00FA6470 /* Browse */,
 				52987C692B7DF9D2006290F6 /* Detail */,
 				52987C612B7DDB06006290F6 /* Result */,
+				527F13962B7F463A0055F424 /* FeeStructureViewController */,
 			);
 			path = SearchResult;
 			sourceTree = "<group>";
@@ -546,7 +607,9 @@
 				520538FB2B7A29E900D81267 /* Home.storyboard in Resources */,
 				52AD1C0F2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib in Resources */,
 				529834B52B7B612000A33DAD /* manrope-thin.otf in Resources */,
+				527F139B2B7F46670055F424 /* FeeStructureViewTableViewCell.xib in Resources */,
 				52C208CA2B7E2A0900FA6470 /* GridCollectionViewCell.xib in Resources */,
+				527F13932B7F3E650055F424 /* ReviewTableViewCell.xib in Resources */,
 				529834B62B7B612000A33DAD /* manrope-light.otf in Resources */,
 				52AD1C1C2B7CC05F00E5EA4F /* BrowseCollectionViewCell.xib in Resources */,
 			);
@@ -603,6 +666,7 @@
 			files = (
 				52987C6B2B7DF9E7006290F6 /* DetailViewController.swift in Sources */,
 				520538E32B79EE8000D81267 /* IBDesignableExtensions.swift in Sources */,
+				527F138E2B7F3E480055F424 /* ReviewViewController.swift in Sources */,
 				520538BE2B79EE3B00D81267 /* LoginViewController.swift in Sources */,
 				520538ED2B7A0B5900D81267 /* SignupViewController.swift in Sources */,
 				520538E42B79EE8000D81267 /* Userdefaults+Extensions.swift in Sources */,
@@ -616,14 +680,18 @@
 				520538CF2B79EE7600D81267 /* URLSession+Extension.swift in Sources */,
 				52AD1C122B7C997500E5EA4F /* FeatureTableViewCell.swift in Sources */,
 				529834A52B7B3B6F00A33DAD /* MyTabBar.swift in Sources */,
+				523C294E2B7F30DA00110C1D /* InformationViewController.swift in Sources */,
 				520538E52B79EE8000D81267 /* Helper.swift in Sources */,
 				520538D22B79EE7600D81267 /* ApiResponse.swift in Sources */,
 				52AD1C1F2B7CCE2100E5EA4F /* SustainableCollectionViewCell.swift in Sources */,
 				520538D02B79EE7600D81267 /* Networking.swift in Sources */,
 				520538CE2B79EE7600D81267 /* AppError.swift in Sources */,
+				527F13952B7F46360055F424 /* FeeStructureViewController.swift in Sources */,
+				527F13922B7F3E650055F424 /* ReviewTableViewCell.swift in Sources */,
 				520538E62B79EE8000D81267 /* Color.swift in Sources */,
 				529834A32B7B3A9800A33DAD /* MyTabBarCtrl.swift in Sources */,
 				52B6389D2B73750600AE8B7E /* AppDelegate.swift in Sources */,
+				527F139A2B7F46670055F424 /* FeeStructureViewTableViewCell.swift in Sources */,
 				52987C662B7DE14F006290F6 /* ResultTableViewCell.swift in Sources */,
 				520538DF2B79EE7F00D81267 /* Switcher.swift in Sources */,
 				52B6389F2B73750600AE8B7E /* SceneDelegate.swift in Sources */,
