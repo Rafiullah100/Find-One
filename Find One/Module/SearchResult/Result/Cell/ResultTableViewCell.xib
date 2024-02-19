@@ -34,7 +34,7 @@
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhm-R6-HsF">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="115"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo (1)" translatesAutoresizingMaskIntoConstraints="NO" id="a8E-Xo-CR1">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 405" translatesAutoresizingMaskIntoConstraints="NO" id="a8E-Xo-CR1">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="115"/>
                                             </imageView>
                                         </subviews>
@@ -61,8 +61,8 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmb-9l-SIX">
                                                         <rect key="frame" x="0.0" y="0.0" width="183" height="15"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YUSR International School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80F-Ue-Bj9">
-                                                                <rect key="frame" x="0.0" y="-2" width="182" height="19.333333333333332"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fawaq International School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80F-Ue-Bj9">
+                                                                <rect key="frame" x="0.0" y="-2" width="189" height="19.333333333333332"/>
                                                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -489,11 +489,11 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Rectangle 405" width="105" height="92"/>
         <image name="Star" width="15" height="14"/>
         <image name="check" width="9" height="10"/>
         <image name="gender" width="21" height="20"/>
         <image name="location" width="9" height="10"/>
-        <image name="photo (1)" width="173" height="147"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

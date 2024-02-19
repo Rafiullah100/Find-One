@@ -19,7 +19,7 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oDK-Hw-Xep">
                         <rect key="frame" x="0.0" y="0.0" width="110" height="90"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo (1)" translatesAutoresizingMaskIntoConstraints="NO" id="dq1-Sp-lQg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 405" translatesAutoresizingMaskIntoConstraints="NO" id="dq1-Sp-lQg">
                                 <rect key="frame" x="0.0" y="0.0" width="110" height="90"/>
                             </imageView>
                         </subviews>
@@ -50,6 +50,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="photo (1)" width="173" height="147"/>
+        <image name="Rectangle 405" width="105" height="92"/>
     </resources>
 </document>

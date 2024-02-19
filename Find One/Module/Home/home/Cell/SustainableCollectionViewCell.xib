@@ -34,7 +34,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfl-QY-oB1">
                                         <rect key="frame" x="0.0" y="0.0" width="167" height="125"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo (1)" translatesAutoresizingMaskIntoConstraints="NO" id="BoB-SW-uJ7">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 405" translatesAutoresizingMaskIntoConstraints="NO" id="BoB-SW-uJ7">
                                                 <rect key="frame" x="0.0" y="0.0" width="167" height="125"/>
                                             </imageView>
                                         </subviews>
@@ -236,8 +236,8 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="Rectangle 405" width="105" height="92"/>
         <image name="Star" width="15" height="14"/>
-        <image name="photo (1)" width="173" height="147"/>
         <image name="sustainable" width="19" height="16"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -34,7 +34,7 @@
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEG-z5-V8T">
                                         <rect key="frame" x="0.0" y="0.0" width="167" height="155"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo (1)" translatesAutoresizingMaskIntoConstraints="NO" id="LnJ-wR-LeF">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 405" translatesAutoresizingMaskIntoConstraints="NO" id="LnJ-wR-LeF">
                                                 <rect key="frame" x="0.0" y="0.0" width="167" height="155"/>
                                             </imageView>
                                         </subviews>
@@ -62,8 +62,8 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLb-XS-UnJ">
                                                                         <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="25"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yusr International" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDZ-l4-QGu">
-                                                                                <rect key="frame" x="0.0" y="3.6666666666666572" width="116.33333333333333" height="18"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fawaq International School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDZ-l4-QGu">
+                                                                                <rect key="frame" x="0.0" y="3.6666666666666572" width="175.33333333333334" height="18"/>
                                                                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="13"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -288,9 +288,9 @@
     </objects>
     <resources>
         <image name="Dollar" width="12" height="12"/>
+        <image name="Rectangle 405" width="105" height="92"/>
         <image name="Star" width="15" height="14"/>
         <image name="gender" width="21" height="20"/>
-        <image name="photo (1)" width="173" height="147"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

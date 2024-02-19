@@ -42,7 +42,7 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //        return CGSize(width: 110, height: 90)
         let cellsAcross: CGFloat = 3
-        let spaceBetweenCells: CGFloat = 10
+        let spaceBetweenCells: CGFloat = 5
         let width = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells) / cellsAcross
         return CGSize(width: width, height: width * 0.9)
     }

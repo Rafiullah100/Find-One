@@ -13,6 +13,10 @@ struct Grid {
     
 }
 
+protocol BrowseDelegate {
+    func selectCategory(index: Int)
+}
+
 class BrowseViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!{
@@ -26,9 +30,17 @@ class BrowseViewController: UIViewController {
     let arr = [Grid(name: "Information", image: "about"), Grid(name: "Sustainability", image: "sustainability"), Grid(name: "Fee Structure", image: "cash"), Grid(name: "Gallery", image: "gallery"), Grid(name: "Reviews", image: "review"), Grid(name: "Location", image: "locate")]
     
     
+    var delegate: BrowseDelegate?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.backgroundColor = .clear
     }
 }
 
@@ -49,8 +61,9 @@ extension BrowseViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return CGSize(width: 110, height: 90)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        didTappedInstitute?(indexPath.row)
-//    }
+        delegate?.selectCategory(index: indexPath.row)
+    }
 }
 

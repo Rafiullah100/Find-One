@@ -22,11 +22,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="115"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVS-FF-IdH">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVS-FF-IdH">
                         <rect key="frame" x="2" y="2" width="96" height="93"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo (1)" translatesAutoresizingMaskIntoConstraints="NO" id="rRA-5F-iCL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 405" translatesAutoresizingMaskIntoConstraints="NO" id="rRA-5F-iCL">
                                 <rect key="frame" x="0.0" y="0.0" width="96" height="93"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maskedCornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomMaskedCornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topMaskedCornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftMaskedCornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightMaskedCornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riyadh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0h7-de-kqo">
                                 <rect key="frame" x="5" y="73" width="34" height="15"/>
@@ -47,11 +64,6 @@
                             <constraint firstItem="rRA-5F-iCL" firstAttribute="top" secondItem="QVS-FF-IdH" secondAttribute="top" id="cbJ-Uz-t3E"/>
                             <constraint firstAttribute="bottom" secondItem="rRA-5F-iCL" secondAttribute="bottom" id="fsv-Oe-iKc"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
-                                <real key="value" value="5"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
@@ -62,11 +74,11 @@
                 <constraint firstAttribute="trailing" secondItem="QVS-FF-IdH" secondAttribute="trailing" constant="2" id="7Zs-dh-W6U"/>
                 <constraint firstAttribute="bottom" secondItem="QVS-FF-IdH" secondAttribute="bottom" constant="20" id="PD5-p2-DPa"/>
             </constraints>
-            <point key="canvasLocation" x="-32.061068702290072" y="19.718309859154932"/>
+            <point key="canvasLocation" x="-32.061068702290072" y="19.366197183098592"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="photo (1)" width="173" height="147"/>
+        <image name="Rectangle 405" width="105" height="92"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

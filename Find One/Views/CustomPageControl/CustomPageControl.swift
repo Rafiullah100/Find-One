@@ -20,16 +20,20 @@ class CustomPageControl: UIPageControl {
             return
         }
 
-        let dotSize = activeImage.size // Size of your custom dot images
-        let dotSpacing: CGFloat = 8.0
+        let dotSize = CGSize(width: inactiveImage.size.width * 5, height: inactiveImage.size.height) // Size of your custom dot images
+        let dotSpacing: CGFloat = 5.0
 
-        var x = (rect.size.width - CGFloat(numberOfPages) * (dotSize.width + dotSpacing)) / 2.0
+        let totalInactiveWidth = CGFloat(numberOfPages - 1) * inactiveImage.size.width + CGFloat(numberOfPages - 1) * dotSpacing
+        let totalWidth = totalInactiveWidth + dotSize.width
+
+        var x = (rect.size.width - totalWidth) / 2.0
 
         for pageIndex in 0..<numberOfPages {
-            let dotFrame = CGRect(x: x, y: (rect.size.height - dotSize.height) / 2, width: pageIndex == currentPage ? dotSize.width : dotSize.width, height: dotSize.height)
-            let dotImage = pageIndex == currentPage ? activeImage : inactiveImage
+            let isCurrentPage = pageIndex == currentPage
+            let dotFrame = CGRect(x: x, y: (rect.size.height - dotSize.height) / 2, width: isCurrentPage ? dotSize.width : inactiveImage.size.width, height: dotSize.height)
+            let dotImage = isCurrentPage ? activeImage : inactiveImage
             dotImage.draw(in: dotFrame)
-            x += pageIndex == currentPage ? dotSize.width + dotSpacing : dotSize.width + dotSpacing
+            x += isCurrentPage ? dotSize.width + dotSpacing : inactiveImage.size.width + dotSpacing
         }
     }
 }
