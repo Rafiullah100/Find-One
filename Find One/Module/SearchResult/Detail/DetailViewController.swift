@@ -54,7 +54,7 @@ class DetailViewController: BaseViewController {
         pageControl.inactiveImage = UIImage(named: "dot")
         pageControl.activeImage = UIImage(named: "ellipse")
         pageControl.numberOfPages = 6
-        pageControl.currentPage = 0
+        pageControl.currentPage = 2
     }
     
     override func backButtonAction() {
@@ -84,7 +84,7 @@ extension DetailViewController: BrowseDelegate{
         case 4:
             childVC = reviewVC
         case 5:
-            childVC = locationVC
+            Switcher.gotoLocation(delegate: self)
         default:
             break
         }

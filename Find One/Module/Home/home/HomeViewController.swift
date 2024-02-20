@@ -12,8 +12,20 @@ enum CellType {
     case sustainable
 }
 
+enum InstitutionType {
+    case school
+    case college
+    case university
+}
+
 class HomeViewController: BaseViewController {
     
+    @IBOutlet weak var universityLabel: UILabel!
+    @IBOutlet weak var collegeLabel: UILabel!
+    @IBOutlet weak var schoolLabel: UILabel!
+    @IBOutlet weak var universityDotView: UIView!
+    @IBOutlet weak var collegeDotView: UIView!
+    @IBOutlet weak var schoolDotView: UIView!
     @IBOutlet weak var tableView: UITableView!{
         didSet{
             tableView.delegate = self
@@ -21,6 +33,8 @@ class HomeViewController: BaseViewController {
             tableView.register(UINib(nibName: "FeatureTableViewCell", bundle: nil), forCellReuseIdentifier: FeatureTableViewCell.cellReuseIdentifier())
         }
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .home
@@ -34,6 +48,44 @@ class HomeViewController: BaseViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+    }
+    
+    @IBAction func schoolBtnAction(_ sender: Any) {
+        selectInstitutionType(type: .school)
+    }
+    
+    @IBAction func collegeBtnAction(_ sender: Any) {
+        selectInstitutionType(type: .college)
+    }
+    
+    @IBAction func universityBtnAction(_ sender: Any) {
+        selectInstitutionType(type: .university)
+    }
+    
+    private func selectInstitutionType(type: InstitutionType){
+        switch type {
+        case .school:
+            schoolLabel.textColor = UIColor.black
+            collegeLabel.textColor = UIColor.darkGray
+            universityLabel.textColor = UIColor.darkGray
+            schoolDotView.isHidden = false
+            collegeDotView.isHidden = true
+            universityDotView.isHidden = true
+        case .college:
+            schoolLabel.textColor = UIColor.darkGray
+            collegeLabel.textColor = UIColor.black
+            universityLabel.textColor = UIColor.darkGray
+            schoolDotView.isHidden = true
+            collegeDotView.isHidden = false
+            universityDotView.isHidden = true
+        case .university:
+            schoolLabel.textColor = UIColor.darkGray
+            collegeLabel.textColor = UIColor.darkGray
+            universityLabel.textColor = UIColor.black
+            schoolDotView.isHidden = true
+            collegeDotView.isHidden = true
+            universityDotView.isHidden = false
+        }
     }
 }
 

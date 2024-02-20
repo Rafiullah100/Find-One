@@ -38,4 +38,11 @@ class Switcher {
         vc.hidesBottomBarWhenPushed = false
         delegate.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    static func gotoLocation(delegate: UIViewController){
+        let vc = UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "LocationViewController") as! LocationViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.hidesBottomBarWhenPushed = true
+        delegate.navigationController?.pushViewController(vc, animated: true)
+    }
 }
