@@ -66,21 +66,21 @@ class HomeViewController: BaseViewController {
         switch type {
         case .school:
             schoolLabel.textColor = UIColor.black
-            collegeLabel.textColor = UIColor.darkGray
-            universityLabel.textColor = UIColor.darkGray
+            collegeLabel.textColor = UIColor.lightGray
+            universityLabel.textColor = UIColor.lightGray
             schoolDotView.isHidden = false
             collegeDotView.isHidden = true
             universityDotView.isHidden = true
         case .college:
-            schoolLabel.textColor = UIColor.darkGray
+            schoolLabel.textColor = UIColor.lightGray
             collegeLabel.textColor = UIColor.black
-            universityLabel.textColor = UIColor.darkGray
+            universityLabel.textColor = UIColor.lightGray
             schoolDotView.isHidden = true
             collegeDotView.isHidden = false
             universityDotView.isHidden = true
         case .university:
-            schoolLabel.textColor = UIColor.darkGray
-            collegeLabel.textColor = UIColor.darkGray
+            schoolLabel.textColor = UIColor.lightGray
+            collegeLabel.textColor = UIColor.lightGray
             universityLabel.textColor = UIColor.black
             schoolDotView.isHidden = true
             collegeDotView.isHidden = true
@@ -97,8 +97,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: FeatureTableViewCell = tableView.dequeueReusableCell(withIdentifier: FeatureTableViewCell.cellReuseIdentifier()) as! FeatureTableViewCell
         
-        cell.didTappedInstitute = { index in
-            Switcher.gotoResult(delegate: self)
+        cell.didTappedInstitute = { index, type in
+            if type == .feature {
+                Switcher.gotoDetail(delegate: self)
+            }
+            else if type == .browse {
+                Switcher.gotoResult(delegate: self)
+            }
+            else{
+                Switcher.gotoResult(delegate: self)
+            }
         }
         switch indexPath.row {
         case 0:

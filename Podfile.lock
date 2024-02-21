@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (5.0.5)
+  - DGCharts (5.1.0):
+    - DGCharts/Core (= 5.1.0)
+  - DGCharts/Core (5.1.0)
   - GoogleMaps (7.4.0):
     - GoogleMaps/Maps (= 7.4.0)
   - GoogleMaps/Base (7.4.0)
@@ -16,6 +19,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.2)
+  - DGCharts
   - GoogleMaps
   - IQKeyboardManager
   - SDWebImage (~> 5.0)
@@ -27,6 +31,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - DGCharts
     - GoogleMaps
     - IQKeyboardManager
     - SDWebImage
@@ -37,6 +42,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  DGCharts: 1c6daf585b6cfc78807af44ea690d357c410627f
   GoogleMaps: 032f676450ba0779bd8ce16840690915f84e57ac
   IQKeyboardManager: ef43ce1ba1e5aaf4adf222c0a46f39761f246879
   SDWebImage: fd7e1a22f00303e058058278639bf6196ee431fe
@@ -45,6 +51,6 @@ SPEC CHECKSUMS:
   SwiftIcons: 3b748e57d9eee0c7c8d3bdbf2d742c0b1b4c6172
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: aeeab141ad97398ecd4cec8eb28a60c640348454
+PODFILE CHECKSUM: bb8498af92871fc77297a0c38cf693c3eb6eb105
 
 COCOAPODS: 1.11.3

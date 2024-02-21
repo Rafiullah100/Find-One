@@ -14,5 +14,5 @@ target 'Find One' do
     pod "SideMenu"
     pod 'SwiftIcons', '~> 3.0'
     pod 'GoogleMaps'
-
+    pod 'DGCharts'
 end

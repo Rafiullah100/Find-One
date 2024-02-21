@@ -1446,7 +1446,7 @@
         <!--My Tab Bar Ctrl-->
         <scene sceneID="heq-G9-YoF">
             <objects>
-                <tabBarController storyboardIdentifier="MyTabBarCtrl" id="flO-Qc-dvQ" customClass="MyTabBarCtrl" customModule="Find_One" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MyTabBarCtrl" modalPresentationStyle="fullScreen" id="flO-Qc-dvQ" customClass="MyTabBarCtrl" customModule="Find_One" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tWU-uy-cSC" customClass="MyTabBar" customModule="Find_One" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

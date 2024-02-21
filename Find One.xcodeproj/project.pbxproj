@@ -78,6 +78,7 @@
 		52C208C62B7E29EC00FA6470 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C208C52B7E29EC00FA6470 /* BrowseViewController.swift */; };
 		52C208C92B7E2A0900FA6470 /* GridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C208C72B7E2A0900FA6470 /* GridCollectionViewCell.swift */; };
 		52C208CA2B7E2A0900FA6470 /* GridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C208C82B7E2A0900FA6470 /* GridCollectionViewCell.xib */; };
+		52D4DB212B85C60700059025 /* SustainableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D4DB202B85C60700059025 /* SustainableViewController.swift */; };
 		79C29CD0D1DE5E8578D2885B /* Pods_Find_One.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B29EAB32F0B37ECF44AD097 /* Pods_Find_One.framework */; };
 /* End PBXBuildFile section */
 
@@ -156,6 +157,7 @@
 		52C208C52B7E29EC00FA6470 /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		52C208C72B7E2A0900FA6470 /* GridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewCell.swift; sourceTree = "<group>"; };
 		52C208C82B7E2A0900FA6470 /* GridCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridCollectionViewCell.xib; sourceTree = "<group>"; };
+		52D4DB202B85C60700059025 /* SustainableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SustainableViewController.swift; sourceTree = "<group>"; };
 		7B29EAB32F0B37ECF44AD097 /* Pods_Find_One.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Find_One.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B7DA2D5124F7DEBAD8FE21 /* Pods-Find One.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Find One.debug.xcconfig"; path = "Target Support Files/Pods-Find One/Pods-Find One.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -460,6 +462,7 @@
 		52987C602B7DDAE0006290F6 /* SearchResult */ = {
 			isa = PBXGroup;
 			children = (
+				52D4DB1F2B85C5D600059025 /* Sustainable */,
 				529220862B7F758200C0E396 /* Gallery */,
 				529220832B7F71F800C0E396 /* Locate */,
 				527F138C2B7F3E330055F424 /* Review */,
@@ -572,6 +575,14 @@
 				52C208C82B7E2A0900FA6470 /* GridCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		52D4DB1F2B85C5D600059025 /* Sustainable */ = {
+			isa = PBXGroup;
+			children = (
+				52D4DB202B85C60700059025 /* SustainableViewController.swift */,
+			);
+			path = Sustainable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -768,6 +779,7 @@
 				529834AB2B7B5C8100A33DAD /* CustomSearchViewController.swift in Sources */,
 				520538D12B79EE7600D81267 /* Method.swift in Sources */,
 				52AD1C1B2B7CC05F00E5EA4F /* BrowseCollectionViewCell.swift in Sources */,
+				52D4DB212B85C60700059025 /* SustainableViewController.swift in Sources */,
 				520538DE2B79EE7F00D81267 /* Constants.swift in Sources */,
 				52C208C92B7E2A0900FA6470 /* GridCollectionViewCell.swift in Sources */,
 				52987C632B7DDB29006290F6 /* ResultViewController.swift in Sources */,

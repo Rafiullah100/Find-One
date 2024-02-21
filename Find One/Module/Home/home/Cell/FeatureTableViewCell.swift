@@ -9,7 +9,7 @@ import UIKit
 
 class FeatureTableViewCell: UITableViewCell {
 
-    var didTappedInstitute: ((Int) -> Void)? = nil
+    var didTappedInstitute: ((Int, CellType) -> Void)? = nil
 
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!{
@@ -87,7 +87,7 @@ extension FeatureTableViewCell: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        didTappedInstitute?(indexPath.row)
+        didTappedInstitute?(indexPath.row, cellType ?? .feature)
     }
 }
 

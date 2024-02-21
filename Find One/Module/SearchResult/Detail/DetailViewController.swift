@@ -27,6 +27,9 @@ class DetailViewController: BaseViewController {
     lazy var locationVC: LocationViewController = {
         return UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "LocationViewController") as! LocationViewController
     }()
+    lazy var sustainableVC: SustainableViewController = {
+        return UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "SustainableViewController") as! SustainableViewController
+    }()
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var pageControl: CustomPageControl!
@@ -54,7 +57,7 @@ class DetailViewController: BaseViewController {
         pageControl.inactiveImage = UIImage(named: "dot")
         pageControl.activeImage = UIImage(named: "ellipse")
         pageControl.numberOfPages = 6
-        pageControl.currentPage = 2
+        pageControl.currentPage = 5
     }
     
     override func backButtonAction() {
@@ -76,7 +79,7 @@ extension DetailViewController: BrowseDelegate{
         case 0:
             childVC = informationVC
         case 1:
-            print("erkfm")
+            childVC = sustainableVC
         case 2:
             childVC = feeVC
         case 3:

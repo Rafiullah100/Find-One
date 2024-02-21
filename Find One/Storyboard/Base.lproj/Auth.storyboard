@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7tg-11-pMB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hbl-3r-CEz">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -22,7 +22,7 @@
         <!--Login View Controller-->
         <scene sceneID="ouJ-V9-8Eb">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="xrf-Nf-cgD" customClass="LoginViewController" customModule="Find_One" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" modalPresentationStyle="fullScreen" id="xrf-Nf-cgD" customClass="LoginViewController" customModule="Find_One" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8aQ-jD-Fvd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -627,7 +627,7 @@
         <!--Signup View Controller-->
         <scene sceneID="1L4-ZG-m5Z">
             <objects>
-                <viewController storyboardIdentifier="SignupViewController" id="hbl-3r-CEz" customClass="SignupViewController" customModule="Find_One" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignupViewController" modalPresentationStyle="fullScreen" id="hbl-3r-CEz" customClass="SignupViewController" customModule="Find_One" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x8b-Yg-koC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1131,29 +1131,7 @@
             </objects>
             <point key="canvasLocation" x="2347.3282442748091" y="-2.1126760563380285"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="30c-nG-BIr">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7tg-11-pMB" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z60-GB-Mdm">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="hbl-3r-CEz" kind="relationship" relationship="rootViewController" id="38G-vf-KdX"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="opI-AI-cv6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1420.6106870229007" y="-2.1126760563380285"/>
-        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="UNP-cu-rMh"/>
-        <segue reference="7YQ-yO-sD4"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="bg" width="390" height="844"/>
         <image name="globe" width="20" height="20"/>

@@ -20,6 +20,7 @@ class ReviewViewController: UIViewController {
         super.viewDidLoad()
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44.0
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
     }
 
     override func viewWillAppear(_ animated: Bool) {

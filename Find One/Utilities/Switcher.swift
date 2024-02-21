@@ -15,7 +15,7 @@ class Switcher {
         let vc = UIStoryboard(name: Storyboard.home.rawValue, bundle: nil).instantiateViewController(withIdentifier: "MyTabBarCtrl") as! MyTabBarCtrl
         vc.modalPresentationStyle = .fullScreen
         vc.hidesBottomBarWhenPushed = false
-        delegate.navigationController?.pushViewController(vc, animated: true)
+        delegate.present(vc, animated: true)
     }
     
     static func gotoResult(delegate: UIViewController){
