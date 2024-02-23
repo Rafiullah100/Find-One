@@ -13,9 +13,11 @@ import UIKit
 class Switcher {
     static func gotoHome(delegate: UIViewController){
         let vc = UIStoryboard(name: Storyboard.home.rawValue, bundle: nil).instantiateViewController(withIdentifier: "MyTabBarCtrl") as! MyTabBarCtrl
-        vc.modalPresentationStyle = .fullScreen
-        vc.hidesBottomBarWhenPushed = false
-        delegate.present(vc, animated: true)
+//        vc.modalPresentationStyle = .fullScreen
+        let nav = UINavigationController(rootViewController: vc)
+        nav.hidesBottomBarWhenPushed = false
+        nav.modalPresentationStyle = .fullScreen
+        delegate.present(nav, animated: true)
     }
     
     static func gotoResult(delegate: UIViewController){
@@ -44,5 +46,12 @@ class Switcher {
         vc.modalPresentationStyle = .fullScreen
         vc.hidesBottomBarWhenPushed = true
         delegate.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    static func gotoLogin(delegate: UIViewController){
+        let vc = UIStoryboard(name: Storyboard.auth.rawValue, bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.hidesBottomBarWhenPushed = true
+        delegate.present(vc, animated: true)
     }
 }

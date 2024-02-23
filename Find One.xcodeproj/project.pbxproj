@@ -62,6 +62,10 @@
 		52987C672B7DE14F006290F6 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52987C652B7DE14F006290F6 /* ResultTableViewCell.xib */; };
 		52987C6B2B7DF9E7006290F6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52987C6A2B7DF9E7006290F6 /* DetailViewController.swift */; };
 		52987C6E2B7E08A5006290F6 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52987C6D2B7E08A5006290F6 /* CustomPageControl.swift */; };
+		52A4ABF92B886FB800E54458 /* SuccessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4ABF82B886FB800E54458 /* SuccessModel.swift */; };
+		52A4ABFB2B88700C00E54458 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4ABFA2B88700C00E54458 /* SignupViewModel.swift */; };
+		52A4ABFE2B887F9D00E54458 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4ABFD2B887F9D00E54458 /* LoginViewModel.swift */; };
+		52A4AC012B88809600E54458 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4AC002B88809600E54458 /* LoginModel.swift */; };
 		52AD1C0E2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD1C0C2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift */; };
 		52AD1C0F2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AD1C0D2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib */; };
 		52AD1C122B7C997500E5EA4F /* FeatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD1C102B7C997500E5EA4F /* FeatureTableViewCell.swift */; };
@@ -139,6 +143,11 @@
 		52987C652B7DE14F006290F6 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
 		52987C6A2B7DF9E7006290F6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		52987C6D2B7E08A5006290F6 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
+		52A4ABF82B886FB800E54458 /* SuccessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessModel.swift; sourceTree = "<group>"; };
+		52A4ABFA2B88700C00E54458 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		52A4ABFD2B887F9D00E54458 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		52A4AC002B88809600E54458 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		52A4AC022B88988A00E54458 /* Find One.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Find One.entitlements"; sourceTree = "<group>"; };
 		52AD1C0C2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCollectionViewCell.swift; sourceTree = "<group>"; };
 		52AD1C0D2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureCollectionViewCell.xib; sourceTree = "<group>"; };
 		52AD1C102B7C997500E5EA4F /* FeatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTableViewCell.swift; sourceTree = "<group>"; };
@@ -223,6 +232,8 @@
 		520538BC2B79EE3B00D81267 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				52A4ABFF2B88808800E54458 /* Model */,
+				52A4ABFC2B887F7D00E54458 /* ViewModel */,
 				520538BD2B79EE3B00D81267 /* LoginViewController.swift */,
 			);
 			path = Login;
@@ -298,6 +309,8 @@
 		520538EB2B7A0B3F00D81267 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				52A4ABF72B886D0A00E54458 /* Model */,
+				52A4ABF62B886CFB00E54458 /* ViewModel */,
 				520538EC2B7A0B5900D81267 /* SignupViewController.swift */,
 			);
 			path = Signup;
@@ -510,6 +523,38 @@
 			path = CustomPageControl;
 			sourceTree = "<group>";
 		};
+		52A4ABF62B886CFB00E54458 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52A4ABFA2B88700C00E54458 /* SignupViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52A4ABF72B886D0A00E54458 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52A4ABF82B886FB800E54458 /* SuccessModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52A4ABFC2B887F7D00E54458 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52A4ABFD2B887F9D00E54458 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52A4ABFF2B88808800E54458 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52A4AC002B88809600E54458 /* LoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		52AD1C0B2B7C959E00E5EA4F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,6 +591,7 @@
 		52B6389B2B73750600AE8B7E /* Find One */ = {
 			isa = PBXGroup;
 			children = (
+				52A4AC022B88988A00E54458 /* Find One.entitlements */,
 				520538B92B79EE1600D81267 /* AppDelegate */,
 				520538BA2B79EE3B00D81267 /* Module */,
 				520538BF2B79EE4500D81267 /* Views */,
@@ -775,6 +821,9 @@
 				52987C662B7DE14F006290F6 /* ResultTableViewCell.swift in Sources */,
 				520538DF2B79EE7F00D81267 /* Switcher.swift in Sources */,
 				52B6389F2B73750600AE8B7E /* SceneDelegate.swift in Sources */,
+				52A4ABFE2B887F9D00E54458 /* LoginViewModel.swift in Sources */,
+				52A4AC012B88809600E54458 /* LoginModel.swift in Sources */,
+				52A4ABFB2B88700C00E54458 /* SignupViewModel.swift in Sources */,
 				529220882B7F758F00C0E396 /* GalleryViewController.swift in Sources */,
 				529834AB2B7B5C8100A33DAD /* CustomSearchViewController.swift in Sources */,
 				520538D12B79EE7600D81267 /* Method.swift in Sources */,
@@ -782,6 +831,7 @@
 				52D4DB212B85C60700059025 /* SustainableViewController.swift in Sources */,
 				520538DE2B79EE7F00D81267 /* Constants.swift in Sources */,
 				52C208C92B7E2A0900FA6470 /* GridCollectionViewCell.swift in Sources */,
+				52A4ABF92B886FB800E54458 /* SuccessModel.swift in Sources */,
 				52987C632B7DDB29006290F6 /* ResultViewController.swift in Sources */,
 				520538E02B79EE8000D81267 /* Extensions.swift in Sources */,
 				52AD1C0E2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift in Sources */,
@@ -932,6 +982,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Find One/Find One.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9K786374U5;
@@ -947,7 +998,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sk.Find-One";
+				PRODUCT_BUNDLE_IDENTIFIER = com.find1.ngen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -961,6 +1012,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Find One/Find One.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9K786374U5;
@@ -976,7 +1028,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sk.Find-One";
+				PRODUCT_BUNDLE_IDENTIFIER = com.find1.ngen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

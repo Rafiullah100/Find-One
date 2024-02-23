@@ -9,9 +9,9 @@ import UIKit
 
 class DetailViewController: BaseViewController {
 
-    lazy var browseVC: BrowseViewController = {
-        return UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "BrowseViewController") as! BrowseViewController
-    }()
+//    lazy var browseVC: BrowseViewController = {
+//        return UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "BrowseViewController") as! BrowseViewController
+//    }()
     lazy var informationVC: InformationViewController = {
         return UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "InformationViewController") as! InformationViewController
     }()
@@ -39,8 +39,8 @@ class DetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .detail
-        browseVC.delegate = self
-        childVC = browseVC
+        informationVC.delegate = self
+        childVC = informationVC
         addChildVC()
         custompageContrl()
     }
@@ -61,12 +61,12 @@ class DetailViewController: BaseViewController {
     }
     
     override func backButtonAction() {
-        if isChildViewControllerAdded(browseVC) == true{
+        if isChildViewControllerAdded(informationVC) == true{
             super.backButtonAction()
         }
         else{
             removeChild(childVC: childVC)
-            childVC = browseVC
+            childVC = informationVC
             addChildVC()
         }
     }
@@ -74,19 +74,17 @@ class DetailViewController: BaseViewController {
 
 extension DetailViewController: BrowseDelegate{
     func selectCategory(index: Int) {
-        removeChild(childVC: browseVC)
+        removeChild(childVC: informationVC)
         switch index {
         case 0:
-            childVC = informationVC
-        case 1:
             childVC = sustainableVC
-        case 2:
+        case 1:
             childVC = feeVC
-        case 3:
+        case 2:
             childVC = galleryVC
-        case 4:
+        case 3:
             childVC = reviewVC
-        case 5:
+        case 4:
             Switcher.gotoLocation(delegate: self)
         default:
             break

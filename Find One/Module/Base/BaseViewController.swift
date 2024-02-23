@@ -7,6 +7,8 @@
 
 import UIKit
 import SideMenu
+import SpinKit
+
 enum ViewControllerType {
     case home
     case back
@@ -16,6 +18,10 @@ enum ViewControllerType {
 
 
 class BaseViewController: UIViewController, UINavigationControllerDelegate {
+    
+    let spinnerView = RTSpinKitView(style: .styleThreeBounce, color: CustomColor.appColor.color, spinnerSize: 70.0)
+
+    
     var isOverlayViewAdded: Bool = false
     var type: ViewControllerType = .home
     var titleLabel: UILabel?
@@ -49,6 +55,16 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
             titleLabel.textColor = .black
             self.navigationItem.titleView = titleLabel
         }
+    }
+    
+    func animateSpinner() {
+        spinnerView?.center = view.center
+        view.addSubview(spinnerView ?? UIView())
+        spinnerView?.startAnimating()
+    }
+    
+    func stopAnimation() {
+        spinnerView?.stopAnimating()
     }
     
 
