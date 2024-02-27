@@ -7,13 +7,29 @@
 
 import UIKit
 import GoogleMaps
-
+import Firebase
+import GoogleSignIn
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+//        let window = UIWindow(frame: UIScreen.main.bounds)
+//        if UserDefaults.standard.isLogin == true && UserDefaults.standard.rememberMe == true{
+////            Switcher.setInitialScreen(vc: .home)
+//            let homeVC = UIStoryboard(name: Storyboard.auth.rawValue, bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+//            window.rootViewController = homeVC
+//            window.makeKeyAndVisible()
+//            self.window = window
+//        }
+//        else{
+//            Switcher.setInitialScreen(vc: .login)
+//        }
+        
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyBC2Xdb2ato7ULwuGnDjPLXLAvqUZx_1VM")
+        FirebaseApp.configure()
         return true
     }
 

@@ -21,6 +21,7 @@ extension UserDefaults{
         case token
         case isLogin
         case appleUserData
+        case rememberMe
     }
     
     var selectedLanguage: String?  {
@@ -101,6 +102,15 @@ extension UserDefaults{
         }
         set{
             set(newValue, forKey: userdefaultsKey.appleUserData.rawValue)
+        }
+    }
+    
+    var rememberMe: Bool?  {
+        get {
+            value(forKey: userdefaultsKey.rememberMe.rawValue) as? Bool
+        }
+        set {
+            set(newValue, forKey: userdefaultsKey.rememberMe.rawValue)
         }
     }
 }

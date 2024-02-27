@@ -7,17 +7,17 @@
 
 import UIKit
 import AuthenticationServices
-
+import GoogleSignIn
+import Firebase
 class LoginViewController: BaseViewController {
-
    
+    @IBOutlet weak var keepMeButton: UIImageView!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var appleSigninView: UIView!
 
     private var viewModel = LoginViewModel()
     private let appleSignInButton = ASAuthorizationAppleIDButton()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,17 @@ class LoginViewController: BaseViewController {
             }
             else{
                 self.showAlert(message: appleLogin?.message ?? "")
+            }
+        }
+        
+        viewModel.googleLogin.bind { [weak self] googleLogin in
+            guard let self = self else{return}
+            self.stopAnimation()
+            if googleLogin?.success == true{
+                Switcher.gotoHome(delegate: self)
+            }
+            else{
+                self.showAlert(message: googleLogin?.message ?? "")
             }
         }
     }
@@ -79,6 +90,34 @@ class LoginViewController: BaseViewController {
         else{
             showAlert(message: validationResponse.message)
         }
+    }
+    
+    @IBAction func googleSigninBtnAction(_ sender: Any) {
+        let clientID = FirebaseApp.app()?.options.clientID
+        guard let clientID = clientID else {
+            return
+        }
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [weak self] result, error in
+            guard error == nil else {
+                return
+            }
+            if let result = result,
+               let email = result.user.profile?.email,
+               let name = result.user.profile?.name
+               /*,let imageURL = result.user.profile?.imageURL(withDimension: 120)?.absoluteString*/ {
+                print(email, name)
+                self?.animateSpinner()
+                self?.viewModel.googleLogin(email: email, name: name)
+            }
+        }
+    }
+    
+    @IBAction func keepMeLogin(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        keepMeButton.image = sender.isSelected == true ? UIImage(named: "remember-me") : UIImage(named: "not-remember")
+        UserDefaults.standard.rememberMe = sender.isSelected
     }
 }
 

@@ -34,6 +34,9 @@ class LoginViewModel {
     
     var appleLogin: Observable<AppleLoginModel> = Observable(nil)
     var appleLoginData: AppleLoginModel?
+    
+    var googleLogin: Observable<GoogleLoginModel> = Observable(nil)
+    var googleLoginData: GoogleLoginModel?
 
     var parameters: [String: Any]?
     
@@ -81,11 +84,11 @@ class LoginViewModel {
                 self.appleLogin.value = appleLogin
                 self.saveAppleUserPreference()
                 
-        case .failure(let error):
-            self.errorMessage.value = error.localizedDescription
+            case .failure(let error):
+                self.errorMessage.value = error.localizedDescription
+            }
         }
     }
-}
     
     func saveAppleUserPreference(){
         UserDefaults.standard.name = self.appleLoginData?.name
@@ -94,6 +97,31 @@ class LoginViewModel {
         UserDefaults.standard.token = self.appleLoginData?.token
         UserDefaults.standard.mobile = self.appleLoginData?.mobileNo
         UserDefaults.standard.uuid = self.appleLoginData?.uuID
+        UserDefaults.standard.isLogin = true
+    }
+    
+    func googleLogin(email: String, name: String) {
+        print(email, name)
+        URLSession.shared.request(route: .googleLogin, method: .post, parameters: ["email": email, "name": name], model: GoogleLoginModel.self) { result in
+            switch result {
+            case .success(let googleLogin):
+                self.googleLoginData = googleLogin
+                self.googleLogin.value = googleLogin
+                self.saveGoogleUserPreference()
+                
+            case .failure(let error):
+                self.errorMessage.value = error.localizedDescription
+            }
+        }
+    }
+    
+    func saveGoogleUserPreference(){
+        UserDefaults.standard.name = self.googleLoginData?.user?.name
+        UserDefaults.standard.email = self.googleLoginData?.user?.email
+        UserDefaults.standard.profileImage = self.googleLoginData?.user?.profileImage
+        UserDefaults.standard.token = self.googleLoginData?.user?.token
+        UserDefaults.standard.mobile = self.googleLoginData?.user?.mobileNo
+        UserDefaults.standard.uuid = self.googleLoginData?.user?.uuid
         UserDefaults.standard.isLogin = true
     }
 }

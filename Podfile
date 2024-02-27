@@ -15,4 +15,7 @@ target 'Find One' do
     pod 'SwiftIcons', '~> 3.0'
     pod 'GoogleMaps'
     pod 'DGCharts'
+    pod 'Firebase/Core'
+    pod 'Firebase/Auth'
+    pod 'GoogleSignIn'
 end

@@ -40,6 +40,10 @@
 		527F13952B7F46360055F424 /* FeeStructureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F13942B7F46360055F424 /* FeeStructureViewController.swift */; };
 		527F139A2B7F46670055F424 /* FeeStructureViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F13982B7F46670055F424 /* FeeStructureViewTableViewCell.swift */; };
 		527F139B2B7F46670055F424 /* FeeStructureViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527F13992B7F46670055F424 /* FeeStructureViewTableViewCell.xib */; };
+		528F939B2B8C677F00BF0A5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 528F939A2B8C677F00BF0A5F /* GoogleService-Info.plist */; };
+		528F939E2B8C8E0300BF0A5F /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F939D2B8C8E0300BF0A5F /* SideMenuViewController.swift */; };
+		528F93A12B8CAF8600BF0A5F /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F93A02B8CAF8600BF0A5F /* HomeModel.swift */; };
+		528F93A42B8CAFB200BF0A5F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F93A32B8CAFB200BF0A5F /* HomeViewModel.swift */; };
 		529220812B7F6D9B00C0E396 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529220802B7F6D9A00C0E396 /* MapViewController.swift */; };
 		529220852B7F720D00C0E396 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529220842B7F720D00C0E396 /* LocationViewController.swift */; };
 		529220882B7F758F00C0E396 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529220872B7F758F00C0E396 /* GalleryViewController.swift */; };
@@ -70,8 +74,8 @@
 		52AD1C0F2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AD1C0D2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib */; };
 		52AD1C122B7C997500E5EA4F /* FeatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD1C102B7C997500E5EA4F /* FeatureTableViewCell.swift */; };
 		52AD1C132B7C997500E5EA4F /* FeatureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AD1C112B7C997500E5EA4F /* FeatureTableViewCell.xib */; };
-		52AD1C1B2B7CC05F00E5EA4F /* BrowseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD1C192B7CC05F00E5EA4F /* BrowseCollectionViewCell.swift */; };
-		52AD1C1C2B7CC05F00E5EA4F /* BrowseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AD1C1A2B7CC05F00E5EA4F /* BrowseCollectionViewCell.xib */; };
+		52AD1C1B2B7CC05F00E5EA4F /* CityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD1C192B7CC05F00E5EA4F /* CityCollectionViewCell.swift */; };
+		52AD1C1C2B7CC05F00E5EA4F /* CityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AD1C1A2B7CC05F00E5EA4F /* CityCollectionViewCell.xib */; };
 		52AD1C1F2B7CCE2100E5EA4F /* SustainableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD1C1D2B7CCE2100E5EA4F /* SustainableCollectionViewCell.swift */; };
 		52AD1C202B7CCE2100E5EA4F /* SustainableCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AD1C1E2B7CCE2100E5EA4F /* SustainableCollectionViewCell.xib */; };
 		52B6389D2B73750600AE8B7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6389C2B73750600AE8B7E /* AppDelegate.swift */; };
@@ -83,6 +87,7 @@
 		52C208C92B7E2A0900FA6470 /* GridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C208C72B7E2A0900FA6470 /* GridCollectionViewCell.swift */; };
 		52C208CA2B7E2A0900FA6470 /* GridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C208C82B7E2A0900FA6470 /* GridCollectionViewCell.xib */; };
 		52D4DB212B85C60700059025 /* SustainableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D4DB202B85C60700059025 /* SustainableViewController.swift */; };
+		52E4E50E2B8DC8A6001529AF /* TypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4E50D2B8DC8A6001529AF /* TypeCollectionViewCell.swift */; };
 		79C29CD0D1DE5E8578D2885B /* Pods_Find_One.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B29EAB32F0B37ECF44AD097 /* Pods_Find_One.framework */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +126,10 @@
 		527F13942B7F46360055F424 /* FeeStructureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeStructureViewController.swift; sourceTree = "<group>"; };
 		527F13982B7F46670055F424 /* FeeStructureViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeStructureViewTableViewCell.swift; sourceTree = "<group>"; };
 		527F13992B7F46670055F424 /* FeeStructureViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeeStructureViewTableViewCell.xib; sourceTree = "<group>"; };
+		528F939A2B8C677F00BF0A5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		528F939D2B8C8E0300BF0A5F /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		528F93A02B8CAF8600BF0A5F /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		528F93A32B8CAFB200BF0A5F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		529220802B7F6D9A00C0E396 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		529220842B7F720D00C0E396 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		529220872B7F758F00C0E396 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -152,8 +161,8 @@
 		52AD1C0D2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureCollectionViewCell.xib; sourceTree = "<group>"; };
 		52AD1C102B7C997500E5EA4F /* FeatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTableViewCell.swift; sourceTree = "<group>"; };
 		52AD1C112B7C997500E5EA4F /* FeatureTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureTableViewCell.xib; sourceTree = "<group>"; };
-		52AD1C192B7CC05F00E5EA4F /* BrowseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCollectionViewCell.swift; sourceTree = "<group>"; };
-		52AD1C1A2B7CC05F00E5EA4F /* BrowseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowseCollectionViewCell.xib; sourceTree = "<group>"; };
+		52AD1C192B7CC05F00E5EA4F /* CityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewCell.swift; sourceTree = "<group>"; };
+		52AD1C1A2B7CC05F00E5EA4F /* CityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCollectionViewCell.xib; sourceTree = "<group>"; };
 		52AD1C1D2B7CCE2100E5EA4F /* SustainableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SustainableCollectionViewCell.swift; sourceTree = "<group>"; };
 		52AD1C1E2B7CCE2100E5EA4F /* SustainableCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SustainableCollectionViewCell.xib; sourceTree = "<group>"; };
 		52B638992B73750600AE8B7E /* Find One.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find One.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +176,7 @@
 		52C208C72B7E2A0900FA6470 /* GridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewCell.swift; sourceTree = "<group>"; };
 		52C208C82B7E2A0900FA6470 /* GridCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridCollectionViewCell.xib; sourceTree = "<group>"; };
 		52D4DB202B85C60700059025 /* SustainableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SustainableViewController.swift; sourceTree = "<group>"; };
+		52E4E50D2B8DC8A6001529AF /* TypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		7B29EAB32F0B37ECF44AD097 /* Pods_Find_One.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Find_One.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B7DA2D5124F7DEBAD8FE21 /* Pods-Find One.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Find One.debug.xcconfig"; path = "Target Support Files/Pods-Find One/Pods-Find One.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -212,6 +222,7 @@
 		520538BA2B79EE3B00D81267 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				528F939C2B8C8DEF00BF0A5F /* SideMenu */,
 				520538F72B7A27DF00D81267 /* Base */,
 				520538BB2B79EE3B00D81267 /* Auth */,
 				520538FC2B7A29FC00D81267 /* Home */,
@@ -298,6 +309,7 @@
 		520538E82B79EEEB00D81267 /* Assest&fonts */ = {
 			isa = PBXGroup;
 			children = (
+				528F939A2B8C677F00BF0A5F /* GoogleService-Info.plist */,
 				529834AC2B7B611200A33DAD /* Manrope */,
 				520538EE2B7A239700D81267 /* outfit */,
 				52B638A52B73750B00AE8B7E /* Assets.xcassets */,
@@ -349,6 +361,8 @@
 		520538FD2B7A2A1100D81267 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				528F93A22B8CAF9F00BF0A5F /* ViewModel */,
+				528F939F2B8CAF6D00BF0A5F /* Model */,
 				520538FE2B7A2A2200D81267 /* HomeViewController.swift */,
 				52AD1C0B2B7C959E00E5EA4F /* Cell */,
 			);
@@ -397,6 +411,30 @@
 				527F13992B7F46670055F424 /* FeeStructureViewTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		528F939C2B8C8DEF00BF0A5F /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				528F939D2B8C8E0300BF0A5F /* SideMenuViewController.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		528F939F2B8CAF6D00BF0A5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				528F93A02B8CAF8600BF0A5F /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		528F93A22B8CAF9F00BF0A5F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				528F93A32B8CAFB200BF0A5F /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		529220822B7F6DA800C0E396 /* Map */ = {
@@ -558,14 +596,15 @@
 		52AD1C0B2B7C959E00E5EA4F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				52AD1C0C2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift */,
-				52AD1C0D2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib */,
 				52AD1C102B7C997500E5EA4F /* FeatureTableViewCell.swift */,
 				52AD1C112B7C997500E5EA4F /* FeatureTableViewCell.xib */,
-				52AD1C192B7CC05F00E5EA4F /* BrowseCollectionViewCell.swift */,
-				52AD1C1A2B7CC05F00E5EA4F /* BrowseCollectionViewCell.xib */,
+				52AD1C0C2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift */,
+				52AD1C0D2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib */,
+				52AD1C192B7CC05F00E5EA4F /* CityCollectionViewCell.swift */,
+				52AD1C1A2B7CC05F00E5EA4F /* CityCollectionViewCell.xib */,
 				52AD1C1D2B7CCE2100E5EA4F /* SustainableCollectionViewCell.swift */,
 				52AD1C1E2B7CCE2100E5EA4F /* SustainableCollectionViewCell.xib */,
+				52E4E50D2B8DC8A6001529AF /* TypeCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -693,6 +732,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				529834B42B7B612000A33DAD /* manrope-extrabold.otf in Resources */,
+				528F939B2B8C677F00BF0A5F /* GoogleService-Info.plist in Resources */,
 				52B638A92B73750B00AE8B7E /* LaunchScreen.storyboard in Resources */,
 				52B638A62B73750B00AE8B7E /* Assets.xcassets in Resources */,
 				529834B72B7B612000A33DAD /* manrope-semibold.otf in Resources */,
@@ -717,7 +757,7 @@
 				52C208CA2B7E2A0900FA6470 /* GridCollectionViewCell.xib in Resources */,
 				527F13932B7F3E650055F424 /* ReviewTableViewCell.xib in Resources */,
 				529834B62B7B612000A33DAD /* manrope-light.otf in Resources */,
-				52AD1C1C2B7CC05F00E5EA4F /* BrowseCollectionViewCell.xib in Resources */,
+				52AD1C1C2B7CC05F00E5EA4F /* CityCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,11 +837,13 @@
 				520538F92B7A27EC00D81267 /* BaseViewController.swift in Sources */,
 				520538C62B79EE6300D81267 /* Observable.swift in Sources */,
 				520538FF2B7A2A2200D81267 /* HomeViewController.swift in Sources */,
+				528F939E2B8C8E0300BF0A5F /* SideMenuViewController.swift in Sources */,
 				529834A82B7B4B5B00A33DAD /* SettingsViewController.swift in Sources */,
 				529220852B7F720D00C0E396 /* LocationViewController.swift in Sources */,
 				520538D32B79EE7600D81267 /* Route.swift in Sources */,
 				520538E22B79EE8000D81267 /* AutoSizingUiTableView.swift in Sources */,
 				529220812B7F6D9B00C0E396 /* MapViewController.swift in Sources */,
+				528F93A42B8CAFB200BF0A5F /* HomeViewModel.swift in Sources */,
 				520538CF2B79EE7600D81267 /* URLSession+Extension.swift in Sources */,
 				529220922B7F76E900C0E396 /* GalleryCollectionViewCell.swift in Sources */,
 				52AD1C122B7C997500E5EA4F /* FeatureTableViewCell.swift in Sources */,
@@ -827,13 +869,15 @@
 				529220882B7F758F00C0E396 /* GalleryViewController.swift in Sources */,
 				529834AB2B7B5C8100A33DAD /* CustomSearchViewController.swift in Sources */,
 				520538D12B79EE7600D81267 /* Method.swift in Sources */,
-				52AD1C1B2B7CC05F00E5EA4F /* BrowseCollectionViewCell.swift in Sources */,
+				52AD1C1B2B7CC05F00E5EA4F /* CityCollectionViewCell.swift in Sources */,
 				52D4DB212B85C60700059025 /* SustainableViewController.swift in Sources */,
 				520538DE2B79EE7F00D81267 /* Constants.swift in Sources */,
 				52C208C92B7E2A0900FA6470 /* GridCollectionViewCell.swift in Sources */,
 				52A4ABF92B886FB800E54458 /* SuccessModel.swift in Sources */,
 				52987C632B7DDB29006290F6 /* ResultViewController.swift in Sources */,
 				520538E02B79EE8000D81267 /* Extensions.swift in Sources */,
+				528F93A12B8CAF8600BF0A5F /* HomeModel.swift in Sources */,
+				52E4E50E2B8DC8A6001529AF /* TypeCollectionViewCell.swift in Sources */,
 				52AD1C0E2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift in Sources */,
 				52987C6E2B7E08A5006290F6 /* CustomPageControl.swift in Sources */,
 				52C208C62B7E29EC00FA6470 /* BrowseViewController.swift in Sources */,
@@ -991,8 +1035,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1021,8 +1064,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

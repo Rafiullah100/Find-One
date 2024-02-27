@@ -63,7 +63,7 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="25"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yusr International" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rag-SM-UIN">
-                                                                                <rect key="frame" x="0.0" y="3.6666666666666572" width="116.33333333333333" height="18"/>
+                                                                                <rect key="frame" x="0.0" y="5.0000000000000009" width="101.33333333333333" height="15.333333333333336"/>
                                                                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="13"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -159,7 +159,7 @@
                                                                                         <rect key="frame" x="24" y="0.0" width="133" height="3"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="97% Sustainable Institute" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tR6-fe-4oN">
-                                                                                                <rect key="frame" x="0.0" y="-5.3333333333333428" width="120.33333333333333" height="14"/>
+                                                                                                <rect key="frame" x="0.0" y="-5" width="126.33333333333333" height="13"/>
                                                                                                 <fontDescription key="fontDescription" name="Outfit-Medium" family="Outfit" pointSize="11"/>
                                                                                                 <color key="textColor" red="0.44705882352941173" green="0.70980392156862748" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -232,6 +232,12 @@
                 <constraint firstAttribute="bottom" secondItem="g85-pt-1hU" secondAttribute="bottom" constant="10" id="iDb-vY-MBr"/>
             </constraints>
             <size key="customSize" width="184" height="152"/>
+            <connections>
+                <outlet property="imgView" destination="BoB-SW-uJ7" id="Fil-nu-I77"/>
+                <outlet property="label" destination="Rag-SM-UIN" id="ujG-TK-T2P"/>
+                <outlet property="ratingLabel" destination="Mod-vS-Rua" id="Ivv-rH-3ui"/>
+                <outlet property="susLabel" destination="tR6-fe-4oN" id="eqT-qt-Glt"/>
+            </connections>
             <point key="canvasLocation" x="69.465648854961827" y="35.563380281690144"/>
         </collectionViewCell>
     </objects>

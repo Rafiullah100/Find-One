@@ -283,6 +283,13 @@
                 <constraint firstItem="l8p-Gd-m5J" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="hBW-E6-SPj"/>
             </constraints>
             <size key="customSize" width="184" height="152"/>
+            <connections>
+                <outlet property="educationLabel" destination="RCL-rU-dS0" id="xIy-U0-zT0"/>
+                <outlet property="feeLabel" destination="8OV-1C-hn7" id="emo-EE-cb1"/>
+                <outlet property="imgView" destination="LnJ-wR-LeF" id="xlX-3u-7EN"/>
+                <outlet property="nameLabel" destination="iDZ-l4-QGu" id="tvy-Dp-0Cd"/>
+                <outlet property="ratingLabel" destination="6qd-w8-moS" id="Eb1-OO-kjm"/>
+            </connections>
             <point key="canvasLocation" x="69.465648854961827" y="35.563380281690144"/>
         </collectionViewCell>
     </objects>

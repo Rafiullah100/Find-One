@@ -17,18 +17,29 @@ class FeatureTableViewCell: UITableViewCell {
             collectionView.delegate = self
             collectionView.dataSource = self
             collectionView.register(UINib(nibName: "FeatureCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: FeatureCollectionViewCell.cellReuseIdentifier())
-            collectionView.register(UINib(nibName: "BrowseCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: BrowseCollectionViewCell.cellReuseIdentifier())
+            collectionView.register(UINib(nibName: "CityCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CityCollectionViewCell.cellReuseIdentifier())
             collectionView.register(UINib(nibName: "SustainableCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: SustainableCollectionViewCell.cellReuseIdentifier())
         }
     }
     
+    var citiesList: [CitiesResult]?
+    var regionList: [RegionResult]?
+    var sustainableList: [sustainableResult]?
+    var featureList: [FeatureResult]?{
+        didSet{
+            self.collectionView.reloadData()
+        }
+    }
+
     var cellType: CellType?{
         didSet{
             switch cellType {
             case .feature:
                 typeLabel.text = "Featured Institutions"
-            case .browse:
+            case .city:
                 typeLabel.text = "Browse by Cities"
+            case .region:
+                typeLabel.text = "Browse by Region"
             case .sustainable:
                 typeLabel.text = "Sustainable Institutes"
             default:
@@ -54,19 +65,37 @@ class FeatureTableViewCell: UITableViewCell {
 extension FeatureTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        switch cellType {
+        case .feature:
+            return featureList?.count ?? 0
+        case .city:
+            return citiesList?.count ?? 0
+        case .region:
+            return regionList?.count ?? 0
+        case .sustainable:
+            return sustainableList?.count ?? 0
+        default:
+            return sustainableList?.count ?? 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch cellType {
         case .feature:
             let cell: FeatureCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: FeatureCollectionViewCell.cellReuseIdentifier(), for: indexPath) as! FeatureCollectionViewCell
+            cell.institute = featureList?[indexPath.row]
             return cell
-        case .browse:
-            let cell: BrowseCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: BrowseCollectionViewCell.cellReuseIdentifier(), for: indexPath) as! BrowseCollectionViewCell
+        case .city:
+            let cell: CityCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: CityCollectionViewCell.cellReuseIdentifier(), for: indexPath) as! CityCollectionViewCell
+            cell.city = citiesList?[indexPath.row]
+            return cell
+        case .region:
+            let cell: CityCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: CityCollectionViewCell.cellReuseIdentifier(), for: indexPath) as! CityCollectionViewCell
+            cell.region = regionList?[indexPath.row]
             return cell
         case .sustainable:
             let cell: SustainableCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: SustainableCollectionViewCell.cellReuseIdentifier(), for: indexPath) as! SustainableCollectionViewCell
+            cell.sustainable = sustainableList?[indexPath.row]
             return cell
         default:
             return UICollectionViewCell()
@@ -77,7 +106,9 @@ extension FeatureTableViewCell: UICollectionViewDelegate, UICollectionViewDataSo
         switch cellType {
         case .feature:
             return CGSize(width: 185, height: 250)
-        case .browse:
+        case .city:
+            return  CGSize(width: 100, height: 130)
+        case .region:
             return  CGSize(width: 100, height: 130)
         case .sustainable:
             return  CGSize(width: 170, height: 195)
