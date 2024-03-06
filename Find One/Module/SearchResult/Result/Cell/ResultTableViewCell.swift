@@ -6,9 +6,15 @@
 //
 
 import UIKit
-
+import SDWebImage
 class ResultTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var transportLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var imgView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +26,10 @@ class ResultTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    var institute: Results? {
+        didSet{
+            imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (institute?.imageURL ?? "") ), placeholderImage: UIImage(named: "Rectangle 405"))
+            nameLabel.text = institute?.name ?? ""
+        }
+    }
 }

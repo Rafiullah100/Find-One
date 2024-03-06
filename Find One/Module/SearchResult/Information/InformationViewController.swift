@@ -9,7 +9,12 @@ import UIKit
 
 class InformationViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
-
+    @IBOutlet weak var levelLabel: UILabel!
+    
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var curriculamLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet{
             collectionView.delegate = self
@@ -21,6 +26,16 @@ class InformationViewController: UIViewController {
     let arr = [Grid(name: "Sustainability", image: "sustainability"), Grid(name: "Fee Structure", image: "cash"), Grid(name: "Gallery", image: "gallery"), Grid(name: "Reviews", image: "review"), Grid(name: "Location", image: "locate")]
     
     var delegate: BrowseDelegate?
+    
+    var information: DetailResult? {
+        didSet{
+            levelLabel.text = information?.educationLevel
+            typeLabel.text = information?.type
+            genderLabel.text = information?.gender
+            curriculamLabel.text = information?.curriculam
+            textView.text = information?.detail?.htmlToString.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,24 +73,24 @@ extension InformationViewController: UICollectionViewDelegate, UICollectionViewD
 }
 
 
-class CustomCollectionViewFlowLayout: UICollectionViewFlowLayout {
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        let attributes = super.layoutAttributesForElements(in: rect)
-        
-        var newAttributes = [UICollectionViewLayoutAttributes]()
-        var maxY: CGFloat = -1.0
-        
-        attributes?.forEach { layoutAttribute in
-            if layoutAttribute.frame.origin.y >= maxY {
-                maxY = layoutAttribute.frame.maxY
-            } else {
-                var frame = layoutAttribute.frame
-                frame.origin.x = (collectionView!.bounds.width - frame.width) / 2
-                layoutAttribute.frame = frame
-            }
-            newAttributes.append(layoutAttribute)
-        }
-        
-        return newAttributes
-    }
-}
+//class CustomCollectionViewFlowLayout: UICollectionViewFlowLayout {
+//    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+//        let attributes = super.layoutAttributesForElements(in: rect)
+//        
+//        var newAttributes = [UICollectionViewLayoutAttributes]()
+//        var maxY: CGFloat = -1.0
+//        
+//        attributes?.forEach { layoutAttribute in
+//            if layoutAttribute.frame.origin.y >= maxY {
+//                maxY = layoutAttribute.frame.maxY
+//            } else {
+//                var frame = layoutAttribute.frame
+//                frame.origin.x = (collectionView!.bounds.width - frame.width) / 2
+//                layoutAttribute.frame = frame
+//            }
+//            newAttributes.append(layoutAttribute)
+//        }
+//        
+//        return newAttributes
+//    }
+//}

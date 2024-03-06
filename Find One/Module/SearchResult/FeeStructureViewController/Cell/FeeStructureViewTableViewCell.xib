@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -293,8 +294,12 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="boysFeeLabel" destination="6dk-LP-GP0" id="I7f-PY-h62"/>
                 <outlet property="collapseView" destination="JgY-dE-Bys" id="BWV-x5-6xd"/>
                 <outlet property="dropDownImgView" destination="YVs-md-zFx" id="CtV-L4-Zgu"/>
+                <outlet property="girlsFeeLabel" destination="TMI-t4-6Gc" id="jgc-oP-57V"/>
+                <outlet property="nameLabel" destination="Mmm-tg-5Oc" id="edg-0Z-yCk"/>
+                <outlet property="reservationLabel" destination="ZlY-qV-nxI" id="tGN-jB-ULi"/>
             </connections>
             <point key="canvasLocation" x="-41.221374045801525" y="19.718309859154932"/>
         </tableViewCell>

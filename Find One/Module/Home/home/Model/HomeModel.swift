@@ -60,11 +60,13 @@ struct sustainableResult: Codable {
     let id: Int?
     let name, imageURL: String?
     let sustainable: Int?
-
+    let slug: String?
+    
     enum CodingKeys: String, CodingKey {
         case id, name
         case imageURL = "image_url"
         case sustainable
+        case slug
     }
 }
 
@@ -93,11 +95,13 @@ struct FeatureResult: Codable {
     let id: Int?
     let name, imageURL: String?
     let gender: String?
+    let slug: String?
 
     enum CodingKeys: String, CodingKey {
         case id, name
         case imageURL = "image_url"
         case gender
+        case slug
     }
 }
 

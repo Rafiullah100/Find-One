@@ -25,17 +25,22 @@ class Switcher {
         delegate.present(nav, animated: true)
     }
     
-    static func gotoResult(delegate: UIViewController){
+    static func gotoResult(delegate: UIViewController, id: Int, type: ResultType){
         let vc = UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
         vc.modalPresentationStyle = .fullScreen
         vc.hidesBottomBarWhenPushed = false
+        vc.id = id
+        vc.instType = type
         delegate.navigationController?.pushViewController(vc, animated: true)
     }
     
-    static func gotoDetail(delegate: UIViewController){
+    static func gotoDetail(delegate: UIViewController, id: Int, slug: String){
         let vc = UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         vc.modalPresentationStyle = .fullScreen
         vc.hidesBottomBarWhenPushed = false
+        vc.id = id
+        vc.slug = slug
+        print(id, slug)
         delegate.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -46,10 +51,11 @@ class Switcher {
         delegate.navigationController?.pushViewController(vc, animated: true)
     }
     
-    static func gotoLocation(delegate: UIViewController){
+    static func gotoLocation(delegate: UIViewController, id: Int){
         let vc = UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "LocationViewController") as! LocationViewController
         vc.modalPresentationStyle = .fullScreen
         vc.hidesBottomBarWhenPushed = true
+        vc.id = id
         delegate.navigationController?.pushViewController(vc, animated: true)
     }
     

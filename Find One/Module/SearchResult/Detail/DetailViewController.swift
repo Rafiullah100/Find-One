@@ -31,10 +31,19 @@ class DetailViewController: BaseViewController {
         return UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "SustainableViewController") as! SustainableViewController
     }()
     
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var pageControl: CustomPageControl!
     
     var childVC: UIViewController!
+    var id: Int?
+    var slug: String?
+
+    var viewModel = DetailViewModel()
+    var details: DetailModel?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +52,7 @@ class DetailViewController: BaseViewController {
         childVC = informationVC
         addChildVC()
         custompageContrl()
+        self.loadData()
     }
     
     private func addChildVC(){
@@ -70,6 +80,23 @@ class DetailViewController: BaseViewController {
             addChildVC()
         }
     }
+    
+    private func loadData(){
+        viewModel.details.bind { detail in
+            self.stopAnimation()
+            self.details = detail
+            self.reloadView()
+        }
+        self.animateSpinner()
+        viewModel.getInstituteDetails(id: id ?? 0, slug: slug ?? "")
+    }
+    
+    private func reloadView(){
+        nameLabel.text = details?.result?.name
+        addressLabel.text = details?.result?.address
+        informationVC.information = self.details?.result
+//        ratingLabel.text = details?.result?.
+    }
 }
 
 extension DetailViewController: BrowseDelegate{
@@ -80,12 +107,15 @@ extension DetailViewController: BrowseDelegate{
             childVC = sustainableVC
         case 1:
             childVC = feeVC
+            feeVC.id = id
         case 2:
             childVC = galleryVC
+            galleryVC.id = id
         case 3:
             childVC = reviewVC
+            reviewVC.id = id
         case 4:
-            Switcher.gotoLocation(delegate: self)
+            Switcher.gotoLocation(delegate: self, id: id ?? 0)
         default:
             break
         }

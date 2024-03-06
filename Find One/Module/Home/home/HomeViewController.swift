@@ -15,17 +15,42 @@ enum CellType {
 
 class HomeViewController: BaseViewController {
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var sustainableCollectionView: UICollectionView!{
+        didSet{
+            sustainableCollectionView.dataSource = self
+            sustainableCollectionView.delegate = self
+            sustainableCollectionView.register(UINib(nibName: "SustainableCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "sustain")
+        }
+    }
+    @IBOutlet weak var regionCollectionView: UICollectionView!{
+        didSet{
+            regionCollectionView.dataSource = self
+            regionCollectionView.delegate = self
+            regionCollectionView.register(UINib(nibName: "CityCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "city")
+
+        }
+    }
+    @IBOutlet weak var cityCollectionView: UICollectionView!{
+        didSet{
+            cityCollectionView.dataSource = self
+            cityCollectionView.delegate = self
+            cityCollectionView.register(UINib(nibName: "CityCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "city")
+
+        }
+    }
+    @IBOutlet weak var featureCollectionView: UICollectionView!{
+        didSet{
+            featureCollectionView.dataSource = self
+            featureCollectionView.delegate = self
+            featureCollectionView.register(UINib(nibName: "FeatureCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "feature")
+
+        }
+    }
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet{
             collectionView.dataSource = self
             collectionView.delegate = self
-        }
-    }
-    @IBOutlet weak var tableView: UITableView!{
-        didSet{
-            tableView.delegate = self
-            tableView.dataSource = self
-            tableView.register(UINib(nibName: "FeatureTableViewCell", bundle: nil), forCellReuseIdentifier: FeatureTableViewCell.cellReuseIdentifier())
         }
     }
     
@@ -37,14 +62,14 @@ class HomeViewController: BaseViewController {
     var featureList: [FeatureResult]?
 
     let dispatchGroup = DispatchGroup()
-    
+    var shouldReloadSustainableRow = false
+
     var indexRow: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .home
         self.animateSpinner()
-        
         viewModel.instituteList.bind { institute in
             self.stopAnimation()
             self.instituteList = institute
@@ -55,25 +80,25 @@ class HomeViewController: BaseViewController {
         }
 
         viewModel.featureList.bind { feature in
-            print(feature?.count)
             self.featureList = feature
-            self.tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+            self.featureCollectionView.reloadData()
         }
         
         viewModel.CitiesList.bind { cities in
             self.citiesList = cities
-            self.tableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .automatic)
+            self.cityCollectionView.reloadData()
         }
         
         viewModel.regionList.bind { regions in
             self.regionList = regions
-            self.tableView.reloadRows(at: [IndexPath(row: 2, section: 0)], with: .automatic)
+            self.regionCollectionView.reloadData()
         }
         
         viewModel.sustainableList.bind { sustainable in
             self.stopAnimation()
+            self.shouldReloadSustainableRow = true
             self.sustainableList = sustainable
-            self.tableView.reloadRows(at: [IndexPath(row: 3, section: 0)], with: .automatic)
+            self.sustainableCollectionView.reloadData()
         }
         
         dispatchGroup.enter()
@@ -99,93 +124,153 @@ class HomeViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
-    }
-    
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: FeatureTableViewCell = tableView.dequeueReusableCell(withIdentifier: FeatureTableViewCell.cellReuseIdentifier()) as! FeatureTableViewCell
-        
-        cell.didTappedInstitute = { index, type in
-            if type == .feature {
-                Switcher.gotoDetail(delegate: self)
-            }
-            else if type == .city {
-                Switcher.gotoResult(delegate: self)
-            }
-            else{
-                Switcher.gotoResult(delegate: self)
-            }
-        }
-        switch indexPath.row {
-        case 0:
-            cell.cellType = .feature
-            cell.featureList = featureList
-        case 1:
-            cell.cellType = .city
-            cell.citiesList = citiesList
-        case 2:
-            cell.cellType = .region
-            cell.regionList = regionList
-        case 3:
-            cell.cellType = .sustainable
-            cell.sustainableList = sustainableList
-        default:
-            cell.cellType = .feature
-        }
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
-        case 0:
-            return 290.0
-        case 1, 2:
-            return 145.0
-        case 3:
-            return 245.0
-        default:
-            return 0
-        }
-    }
-}
+//extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 4
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell: FeatureTableViewCell = tableView.dequeueReusableCell(withIdentifier: FeatureTableViewCell.cellReuseIdentifier()) as! FeatureTableViewCell
+//        tableView.reloadRows(at: [IndexPath(row: 3, section: 0)], with: .automatic)
+//        cell.didTappedInstitute = { index, type in
+//            if type == .feature {
+//                Switcher.gotoDetail(delegate: self)
+//            }
+//            else if type == .city {
+//                Switcher.gotoResult(delegate: self)
+//            }
+//            else{
+//                Switcher.gotoResult(delegate: self)
+//            }
+//        }
+//        switch indexPath.row {
+//        case 0:
+//            cell.cellType = .feature
+//            cell.featureList = featureList
+//        case 1:
+//            cell.cellType = .city
+//            cell.citiesList = citiesList
+//        case 2:
+//            cell.cellType = .region
+//            cell.regionList = regionList
+//        case 3:
+//            cell.cellType = .sustainable
+//            cell.sustainableList = sustainableList
+//        default:
+//            cell.cellType = .feature
+//        }
+//        return cell
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        switch indexPath.row {
+//        case 0:
+//            return 290.0
+//        case 1, 2:
+//            return 220.0
+//        case 3:
+//            return 245.0
+//        default:
+//            return 0
+//        }
+//    }
+//}
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return instituteList?.count ?? 0
+        if collectionView == self.featureCollectionView{
+            return featureList?.count ?? 0
+        }
+        else if collectionView == self.regionCollectionView{
+            print(regionList?.count ?? 0)
+            return regionList?.count ?? 0
+        }
+        else if collectionView == self.cityCollectionView{
+            return citiesList?.count ?? 0
+        }
+        else if collectionView == self.sustainableCollectionView{
+            return sustainableList?.count ?? 0
+        }
+        else{
+            return instituteList?.count ?? 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: TypeCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "id", for: indexPath) as! TypeCollectionViewCell
-        cell.label.text = instituteList?[indexPath.row].name
-        if indexPath.row == indexRow{
-            cell.dotView.isHidden = false
-            cell.label.textColor = .black
-        }else{
-            cell.dotView.isHidden = true
-            cell.label.textColor = .darkGray
-        }
         
-        return cell
+        if collectionView == self.featureCollectionView{
+            let cell: FeatureCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "feature", for: indexPath) as! FeatureCollectionViewCell
+            cell.institute = featureList?[indexPath.row]
+            return cell
+        }
+        else if collectionView == self.regionCollectionView{
+            let cell: CityCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "city", for: indexPath) as! CityCollectionViewCell
+            cell.region = regionList?[indexPath.row]
+            return cell
+        }
+        else if collectionView == self.cityCollectionView{
+            let cell: CityCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "city", for: indexPath) as! CityCollectionViewCell
+            cell.city = citiesList?[indexPath.row]
+            return cell
+        }
+        else if collectionView == self.sustainableCollectionView{
+            let cell: SustainableCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "sustain", for: indexPath) as! SustainableCollectionViewCell
+            cell.sustainable = sustainableList?[indexPath.row]
+            return cell
+        }
+        else{
+            let cell: TypeCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "id", for: indexPath) as! TypeCollectionViewCell
+            cell.instituteType = instituteList?[indexPath.row]
+            if indexRow == indexPath.row {
+                cell.label.textColor = .black
+                cell.dotView.isHidden = false
+            }
+            else{
+                cell.label.textColor = .darkGray
+                cell.dotView.isHidden = true
+
+            }
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width/4, height: collectionView.frame.height)
+        if collectionView == self.featureCollectionView{
+            return CGSize(width: 185, height: 220)
+        }
+        else if collectionView == self.cityCollectionView || collectionView == self.regionCollectionView{
+            return CGSize(width: 150, height: 160)
+        }
+        else if collectionView == self.sustainableCollectionView{
+            return CGSize(width: 170, height: 195)
+
+        }
+        else{
+            return CGSize(width: collectionView.frame.width/4, height: collectionView.frame.height)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        indexRow = indexPath.row
-        collectionView.reloadData()
-        viewModel.getFeatureList(levelID: self.instituteList?[indexPath.row].id ?? 0)
+        if collectionView == self.featureCollectionView {
+            Switcher.gotoDetail(delegate: self, id: featureList?[indexPath.row].id ?? 0, slug: sustainableList?[indexPath.row].slug ?? "")
+        }
+        else if collectionView == self.sustainableCollectionView{
+            Switcher.gotoDetail(delegate: self, id: sustainableList?[indexPath.row].id ?? 0, slug: sustainableList?[indexPath.row].slug ?? "")
+        }
+        else if collectionView == self.cityCollectionView{
+            Switcher.gotoResult(delegate: self, id: citiesList?[indexPath.row].id ?? 0, type: .city)
+        }
+        else if collectionView == self.regionCollectionView{
+            Switcher.gotoResult(delegate: self, id: regionList?[indexPath.row].id ?? 0, type: .region)
+        }
+        else{
+            indexRow = indexPath.row
+            collectionView.reloadData()
+            viewModel.getFeatureList(levelID: self.instituteList?[indexPath.row].id ?? 0)
+        }
     }
 }

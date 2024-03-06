@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GalleryViewController: UIViewController {
+class GalleryViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet{
@@ -16,27 +16,38 @@ class GalleryViewController: UIViewController {
             collectionView.register(UINib(nibName: "GalleryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: GalleryCollectionViewCell.cellReuseIdentifier())
         }
     }
+    var viewModel = DetailViewModel()
+    var galleryDetail: [GalleryResult]?
+    var id: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 30.0, right: 0)
+        
+        viewModel.galleryDetails.bind { galleryDetail in
+            self.stopAnimation()
+            self.galleryDetail = galleryDetail
+            self.collectionView.reloadData()
+        }
+        self.animateSpinner()
+        viewModel.getGalleryDetails(id: id ?? 0, detailType: .gallery)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         view.backgroundColor = .clear
-    
     }
 }
 
 extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 21
+        return galleryDetail?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: GalleryCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: GalleryCollectionViewCell.cellReuseIdentifier(), for: indexPath) as! GalleryCollectionViewCell
+        cell.gallery = galleryDetail?[indexPath.row]
         return cell
     }
     

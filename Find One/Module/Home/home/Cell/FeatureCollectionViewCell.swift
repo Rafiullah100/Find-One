@@ -9,6 +9,7 @@ import UIKit
 
 class FeatureCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var topView: UIView!
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var feeLabel: UILabel!
     @IBOutlet weak var educationLabel: UILabel!
@@ -25,7 +26,7 @@ class FeatureCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        topView.layer.masksToBounds = true
     }
 
 }

@@ -21,7 +21,10 @@ enum Route {
     case sustainable
     case level
     case featureInstitute
-
+    case institutesByCity
+    case institutesByRegion
+    case detail
+    case detailRelated
     var description: String {
         switch self {
         case .signup:
@@ -42,6 +45,14 @@ enum Route {
             return "mobile/home/level"
         case .featureInstitute:
             return "mobile/home/institutes-by-level?"
+        case .institutesByCity:
+            return "mobile/home/institutes-by-city"
+        case .institutesByRegion:
+            return "mobile/home/institutes-by-region"
+        case .detail:
+            return "mobile/institutes/detail"
+        case .detailRelated:
+            return "mobile/institutes/detail-related"
         }
     }
 }

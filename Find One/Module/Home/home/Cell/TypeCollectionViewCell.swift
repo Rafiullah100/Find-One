@@ -11,4 +11,11 @@ class TypeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var dotView: UIView!
+    
+    var instituteType: InstituteResult?{
+        didSet{
+            label.text = instituteType?.name ?? ""
+        }
+    }
+
 }
