@@ -38,21 +38,15 @@
             </objects>
             <point key="canvasLocation" x="2228.2442748091603" y="423.94366197183103"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="mPu-89-4yb">
+        <!--ProfileViewController-->
+        <scene sceneID="Iy1-RG-wHf">
             <objects>
-                <viewController id="gZp-Sx-ORe" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aVn-2O-PCe">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="VCp-eh-KHn"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="tLT-GR-ghp"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Its-BE-zg8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="ProfileViewController" id="JgF-hC-uzY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="K4h-M1-WG1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="piL-8d-U0K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3967.1755725190837" y="61.971830985915496"/>
+            <point key="canvasLocation" x="2543" y="-15"/>
         </scene>
         <!--Custom Search View Controller-->
         <scene sceneID="JZ5-sx-yoz">
@@ -1458,7 +1452,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="oBI-KS-hkT"/>
                     <connections>
+                        <outlet property="cityTextField" destination="I2X-eH-9WQ" id="HQD-Yv-qJd"/>
+                        <outlet property="instituteTextField" destination="o83-3J-NGx" id="4nF-Ii-xVA"/>
+                        <outlet property="regionTextField" destination="ytc-oF-WXJ" id="o2k-Ii-xrX"/>
                         <outlet property="scrollView" destination="MbD-jR-PNX" id="W3S-id-Tai"/>
+                        <outlet property="segmentView" destination="IgJ-Wu-pym" id="DBQ-0e-S6f"/>
+                        <outlet property="sliderView" destination="cLD-1C-itL" id="mKG-Le-ovg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V4o-zp-Xhj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1479,7 +1478,7 @@
                         <segue destination="MRd-yt-RT5" kind="relationship" relationship="viewControllers" id="I5U-UP-dr5"/>
                         <segue destination="m8l-nw-zh2" kind="relationship" relationship="viewControllers" id="wNQ-hR-wlG"/>
                         <segue destination="wg1-xL-7cp" kind="relationship" relationship="viewControllers" id="ATX-f3-m0m"/>
-                        <segue destination="Lc6-XL-ALJ" kind="relationship" relationship="viewControllers" id="9qh-dA-0h7"/>
+                        <segue destination="JgF-hC-uzY" kind="relationship" relationship="viewControllers" id="BCG-K8-1nX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pdj-Ai-cOu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1928,25 +1927,6 @@
             </objects>
             <point key="canvasLocation" x="1553.4351145038167" y="423.94366197183103"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="4gs-cj-Kqk">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lc6-XL-ALJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="profile" id="76i-qo-SDE"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gUs-aw-ao5">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gZp-Sx-ORe" kind="relationship" relationship="rootViewController" id="9wm-yP-XXe"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WR1-Au-gL1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3040.4580152671756" y="61.971830985915496"/>
-        </scene>
         <!--Settings-->
         <scene sceneID="hpx-MM-AHG">
             <objects>
@@ -2318,11 +2298,11 @@
             </objects>
             <point key="canvasLocation" x="846.56488549618314" y="423.94366197183103"/>
         </scene>
-        <!--Settings-->
+        <!--Navigation Controller-->
         <scene sceneID="l8D-BN-RXm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MRd-yt-RT5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="Settings" id="O1E-cG-f6x"/>
+                    <tabBarItem key="tabBarItem" title="" image="Settings" id="O1E-cG-f6x"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8li-an-pVN">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -2354,7 +2334,6 @@
         <image name="language" width="16" height="15"/>
         <image name="navigation" width="7" height="15"/>
         <image name="option" width="16" height="16"/>
-        <image name="profile" width="25" height="25"/>
         <image name="region" width="12" height="15"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

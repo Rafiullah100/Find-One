@@ -32,13 +32,12 @@ class FeeStructureViewController: BaseViewController {
         viewModel.feeDetails.bind { feeDetail in
             self.stopAnimation()
             self.feeDetail = feeDetail
+            feeDetail?.count == 0 ? self.tableView.setEmptyView() : self.tableView.setEmptyView("")
             self.tableView.reloadData()
         }
         self.animateSpinner()
         viewModel.getFeeDetails(id: id ?? 0, detailType: .fee)
     }
-    
-    
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

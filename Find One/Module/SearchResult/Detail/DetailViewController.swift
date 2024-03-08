@@ -92,8 +92,8 @@ class DetailViewController: BaseViewController {
     }
     
     private func reloadView(){
-        nameLabel.text = details?.result?.name
-        addressLabel.text = details?.result?.address
+        nameLabel.text = details?.result?.name?.trimmingCharacters(in: .whitespacesAndNewlines)
+        addressLabel.text = details?.result?.address?.trimmingCharacters(in: .whitespacesAndNewlines)
         informationVC.information = self.details?.result
 //        ratingLabel.text = details?.result?.
     }

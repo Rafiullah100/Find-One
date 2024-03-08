@@ -256,7 +256,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.featureCollectionView {
-            Switcher.gotoDetail(delegate: self, id: featureList?[indexPath.row].id ?? 0, slug: sustainableList?[indexPath.row].slug ?? "")
+            Switcher.gotoDetail(delegate: self, id: featureList?[indexPath.row].id ?? 0, slug: featureList?[indexPath.row].slug ?? "")
         }
         else if collectionView == self.sustainableCollectionView{
             Switcher.gotoDetail(delegate: self, id: sustainableList?[indexPath.row].id ?? 0, slug: sustainableList?[indexPath.row].slug ?? "")

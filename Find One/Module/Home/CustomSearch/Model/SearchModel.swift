@@ -6,3 +6,44 @@
 //
 
 import Foundation
+
+struct SearchRegionModel: Codable {
+    let success: Bool?
+    let result: [RegionResultModel]?
+    let message: String?
+}
+
+// MARK: - Result
+struct RegionResultModel: Codable {
+    let id, countryID: Int?
+    let name, slug, imageURL: String?
+    let instituteCount: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case countryID = "country_id"
+        case name, slug
+        case imageURL = "image_url"
+        case instituteCount = "institute_count"
+    }
+}
+
+
+struct SearchCityModel: Codable {
+    let success: Bool?
+    let result: [CityResultModel]?
+    let message: String?
+}
+
+// MARK: - Result
+struct CityResultModel: Codable {
+    let id: Int?
+    let name, slug, imageURL: String?
+    let instituteCount: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, slug
+        case imageURL = "image_url"
+        case instituteCount = "institute_count"
+    }
+}

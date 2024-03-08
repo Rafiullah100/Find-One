@@ -305,6 +305,7 @@
             <connections>
                 <outlet property="imgView" destination="esw-2R-uya" id="eBa-pA-DOJ"/>
                 <outlet property="nameLabel" destination="U2T-JH-fVh" id="d9g-CF-YEN"/>
+                <outlet property="reviewLabel" destination="mS7-pJ-XNr" id="wGg-qc-Cpe"/>
                 <outlet property="timeLabel" destination="EdA-rt-Pgt" id="Tim-RY-1L8"/>
                 <outletCollection property="starsImgView" destination="rPP-Cm-WBb" collectionClass="NSMutableArray" id="LVF-8G-4rn"/>
                 <outletCollection property="starsImgView" destination="P05-6m-dex" collectionClass="NSMutableArray" id="Ipy-Wm-J30"/>

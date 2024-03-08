@@ -88,4 +88,11 @@ class Switcher {
             window.makeKeyAndVisible()
         }
     }
+    
+    static func gotoInformation(delegate: UIViewController){
+        let vc = UIStoryboard(name: Storyboard.profile.rawValue, bundle: nil).instantiateViewController(withIdentifier: "PersonalInfoViewController") as! PersonalInfoViewController
+        vc.modalPresentationStyle = .fullScreen
+        delegate.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

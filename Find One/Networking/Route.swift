@@ -25,6 +25,8 @@ enum Route {
     case institutesByRegion
     case detail
     case detailRelated
+    case region
+    case city
     var description: String {
         switch self {
         case .signup:
@@ -53,6 +55,10 @@ enum Route {
             return "mobile/institutes/detail"
         case .detailRelated:
             return "mobile/institutes/detail-related"
+        case .region:
+            return "mobile/home/region"
+        case .city:
+            return "mobile/home/cities"
         }
     }
 }
