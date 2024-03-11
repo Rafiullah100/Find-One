@@ -23,6 +23,7 @@ class InformationViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var viewhieght: NSLayoutConstraint!
     let arr = [Grid(name: "Sustainability", image: "sustainability"), Grid(name: "Fee Structure", image: "cash"), Grid(name: "Gallery", image: "gallery"), Grid(name: "Reviews", image: "review"), Grid(name: "Location", image: "locate")]
     
     var delegate: BrowseDelegate?
@@ -39,7 +40,7 @@ class InformationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,6 +48,10 @@ class InformationViewController: UIViewController {
         self.view.backgroundColor = .clear
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        viewhieght.constant = collectionView.contentSize.height
+    }
 }
 
 extension InformationViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -67,30 +72,22 @@ extension InformationViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        didTappedInstitute?(indexPath.row)
         delegate?.selectCategory(index: indexPath.row)
     }
 }
 
 
-//class CustomCollectionViewFlowLayout: UICollectionViewFlowLayout {
-//    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-//        let attributes = super.layoutAttributesForElements(in: rect)
-//        
-//        var newAttributes = [UICollectionViewLayoutAttributes]()
-//        var maxY: CGFloat = -1.0
-//        
-//        attributes?.forEach { layoutAttribute in
-//            if layoutAttribute.frame.origin.y >= maxY {
-//                maxY = layoutAttribute.frame.maxY
-//            } else {
-//                var frame = layoutAttribute.frame
-//                frame.origin.x = (collectionView!.bounds.width - frame.width) / 2
-//                layoutAttribute.frame = frame
-//            }
-//            newAttributes.append(layoutAttribute)
-//        }
-//        
-//        return newAttributes
-//    }
-//}
+extension InformationViewController {
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if kind == UICollectionView.elementKindSectionFooter {
+            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer_view", for: indexPath) as! FooterView
+            footerView.didTappedBtn = {
+                Switcher.gotoBooking(delegate: self)
+            }
+            return footerView
+        }
+        return UICollectionReusableView()
+    }
+}

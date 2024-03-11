@@ -47,3 +47,29 @@ struct CityResultModel: Codable {
         case instituteCount = "institute_count"
     }
 }
+
+
+struct InstitutetypeModel: Codable {
+    let success: Bool?
+    let result: [InstitutetypeResult]?
+    let message: String?
+}
+
+// MARK: - Result
+struct InstitutetypeResult: Codable {
+    let id: Int?
+    let name: String?
+}
+
+
+struct GenderModel: Codable {
+    let success: Bool?
+    let result: [GenderResult]?
+    let message: String?
+}
+
+// MARK: - Result
+struct GenderResult: Codable, Equatable {
+    let id: Int?
+    let name: String?
+}

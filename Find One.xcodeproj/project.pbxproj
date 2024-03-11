@@ -33,6 +33,12 @@
 		520538FB2B7A29E900D81267 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520538FA2B7A29E900D81267 /* Home.storyboard */; };
 		520538FF2B7A2A2200D81267 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520538FE2B7A2A2200D81267 /* HomeViewController.swift */; };
 		520539012B7A2E0C00D81267 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520539002B7A2E0C00D81267 /* Menu.storyboard */; };
+		5234034F2B9EF0D100A93EFE /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5234034E2B9EF0D100A93EFE /* FooterView.swift */; };
+		523403512B9F0E0400A93EFE /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523403502B9F0E0400A93EFE /* Booking.storyboard */; };
+		523403542B9F104E00A93EFE /* Header.png in Resources */ = {isa = PBXBuildFile; fileRef = 523403532B9F104E00A93EFE /* Header.png */; };
+		523403582B9F10DA00A93EFE /* ParentBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523403572B9F10DA00A93EFE /* ParentBookingViewController.swift */; };
+		5234035A2B9F10F900A93EFE /* StudentBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523403592B9F10F900A93EFE /* StudentBookingViewController.swift */; };
+		5234035C2B9F160F00A93EFE /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5234035B2B9F160F00A93EFE /* BookingViewController.swift */; };
 		523C294E2B7F30DA00110C1D /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523C294D2B7F30DA00110C1D /* InformationViewController.swift */; };
 		523FFB362B9AE6D0005BCFA7 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FFB352B9AE6D0005BCFA7 /* PersonalInfoViewController.swift */; };
 		523FFB3A2B9AE897005BCFA7 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 523FFB382B9AE897005BCFA7 /* ProfileTableViewCell.xib */; };
@@ -131,6 +137,12 @@
 		520538FA2B7A29E900D81267 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		520538FE2B7A2A2200D81267 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		520539002B7A2E0C00D81267 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		5234034E2B9EF0D100A93EFE /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		523403502B9F0E0400A93EFE /* Booking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Booking.storyboard; sourceTree = "<group>"; };
+		523403532B9F104E00A93EFE /* Header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Header.png; sourceTree = "<group>"; };
+		523403572B9F10DA00A93EFE /* ParentBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentBookingViewController.swift; sourceTree = "<group>"; };
+		523403592B9F10F900A93EFE /* StudentBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentBookingViewController.swift; sourceTree = "<group>"; };
+		5234035B2B9F160F00A93EFE /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		523C294D2B7F30DA00110C1D /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		523FFB352B9AE6D0005BCFA7 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		523FFB382B9AE897005BCFA7 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
@@ -246,6 +258,7 @@
 		520538BA2B79EE3B00D81267 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				523403522B9F0FDD00A93EFE /* Book */,
 				52F612B82B999EAD00EC1EA9 /* Profile */,
 				528F939C2B8C8DEF00BF0A5F /* SideMenu */,
 				520538F72B7A27DF00D81267 /* Base */,
@@ -328,6 +341,7 @@
 				520539002B7A2E0C00D81267 /* Menu.storyboard */,
 				52987C5E2B7DDAA0006290F6 /* Result.storyboard */,
 				52F612B62B9993E600EC1EA9 /* Profile.storyboard */,
+				523403502B9F0E0400A93EFE /* Booking.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -339,6 +353,7 @@
 				529834AC2B7B611200A33DAD /* Manrope */,
 				520538EE2B7A239700D81267 /* outfit */,
 				52B638A52B73750B00AE8B7E /* Assets.xcassets */,
+				523403532B9F104E00A93EFE /* Header.png */,
 				523FFB3C2B9AEDAB005BCFA7 /* Profile.png */,
 				52B638A72B73750B00AE8B7E /* LaunchScreen.storyboard */,
 			);
@@ -396,10 +411,45 @@
 			path = home;
 			sourceTree = "<group>";
 		};
+		5234034D2B9EE59800A93EFE /* FooterView */ = {
+			isa = PBXGroup;
+			children = (
+				5234034E2B9EF0D100A93EFE /* FooterView.swift */,
+			);
+			path = FooterView;
+			sourceTree = "<group>";
+		};
+		523403522B9F0FDD00A93EFE /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				523403562B9F10B700A93EFE /* StudentBooking */,
+				523403552B9F10AA00A93EFE /* ParentBooking */,
+				5234035B2B9F160F00A93EFE /* BookingViewController.swift */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
+		523403552B9F10AA00A93EFE /* ParentBooking */ = {
+			isa = PBXGroup;
+			children = (
+				523403572B9F10DA00A93EFE /* ParentBookingViewController.swift */,
+			);
+			path = ParentBooking;
+			sourceTree = "<group>";
+		};
+		523403562B9F10B700A93EFE /* StudentBooking */ = {
+			isa = PBXGroup;
+			children = (
+				523403592B9F10F900A93EFE /* StudentBookingViewController.swift */,
+			);
+			path = StudentBooking;
+			sourceTree = "<group>";
+		};
 		523C294C2B7F30C000110C1D /* Information */ = {
 			isa = PBXGroup;
 			children = (
 				523C294D2B7F30DA00110C1D /* InformationViewController.swift */,
+				5234034D2B9EE59800A93EFE /* FooterView */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -833,9 +883,11 @@
 			files = (
 				529834B42B7B612000A33DAD /* manrope-extrabold.otf in Resources */,
 				528F939B2B8C677F00BF0A5F /* GoogleService-Info.plist in Resources */,
+				523403512B9F0E0400A93EFE /* Booking.storyboard in Resources */,
 				52B638A92B73750B00AE8B7E /* LaunchScreen.storyboard in Resources */,
 				52B638A62B73750B00AE8B7E /* Assets.xcassets in Resources */,
 				529834B72B7B612000A33DAD /* manrope-semibold.otf in Resources */,
+				523403542B9F104E00A93EFE /* Header.png in Resources */,
 				52AD1C132B7C997500E5EA4F /* FeatureTableViewCell.xib in Resources */,
 				520538F32B7A23A500D81267 /* Outfit-SemiBold.ttf in Resources */,
 				529834B82B7B612000A33DAD /* manrope-bold.otf in Resources */,
@@ -944,6 +996,7 @@
 				520538FF2B7A2A2200D81267 /* HomeViewController.swift in Sources */,
 				528F939E2B8C8E0300BF0A5F /* SideMenuViewController.swift in Sources */,
 				52F612BA2B999EC800EC1EA9 /* ProfileViewController.swift in Sources */,
+				523403582B9F10DA00A93EFE /* ParentBookingViewController.swift in Sources */,
 				529834A82B7B4B5B00A33DAD /* SettingsViewController.swift in Sources */,
 				523FFB422B9B0FB5005BCFA7 /* SearchViewModel.swift in Sources */,
 				529220852B7F720D00C0E396 /* LocationViewController.swift in Sources */,
@@ -973,16 +1026,19 @@
 				52987C662B7DE14F006290F6 /* ResultTableViewCell.swift in Sources */,
 				520538DF2B79EE7F00D81267 /* Switcher.swift in Sources */,
 				52B6389F2B73750600AE8B7E /* SceneDelegate.swift in Sources */,
+				5234035A2B9F10F900A93EFE /* StudentBookingViewController.swift in Sources */,
 				52A4ABFE2B887F9D00E54458 /* LoginViewModel.swift in Sources */,
 				52A4AC012B88809600E54458 /* LoginModel.swift in Sources */,
 				52A4ABFB2B88700C00E54458 /* SignupViewModel.swift in Sources */,
 				529220882B7F758F00C0E396 /* GalleryViewController.swift in Sources */,
 				529834AB2B7B5C8100A33DAD /* CustomSearchViewController.swift in Sources */,
 				520538D12B79EE7600D81267 /* Method.swift in Sources */,
+				5234035C2B9F160F00A93EFE /* BookingViewController.swift in Sources */,
 				525529962B971C5E00395676 /* ResultViewModel.swift in Sources */,
 				52AD1C1B2B7CC05F00E5EA4F /* CityCollectionViewCell.swift in Sources */,
 				52D4DB212B85C60700059025 /* SustainableViewController.swift in Sources */,
 				520538DE2B79EE7F00D81267 /* Constants.swift in Sources */,
+				5234034F2B9EF0D100A93EFE /* FooterView.swift in Sources */,
 				52C208C92B7E2A0900FA6470 /* GridCollectionViewCell.swift in Sources */,
 				52A4ABF92B886FB800E54458 /* SuccessModel.swift in Sources */,
 				523FFB362B9AE6D0005BCFA7 /* PersonalInfoViewController.swift in Sources */,

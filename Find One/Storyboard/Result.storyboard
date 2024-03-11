@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Manrope-VariableFont_wght.ttf">
+        <array key="Manrope-SemiBold.ttf">
             <string>Manrope-SemiBold</string>
         </array>
         <array key="manrope-bold.otf">
@@ -823,10 +823,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOK-iz-WGF">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="776.66666666666663"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="806.66666666666663"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YUJ-o8-jzK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="776.66666666666663"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="806.66666666666663"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfx-m6-LNI">
                                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="145"/>
@@ -1328,10 +1328,10 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBG-2n-ZON">
-                                                                <rect key="frame" x="0.0" y="506.66666666666663" width="393" height="270"/>
+                                                                <rect key="frame" x="0.0" y="506.66666666666663" width="393" height="300"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uRx-x7-yz2">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="270"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xEd-9e-BaJ">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="22"/>
@@ -1351,15 +1351,15 @@
                                                                                 </constraints>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5L-eb-u7p">
-                                                                                <rect key="frame" x="0.0" y="32" width="393" height="238"/>
+                                                                                <rect key="frame" x="0.0" y="32" width="393" height="268"/>
                                                                                 <subviews>
-                                                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3kg-BV-GmI">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="238"/>
+                                                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3kg-BV-GmI">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="268"/>
                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vEo-iu-Dtr">
+                                                                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CIk-Pu-sho">
                                                                                             <size key="itemSize" width="128" height="128"/>
                                                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                                            <size key="footerReferenceSize" width="50" height="70"/>
                                                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                                         </collectionViewFlowLayout>
                                                                                         <cells>
@@ -1372,11 +1372,43 @@
                                                                                                 </collectionViewCellContentView>
                                                                                             </collectionViewCell>
                                                                                         </cells>
+                                                                                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footer_view" id="0o2-qb-K21" customClass="FooterView" customModule="Find_One" customModuleProvider="target">
+                                                                                            <rect key="frame" x="0.0" y="128" width="393" height="70"/>
+                                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                                            <subviews>
+                                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqC-ee-3n2">
+                                                                                                    <rect key="frame" x="121.66666666666669" y="20" width="150" height="50"/>
+                                                                                                    <color key="backgroundColor" red="0.08235294118" green="0.61176470589999998" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                                    <constraints>
+                                                                                                        <constraint firstAttribute="width" constant="150" id="gix-09-GUl"/>
+                                                                                                        <constraint firstAttribute="height" constant="50" id="mP9-l5-mTJ"/>
+                                                                                                    </constraints>
+                                                                                                    <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="20"/>
+                                                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                                    <state key="normal" title="Booking">
+                                                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                    </state>
+                                                                                                    <userDefinedRuntimeAttributes>
+                                                                                                        <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
+                                                                                                            <real key="value" value="7"/>
+                                                                                                        </userDefinedRuntimeAttribute>
+                                                                                                    </userDefinedRuntimeAttributes>
+                                                                                                    <connections>
+                                                                                                        <action selector="bookingBtnAction:" destination="0o2-qb-K21" eventType="touchUpInside" id="KOj-Ll-ZKf"/>
+                                                                                                    </connections>
+                                                                                                </button>
+                                                                                            </subviews>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="bottom" secondItem="bqC-ee-3n2" secondAttribute="bottom" id="DiN-xz-Vjv"/>
+                                                                                                <constraint firstItem="bqC-ee-3n2" firstAttribute="centerX" secondItem="0o2-qb-K21" secondAttribute="centerX" id="DkZ-W0-iEK"/>
+                                                                                            </constraints>
+                                                                                        </collectionReusableView>
                                                                                     </collectionView>
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="trailing" secondItem="3kg-BV-GmI" secondAttribute="trailing" id="dZO-Mm-FIo"/>
+                                                                                    <constraint firstAttribute="height" priority="250" constant="168" id="grp-1r-S7Z"/>
                                                                                     <constraint firstItem="3kg-BV-GmI" firstAttribute="top" secondItem="l5L-eb-u7p" secondAttribute="top" id="nZx-2g-HTe"/>
                                                                                     <constraint firstItem="3kg-BV-GmI" firstAttribute="leading" secondItem="l5L-eb-u7p" secondAttribute="leading" id="t7c-Ag-Gl5"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="3kg-BV-GmI" secondAttribute="bottom" id="vsA-AN-wLF"/>
@@ -1387,7 +1419,7 @@
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="270" id="9aY-Al-awp"/>
+                                                                    <constraint firstAttribute="height" priority="250" constant="300" id="9aY-Al-awp"/>
                                                                     <constraint firstItem="uRx-x7-yz2" firstAttribute="leading" secondItem="tBG-2n-ZON" secondAttribute="leading" id="KGJ-P4-Eux"/>
                                                                     <constraint firstAttribute="bottom" secondItem="uRx-x7-yz2" secondAttribute="bottom" id="Skx-L1-L4o"/>
                                                                     <constraint firstItem="uRx-x7-yz2" firstAttribute="top" secondItem="tBG-2n-ZON" secondAttribute="top" id="dY3-BI-Tcp"/>
@@ -1441,6 +1473,7 @@
                         <outlet property="scrollView" destination="g5B-ta-laN" id="C1J-ta-2Ro"/>
                         <outlet property="textView" destination="8Wf-Tb-pn5" id="Xyb-F4-828"/>
                         <outlet property="typeLabel" destination="gFH-D1-dex" id="E5I-7g-zSt"/>
+                        <outlet property="viewhieght" destination="grp-1r-S7Z" id="div-Vr-h6T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8r1-7O-zbw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

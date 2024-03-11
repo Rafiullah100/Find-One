@@ -95,4 +95,10 @@ class Switcher {
         delegate.navigationController?.pushViewController(vc, animated: true)
     }
     
+    static func gotoBooking(delegate: UIViewController){
+        let vc = UIStoryboard(name: Storyboard.booking.rawValue, bundle: nil).instantiateViewController(withIdentifier: "BookingViewController") as! BookingViewController
+        vc.modalPresentationStyle = .fullScreen
+        delegate.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

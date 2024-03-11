@@ -11,6 +11,8 @@ class SearchViewModel {
     var regionList: Observable<[RegionResultModel]> = Observable(nil)
     var errorMessage: Observable<String> = Observable("")
     var citiesList: Observable<[CityResultModel]> = Observable(nil)
+    var curriculam: Observable<[InstitutetypeResult]> = Observable(nil)
+    var genderList: Observable<[GenderResult]> = Observable(nil)
 
     
     func getRegionList(){
@@ -24,11 +26,33 @@ class SearchViewModel {
         }
     }
     
-    func getCitiesList(){
-        URLSession.shared.request(route: .city, method: .get, parameters: [:], model: SearchCityModel.self) { result in
+    func getCitiesList(regionID: Int){
+        URLSession.shared.request(route: .city, method: .get, parameters: ["region_id": regionID], model: SearchCityModel.self) { result in
             switch result {
             case .success(let cities):
                 self.citiesList.value = cities.result
+            case .failure(let error):
+                self.errorMessage.value = error.localizedDescription
+            }
+        }
+    }
+    
+    func getCurriculamType(){
+        URLSession.shared.request(route: .curriculam, method: .get, parameters: [:], model: InstitutetypeModel.self) { result in
+            switch result {
+            case .success(let curriculam):
+                self.curriculam.value = curriculam.result
+            case .failure(let error):
+                self.errorMessage.value = error.localizedDescription
+            }
+        }
+    }
+    
+    func getGender(){
+        URLSession.shared.request(route: .gender, method: .get, parameters: [:], model: GenderModel.self) { result in
+            switch result {
+            case .success(let gender):
+                self.genderList.value = gender.result
             case .failure(let error):
                 self.errorMessage.value = error.localizedDescription
             }
