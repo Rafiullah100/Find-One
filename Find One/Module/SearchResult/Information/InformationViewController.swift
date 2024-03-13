@@ -34,7 +34,7 @@ class InformationViewController: UIViewController {
             typeLabel.text = information?.type
             genderLabel.text = information?.gender
             curriculamLabel.text = information?.curriculam
-            textView.text = information?.detail?.htmlToString.trimmingCharacters(in: .whitespacesAndNewlines)
+            textView.text = information?.detail?.htmlToString.trimmingCharacters(in: .whitespaces)
         }
     }
     

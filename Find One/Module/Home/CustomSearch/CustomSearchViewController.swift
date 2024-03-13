@@ -9,6 +9,7 @@ import UIKit
 
 class CustomSearchViewController: BaseViewController {
 
+    @IBOutlet weak var sliderValueLabel: UILabel!
     @IBOutlet weak var sliderView: UISlider!
     @IBOutlet weak var segmentView: UISegmentedControl!
     @IBOutlet weak var instituteTextField: UITextField!
@@ -43,6 +44,12 @@ class CustomSearchViewController: BaseViewController {
         }
     }
     
+    var regionID: Int?
+    var cityID: Int?
+    var instituteTypeID: Int?
+    var genderID: Int?
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +81,7 @@ class CustomSearchViewController: BaseViewController {
             self.genderList = gender
             for i in 0..<(self.genderList?.count ?? 0){
                 self.segmentView.insertSegment(withTitle: self.genderList?[i].name, at: i, animated: true)
+                self.segmentView.selectedSegmentIndex = 0
             }
         }
         
@@ -90,6 +98,18 @@ class CustomSearchViewController: BaseViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
+    }
+  
+    @IBAction func typeSegmentAction(_ sender: Any) {
+    }
+    
+    @IBAction func sliderAction(_ sender: Any) {
+    }
+    
+    @IBAction func browseResultAction(_ sender: Any) {
+        let gID = genderList?[segmentView.selectedSegmentIndex].id
+        guard let regionID = regionID, let cityID = cityID, let instituteTypeID = instituteTypeID, let genderID = gID  else { return }
+        Switcher.gotoSerachResult(delegate: self, regionID: regionID, cityID: cityID, typeID: instituteTypeID, minFee: 500, maxFee: 5000, genderID: genderID)
     }
 }
 
@@ -130,8 +150,15 @@ extension CustomSearchViewController: UIPickerViewDelegate, UIPickerViewDataSour
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == regionPicker {
+            regionID = regionList?[row].id ?? 0
             cityTextField.text = ""
             viewModel.getCitiesList(regionID: regionList?[row].id ?? 0)
+        }
+        else if pickerView == CityPicker{
+            cityID = citiesList?[row].id ?? 0
+        }
+        else if pickerView == curriculamPicker{
+            instituteTypeID = curriculamList?[row].id ?? 0
         }
     }
 }

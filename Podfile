@@ -18,6 +18,8 @@ target 'Find One' do
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
+#    pod "WARangeSlider"
+
 end
 
 post_install do |installer|

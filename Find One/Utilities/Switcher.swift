@@ -101,4 +101,18 @@ class Switcher {
         delegate.navigationController?.pushViewController(vc, animated: true)
     }
     
+    static func gotoSerachResult(delegate: UIViewController, regionID: Int, cityID: Int, typeID: Int, minFee: Int, maxFee: Int, genderID: Int){
+        let vc = UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.hidesBottomBarWhenPushed = false
+        vc.regionID = regionID
+        vc.cityID = cityID
+        vc.typeID = typeID
+        vc.minFee = minFee
+        vc.maxFee = maxFee
+        vc.genderID = genderID
+        vc.instType = .search
+        delegate.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

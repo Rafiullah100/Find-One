@@ -703,6 +703,9 @@
                                                                                                                             <segment title="Boys Only"/>
                                                                                                                             <segment title="Girls Only"/>
                                                                                                                         </segments>
+                                                                                                                        <connections>
+                                                                                                                            <action selector="typeSegmentAction:" destination="ARJ-ye-KHt" eventType="valueChanged" id="g0z-Zx-hnW"/>
+                                                                                                                        </connections>
                                                                                                                     </segmentedControl>
                                                                                                                 </subviews>
                                                                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -940,6 +943,9 @@
                                                                                                                                         <rect key="frame" x="-2" y="0.0" width="324" height="31"/>
                                                                                                                                         <color key="minimumTrackTintColor" red="0.08235294118" green="0.61176470589999998" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                                                         <color key="thumbTintColor" red="0.08235294118" green="0.61176470589999998" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                                                                        <connections>
+                                                                                                                                            <action selector="sliderAction:" destination="ARJ-ye-KHt" eventType="valueChanged" id="f3b-jk-RNr"/>
+                                                                                                                                        </connections>
                                                                                                                                     </slider>
                                                                                                                                 </subviews>
                                                                                                                                 <constraints>
@@ -953,14 +959,14 @@
                                                                                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VwN-Be-pFc">
                                                                                                                                 <rect key="frame" x="0.0" y="30" width="320" height="20"/>
                                                                                                                                 <subviews>
-                                                                                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8i-8y-EZJ">
+                                                                                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="H8i-8y-EZJ">
                                                                                                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
                                                                                                                                         <subviews>
                                                                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zq-ig-hAZ">
-                                                                                                                                                <rect key="frame" x="0.0" y="0.0" width="270" height="20"/>
+                                                                                                                                                <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="20"/>
                                                                                                                                                 <subviews>
-                                                                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukl-4K-T0b">
-                                                                                                                                                        <rect key="frame" x="0.0" y="0.0" width="270" height="20"/>
+                                                                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500SAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukl-4K-T0b">
+                                                                                                                                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="20"/>
                                                                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="12"/>
                                                                                                                                                         <nil key="textColor"/>
                                                                                                                                                         <nil key="highlightedColor"/>
@@ -971,14 +977,13 @@
                                                                                                                                                     <constraint firstItem="ukl-4K-T0b" firstAttribute="top" secondItem="7zq-ig-hAZ" secondAttribute="top" id="5uR-dX-KST"/>
                                                                                                                                                     <constraint firstAttribute="bottom" secondItem="ukl-4K-T0b" secondAttribute="bottom" id="Eg9-jX-UdI"/>
                                                                                                                                                     <constraint firstItem="ukl-4K-T0b" firstAttribute="leading" secondItem="7zq-ig-hAZ" secondAttribute="leading" id="nYq-X6-siJ"/>
-                                                                                                                                                    <constraint firstAttribute="width" priority="250" constant="315" id="rKz-6U-hjZ"/>
                                                                                                                                                 </constraints>
                                                                                                                                             </view>
                                                                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vji-Fl-2gD">
-                                                                                                                                                <rect key="frame" x="270" y="0.0" width="50" height="20"/>
+                                                                                                                                                <rect key="frame" x="106.66666666666666" y="0.0" width="106.66666666666666" height="20"/>
                                                                                                                                                 <subviews>
-                                                                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayI-Vo-4VT">
-                                                                                                                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="20"/>
+                                                                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayI-Vo-4VT">
+                                                                                                                                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="20"/>
                                                                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="12"/>
                                                                                                                                                         <nil key="textColor"/>
                                                                                                                                                         <nil key="highlightedColor"/>
@@ -989,6 +994,23 @@
                                                                                                                                                     <constraint firstItem="ayI-Vo-4VT" firstAttribute="leading" secondItem="Vji-Fl-2gD" secondAttribute="leading" id="a6R-W4-ym6"/>
                                                                                                                                                     <constraint firstAttribute="trailing" secondItem="ayI-Vo-4VT" secondAttribute="trailing" id="cBX-xW-RD1"/>
                                                                                                                                                     <constraint firstItem="ayI-Vo-4VT" firstAttribute="top" secondItem="Vji-Fl-2gD" secondAttribute="top" id="uHO-Sq-D5T"/>
+                                                                                                                                                </constraints>
+                                                                                                                                            </view>
+                                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kqj-Ku-viw">
+                                                                                                                                                <rect key="frame" x="213.33333333333334" y="0.0" width="106.66666666666666" height="20"/>
+                                                                                                                                                <subviews>
+                                                                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5000SAR" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sai-O0-zUG">
+                                                                                                                                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="20"/>
+                                                                                                                                                        <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="12"/>
+                                                                                                                                                        <nil key="textColor"/>
+                                                                                                                                                        <nil key="highlightedColor"/>
+                                                                                                                                                    </label>
+                                                                                                                                                </subviews>
+                                                                                                                                                <constraints>
+                                                                                                                                                    <constraint firstItem="Sai-O0-zUG" firstAttribute="leading" secondItem="Kqj-Ku-viw" secondAttribute="leading" id="3Uj-Yi-cFq"/>
+                                                                                                                                                    <constraint firstAttribute="bottom" secondItem="Sai-O0-zUG" secondAttribute="bottom" id="6Io-MH-k0e"/>
+                                                                                                                                                    <constraint firstAttribute="trailing" secondItem="Sai-O0-zUG" secondAttribute="trailing" id="Vx5-RA-qYn"/>
+                                                                                                                                                    <constraint firstItem="Sai-O0-zUG" firstAttribute="top" secondItem="Kqj-Ku-viw" secondAttribute="top" id="eDW-Ja-Diz"/>
                                                                                                                                                 </constraints>
                                                                                                                                             </view>
                                                                                                                                         </subviews>
@@ -1388,6 +1410,9 @@
                                                                                                 <real key="value" value="5"/>
                                                                                             </userDefinedRuntimeAttribute>
                                                                                         </userDefinedRuntimeAttributes>
+                                                                                        <connections>
+                                                                                            <action selector="browseResultAction:" destination="ARJ-ye-KHt" eventType="touchUpInside" id="xvs-dO-C2L"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                                 <constraints>
@@ -1456,12 +1481,13 @@
                         <outlet property="regionTextField" destination="ytc-oF-WXJ" id="o2k-Ii-xrX"/>
                         <outlet property="scrollView" destination="MbD-jR-PNX" id="W3S-id-Tai"/>
                         <outlet property="segmentView" destination="IgJ-Wu-pym" id="DBQ-0e-S6f"/>
+                        <outlet property="sliderValueLabel" destination="ayI-Vo-4VT" id="SJx-5O-nxn"/>
                         <outlet property="sliderView" destination="cLD-1C-itL" id="mKG-Le-ovg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V4o-zp-Xhj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1301.5267175572519" y="-306.33802816901408"/>
+            <point key="canvasLocation" x="1312" y="-306"/>
         </scene>
         <!--My Tab Bar Ctrl-->
         <scene sceneID="heq-G9-YoF">
@@ -1649,15 +1675,38 @@
                                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Llj-Cj-6pO">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="377" height="250"/>
                                                                                                 <subviews>
-                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured Institutions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKJ-VN-zkl">
+                                                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSB-zp-Gz7">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="377" height="20"/>
+                                                                                                        <subviews>
+                                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured Institutions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKJ-VN-zkl">
+                                                                                                                <rect key="frame" x="0.0" y="0.0" width="148" height="20"/>
+                                                                                                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="14"/>
+                                                                                                                <nil key="textColor"/>
+                                                                                                                <nil key="highlightedColor"/>
+                                                                                                            </label>
+                                                                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBG-W1-U6s">
+                                                                                                                <rect key="frame" x="317" y="0.0" width="60" height="20"/>
+                                                                                                                <constraints>
+                                                                                                                    <constraint firstAttribute="width" priority="250" constant="60" id="HQy-E1-euo"/>
+                                                                                                                </constraints>
+                                                                                                                <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="12"/>
+                                                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                                                <state key="normal" title="View All">
+                                                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                                </state>
+                                                                                                            </button>
+                                                                                                        </subviews>
+                                                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                                         <constraints>
-                                                                                                            <constraint firstAttribute="height" constant="20" id="uu0-zj-h6B"/>
+                                                                                                            <constraint firstAttribute="height" constant="20" id="1FI-Re-Ovh"/>
+                                                                                                            <constraint firstAttribute="trailing" secondItem="nBG-W1-U6s" secondAttribute="trailing" id="6qJ-N2-P8N"/>
+                                                                                                            <constraint firstAttribute="bottom" secondItem="nBG-W1-U6s" secondAttribute="bottom" id="7XK-jh-4e9"/>
+                                                                                                            <constraint firstItem="nBG-W1-U6s" firstAttribute="top" secondItem="gSB-zp-Gz7" secondAttribute="top" id="85n-fj-lVA"/>
+                                                                                                            <constraint firstItem="CKJ-VN-zkl" firstAttribute="top" secondItem="gSB-zp-Gz7" secondAttribute="top" id="Al2-Gg-OMR"/>
+                                                                                                            <constraint firstItem="CKJ-VN-zkl" firstAttribute="leading" secondItem="gSB-zp-Gz7" secondAttribute="leading" id="Fhj-y2-S9J"/>
+                                                                                                            <constraint firstAttribute="bottom" secondItem="CKJ-VN-zkl" secondAttribute="bottom" id="fgI-hk-WJC"/>
                                                                                                         </constraints>
-                                                                                                        <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="14"/>
-                                                                                                        <nil key="textColor"/>
-                                                                                                        <nil key="highlightedColor"/>
-                                                                                                    </label>
+                                                                                                    </view>
                                                                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tbz-R2-54I">
                                                                                                         <rect key="frame" x="0.0" y="30" width="377" height="220"/>
                                                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

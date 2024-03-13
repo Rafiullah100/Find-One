@@ -10,6 +10,7 @@ import UIKit
 enum ResultType {
     case city
     case region
+    case search
 }
 
 class ResultViewController: BaseViewController {
@@ -25,8 +26,16 @@ class ResultViewController: BaseViewController {
     var id: Int?
     var instituteList: [Results]?
     var viewModel = ResultViewModel()
+    var searchList: [SearchResult]?
 
     var instType: ResultType?
+    
+    var regionID: Int?
+    var cityID: Int?
+    var typeID: Int?
+    var minFee: Int?
+    var maxFee: Int?
+    var genderID: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,14 +47,24 @@ class ResultViewController: BaseViewController {
             self.instituteList = result
             self.tableView.reloadData()
         }
+        
+        viewModel.searchResultList.bind { result in
+            self.stopAnimation()
+            self.displayLabel.text = "Displaying all \(result?.count ?? 0) results"
+            self.searchList = result
+            self.tableView.reloadData()
+        }
+        
         self.animateSpinner()
         switch instType {
         case .city:
             viewModel.getInstituteList(id: id ?? 0)
         case .region:
             viewModel.getInstituteListByRegion(id: id ?? 0)
+        case .search:
+            viewModel.getSearchResult(regionID: regionID ?? 0, cityID: cityID ?? 0, typeID: typeID ?? 0, genderID: regionID ?? 0, minFee: minFee ?? 0, maxFee: maxFee ?? 0)
         case nil:
-            print("")
+            break
         }
     }
     
@@ -60,12 +79,26 @@ class ResultViewController: BaseViewController {
 
 extension ResultViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return instituteList?.count ?? 0
+        switch instType {
+        case .city, .region:
+            return instituteList?.count ?? 0
+        case .search:
+            return searchList?.count ?? 0
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ResultTableViewCell = tableView.dequeueReusableCell(withIdentifier: ResultTableViewCell.cellReuseIdentifier()) as! ResultTableViewCell
-        cell.institute = instituteList?[indexPath.row]
+        switch instType {
+        case .city, .region:
+            cell.institute = instituteList?[indexPath.row]
+        case .search:
+            cell.searchInstitute = searchList?[indexPath.row]
+        default:
+            break
+        }
         return cell
     }
     
@@ -74,7 +107,22 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        Switcher.gotoDetail(delegate: self, id: instituteList?[indexPath.row].id ?? 0, slug: instituteList?[indexPath.row].slug ?? "")
+        let id: Int?
+        let slug: String?
+        
+        switch instType {
+        case .city, .region:
+            id = instituteList?[indexPath.row].id ?? 0
+            slug = instituteList?[indexPath.row].slug ?? ""
+        case .search:
+            id = searchList?[indexPath.row].id ?? 0
+//            slug = searchList?[indexPath.row].slug ?? ""
+            slug = ""
+        default:
+            id = 0
+            slug = ""
+        }
+        Switcher.gotoDetail(delegate: self, id: id ?? 0, slug: slug ?? "")
     }
 }
 

@@ -32,4 +32,11 @@ class ResultTableViewCell: UITableViewCell {
             nameLabel.text = institute?.name ?? ""
         }
     }
+    
+    var searchInstitute: SearchResult? {
+        didSet{
+            imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (searchInstitute?.imageURL ?? "") ), placeholderImage: UIImage(named: "Rectangle 405"))
+            nameLabel.text = searchInstitute?.name ?? ""
+        }
+    }
 }
