@@ -141,3 +141,33 @@ struct ReviewUser: Codable {
         case profileImage = "profile_image"
     }
 }
+
+
+struct AddReviewModel: Codable {
+    let success: Bool?
+    let result: AddReviewResult?
+    let message: String?
+}
+
+// MARK: - Result
+struct AddReviewResult: Codable {
+    let isDeleted, id, instituteID, userID: Int?
+    let rating: Int?
+    let reviewText, updatedAt, createdAt: String?
+
+    enum CodingKeys: String, CodingKey {
+        case isDeleted, id
+        case instituteID = "institute_id"
+        case userID = "user_id"
+        case rating
+        case reviewText = "review_text"
+        case updatedAt, createdAt
+    }
+}
+
+
+struct ReviewInoutModel {
+    let review: String?
+    let rating: Int?
+    let id: Int?
+}

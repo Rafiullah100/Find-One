@@ -115,4 +115,13 @@ class Switcher {
         delegate.navigationController?.pushViewController(vc, animated: true)
     }
     
+    static func gotoAddReviewVC(delegate: UIViewController, instituteID: Int){
+        let vc = UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "AddReviewViewController") as! AddReviewViewController
+        vc.delegate = delegate as? any AddReviewProtocol
+        vc.institudeID = instituteID
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        delegate.present(vc, animated: true, completion: nil)
+    }
+    
 }

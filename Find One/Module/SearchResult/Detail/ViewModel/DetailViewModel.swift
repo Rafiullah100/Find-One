@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol AddReviewProtocol {
+    func reviewAdded()
+}
+
 enum DetailType: String {
     case sustainability = "sustainability"
     case fee = "fee_structure"
@@ -23,6 +27,8 @@ class DetailViewModel {
     var galleryDetails: Observable<[GalleryResult]> = Observable(nil)
     var locationDetails: Observable<LocationResult> = Observable(nil)
     var reviewDetails: Observable<[ReviewResult]> = Observable(nil)
+    var addReview: Observable<AddReviewModel> = Observable(nil)
+    var reviewParameters: [String: Any]?
 
     func getInstituteDetails(id: Int, slug: String){
         URLSession.shared.request(route: .detail, method: .get, parameters: ["institute_id": id, "slug": slug], model: DetailModel.self) { result in
@@ -77,6 +83,27 @@ class DetailViewModel {
             case .failure(let error):
                 self.errorMessage.value = error.localizedDescription
             }
+        }
+    }
+    
+    func submitReview(){
+        URLSession.shared.request(route: .addReview, method: .post, parameters: reviewParameters, model: AddReviewModel.self) { result in
+            switch result {
+            case .success(let addReview):
+                self.addReview.value = addReview
+            case .failure(let error):
+                self.errorMessage.value = error.localizedDescription
+            }
+        }
+    }
+    
+    func isFormValid(reviewInput: ReviewInoutModel) -> ValidationResponse {
+        if reviewInput.review == nil || reviewInput.rating == nil || reviewInput.review ==  "Add a review" {
+            return ValidationResponse(isValid: false, message: "Please fill all field and try again!")
+        }
+        else{
+            reviewParameters = ["institute_id": reviewInput.id!, "rating": reviewInput.rating!, "review_text": reviewInput.review!]
+            return ValidationResponse(isValid: true, message: "")
         }
     }
 }

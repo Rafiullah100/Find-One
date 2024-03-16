@@ -33,13 +33,27 @@ class ReviewViewController: BaseViewController {
             self.reviewsDetail = reviewDetail
             self.tableView.reloadData()
         }
-        self.animateSpinner()
-        viewModel.getReviewsDetails(id: id ?? 0, detailType: .reviews)
+        loadReview()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.backgroundColor = .clear
+        
+    }
+    
+    private func loadReview(){
+        self.animateSpinner()
+        viewModel.getReviewsDetails(id: id ?? 0, detailType: .reviews)
+    }
+    
+    @IBAction func addReviewBtnAction(_ sender: Any) {
+//        if Helper.isLogin() == true {
+        Switcher.gotoAddReviewVC(delegate: self, instituteID: id ?? 0)
+//        }
+//        else{
+//            self.view.makeToast("Login to comment")
+//        }
     }
 }
 
@@ -61,3 +75,9 @@ extension ReviewViewController: UITableViewDelegate, UITableViewDataSource{
 
 
 
+
+extension ReviewViewController: AddReviewProtocol{
+    func reviewAdded() {
+       loadReview()
+    }
+}

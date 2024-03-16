@@ -6,11 +6,13 @@
 //
 
 import UIKit
-
+import WARangeSlider
 class CustomSearchViewController: BaseViewController {
 
+    @IBOutlet weak var maxLabel: UILabel!
+    @IBOutlet weak var minLabel: UILabel!
+    @IBOutlet weak var rangeSlider: RangeSlider!
     @IBOutlet weak var sliderValueLabel: UILabel!
-    @IBOutlet weak var sliderView: UISlider!
     @IBOutlet weak var segmentView: UISegmentedControl!
     @IBOutlet weak var instituteTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
@@ -49,12 +51,17 @@ class CustomSearchViewController: BaseViewController {
     var instituteTypeID: Int?
     var genderID: Int?
 
+    var maxPrice = 500
+    var minPrice = 5000
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .home
         
+        
+        rangeSlider.addTarget(self, action: #selector(CustomSearchViewController.rangeSliderValueChanged(_:)), for: .valueChanged)
+        updateLabel()
         segmentView.removeAllSegments()
         regionPicker = UIPickerView()
         CityPicker = UIPickerView()
@@ -108,8 +115,21 @@ class CustomSearchViewController: BaseViewController {
     
     @IBAction func browseResultAction(_ sender: Any) {
         let gID = genderList?[segmentView.selectedSegmentIndex].id
-        guard let regionID = regionID, let cityID = cityID, let instituteTypeID = instituteTypeID, let genderID = gID  else { return }
-        Switcher.gotoSerachResult(delegate: self, regionID: regionID, cityID: cityID, typeID: instituteTypeID, minFee: 500, maxFee: 5000, genderID: genderID)
+        guard let regionID = regionID, let cityID = cityID, let instituteTypeID = instituteTypeID, let genderID = gID else { return }
+        Switcher.gotoSerachResult(delegate: self, regionID: regionID, cityID: cityID, typeID: instituteTypeID, minFee: minPrice, maxFee: maxPrice, genderID: genderID)
+    }
+    
+    @objc func rangeSliderValueChanged(_ rangeSlider: RangeSlider) {
+        let lowerValue = Int(rangeSlider.lowerValue)
+        let upperValue = Int(rangeSlider.upperValue)
+        minPrice = lowerValue
+        maxPrice = upperValue
+        updateLabel()
+    }
+    
+    private func updateLabel(){
+        minLabel.attributedText = Helper.attributedText(text1: "\(minPrice) ", text2: "SAR")
+        maxLabel.attributedText = Helper.attributedText(text1: "\(maxPrice) ", text2: "SAR")
     }
 }
 

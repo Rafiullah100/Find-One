@@ -74,6 +74,7 @@ extension UserDefaults{
             value(forKey: userdefaultsKey.token.rawValue) as? String
         }
         set {
+            print(newValue)
             set(newValue, forKey: userdefaultsKey.token.rawValue)
         }
     }

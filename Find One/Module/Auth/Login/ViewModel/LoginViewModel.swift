@@ -66,12 +66,12 @@ class LoginViewModel {
     }
     
     func saveUserPreference(){
-        UserDefaults.standard.name = self.loginData?.user?.name
-        UserDefaults.standard.email = self.loginData?.user?.email
-        UserDefaults.standard.profileImage = self.loginData?.user?.profileImage
-        UserDefaults.standard.token = self.loginData?.user?.token
-        UserDefaults.standard.mobile = self.loginData?.user?.mobileNo
-        UserDefaults.standard.uuid = self.loginData?.user?.uuid
+        UserDefaults.standard.name = self.login.value?.user?.name
+        UserDefaults.standard.email = self.login.value?.user?.email
+        UserDefaults.standard.profileImage = self.login.value?.user?.profileImage
+        UserDefaults.standard.token = self.login.value?.user?.token
+        UserDefaults.standard.mobile = self.login.value?.user?.mobileNo
+        UserDefaults.standard.uuid = self.login.value?.user?.uuid
         UserDefaults.standard.isLogin = true
     }
     

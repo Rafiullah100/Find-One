@@ -77,6 +77,7 @@ class HomeViewController: BaseViewController {
             self.collectionView.reloadData()
             guard let _ = self.instituteList?[0].id else {return}
             self.callapi()
+            
         }
 
         viewModel.featureList.bind { feature in

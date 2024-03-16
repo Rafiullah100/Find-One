@@ -66,8 +66,9 @@ extension URLSession{
         guard let url = urlString.asUrl else { return nil }
         var urlRequest = URLRequest(url: url)
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//        urlRequest.addValue(UserDefaults.standard.token ?? "", forHTTPHeaderField: "x-access-token")
+        urlRequest.addValue(UserDefaults.standard.token ?? "", forHTTPHeaderField: "x-access-token")
 //        urlRequest.addValue(UserDefaults.standard.languageCode ?? "", forHTTPHeaderField: "lang-code")
+        print(UserDefaults.standard.token ?? "")
         urlRequest.httpMethod = method.rawValue
         print(urlRequest.headers)
         if let params = parameters {

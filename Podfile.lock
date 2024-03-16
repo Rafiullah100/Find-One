@@ -119,6 +119,7 @@ PODS:
   - SpinKit (1.2.0)
   - SwiftIcons (3.0)
   - Toast-Swift (5.0.1)
+  - WARangeSlider (1.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.2)
@@ -133,6 +134,7 @@ DEPENDENCIES:
   - SpinKit
   - SwiftIcons (~> 3.0)
   - Toast-Swift (~> 5.0.1)
+  - WARangeSlider
 
 SPEC REPOS:
   trunk:
@@ -160,6 +162,7 @@ SPEC REPOS:
     - SpinKit
     - SwiftIcons
     - Toast-Swift
+    - WARangeSlider
 
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
@@ -186,7 +189,8 @@ SPEC CHECKSUMS:
   SpinKit: 65906a8b534a4e14cbfd3f8b0b6c329131faef4a
   SwiftIcons: 3b748e57d9eee0c7c8d3bdbf2d742c0b1b4c6172
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+  WARangeSlider: 03f195d4dc5419e6b0d9043cc94fdf418dfe804d
 
-PODFILE CHECKSUM: cb66cdef3930afa07516f46ed78bfeff227063f4
+PODFILE CHECKSUM: f72e92e0361421191f5dc53661be303598c9a16c
 
 COCOAPODS: 1.15.2

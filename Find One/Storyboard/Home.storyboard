@@ -76,10 +76,10 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="659"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmy-4v-aQo">
-                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="750"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="580"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9bS-me-L5M">
-                                                                        <rect key="frame" x="34" y="10" width="325" height="740"/>
+                                                                        <rect key="frame" x="34" y="10" width="325" height="570"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="unb-ka-ocM">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="325" height="40"/>
@@ -936,25 +936,25 @@
                                                                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mx6-az-Cbq">
                                                                                                                         <rect key="frame" x="5" y="0.0" width="320" height="50"/>
                                                                                                                         <subviews>
-                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PIl-21-Y44">
+                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PIl-21-Y44" customClass="RangeSlider" customModule="WARangeSlider">
                                                                                                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
-                                                                                                                                <subviews>
-                                                                                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cLD-1C-itL">
-                                                                                                                                        <rect key="frame" x="-2" y="0.0" width="324" height="31"/>
-                                                                                                                                        <color key="minimumTrackTintColor" red="0.08235294118" green="0.61176470589999998" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                                                                        <color key="thumbTintColor" red="0.08235294118" green="0.61176470589999998" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                                                                        <connections>
-                                                                                                                                            <action selector="sliderAction:" destination="ARJ-ye-KHt" eventType="valueChanged" id="f3b-jk-RNr"/>
-                                                                                                                                        </connections>
-                                                                                                                                    </slider>
-                                                                                                                                </subviews>
                                                                                                                                 <constraints>
-                                                                                                                                    <constraint firstItem="cLD-1C-itL" firstAttribute="leading" secondItem="PIl-21-Y44" secondAttribute="leading" id="Dm3-xM-IY1"/>
-                                                                                                                                    <constraint firstItem="cLD-1C-itL" firstAttribute="centerX" secondItem="PIl-21-Y44" secondAttribute="centerX" id="Fnd-e1-eAJ"/>
-                                                                                                                                    <constraint firstAttribute="trailing" secondItem="cLD-1C-itL" secondAttribute="trailing" id="R9N-xk-3cV"/>
-                                                                                                                                    <constraint firstItem="cLD-1C-itL" firstAttribute="centerY" secondItem="PIl-21-Y44" secondAttribute="centerY" id="aYm-Fk-pZf"/>
                                                                                                                                     <constraint firstAttribute="height" constant="30" id="sYl-NQ-fq6"/>
                                                                                                                                 </constraints>
+                                                                                                                                <userDefinedRuntimeAttributes>
+                                                                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                                                                                                        <real key="value" value="0.0"/>
+                                                                                                                                    </userDefinedRuntimeAttribute>
+                                                                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                                                                                                        <real key="value" value="5000"/>
+                                                                                                                                    </userDefinedRuntimeAttribute>
+                                                                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="lowerValue">
+                                                                                                                                        <real key="value" value="500"/>
+                                                                                                                                    </userDefinedRuntimeAttribute>
+                                                                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="upperValue">
+                                                                                                                                        <real key="value" value="5000"/>
+                                                                                                                                    </userDefinedRuntimeAttribute>
+                                                                                                                                </userDefinedRuntimeAttributes>
                                                                                                                             </view>
                                                                                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VwN-Be-pFc">
                                                                                                                                 <rect key="frame" x="0.0" y="30" width="320" height="20"/>
@@ -1062,336 +1062,8 @@
                                                                                     <constraint firstAttribute="trailing" secondItem="DlO-c5-ypT" secondAttribute="trailing" id="gjA-B6-17O"/>
                                                                                 </constraints>
                                                                             </view>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PdL-AP-A27">
-                                                                                <rect key="frame" x="0.0" y="510" width="325" height="160"/>
-                                                                                <subviews>
-                                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8zm-WY-aiz">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="325" height="160"/>
-                                                                                        <subviews>
-                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Acl-MH-01w">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="325" height="40"/>
-                                                                                                <subviews>
-                                                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pKn-8M-Tki">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="325" height="40"/>
-                                                                                                        <subviews>
-                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X61-Hw-Wl3">
-                                                                                                                <rect key="frame" x="0.0" y="0.0" width="15" height="40"/>
-                                                                                                                <subviews>
-                                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="option" translatesAutoresizingMaskIntoConstraints="NO" id="nRn-te-D5z">
-                                                                                                                        <rect key="frame" x="0.0" y="12.666666666666629" width="15" height="15"/>
-                                                                                                                        <constraints>
-                                                                                                                            <constraint firstAttribute="width" constant="15" id="LUI-ql-7dO"/>
-                                                                                                                            <constraint firstAttribute="height" constant="15" id="Mza-vQ-itb"/>
-                                                                                                                        </constraints>
-                                                                                                                    </imageView>
-                                                                                                                </subviews>
-                                                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                                                <constraints>
-                                                                                                                    <constraint firstAttribute="width" constant="15" id="SNd-JZ-kHJ"/>
-                                                                                                                    <constraint firstItem="nRn-te-D5z" firstAttribute="centerX" secondItem="X61-Hw-Wl3" secondAttribute="centerX" id="ZuN-iu-kTB"/>
-                                                                                                                    <constraint firstItem="nRn-te-D5z" firstAttribute="centerY" secondItem="X61-Hw-Wl3" secondAttribute="centerY" id="zqv-vw-Gyj"/>
-                                                                                                                </constraints>
-                                                                                                            </view>
-                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1q-BB-3ys">
-                                                                                                                <rect key="frame" x="20" y="0.0" width="305" height="40"/>
-                                                                                                                <subviews>
-                                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check the following options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1L-lm-r9Y">
-                                                                                                                        <rect key="frame" x="0.0" y="9" width="218" height="22"/>
-                                                                                                                        <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="16"/>
-                                                                                                                        <nil key="textColor"/>
-                                                                                                                        <nil key="highlightedColor"/>
-                                                                                                                    </label>
-                                                                                                                </subviews>
-                                                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                                                <constraints>
-                                                                                                                    <constraint firstItem="v1L-lm-r9Y" firstAttribute="centerY" secondItem="Y1q-BB-3ys" secondAttribute="centerY" id="94S-TB-de2"/>
-                                                                                                                    <constraint firstItem="v1L-lm-r9Y" firstAttribute="leading" secondItem="Y1q-BB-3ys" secondAttribute="leading" id="UF3-2D-phj"/>
-                                                                                                                </constraints>
-                                                                                                            </view>
-                                                                                                        </subviews>
-                                                                                                    </stackView>
-                                                                                                </subviews>
-                                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                                <constraints>
-                                                                                                    <constraint firstAttribute="trailing" secondItem="pKn-8M-Tki" secondAttribute="trailing" id="42f-KT-tfj"/>
-                                                                                                    <constraint firstItem="pKn-8M-Tki" firstAttribute="top" secondItem="Acl-MH-01w" secondAttribute="top" id="BLy-ZC-I4S"/>
-                                                                                                    <constraint firstAttribute="bottom" secondItem="pKn-8M-Tki" secondAttribute="bottom" id="Lbg-b3-1Ub"/>
-                                                                                                    <constraint firstItem="pKn-8M-Tki" firstAttribute="leading" secondItem="Acl-MH-01w" secondAttribute="leading" id="MRX-Bp-zgQ"/>
-                                                                                                    <constraint firstAttribute="height" constant="40" id="WtO-uX-YgV"/>
-                                                                                                </constraints>
-                                                                                            </view>
-                                                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQV-i9-ANf">
-                                                                                                <rect key="frame" x="0.0" y="40" width="325" height="120"/>
-                                                                                                <subviews>
-                                                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lwV-yE-lgV">
-                                                                                                        <rect key="frame" x="5" y="0.0" width="320" height="120"/>
-                                                                                                        <subviews>
-                                                                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slO-bd-gLB">
-                                                                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
-                                                                                                                <subviews>
-                                                                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gBm-OA-QXR">
-                                                                                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
-                                                                                                                        <subviews>
-                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDW-aM-PC2">
-                                                                                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
-                                                                                                                                <subviews>
-                                                                                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="S1B-7O-OZQ">
-                                                                                                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
-                                                                                                                                        <subviews>
-                                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucb-pm-4DL">
-                                                                                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                                                                                                                                <color key="backgroundColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                                                                                <constraints>
-                                                                                                                                                    <constraint firstAttribute="width" constant="20" id="ziD-Hv-Lbz"/>
-                                                                                                                                                </constraints>
-                                                                                                                                                <userDefinedRuntimeAttributes>
-                                                                                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
-                                                                                                                                                        <real key="value" value="10"/>
-                                                                                                                                                    </userDefinedRuntimeAttribute>
-                                                                                                                                                </userDefinedRuntimeAttributes>
-                                                                                                                                            </view>
-                                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1x-Q1-mhi">
-                                                                                                                                                <rect key="frame" x="25" y="0.0" width="295" height="20"/>
-                                                                                                                                                <subviews>
-                                                                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSm-UK-DPa">
-                                                                                                                                                        <rect key="frame" x="0.0" y="1.6666666666666288" width="57.666666666666664" height="16.666666666666668"/>
-                                                                                                                                                        <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="12"/>
-                                                                                                                                                        <nil key="textColor"/>
-                                                                                                                                                        <nil key="highlightedColor"/>
-                                                                                                                                                    </label>
-                                                                                                                                                </subviews>
-                                                                                                                                                <constraints>
-                                                                                                                                                    <constraint firstItem="VSm-UK-DPa" firstAttribute="leading" secondItem="d1x-Q1-mhi" secondAttribute="leading" id="Gj7-yt-dHU"/>
-                                                                                                                                                    <constraint firstItem="VSm-UK-DPa" firstAttribute="centerY" secondItem="d1x-Q1-mhi" secondAttribute="centerY" id="WR8-Ba-36W"/>
-                                                                                                                                                </constraints>
-                                                                                                                                            </view>
-                                                                                                                                        </subviews>
-                                                                                                                                    </stackView>
-                                                                                                                                </subviews>
-                                                                                                                                <constraints>
-                                                                                                                                    <constraint firstAttribute="height" constant="20" id="0vz-2N-oLB"/>
-                                                                                                                                    <constraint firstItem="S1B-7O-OZQ" firstAttribute="top" secondItem="ZDW-aM-PC2" secondAttribute="top" id="45O-sk-dfS"/>
-                                                                                                                                    <constraint firstItem="S1B-7O-OZQ" firstAttribute="leading" secondItem="ZDW-aM-PC2" secondAttribute="leading" id="6jz-2S-2AM"/>
-                                                                                                                                    <constraint firstAttribute="trailing" secondItem="S1B-7O-OZQ" secondAttribute="trailing" id="Gv3-fi-7OG"/>
-                                                                                                                                    <constraint firstAttribute="bottom" secondItem="S1B-7O-OZQ" secondAttribute="bottom" id="UOy-sD-rgq"/>
-                                                                                                                                </constraints>
-                                                                                                                            </view>
-                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCr-ZQ-feV">
-                                                                                                                                <rect key="frame" x="0.0" y="25" width="320" height="20"/>
-                                                                                                                                <subviews>
-                                                                                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6MB-kw-yZO">
-                                                                                                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
-                                                                                                                                        <subviews>
-                                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LjS-4E-bhi">
-                                                                                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                                                                                                                                <color key="backgroundColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                                                                                <constraints>
-                                                                                                                                                    <constraint firstAttribute="width" constant="20" id="Pm1-OB-rGm"/>
-                                                                                                                                                </constraints>
-                                                                                                                                                <userDefinedRuntimeAttributes>
-                                                                                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
-                                                                                                                                                        <real key="value" value="10"/>
-                                                                                                                                                    </userDefinedRuntimeAttribute>
-                                                                                                                                                </userDefinedRuntimeAttributes>
-                                                                                                                                            </view>
-                                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m88-OD-DGh">
-                                                                                                                                                <rect key="frame" x="25" y="0.0" width="295" height="20"/>
-                                                                                                                                                <subviews>
-                                                                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZg-7B-I9f">
-                                                                                                                                                        <rect key="frame" x="0.0" y="1.6666666666666288" width="39.666666666666664" height="16.666666666666668"/>
-                                                                                                                                                        <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="12"/>
-                                                                                                                                                        <nil key="textColor"/>
-                                                                                                                                                        <nil key="highlightedColor"/>
-                                                                                                                                                    </label>
-                                                                                                                                                </subviews>
-                                                                                                                                                <constraints>
-                                                                                                                                                    <constraint firstItem="aZg-7B-I9f" firstAttribute="centerY" secondItem="m88-OD-DGh" secondAttribute="centerY" id="cvk-sp-3yg"/>
-                                                                                                                                                    <constraint firstItem="aZg-7B-I9f" firstAttribute="leading" secondItem="m88-OD-DGh" secondAttribute="leading" id="sSv-Cm-pyP"/>
-                                                                                                                                                </constraints>
-                                                                                                                                            </view>
-                                                                                                                                        </subviews>
-                                                                                                                                    </stackView>
-                                                                                                                                </subviews>
-                                                                                                                                <constraints>
-                                                                                                                                    <constraint firstItem="6MB-kw-yZO" firstAttribute="leading" secondItem="tCr-ZQ-feV" secondAttribute="leading" id="7QA-Jq-krz"/>
-                                                                                                                                    <constraint firstAttribute="height" constant="20" id="UeW-TR-3s4"/>
-                                                                                                                                    <constraint firstAttribute="trailing" secondItem="6MB-kw-yZO" secondAttribute="trailing" id="ffG-g9-Nva"/>
-                                                                                                                                    <constraint firstItem="6MB-kw-yZO" firstAttribute="top" secondItem="tCr-ZQ-feV" secondAttribute="top" id="oes-GE-maY"/>
-                                                                                                                                    <constraint firstAttribute="bottom" secondItem="6MB-kw-yZO" secondAttribute="bottom" id="xFU-sr-rkZ"/>
-                                                                                                                                </constraints>
-                                                                                                                            </view>
-                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jpn-Kc-u40">
-                                                                                                                                <rect key="frame" x="0.0" y="50" width="320" height="20"/>
-                                                                                                                                <subviews>
-                                                                                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lI3-53-oWY">
-                                                                                                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
-                                                                                                                                        <subviews>
-                                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hv9-hm-7X2">
-                                                                                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                                                                                                                                <color key="backgroundColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                                                                                <constraints>
-                                                                                                                                                    <constraint firstAttribute="width" constant="20" id="e6q-Wb-37a"/>
-                                                                                                                                                </constraints>
-                                                                                                                                                <userDefinedRuntimeAttributes>
-                                                                                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
-                                                                                                                                                        <real key="value" value="10"/>
-                                                                                                                                                    </userDefinedRuntimeAttribute>
-                                                                                                                                                </userDefinedRuntimeAttributes>
-                                                                                                                                            </view>
-                                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOL-pt-zaG">
-                                                                                                                                                <rect key="frame" x="25" y="0.0" width="295" height="20"/>
-                                                                                                                                                <subviews>
-                                                                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Area" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPH-wt-1hk">
-                                                                                                                                                        <rect key="frame" x="0.0" y="1.6666666666666288" width="53.333333333333336" height="16.666666666666668"/>
-                                                                                                                                                        <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="12"/>
-                                                                                                                                                        <nil key="textColor"/>
-                                                                                                                                                        <nil key="highlightedColor"/>
-                                                                                                                                                    </label>
-                                                                                                                                                </subviews>
-                                                                                                                                                <constraints>
-                                                                                                                                                    <constraint firstItem="uPH-wt-1hk" firstAttribute="centerY" secondItem="eOL-pt-zaG" secondAttribute="centerY" id="AJc-41-Isi"/>
-                                                                                                                                                    <constraint firstItem="uPH-wt-1hk" firstAttribute="leading" secondItem="eOL-pt-zaG" secondAttribute="leading" id="pJy-bF-2DV"/>
-                                                                                                                                                </constraints>
-                                                                                                                                            </view>
-                                                                                                                                        </subviews>
-                                                                                                                                    </stackView>
-                                                                                                                                </subviews>
-                                                                                                                                <constraints>
-                                                                                                                                    <constraint firstAttribute="bottom" secondItem="lI3-53-oWY" secondAttribute="bottom" id="3LW-z6-8or"/>
-                                                                                                                                    <constraint firstItem="lI3-53-oWY" firstAttribute="top" secondItem="Jpn-Kc-u40" secondAttribute="top" id="TgP-EF-dDj"/>
-                                                                                                                                    <constraint firstAttribute="height" constant="20" id="VnL-Yg-wQ1"/>
-                                                                                                                                    <constraint firstAttribute="trailing" secondItem="lI3-53-oWY" secondAttribute="trailing" id="Xt0-DY-LTk"/>
-                                                                                                                                    <constraint firstItem="lI3-53-oWY" firstAttribute="leading" secondItem="Jpn-Kc-u40" secondAttribute="leading" id="fKW-rC-pzr"/>
-                                                                                                                                </constraints>
-                                                                                                                            </view>
-                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QRC-Wz-F9Y">
-                                                                                                                                <rect key="frame" x="0.0" y="75" width="320" height="20"/>
-                                                                                                                                <subviews>
-                                                                                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oDu-Pk-iOr">
-                                                                                                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
-                                                                                                                                        <subviews>
-                                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2A-Ze-iRZ">
-                                                                                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                                                                                                                                <color key="backgroundColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                                                                                <constraints>
-                                                                                                                                                    <constraint firstAttribute="width" constant="20" id="x2S-yS-ebs"/>
-                                                                                                                                                </constraints>
-                                                                                                                                                <userDefinedRuntimeAttributes>
-                                                                                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
-                                                                                                                                                        <real key="value" value="10"/>
-                                                                                                                                                    </userDefinedRuntimeAttribute>
-                                                                                                                                                </userDefinedRuntimeAttributes>
-                                                                                                                                            </view>
-                                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5d-Qx-SRs">
-                                                                                                                                                <rect key="frame" x="25" y="0.0" width="295" height="20"/>
-                                                                                                                                                <subviews>
-                                                                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swimming Pool" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mG-Gr-qQs">
-                                                                                                                                                        <rect key="frame" x="0.0" y="1.6666666666666288" width="87" height="16.666666666666668"/>
-                                                                                                                                                        <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="12"/>
-                                                                                                                                                        <nil key="textColor"/>
-                                                                                                                                                        <nil key="highlightedColor"/>
-                                                                                                                                                    </label>
-                                                                                                                                                </subviews>
-                                                                                                                                                <constraints>
-                                                                                                                                                    <constraint firstItem="4mG-Gr-qQs" firstAttribute="leading" secondItem="d5d-Qx-SRs" secondAttribute="leading" id="IZR-hF-KJK"/>
-                                                                                                                                                    <constraint firstItem="4mG-Gr-qQs" firstAttribute="centerY" secondItem="d5d-Qx-SRs" secondAttribute="centerY" id="u85-o2-sct"/>
-                                                                                                                                                </constraints>
-                                                                                                                                            </view>
-                                                                                                                                        </subviews>
-                                                                                                                                    </stackView>
-                                                                                                                                </subviews>
-                                                                                                                                <constraints>
-                                                                                                                                    <constraint firstItem="oDu-Pk-iOr" firstAttribute="leading" secondItem="QRC-Wz-F9Y" secondAttribute="leading" id="HpO-HE-1Kd"/>
-                                                                                                                                    <constraint firstAttribute="bottom" secondItem="oDu-Pk-iOr" secondAttribute="bottom" id="S7o-ar-S9j"/>
-                                                                                                                                    <constraint firstAttribute="trailing" secondItem="oDu-Pk-iOr" secondAttribute="trailing" id="jC9-t2-CPR"/>
-                                                                                                                                    <constraint firstAttribute="height" constant="20" id="r4M-d4-zrt"/>
-                                                                                                                                    <constraint firstItem="oDu-Pk-iOr" firstAttribute="top" secondItem="QRC-Wz-F9Y" secondAttribute="top" id="u56-yQ-ysQ"/>
-                                                                                                                                </constraints>
-                                                                                                                            </view>
-                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejj-7J-nAU">
-                                                                                                                                <rect key="frame" x="0.0" y="100" width="320" height="20"/>
-                                                                                                                                <subviews>
-                                                                                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="O4N-Zl-WsK">
-                                                                                                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
-                                                                                                                                        <subviews>
-                                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTk-U8-eTJ">
-                                                                                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                                                                                                                                <color key="backgroundColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                                                                                <constraints>
-                                                                                                                                                    <constraint firstAttribute="width" constant="20" id="u0D-zd-mBy"/>
-                                                                                                                                                </constraints>
-                                                                                                                                                <userDefinedRuntimeAttributes>
-                                                                                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
-                                                                                                                                                        <real key="value" value="10"/>
-                                                                                                                                                    </userDefinedRuntimeAttribute>
-                                                                                                                                                </userDefinedRuntimeAttributes>
-                                                                                                                                            </view>
-                                                                                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ABA-nl-Ecc">
-                                                                                                                                                <rect key="frame" x="25" y="0.0" width="295" height="20"/>
-                                                                                                                                                <subviews>
-                                                                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAB-uE-kkX">
-                                                                                                                                                        <rect key="frame" x="0.0" y="1.6666666666666288" width="36.333333333333336" height="16.666666666666668"/>
-                                                                                                                                                        <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="12"/>
-                                                                                                                                                        <nil key="textColor"/>
-                                                                                                                                                        <nil key="highlightedColor"/>
-                                                                                                                                                    </label>
-                                                                                                                                                </subviews>
-                                                                                                                                                <constraints>
-                                                                                                                                                    <constraint firstItem="NAB-uE-kkX" firstAttribute="centerY" secondItem="ABA-nl-Ecc" secondAttribute="centerY" id="qDe-dc-nPu"/>
-                                                                                                                                                    <constraint firstItem="NAB-uE-kkX" firstAttribute="leading" secondItem="ABA-nl-Ecc" secondAttribute="leading" id="siq-yY-E8l"/>
-                                                                                                                                                </constraints>
-                                                                                                                                            </view>
-                                                                                                                                        </subviews>
-                                                                                                                                    </stackView>
-                                                                                                                                </subviews>
-                                                                                                                                <constraints>
-                                                                                                                                    <constraint firstItem="O4N-Zl-WsK" firstAttribute="leading" secondItem="ejj-7J-nAU" secondAttribute="leading" id="1x4-ok-Fos"/>
-                                                                                                                                    <constraint firstAttribute="bottom" secondItem="O4N-Zl-WsK" secondAttribute="bottom" id="Exq-F2-T8a"/>
-                                                                                                                                    <constraint firstAttribute="height" constant="20" id="OI7-5v-MmC"/>
-                                                                                                                                    <constraint firstAttribute="trailing" secondItem="O4N-Zl-WsK" secondAttribute="trailing" id="e3R-nP-75c"/>
-                                                                                                                                    <constraint firstItem="O4N-Zl-WsK" firstAttribute="top" secondItem="ejj-7J-nAU" secondAttribute="top" id="ifS-Eg-MEn"/>
-                                                                                                                                </constraints>
-                                                                                                                            </view>
-                                                                                                                        </subviews>
-                                                                                                                    </stackView>
-                                                                                                                </subviews>
-                                                                                                                <constraints>
-                                                                                                                    <constraint firstAttribute="trailing" secondItem="gBm-OA-QXR" secondAttribute="trailing" id="7Pt-5e-Lbi"/>
-                                                                                                                    <constraint firstItem="gBm-OA-QXR" firstAttribute="top" secondItem="slO-bd-gLB" secondAttribute="top" id="QDJ-7y-ss5"/>
-                                                                                                                    <constraint firstAttribute="bottom" secondItem="gBm-OA-QXR" secondAttribute="bottom" id="skC-YU-Vx6"/>
-                                                                                                                    <constraint firstItem="gBm-OA-QXR" firstAttribute="leading" secondItem="slO-bd-gLB" secondAttribute="leading" id="yWo-Xv-6j9"/>
-                                                                                                                </constraints>
-                                                                                                            </view>
-                                                                                                        </subviews>
-                                                                                                    </stackView>
-                                                                                                </subviews>
-                                                                                                <constraints>
-                                                                                                    <constraint firstAttribute="bottom" secondItem="lwV-yE-lgV" secondAttribute="bottom" id="4uR-bJ-VqW"/>
-                                                                                                    <constraint firstItem="lwV-yE-lgV" firstAttribute="top" secondItem="fQV-i9-ANf" secondAttribute="top" id="SQm-jE-iJb"/>
-                                                                                                    <constraint firstAttribute="trailing" secondItem="lwV-yE-lgV" secondAttribute="trailing" id="ZgL-ft-zdz"/>
-                                                                                                    <constraint firstItem="lwV-yE-lgV" firstAttribute="leading" secondItem="fQV-i9-ANf" secondAttribute="leading" constant="5" id="nBI-48-C3p"/>
-                                                                                                </constraints>
-                                                                                                <userDefinedRuntimeAttributes>
-                                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
-                                                                                                        <real key="value" value="5"/>
-                                                                                                    </userDefinedRuntimeAttribute>
-                                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="addNormalShadow" value="YES"/>
-                                                                                                </userDefinedRuntimeAttributes>
-                                                                                            </view>
-                                                                                        </subviews>
-                                                                                    </stackView>
-                                                                                </subviews>
-                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" priority="250" constant="99" id="RdX-xL-RkG"/>
-                                                                                    <constraint firstItem="8zm-WY-aiz" firstAttribute="leading" secondItem="PdL-AP-A27" secondAttribute="leading" id="Ret-7D-hII"/>
-                                                                                    <constraint firstAttribute="bottom" secondItem="8zm-WY-aiz" secondAttribute="bottom" id="kx6-kC-RAs"/>
-                                                                                    <constraint firstAttribute="trailing" secondItem="8zm-WY-aiz" secondAttribute="trailing" id="pUa-ZN-ACi"/>
-                                                                                    <constraint firstItem="8zm-WY-aiz" firstAttribute="top" secondItem="PdL-AP-A27" secondAttribute="top" id="zk0-4e-ZSk"/>
-                                                                                </constraints>
-                                                                            </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdb-3w-2OI">
-                                                                                <rect key="frame" x="0.0" y="680" width="325" height="60"/>
+                                                                                <rect key="frame" x="0.0" y="510" width="325" height="60"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LbZ-oz-lLh">
                                                                                         <rect key="frame" x="62.666666666666686" y="7.6666666666666288" width="200" height="45"/>
@@ -1478,16 +1150,18 @@
                     <connections>
                         <outlet property="cityTextField" destination="I2X-eH-9WQ" id="HQD-Yv-qJd"/>
                         <outlet property="instituteTextField" destination="o83-3J-NGx" id="4nF-Ii-xVA"/>
+                        <outlet property="maxLabel" destination="Sai-O0-zUG" id="TJ1-hw-jfc"/>
+                        <outlet property="minLabel" destination="ukl-4K-T0b" id="9HP-hi-OoS"/>
+                        <outlet property="rangeSlider" destination="PIl-21-Y44" id="RIu-EM-uWu"/>
                         <outlet property="regionTextField" destination="ytc-oF-WXJ" id="o2k-Ii-xrX"/>
                         <outlet property="scrollView" destination="MbD-jR-PNX" id="W3S-id-Tai"/>
                         <outlet property="segmentView" destination="IgJ-Wu-pym" id="DBQ-0e-S6f"/>
                         <outlet property="sliderValueLabel" destination="ayI-Vo-4VT" id="SJx-5O-nxn"/>
-                        <outlet property="sliderView" destination="cLD-1C-itL" id="mKG-Le-ovg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V4o-zp-Xhj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312" y="-306"/>
+            <point key="canvasLocation" x="1310.6870229007634" y="-306.33802816901408"/>
         </scene>
         <!--My Tab Bar Ctrl-->
         <scene sceneID="heq-G9-YoF">
@@ -2381,7 +2055,6 @@
         <image name="inst-year" width="15" height="16"/>
         <image name="language" width="16" height="15"/>
         <image name="navigation" width="7" height="15"/>
-        <image name="option" width="16" height="16"/>
         <image name="region" width="12" height="15"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

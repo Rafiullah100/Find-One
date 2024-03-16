@@ -30,6 +30,7 @@ enum Route {
     case curriculam
     case gender
     case search
+    case addReview
     var description: String {
         switch self {
         case .signup:
@@ -68,6 +69,8 @@ enum Route {
             return "mobile/home/gender"
         case .search:
             return "mobile/search"
+        case .addReview:
+            return "mobile/institutes/add-review"
         }
     }
 }

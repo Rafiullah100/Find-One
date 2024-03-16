@@ -21,12 +21,12 @@ open class Helper{
     
     class func attributedText(text1: String, text2: String)-> NSMutableAttributedString{
         let text1Attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont(name: Constants.fontNameMedium, size: 19) ?? UIFont(),
+            .font: UIFont(name: Constants.fontRegular, size: 17) ?? UIFont(),
             .foregroundColor: UIColor.label
         ]
 
         let text2Attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont(name: Constants.fontNameMedium, size: 15) ?? UIFont(),
+            .font: UIFont(name: Constants.fontRegular, size: 14) ?? UIFont(),
             .foregroundColor: UIColor.label
         ]
 

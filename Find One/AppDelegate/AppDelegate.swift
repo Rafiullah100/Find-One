@@ -17,14 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        let window = UIWindow(frame: UIScreen.main.bounds)
 //        if UserDefaults.standard.isLogin == true && UserDefaults.standard.rememberMe == true{
-////            Switcher.setInitialScreen(vc: .home)
-//            let homeVC = UIStoryboard(name: Storyboard.auth.rawValue, bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-//            window.rootViewController = homeVC
-//            window.makeKeyAndVisible()
-//            self.window = window
+//            Switcher.setInitialScreen(vc: .home)
+////            let homeVC = UIStoryboard(name: Storyboard.auth.rawValue, bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+////            window.rootViewController = homeVC
+////            window.makeKeyAndVisible()
+////            self.window = window
 //        }
 //        else{
-//            Switcher.setInitialScreen(vc: .login)
+////            Switcher.setInitialScreen(vc: .login)
+//                    
+//            let loginVC = UIStoryboard(name: Storyboard.auth.rawValue, bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+//
+//                  self.window = UIWindow(frame: UIScreen.main.bounds)
+//                  self.window?.rootViewController = loginVC
+//                  self.window?.makeKeyAndVisible()
 //        }
         
         // Override point for customization after application launch.
