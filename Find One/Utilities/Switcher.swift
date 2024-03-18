@@ -44,8 +44,9 @@ class Switcher {
         delegate.navigationController?.pushViewController(vc, animated: true)
     }
     
-    static func gotoMap(delegate: UIViewController){
+    static func gotoMap(delegate: UIViewController, searchList: [SearchResult]){
         let vc = UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        vc.searchList = searchList
         vc.modalPresentationStyle = .fullScreen
         vc.hidesBottomBarWhenPushed = false
         delegate.navigationController?.pushViewController(vc, animated: true)
@@ -124,4 +125,16 @@ class Switcher {
         delegate.present(vc, animated: true, completion: nil)
     }
     
+    static func showFilter(delegate: UIViewController){
+        let vc = UIStoryboard(name: Storyboard.menu.rawValue, bundle: nil).instantiateViewController(withIdentifier: "FilterViewController") as! FilterViewController
+        let nav = UINavigationController(rootViewController: vc)
+        if let sheet = nav.sheetPresentationController {
+
+            // 3
+            sheet.detents = [.large()]
+
+        }
+        // 4
+        delegate.present(nav, animated: true)
+    }
 }

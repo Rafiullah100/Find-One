@@ -36,6 +36,7 @@ class ResultViewModel {
     }
     
     func getSearchResult(regionID: Int, cityID: Int, typeID: Int, genderID: Int, minFee: Int, maxFee: Int){
+        print(regionID, cityID, typeID, genderID)
 //        let params = ["region_id": 1, "city_id": 1, "type_id": 1, "min_fee": minFee, "max_fee": maxFee, "gander_id": 1]
 //        print(params)
         URLSession.shared.request(route: .search, method: .get, parameters: [:], model: SearchModel.self) { result in

@@ -37,6 +37,9 @@ class ResultTableViewCell: UITableViewCell {
         didSet{
             imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (searchInstitute?.imageURL ?? "") ), placeholderImage: UIImage(named: "Rectangle 405"))
             nameLabel.text = searchInstitute?.name ?? ""
+            ratingLabel.text = searchInstitute?.reviewsAvg
+            typeLabel.text = searchInstitute?.gender
+            locationLabel.text = "Location: \(searchInstitute?.city ?? "")  \(searchInstitute?.region ?? "")"
         }
     }
 }

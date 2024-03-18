@@ -73,7 +73,7 @@ class ResultViewController: BaseViewController {
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
     }
     @IBAction func mapBtnAction(_ sender: Any) {
-        Switcher.gotoMap(delegate: self)
+        Switcher.gotoMap(delegate: self, searchList: searchList ?? [])
     }
 }
 

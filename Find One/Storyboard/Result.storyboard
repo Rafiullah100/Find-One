@@ -1377,7 +1377,7 @@
                                                                                             <subviews>
                                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqC-ee-3n2">
                                                                                                     <rect key="frame" x="121.66666666666669" y="25" width="150" height="45"/>
-                                                                                                    <color key="backgroundColor" red="0.08235294118" green="0.61176470589999998" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                                    <color key="backgroundColor" red="0.44705882349999998" green="0.70980392160000005" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                     <constraints>
                                                                                                         <constraint firstAttribute="width" constant="150" id="gix-09-GUl"/>
                                                                                                         <constraint firstAttribute="height" constant="45" id="mP9-l5-mTJ"/>
@@ -1520,7 +1520,7 @@
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="0.08235294118" green="0.61176470589999998" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="backgroundColor" red="0.44705882349999998" green="0.70980392160000005" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="130" id="0XZ-Xc-BB5"/>
                                                                     <constraint firstAttribute="height" constant="40" id="39w-Dd-8rk"/>
@@ -2233,7 +2233,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtJ-h4-ZPh">
                                                         <rect key="frame" x="91.666666666666686" y="17.666666666666629" width="150" height="40"/>
-                                                        <color key="backgroundColor" red="0.08235294118" green="0.61176470589999998" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.44705882349999998" green="0.70980392160000005" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="2wP-2M-Jsj"/>
                                                             <constraint firstAttribute="width" constant="150" id="NQT-Vq-B8M"/>
@@ -2318,7 +2318,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -327,14 +327,14 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrv-hh-iwP">
                                                                         <rect key="frame" x="0.0" y="0.0" width="163" height="20"/>
                                                                         <subviews>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="4pe-w2-Lgm">
-                                                                                <rect key="frame" x="79" y="0.0" width="84" height="20"/>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4pe-w2-Lgm">
+                                                                                <rect key="frame" x="80" y="0.0" width="83" height="20"/>
                                                                                 <subviews>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVA-QG-85B">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="20"/>
                                                                                         <subviews>
-                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="UOX-oB-FYi">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="UOX-oB-FYi">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="15" height="20"/>
                                                                                             </imageView>
                                                                                         </subviews>
                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -346,10 +346,10 @@
                                                                                         </constraints>
                                                                                     </view>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ajf-cf-vb0">
-                                                                                        <rect key="frame" x="16" y="0.0" width="20" height="20"/>
+                                                                                        <rect key="frame" x="17" y="0.0" width="15" height="20"/>
                                                                                         <subviews>
-                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="EuH-O4-D74">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="EuH-O4-D74">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="15" height="20"/>
                                                                                             </imageView>
                                                                                         </subviews>
                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -361,10 +361,10 @@
                                                                                         </constraints>
                                                                                     </view>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cbv-Cs-be8">
-                                                                                        <rect key="frame" x="32" y="0.0" width="20" height="20"/>
+                                                                                        <rect key="frame" x="34" y="0.0" width="15" height="20"/>
                                                                                         <subviews>
-                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="eVr-uy-XrO">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="eVr-uy-XrO">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="15" height="20"/>
                                                                                             </imageView>
                                                                                         </subviews>
                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -376,10 +376,10 @@
                                                                                         </constraints>
                                                                                     </view>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7di-Qk-UK2">
-                                                                                        <rect key="frame" x="48" y="0.0" width="20" height="20"/>
+                                                                                        <rect key="frame" x="51" y="0.0" width="15" height="20"/>
                                                                                         <subviews>
-                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="oni-Tb-TgV">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="oni-Tb-TgV">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="15" height="20"/>
                                                                                             </imageView>
                                                                                         </subviews>
                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -391,17 +391,17 @@
                                                                                         </constraints>
                                                                                     </view>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhK-Qh-wR6">
-                                                                                        <rect key="frame" x="64" y="0.0" width="20" height="20"/>
+                                                                                        <rect key="frame" x="68" y="0.0" width="15" height="20"/>
                                                                                         <subviews>
-                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="rVb-a0-a6a">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="rVb-a0-a6a">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="15" height="20"/>
                                                                                             </imageView>
                                                                                         </subviews>
                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="bottom" secondItem="rVb-a0-a6a" secondAttribute="bottom" id="Jmv-Bf-RaE"/>
                                                                                             <constraint firstAttribute="trailing" secondItem="rVb-a0-a6a" secondAttribute="trailing" id="c5C-uK-NOX"/>
-                                                                                            <constraint firstAttribute="width" constant="20" id="fbc-wL-SWr"/>
+                                                                                            <constraint firstAttribute="width" constant="15" id="fbc-wL-SWr"/>
                                                                                             <constraint firstItem="rVb-a0-a6a" firstAttribute="leading" secondItem="mhK-Qh-wR6" secondAttribute="leading" id="r2J-lZ-ma5"/>
                                                                                             <constraint firstItem="rVb-a0-a6a" firstAttribute="top" secondItem="mhK-Qh-wR6" secondAttribute="top" id="uFo-So-0za"/>
                                                                                         </constraints>
@@ -501,10 +501,10 @@
     </objects>
     <resources>
         <image name="Rectangle 405" width="105" height="92"/>
-        <image name="Star" width="15" height="14"/>
         <image name="check" width="9" height="10"/>
         <image name="gender" width="21" height="20"/>
         <image name="location" width="9" height="10"/>
+        <image name="star" width="13" height="12"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -25,7 +25,7 @@ extension CustomColor {
     var color: UIColor {
         switch self {
         case .appColor:
-            return UIColor(hex: 0x159C95, alpha: 1.0)
+            return UIColor(hex: 0x72B54D, alpha: 1.0)
         case .tabTextColor:
             return UIColor(hex: 0xBCBCBC, alpha: 0.6)
         case .shadowColor:

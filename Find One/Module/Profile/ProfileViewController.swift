@@ -27,6 +27,9 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView.sd_setImage(with: URL(string: Route.imageBaseUrl + (UserDefaults.standard.profileImage ?? "") ), placeholderImage: UIImage(named: "Rectangle 405"))
+        nameLabell.text = UserDefaults.standard.name
+        usernameLabel.text = UserDefaults.standard.email
     }
     
     override func viewWillAppear(_ animated: Bool) {

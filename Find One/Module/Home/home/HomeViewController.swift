@@ -127,6 +127,9 @@ class HomeViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
         scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
     }
+    @IBAction func filterBtnAction(_ sender: Any) {
+        Switcher.showFilter(delegate: self)
+    }
 }
 
 //extension HomeViewController: UITableViewDelegate, UITableViewDataSource{

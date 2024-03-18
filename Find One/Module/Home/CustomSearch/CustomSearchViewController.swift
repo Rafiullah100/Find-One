@@ -51,14 +51,13 @@ class CustomSearchViewController: BaseViewController {
     var instituteTypeID: Int?
     var genderID: Int?
 
-    var maxPrice = 500
-    var minPrice = 5000
+    var maxPrice = 5000
+    var minPrice = 500
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .home
-        
         
         rangeSlider.addTarget(self, action: #selector(CustomSearchViewController.rangeSliderValueChanged(_:)), for: .valueChanged)
         updateLabel()

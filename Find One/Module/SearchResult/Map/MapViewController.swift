@@ -10,19 +10,25 @@ import GoogleMaps
 class MapViewController: BaseViewController {
 
     @IBOutlet weak var mapView: GMSMapView!
+    var searchList: [SearchResult]?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .back
-       setupMap()
+        guard searchList?.count ?? 0 > 0 else { return }
+        setupMap()
     }
 
     private func setupMap(){
-        let camera = GMSCameraPosition.camera(withLatitude: 34.0151, longitude: 71.5249, zoom: 6.0)
+        
+        let camera = GMSCameraPosition.camera(withLatitude: searchList?[0].latitude ?? 0.0, longitude: searchList?[0].longitude ?? 0.0, zoom: 6.0)
         mapView.camera = camera
-        let position = CLLocationCoordinate2D(latitude: 34.0151, longitude: 71.5249)
-        let marker = GMSMarker(position: position)
-        marker.map = mapView
-        marker.icon = UIImage(named: "marker")
+        searchList?.forEach({ institute in
+            let position = CLLocationCoordinate2D(latitude: institute.latitude ?? 0.0, longitude: institute.longitude ?? 0.0)
+            let marker = GMSMarker(position: position)
+            marker.map = mapView
+            marker.icon = UIImage(named: "marker")
+        })
     }
-    
 }

@@ -161,7 +161,7 @@
                             <constraint firstAttribute="trailing" secondItem="rn5-qj-sYh" secondAttribute="trailing" id="tLs-rS-dCo"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="profile" id="LeP-dD-NvT"/>
+                    <tabBarItem key="tabBarItem" title="" image="profile" selectedImage="profile-selected" id="LeP-dD-NvT"/>
                     <navigationItem key="navigationItem" id="2J2-kV-jqx"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -238,7 +238,7 @@
                                                                                 </connections>
                                                                             </button>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" red="0.08235294118" green="0.61176470589999998" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="backgroundColor" red="0.44705882349999998" green="0.70980392160000005" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstItem="jL8-ig-g3T" firstAttribute="centerY" secondItem="RI1-Qs-NIH" secondAttribute="centerY" id="1ky-Xn-P70"/>
                                                                             <constraint firstAttribute="width" constant="30" id="5fZ-ie-sVd"/>
@@ -745,7 +745,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9c9-eQ-odL">
                                                         <rect key="frame" x="111.66666666666666" y="10" width="110" height="45"/>
-                                                        <color key="backgroundColor" red="0.08235294118" green="0.61176470589999998" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.44705882349999998" green="0.70980392160000005" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="3Vf-5q-Tqj"/>
                                                             <constraint firstAttribute="width" constant="110" id="yvk-lj-XWo"/>
@@ -835,6 +835,7 @@
         <image name="camera" width="23" height="21"/>
         <image name="logout-2_svgrepo.com" width="60" height="60"/>
         <image name="profile" width="25" height="25"/>
+        <image name="profile-selected" width="33" height="34"/>
         <namedColor name="backgroundColor">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -845,7 +846,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

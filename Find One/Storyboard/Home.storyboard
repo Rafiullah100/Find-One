@@ -64,7 +64,7 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVW-rf-N6u">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="110"/>
-                                                <color key="backgroundColor" red="0.08235294118" green="0.61176470589999998" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.44705882349999998" green="0.70980392160000005" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="110" id="U3V-Xg-8zt"/>
                                                 </constraints>
@@ -703,6 +703,7 @@
                                                                                                                             <segment title="Boys Only"/>
                                                                                                                             <segment title="Girls Only"/>
                                                                                                                         </segments>
+                                                                                                                        <color key="selectedSegmentTintColor" red="0.44705882349999998" green="0.70980392160000005" blue="0.30196078430000001" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                                                                         <connections>
                                                                                                                             <action selector="typeSegmentAction:" destination="ARJ-ye-KHt" eventType="valueChanged" id="g0z-Zx-hnW"/>
                                                                                                                         </connections>
@@ -954,6 +955,15 @@
                                                                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="upperValue">
                                                                                                                                         <real key="value" value="5000"/>
                                                                                                                                     </userDefinedRuntimeAttribute>
+                                                                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="trackHighlightTintColor">
+                                                                                                                                        <color key="value" red="0.44705882349999998" green="0.70980392160000005" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                                                                    </userDefinedRuntimeAttribute>
+                                                                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="thumbTintColor">
+                                                                                                                                        <color key="value" red="0.44705882349999998" green="0.70980392160000005" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                                                                    </userDefinedRuntimeAttribute>
+                                                                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="thumbBorderColor">
+                                                                                                                                        <color key="value" red="0.08235294118" green="0.61176470589999998" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                                                                    </userDefinedRuntimeAttribute>
                                                                                                                                 </userDefinedRuntimeAttributes>
                                                                                                                             </view>
                                                                                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VwN-Be-pFc">
@@ -1067,7 +1077,7 @@
                                                                                 <subviews>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LbZ-oz-lLh">
                                                                                         <rect key="frame" x="62.666666666666686" y="7.6666666666666288" width="200" height="45"/>
-                                                                                        <color key="backgroundColor" red="0.08235294118" green="0.61176470589999998" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                        <color key="backgroundColor" red="0.44705882349999998" green="0.70980392160000005" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="width" constant="200" id="GIJ-JH-j0A"/>
                                                                                             <constraint firstAttribute="height" constant="45" id="vAy-91-nsR"/>
@@ -1232,7 +1242,7 @@
                                                                                                     <subviews>
                                                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1T-8p-B69">
                                                                                                             <rect key="frame" x="157.66666666666669" y="2.333333333333333" width="5" height="5"/>
-                                                                                                            <color key="backgroundColor" red="0.08235294118" green="0.61176470589999998" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                                            <color key="backgroundColor" red="0.44705882349999998" green="0.70980392160000005" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                             <constraints>
                                                                                                                 <constraint firstAttribute="width" constant="5" id="K3j-TW-QYK"/>
                                                                                                                 <constraint firstAttribute="height" constant="5" id="sR7-hl-AEw"/>
@@ -1321,7 +1331,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.08235294118" green="0.61176470589999998" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.44705882349999998" green="0.70980392160000005" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="Nd5-zF-NXq" secondAttribute="bottom" constant="-2" id="nQZ-if-BFh"/>
                                                     <constraint firstAttribute="height" constant="130" id="vwH-pD-Zkc"/>
@@ -1358,16 +1368,18 @@
                                                                                                                 <nil key="textColor"/>
                                                                                                                 <nil key="highlightedColor"/>
                                                                                                             </label>
-                                                                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBG-W1-U6s">
-                                                                                                                <rect key="frame" x="317" y="0.0" width="60" height="20"/>
+                                                                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBG-W1-U6s">
+                                                                                                                <rect key="frame" x="357" y="0.0" width="20" height="20"/>
                                                                                                                 <constraints>
-                                                                                                                    <constraint firstAttribute="width" priority="250" constant="60" id="HQy-E1-euo"/>
+                                                                                                                    <constraint firstAttribute="width" priority="250" constant="20" id="HQy-E1-euo"/>
                                                                                                                 </constraints>
-                                                                                                                <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="12"/>
                                                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                                                                <state key="normal" title="View All">
+                                                                                                                <state key="normal" image="filter">
                                                                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                                 </state>
+                                                                                                                <connections>
+                                                                                                                    <action selector="filterBtnAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WKR-Lk-cJ1"/>
+                                                                                                                </connections>
                                                                                                             </button>
                                                                                                         </subviews>
                                                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1634,7 +1646,7 @@
         <scene sceneID="V87-wq-BdB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wg1-xL-7cp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="bell" id="0F3-ML-wQD"/>
+                    <tabBarItem key="tabBarItem" title="" image="bell" selectedImage="bell-selected" id="0F3-ML-wQD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ADf-RY-jEx">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -2024,7 +2036,7 @@
         <scene sceneID="l8D-BN-RXm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MRd-yt-RT5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Settings" id="O1E-cG-f6x"/>
+                    <tabBarItem key="tabBarItem" title="" image="Settings" selectedImage="Settings-selected" id="O1E-cG-f6x"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8li-an-pVN">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -2044,12 +2056,15 @@
     </designables>
     <resources>
         <image name="Settings" width="22" height="24"/>
+        <image name="Settings-selected" width="22" height="23"/>
         <image name="bell" width="21" height="24"/>
+        <image name="bell-selected" width="21" height="23"/>
         <image name="cil_education" width="19" height="19"/>
         <image name="city" width="14" height="16"/>
         <image name="dropdown" width="14" height="7"/>
         <image name="edu-type" width="14" height="15"/>
         <image name="fee-range" width="14" height="15"/>
+        <image name="filter" width="17" height="17"/>
         <image name="home" width="25" height="25"/>
         <image name="home-selected" width="32" height="31"/>
         <image name="inst-year" width="15" height="16"/>
@@ -2060,7 +2075,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
