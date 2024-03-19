@@ -73,3 +73,16 @@ struct GenderResult: Codable, Equatable {
     let id: Int?
     let name: String?
 }
+
+
+struct GradeModel: Codable {
+    let success: Bool?
+    let result: [GradeResult]?
+    let message: String?
+}
+
+// MARK: - Result
+struct GradeResult: Codable {
+    let id: Int?
+    let name: String?
+}

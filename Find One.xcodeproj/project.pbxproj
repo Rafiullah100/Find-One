@@ -51,6 +51,9 @@
 		525529992B972E1800395676 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525529982B972E1800395676 /* DetailModel.swift */; };
 		5255299C2B972E4800395676 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255299B2B972E4800395676 /* DetailViewModel.swift */; };
 		52687B992BA411E200334BC3 /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52687B982BA411E200334BC3 /* AddReviewViewController.swift */; };
+		52773C6C2BA95A3E0067FD00 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52773C6A2BA95A3E0067FD00 /* FilterCollectionViewCell.swift */; };
+		52773C6D2BA95A3E0067FD00 /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52773C6B2BA95A3E0067FD00 /* FilterCollectionViewCell.xib */; };
+		52773C712BA98FF30067FD00 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52773C702BA98FF30067FD00 /* FilterViewModel.swift */; };
 		527F138E2B7F3E480055F424 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F138D2B7F3E480055F424 /* ReviewViewController.swift */; };
 		527F13922B7F3E650055F424 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F13902B7F3E650055F424 /* ReviewTableViewCell.swift */; };
 		527F13932B7F3E650055F424 /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527F13912B7F3E650055F424 /* ReviewTableViewCell.xib */; };
@@ -157,6 +160,9 @@
 		525529982B972E1800395676 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		5255299B2B972E4800395676 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		52687B982BA411E200334BC3 /* AddReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
+		52773C6A2BA95A3E0067FD00 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		52773C6B2BA95A3E0067FD00 /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
+		52773C702BA98FF30067FD00 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		527F138D2B7F3E480055F424 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		527F13902B7F3E650055F424 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		527F13912B7F3E650055F424 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
@@ -515,6 +521,41 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		52773C682BA959DF0067FD00 /* FilterModule */ = {
+			isa = PBXGroup;
+			children = (
+				52773C6F2BA98FCF0067FD00 /* ViewModel */,
+				52773C6E2BA98F7E0067FD00 /* Model */,
+				52773C692BA959F70067FD00 /* Cell */,
+				52CEAD492BA82D2E000601DE /* FilterViewController.swift */,
+			);
+			path = FilterModule;
+			sourceTree = "<group>";
+		};
+		52773C692BA959F70067FD00 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				52773C6A2BA95A3E0067FD00 /* FilterCollectionViewCell.swift */,
+				52773C6B2BA95A3E0067FD00 /* FilterCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		52773C6E2BA98F7E0067FD00 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52773C6F2BA98FCF0067FD00 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52773C702BA98FF30067FD00 /* FilterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		527F138C2B7F3E330055F424 /* Review */ = {
 			isa = PBXGroup;
 			children = (
@@ -556,7 +597,7 @@
 			isa = PBXGroup;
 			children = (
 				528F939D2B8C8E0300BF0A5F /* SideMenuViewController.swift */,
-				52CEAD492BA82D2E000601DE /* FilterViewController.swift */,
+				52773C682BA959DF0067FD00 /* FilterModule */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -915,6 +956,7 @@
 				529834B52B7B612000A33DAD /* manrope-thin.otf in Resources */,
 				527F139B2B7F46670055F424 /* FeeStructureViewTableViewCell.xib in Resources */,
 				52C208CA2B7E2A0900FA6470 /* GridCollectionViewCell.xib in Resources */,
+				52773C6D2BA95A3E0067FD00 /* FilterCollectionViewCell.xib in Resources */,
 				527F13932B7F3E650055F424 /* ReviewTableViewCell.xib in Resources */,
 				529834B62B7B612000A33DAD /* manrope-light.otf in Resources */,
 				52F612B72B9993E600EC1EA9 /* Profile.storyboard in Resources */,
@@ -1008,6 +1050,7 @@
 				529220852B7F720D00C0E396 /* LocationViewController.swift in Sources */,
 				520538D32B79EE7600D81267 /* Route.swift in Sources */,
 				520538E22B79EE8000D81267 /* AutoSizingUiTableView.swift in Sources */,
+				52773C6C2BA95A3E0067FD00 /* FilterCollectionViewCell.swift in Sources */,
 				529220812B7F6D9B00C0E396 /* MapViewController.swift in Sources */,
 				528F93A42B8CAFB200BF0A5F /* HomeViewModel.swift in Sources */,
 				523FFB3B2B9AE897005BCFA7 /* ProfileTableViewCell.swift in Sources */,
@@ -1042,6 +1085,7 @@
 				529834AB2B7B5C8100A33DAD /* CustomSearchViewController.swift in Sources */,
 				520538D12B79EE7600D81267 /* Method.swift in Sources */,
 				5234035C2B9F160F00A93EFE /* BookingViewController.swift in Sources */,
+				52773C712BA98FF30067FD00 /* FilterViewModel.swift in Sources */,
 				525529962B971C5E00395676 /* ResultViewModel.swift in Sources */,
 				52AD1C1B2B7CC05F00E5EA4F /* CityCollectionViewCell.swift in Sources */,
 				52D4DB212B85C60700059025 /* SustainableViewController.swift in Sources */,

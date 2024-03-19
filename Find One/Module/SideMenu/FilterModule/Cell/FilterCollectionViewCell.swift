@@ -7,8 +7,12 @@
 
 import UIKit
 
-class FilterCollectionViewCell: UICollectionViewCell {
-
+class FilterCollectionViewCell:
+    
+    UICollectionViewCell {
+    @IBOutlet weak var BgView: UIView!
+    @IBOutlet weak var label: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
