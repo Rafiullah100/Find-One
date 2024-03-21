@@ -36,6 +36,8 @@ class ResultViewController: BaseViewController {
     var minFee: Int?
     var maxFee: Int?
     var genderID: Int?
+    var q: String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +64,7 @@ class ResultViewController: BaseViewController {
         case .region:
             viewModel.getInstituteListByRegion(id: id ?? 0)
         case .search:
-            viewModel.getSearchResult(regionID: regionID ?? 0, cityID: cityID ?? 0, typeID: typeID ?? 0, genderID: regionID ?? 0, minFee: minFee ?? 0, maxFee: maxFee ?? 0)
+            viewModel.getSearchResult(regionID: regionID ?? 0, cityID: cityID ?? 0, typeID: typeID ?? 0, genderID: regionID ?? 0, minFee: minFee ?? 0, maxFee: maxFee ?? 0, q: q)
         case nil:
             break
         }
@@ -116,8 +118,7 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource{
             slug = instituteList?[indexPath.row].slug ?? ""
         case .search:
             id = searchList?[indexPath.row].id ?? 0
-//            slug = searchList?[indexPath.row].slug ?? ""
-            slug = ""
+            slug = searchList?[indexPath.row].slug ?? ""
         default:
             id = 0
             slug = ""

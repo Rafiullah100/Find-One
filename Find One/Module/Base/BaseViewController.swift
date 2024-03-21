@@ -26,7 +26,9 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
     var type: ViewControllerType = .home
     var titleLabel: UILabel?
     var overlayView: UIView?
-    
+    var searchView = UIView()
+    var textField = UITextField()
+
     var viewControllerTitle: String? {
         didSet {
             titleLabel?.text = viewControllerTitle ?? ""
@@ -47,6 +49,27 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
 
 
     func addCenterLabel() {
+        
+        searchView = UIView()
+        searchView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: (self.navigationController?.navigationBar.frame.width ?? 0.0) - 115, height: self.navigationController?.navigationBar.frame.height ?? 0.0))
+        searchView.layer.cornerRadius = (self.navigationController?.navigationBar.frame.height ?? 0.0) / 2.0
+        searchView.layer.borderWidth = 1.0
+        searchView.layer.borderColor = UIColor.label.cgColor
+        searchView.backgroundColor = .systemBackground
+        self.navigationItem.titleView = searchView
+        
+//        textField?.theme.
+        textField.placeholder = "Search"
+        textField.placeHolderColor = UIColor.lightGray
+        textField.clearButtonMode = .never
+        textField.delegate = self
+//        textField?.textAlignment = Helper.shared.isRTL() ? .right : .left
+        searchView.addSubview(textField)
+        searchView.isHidden = true
+        textField.frame = searchView.bounds
+//        textField = UITextField(frame: CGRect(x: 0, y: 0, width: searchView.frame.width - 10, height: searchView.frame.height))
+//        textField.center = searchView.center
+        
         titleLabel = UILabel()
         if let titleLabel = titleLabel {
             print(viewControllerTitle ?? "")
@@ -129,7 +152,7 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
         navigationItem.rightBarButtonItems = []
         navigationItem.leftBarButtonItems = []
         addHomeButtons()
-//        addCenterLabel()
+        addCenterLabel()
     }
     
     func setupDetailButtons() {
@@ -224,17 +247,17 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     @objc func filterAction() {
-//        searchView.isHidden.toggle()
-//        titleLabel?.isHidden.toggle()
-//
-//        if self.navigationItem.titleView == searchView{
-//            textField?.resignFirstResponder()
-//            self.navigationItem.titleView = titleLabel
-//        }
-//        else{
-//            textField?.becomeFirstResponder()
-//            self.navigationItem.titleView = searchView
-//        }
+        searchView.isHidden.toggle()
+        titleLabel?.isHidden.toggle()
+
+        if self.navigationItem.titleView == searchView{
+            textField.resignFirstResponder()
+            self.navigationItem.titleView = titleLabel
+        }
+        else{
+            textField.becomeFirstResponder()
+            self.navigationItem.titleView = searchView
+        }
     }
     
     @objc func pop() {
@@ -318,3 +341,11 @@ extension BaseViewController: SideMenuNavigationControllerDelegate{
 }
 
 
+extension BaseViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.text != nil {
+            Switcher.gotoSerachResult(delegate: self, q: textField.text)
+        }
+        return true
+    }
+}

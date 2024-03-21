@@ -12,6 +12,7 @@ enum ImageSource {
 }
 class PersonalInfoViewController: BaseViewController {
 
+    @IBOutlet weak var segmentView: UISegmentedControl!
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var headerView: UIView!
@@ -22,12 +23,39 @@ class PersonalInfoViewController: BaseViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var updateButton: UIButton!
     
+    @IBOutlet weak var aboutTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var countryTextField: UITextField!
     var imagePicker: UIImagePickerController!
+    private var viewModel = ProfileViewModel()
+
+    var genderArr = ["Male", "Female", "Other"]
+    var gender = "Male"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .back
         viewControllerTitle = "Personal Information"
+        
+        self.animateSpinner()
+        viewModel.editProfile.bind { _ in
+            DispatchQueue.main.async {
+                self.stopAnimation()
+                self.updateUI()
+            }
+        }
+        viewModel.getMyProfile()
+    }
+    
+    private func updateUI(){
+        nameTextField.text = viewModel.getName()
+        emailTextField.text = viewModel.getEmail()
+        imageView.sd_setImage(with: URL(string: viewModel.getImage()), placeholderImage: UIImage(named: "placeholder"))
+        mobileTextField.text = viewModel.getMobile()
+        countryTextField.text = viewModel.getCountry()
+        cityTextField.text = viewModel.getCity()
+        aboutTextField.text = viewModel.getAbout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,6 +97,23 @@ class PersonalInfoViewController: BaseViewController {
             imagePicker.sourceType = .photoLibrary
         }
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func segmentAction(_ sender: Any) {
+        let selectedIndex = segmentView.selectedSegmentIndex
+        gender = genderArr[selectedIndex]
+    }
+    
+    @IBAction func saveBtnAction(_ sender: Any) {
+        let edit = EditProfileInputModel(name: nameTextField.text ?? "", email: emailTextField.text ?? "", mobile: mobileTextField.text ?? "", image: imageView.image ?? UIImage(), about: aboutTextField.text ?? "", city: cityTextField.text ?? "", country: countryTextField.text ?? "", gender: gender)
+        let validationResponse = viewModel.isFormValid(user: edit)
+        if validationResponse.isValid {
+            self.animateSpinner()
+            viewModel.updateProfile(image: imageView.image ?? UIImage())
+        }
+        else{
+            showAlert(message: validationResponse.message)
+        }
     }
 }
 

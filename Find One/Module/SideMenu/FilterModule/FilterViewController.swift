@@ -7,34 +7,11 @@
 
 import UIKit
 
+protocol FilterProtocol {
+    func filter(cityID: Int, regionID: Int, curriculumID: Int, stageID: Int, genderID: Int, instituteType: Int)
+}
+
 class FilterViewController: UIViewController {
-
-    struct Grades {
-        let grades:String?
-    }
-
-    struct Genders {
-        let genderType:String?
-    }
-
-    struct SchoolTypes {
-        let schoolType:String?
-    }
-    
-    let stage = [ Grades(grades: "All grades"),
-              Grades(grades: "Elementary"),
-              Grades(grades: "kindergarten and Nursery"),
-              Grades(grades: "High School"),
-        ]
-    
-    let gender = [Genders(genderType: "Boys"),
-              Genders(genderType: "Girls"), Genders(genderType: "Boys and Girls")]
-    
-    let schooltype = [SchoolTypes(schoolType: "International"),
-                  SchoolTypes(schoolType: "National"),
-                  SchoolTypes(schoolType: "Special Needs"),
-                  SchoolTypes(schoolType: "Typical"),
-    ]
     
     @IBOutlet weak var typeCollectionView: UICollectionView!{
         didSet{
@@ -73,12 +50,16 @@ class FilterViewController: UIViewController {
     var curriculamList: [InstitutetypeResult]?
     var genderList: [GenderResult]?
     var gradeList: [GradeResult]?
+    var instituteList: [InstitutetypeResult]?
 
     var regionID: Int?
     var cityID: Int?
     var curriculumID: Int?
     var genderID: Int?
-    
+    var stageID: Int?
+    var typeID: Int?
+
+    var filterDelegate: FilterProtocol?
     
     var regionPicker: UIPickerView?{
         didSet{
@@ -134,15 +115,26 @@ class FilterViewController: UIViewController {
             self.stageCollectionView.reloadData()
         }
         
+        viewModel.instituteType.bind { type in
+            self.instituteList = type
+            self.typeCollectionView.reloadData()
+        }
+        
         viewModel.getRegionList()
         viewModel.getCurriculamType()
         viewModel.getGender()
         viewModel.getGrade()
+        viewModel.getInstituteType()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    @IBAction func filterBtnAction(_ sender: Any) {
+        filterDelegate?.filter(cityID: cityID ?? 0, regionID: regionID ?? 0, curriculumID: curriculumID ?? 0, stageID: stageID ?? 0, genderID: genderID ?? 0, instituteType: typeID ?? 0)
+        self.dismiss(animated: true)
     }
 }
 
@@ -150,7 +142,7 @@ extension FilterViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case typeCollectionView:
-            return schooltype.count
+            return instituteList?.count ?? 0
         case stageCollectionView:
             return gradeList?.count ?? 0
         case genderCollectionView:
@@ -164,7 +156,7 @@ extension FilterViewController: UICollectionViewDelegate, UICollectionViewDataSo
         switch collectionView {
         case typeCollectionView:
             let cell: FilterCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "school", for: indexPath) as! FilterCollectionViewCell
-            cell.label.text = schooltype[indexPath.row].schoolType ?? ""
+            cell.label.text = instituteList?[indexPath.row].name ?? ""
             cell.label.textColor = indexPath == typeSelected ? .white : .gray
             cell.BgView.backgroundColor = indexPath == typeSelected ? CustomColor.appColor.color : .clear
             cell.BgView.borderColor = indexPath == typeSelected ? .clear : .gray
@@ -192,10 +184,13 @@ extension FilterViewController: UICollectionViewDelegate, UICollectionViewDataSo
         switch collectionView {
         case typeCollectionView:
             typeSelected = indexPath
+            typeID = instituteList?[indexPath.row].id
         case genderCollectionView:
             genderSelected = indexPath
+            genderID = genderList?[indexPath.row].id
         case stageCollectionView:
             stageSelected = indexPath
+            stageID = gradeList?[indexPath.row].id
         default: break
         }
         collectionView.reloadData()
@@ -207,7 +202,7 @@ extension FilterViewController: UICollectionViewDelegateFlowLayout {
         var width: CGFloat = 0
         switch collectionView {
         case typeCollectionView:
-            width = calculateWidth(text: schooltype[indexPath.row].schoolType ?? "")
+            width = calculateWidth(text: instituteList?[indexPath.row].name ?? "")
         case genderCollectionView:
             width = calculateWidth(text: genderList?[indexPath.row].name ?? "")
         case stageCollectionView:
@@ -239,22 +234,19 @@ extension FilterViewController: UIPickerViewDelegate, UIPickerViewDataSource{
             return citiesList?.count ?? 0
         }
         else if pickerView == curriculumPicker{
-            return curriculamList?.count ?? 0
+            return instituteList?.count ?? 0
         }
         return 0
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == regionPicker {
-            regionTextField.text = regionList?[row].name
             return regionList?[row].name
         }
         else if pickerView == CityPicker{
-            cityTextField.text = citiesList?[row].name
             return citiesList?[row].name
         }
         else if pickerView == curriculumPicker{
-            curriculumTextField.text = curriculamList?[row].name
             return curriculamList?[row].name
         }
         return ""
@@ -262,14 +254,17 @@ extension FilterViewController: UIPickerViewDelegate, UIPickerViewDataSource{
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == regionPicker {
+            regionTextField.text = regionList?[row].name
             regionID = regionList?[row].id ?? 0
             cityTextField.text = ""
             viewModel.getCitiesList(regionID: regionList?[row].id ?? 0)
         }
         else if pickerView == CityPicker{
+            cityTextField.text = citiesList?[row].name
             cityID = citiesList?[row].id ?? 0
         }
         else if pickerView == curriculumPicker{
+            curriculumTextField.text = curriculamList?[row].name
             curriculumID = curriculamList?[row].id ?? 0
         }
     }

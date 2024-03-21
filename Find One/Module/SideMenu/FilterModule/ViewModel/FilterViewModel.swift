@@ -14,6 +14,7 @@ class FilterViewModel {
     var curriculam: Observable<[InstitutetypeResult]> = Observable(nil)
     var genderList: Observable<[GenderResult]> = Observable(nil)
     var gradeList: Observable<[GradeResult]> = Observable(nil)
+    var instituteType: Observable<[InstitutetypeResult]> = Observable(nil)
 
     
     func getRegionList(){
@@ -65,6 +66,17 @@ class FilterViewModel {
             switch result {
             case .success(let grade):
                 self.gradeList.value = grade.result
+            case .failure(let error):
+                self.errorMessage.value = error.localizedDescription
+            }
+        }
+    }
+    
+    func getInstituteType(){
+        URLSession.shared.request(route: .type, method: .get, parameters: [:], model: InstitutetypeModel.self) { result in
+            switch result {
+            case .success(let type):
+                self.instituteType.value = type.result
             case .failure(let error):
                 self.errorMessage.value = error.localizedDescription
             }

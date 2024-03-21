@@ -441,9 +441,17 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSQ-B6-Zh7">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 405" translatesAutoresizingMaskIntoConstraints="NO" id="eZA-nN-gGR">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXt-gF-QRT">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
-                                                    </imageView>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="mUX-wD-s1g">
+                                                            <size key="itemSize" width="391" height="283"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells/>
+                                                    </collectionView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPR-lD-a3x">
                                                         <rect key="frame" x="344" y="276" width="39" height="17"/>
                                                         <subviews>
@@ -479,13 +487,14 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="eZA-nN-gGR" firstAttribute="leading" secondItem="HSQ-B6-Zh7" secondAttribute="leading" id="3F1-V1-VnI"/>
-                                                    <constraint firstItem="eZA-nN-gGR" firstAttribute="top" secondItem="HSQ-B6-Zh7" secondAttribute="top" id="Omc-Un-IKS"/>
+                                                    <constraint firstItem="wXt-gF-QRT" firstAttribute="top" secondItem="HSQ-B6-Zh7" secondAttribute="top" id="CDZ-r6-mhh"/>
+                                                    <constraint firstAttribute="bottom" secondItem="wXt-gF-QRT" secondAttribute="bottom" id="Fxm-Mk-tgZ"/>
+                                                    <constraint firstAttribute="height" constant="300" id="JyS-CK-mQV"/>
+                                                    <constraint firstItem="wXt-gF-QRT" firstAttribute="leading" secondItem="HSQ-B6-Zh7" secondAttribute="leading" id="LXL-WT-q93"/>
                                                     <constraint firstItem="BXe-F4-sAx" firstAttribute="centerX" secondItem="HSQ-B6-Zh7" secondAttribute="centerX" id="QY9-jQ-seQ"/>
-                                                    <constraint firstAttribute="trailing" secondItem="eZA-nN-gGR" secondAttribute="trailing" id="Sij-AS-z1W"/>
                                                     <constraint firstItem="BXe-F4-sAx" firstAttribute="centerY" secondItem="FPR-lD-a3x" secondAttribute="centerY" id="Ubm-OQ-tax"/>
                                                     <constraint firstAttribute="trailing" secondItem="FPR-lD-a3x" secondAttribute="trailing" constant="10" id="VdG-sT-5iO"/>
-                                                    <constraint firstAttribute="bottom" secondItem="eZA-nN-gGR" secondAttribute="bottom" id="v9e-vs-zft"/>
+                                                    <constraint firstAttribute="trailing" secondItem="wXt-gF-QRT" secondAttribute="trailing" id="bPQ-Nc-nT7"/>
                                                     <constraint firstAttribute="bottom" secondItem="FPR-lD-a3x" secondAttribute="bottom" constant="7" id="zy3-uS-Yn1"/>
                                                 </constraints>
                                             </view>
@@ -687,7 +696,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="HSQ-B6-Zh7" firstAttribute="height" secondItem="kOH-AY-GkC" secondAttribute="height" multiplier="0.366748" id="WaU-dg-6h4"/>
                                     <constraint firstAttribute="bottom" secondItem="iJ2-61-VtO" secondAttribute="bottom" id="YfT-8c-pEN"/>
                                     <constraint firstAttribute="trailing" secondItem="iJ2-61-VtO" secondAttribute="trailing" id="ZZy-zP-weS"/>
                                     <constraint firstItem="iJ2-61-VtO" firstAttribute="top" secondItem="kOH-AY-GkC" secondAttribute="top" id="aXt-rL-vUt"/>
@@ -707,6 +715,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="kvR-XP-wEi" id="qZw-j8-f6V"/>
                         <outlet property="contentView" destination="qjC-jf-Y6S" id="Abd-zo-HbJ"/>
+                        <outlet property="galleryCollectionView" destination="wXt-gF-QRT" id="v7p-u0-iaS"/>
                         <outlet property="nameLabel" destination="USB-8g-XBa" id="4W5-8S-UF8"/>
                         <outlet property="pageControl" destination="BXe-F4-sAx" id="zqZ-gq-gyg"/>
                         <outlet property="ratingLabel" destination="lov-8u-yp5" id="5nX-Vl-yz7"/>
@@ -2306,7 +2315,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Rectangle 405" width="105" height="92"/>
         <image name="Star" width="15" height="14"/>
         <image name="location" width="9" height="10"/>
         <image name="mapview" width="15" height="20"/>
@@ -2318,7 +2326,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

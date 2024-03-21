@@ -62,8 +62,36 @@ class HomeViewModel {
         }
     }
     
-    func getFeatureList(levelID: Int){
-        URLSession.shared.request(route: .featureInstitute, method: .get, parameters: ["level_id": levelID], model: FeatureModel.self) { result in
+    func getFeatureList(levelID: Int, regionID: Int? = nil, cityID: Int? = nil, typeID: Int? = nil, genderID: Int? = nil, gradeID: Int? = nil, curriculumID: Int? = nil){
+        var params = ["level_id": levelID]
+        if regionID != 0 && regionID != nil {
+            guard let regionID = regionID else { return }
+            params["region_id"] = regionID
+        }
+        if cityID != 0 && cityID != nil {
+            guard let cityID = cityID else { return }
+            params["city_id"] = cityID
+        }
+        if typeID != 0 && typeID != nil{
+            guard let typeID = typeID else { return }
+            params["type_id"] = typeID
+        }
+        if genderID != 0 && genderID != nil{
+            guard let genderID = genderID else { return }
+            params["gender_id"] = genderID
+        }
+        if gradeID != 0 && gradeID != nil{
+            guard let gradeID = gradeID else { return }
+            params["grade_id"] = gradeID
+
+        }
+        if curriculumID != 0 && curriculumID != nil{
+            guard let curriculumID = curriculumID else { return }
+            params["curriculam_id"] = curriculumID
+        }
+        print(params)
+        
+        URLSession.shared.request(route: .featureInstitute, method: .get, parameters: params, model: FeatureModel.self) { result in
             switch result {
             case .success(let feature):
                 self.featureList.value = feature.result

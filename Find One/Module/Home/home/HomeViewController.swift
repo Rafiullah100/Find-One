@@ -28,7 +28,6 @@ class HomeViewController: BaseViewController {
             regionCollectionView.dataSource = self
             regionCollectionView.delegate = self
             regionCollectionView.register(UINib(nibName: "CityCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "city")
-
         }
     }
     @IBOutlet weak var cityCollectionView: UICollectionView!{
@@ -36,7 +35,6 @@ class HomeViewController: BaseViewController {
             cityCollectionView.dataSource = self
             cityCollectionView.delegate = self
             cityCollectionView.register(UINib(nibName: "CityCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "city")
-
         }
     }
     @IBOutlet weak var featureCollectionView: UICollectionView!{
@@ -44,7 +42,6 @@ class HomeViewController: BaseViewController {
             featureCollectionView.dataSource = self
             featureCollectionView.delegate = self
             featureCollectionView.register(UINib(nibName: "FeatureCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "feature")
-
         }
     }
     @IBOutlet weak var collectionView: UICollectionView!{
@@ -65,7 +62,9 @@ class HomeViewController: BaseViewController {
     var shouldReloadSustainableRow = false
 
     var indexRow: Int?
-
+    var levelID: Int?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .home
@@ -75,13 +74,15 @@ class HomeViewController: BaseViewController {
             self.instituteList = institute
             self.indexRow = 0
             self.collectionView.reloadData()
-            guard let _ = self.instituteList?[0].id else {return}
+            guard let levid = self.instituteList?[0].id else {return}
+            self.levelID = levid
             self.callapi()
             
         }
 
         viewModel.featureList.bind { feature in
             self.featureList = feature
+            self.featureList?.count == 0 ? self.featureCollectionView.setEmptyView() : self.featureCollectionView.setEmptyView("")
             self.featureCollectionView.reloadData()
         }
         
@@ -131,58 +132,6 @@ class HomeViewController: BaseViewController {
         Switcher.showFilter(delegate: self)
     }
 }
-
-//extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 4
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell: FeatureTableViewCell = tableView.dequeueReusableCell(withIdentifier: FeatureTableViewCell.cellReuseIdentifier()) as! FeatureTableViewCell
-//        tableView.reloadRows(at: [IndexPath(row: 3, section: 0)], with: .automatic)
-//        cell.didTappedInstitute = { index, type in
-//            if type == .feature {
-//                Switcher.gotoDetail(delegate: self)
-//            }
-//            else if type == .city {
-//                Switcher.gotoResult(delegate: self)
-//            }
-//            else{
-//                Switcher.gotoResult(delegate: self)
-//            }
-//        }
-//        switch indexPath.row {
-//        case 0:
-//            cell.cellType = .feature
-//            cell.featureList = featureList
-//        case 1:
-//            cell.cellType = .city
-//            cell.citiesList = citiesList
-//        case 2:
-//            cell.cellType = .region
-//            cell.regionList = regionList
-//        case 3:
-//            cell.cellType = .sustainable
-//            cell.sustainableList = sustainableList
-//        default:
-//            cell.cellType = .feature
-//        }
-//        return cell
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        switch indexPath.row {
-//        case 0:
-//            return 290.0
-//        case 1, 2:
-//            return 220.0
-//        case 3:
-//            return 245.0
-//        default:
-//            return 0
-//        }
-//    }
-//}
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -272,9 +221,16 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             Switcher.gotoResult(delegate: self, id: regionList?[indexPath.row].id ?? 0, type: .region)
         }
         else{
+            levelID = self.instituteList?[indexPath.row].id ?? 0
             indexRow = indexPath.row
             collectionView.reloadData()
             viewModel.getFeatureList(levelID: self.instituteList?[indexPath.row].id ?? 0)
         }
+    }
+}
+
+extension HomeViewController: FilterProtocol{
+    func filter(cityID: Int, regionID: Int, curriculumID: Int, stageID: Int, genderID: Int, instituteType: Int) {
+        viewModel.getFeatureList(levelID: levelID ?? 0, regionID: regionID, cityID: cityID, typeID: instituteType, genderID: genderID, gradeID: stageID, curriculumID: curriculumID)
     }
 }

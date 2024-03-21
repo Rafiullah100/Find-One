@@ -153,15 +153,12 @@ extension CustomSearchViewController: UIPickerViewDelegate, UIPickerViewDataSour
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == regionPicker {
-            regionTextField.text = regionList?[row].name
             return regionList?[row].name
         }
         else if pickerView == CityPicker{
-            cityTextField.text = citiesList?[row].name
             return citiesList?[row].name
         }
         else if pickerView == curriculamPicker{
-            instituteTextField.text = curriculamList?[row].name
             return curriculamList?[row].name
         }
         return ""
@@ -169,14 +166,17 @@ extension CustomSearchViewController: UIPickerViewDelegate, UIPickerViewDataSour
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == regionPicker {
+            regionTextField.text = regionList?[row].name
             regionID = regionList?[row].id ?? 0
             cityTextField.text = ""
             viewModel.getCitiesList(regionID: regionList?[row].id ?? 0)
         }
         else if pickerView == CityPicker{
+            cityTextField.text = citiesList?[row].name
             cityID = citiesList?[row].id ?? 0
         }
         else if pickerView == curriculamPicker{
+            instituteTextField.text = curriculamList?[row].name
             instituteTypeID = curriculamList?[row].id ?? 0
         }
     }

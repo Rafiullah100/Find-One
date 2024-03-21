@@ -37,18 +37,28 @@ class DetailViewController: BaseViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var pageControl: CustomPageControl!
     
+    @IBOutlet weak var galleryCollectionView: UICollectionView!{
+        didSet{
+            galleryCollectionView.dataSource = self
+            galleryCollectionView.delegate = self
+            galleryCollectionView.register(UINib(nibName: "SliderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: SliderCollectionViewCell.cellReuseIdentifier())
+        }
+    }
     var childVC: UIViewController!
     var id: Int?
     var slug: String?
 
     var viewModel = DetailViewModel()
     var details: DetailModel?
-    
+    var autoScrollTimer: Timer?
+    var currentPage = 0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .detail
         informationVC.delegate = self
+
         childVC = informationVC
         addChildVC()
         custompageContrl()
@@ -67,7 +77,7 @@ class DetailViewController: BaseViewController {
         pageControl.inactiveImage = UIImage(named: "dot")
         pageControl.activeImage = UIImage(named: "ellipse")
         pageControl.numberOfPages = 6
-        pageControl.currentPage = 5
+        pageControl.currentPage = 0
     }
     
     override func backButtonAction() {
@@ -81,11 +91,27 @@ class DetailViewController: BaseViewController {
         }
     }
     
+    func setupAutoScroll() {
+        self.autoScrollTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.autoScroll), userInfo: nil, repeats: true)
+    }
+    
+    @objc func autoScroll() {
+        if currentPage >= (details?.result?.instituteGallery?.count ?? 0) - 1 {
+            currentPage = 0
+        }
+        else{
+            currentPage = currentPage + 1
+        }
+        galleryCollectionView.scrollToItem(at: IndexPath(row: currentPage, section: 0), at: .centeredHorizontally, animated: true)
+    }
+    
     private func loadData(){
         viewModel.details.bind { detail in
             self.stopAnimation()
             self.details = detail
             self.reloadView()
+            self.setupAutoScroll()
+            self.galleryCollectionView.reloadData()
         }
         self.animateSpinner()
         viewModel.getInstituteDetails(id: id ?? 0, slug: slug ?? "")
@@ -95,7 +121,7 @@ class DetailViewController: BaseViewController {
         nameLabel.text = details?.result?.name?.trimmingCharacters(in: .whitespacesAndNewlines)
         addressLabel.text = details?.result?.address?.trimmingCharacters(in: .whitespacesAndNewlines)
         informationVC.information = self.details?.result
-//        ratingLabel.text = details?.result?.
+        ratingLabel.text = details?.result?.reviewsAvg
     }
 }
 
@@ -130,4 +156,26 @@ extension DetailViewController: BrowseDelegate{
         }
         return false
     }
+}
+
+extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return details?.result?.instituteGallery?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: SliderCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: SliderCollectionViewCell.cellReuseIdentifier(), for: indexPath) as! SliderCollectionViewCell
+        cell.gallery = details?.result?.instituteGallery?[indexPath.row]
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        currentPage1 = indexPath.row
+//        customPage()
+//        pageController.setNeedsDisplay()
+//    }
 }

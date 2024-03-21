@@ -92,8 +92,10 @@ class Switcher {
     
     static func gotoInformation(delegate: UIViewController){
         let vc = UIStoryboard(name: Storyboard.profile.rawValue, bundle: nil).instantiateViewController(withIdentifier: "PersonalInfoViewController") as! PersonalInfoViewController
-        vc.modalPresentationStyle = .fullScreen
-        delegate.navigationController?.pushViewController(vc, animated: true)
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        nav.hidesBottomBarWhenPushed = false
+        delegate.present(nav, animated: false, completion: nil)
     }
     
     static func gotoBooking(delegate: UIViewController){
@@ -102,7 +104,7 @@ class Switcher {
         delegate.navigationController?.pushViewController(vc, animated: true)
     }
     
-    static func gotoSerachResult(delegate: UIViewController, regionID: Int, cityID: Int, typeID: Int, minFee: Int, maxFee: Int, genderID: Int){
+    static func gotoSerachResult(delegate: UIViewController, regionID: Int? = nil, cityID: Int? = nil, typeID: Int? = nil, minFee: Int? = nil, maxFee: Int? = nil, genderID: Int? = nil, q: String? = nil){
         let vc = UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
         vc.modalPresentationStyle = .fullScreen
         vc.hidesBottomBarWhenPushed = false
@@ -113,6 +115,7 @@ class Switcher {
         vc.maxFee = maxFee
         vc.genderID = genderID
         vc.instType = .search
+        vc.q = q
         delegate.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -127,6 +130,7 @@ class Switcher {
     
     static func showFilter(delegate: UIViewController){
         let vc = UIStoryboard(name: Storyboard.menu.rawValue, bundle: nil).instantiateViewController(withIdentifier: "FilterViewController") as! FilterViewController
+        vc.filterDelegate = delegate as? any FilterProtocol
         let nav = UINavigationController(rootViewController: vc)
         if let sheet = nav.sheetPresentationController {
 

@@ -22,7 +22,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     
-    var arr = ["Personal Information", "My Sources", "Wishlist"]
+    var arr = ["Personal Information"]
     
     
     override func viewDidLoad() {

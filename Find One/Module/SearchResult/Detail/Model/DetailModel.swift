@@ -24,6 +24,8 @@ struct DetailResult: Codable {
     let type, curriculam, educationLevel, gender: String?
     let instituteShifts: [InstituteShift]?
     let instituteFacility: [InstituteFacility]?
+    let reviewsAvg: String?
+    let instituteGallery: [InstituteGallery]?
 
     enum CodingKeys: String, CodingKey {
         case id, name
@@ -37,6 +39,18 @@ struct DetailResult: Codable {
         case gender
         case instituteShifts = "institute_shifts"
         case instituteFacility = "institute_facility"
+        case reviewsAvg = "reviews_avg"
+        case instituteGallery = "institute_gallery"
+    }
+}
+
+struct InstituteGallery: Codable {
+    let id: Int?
+    let imageURL: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case imageURL = "image_url"
     }
 }
 

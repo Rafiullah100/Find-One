@@ -16,11 +16,12 @@ struct ResultModel: Codable {
 // MARK: - Result
 struct Results: Codable {
     let id: Int?
-    let name, slug, imageURL: String?
+    let name, slug, imageURL, reviewsAverage: String?
 
     enum CodingKeys: String, CodingKey {
         case id, name, slug
         case imageURL = "image_url"
+        case reviewsAverage = "reviews_avg"
     }
 }
 
@@ -37,6 +38,7 @@ struct SearchModel: Codable {
 // MARK: - Result
 struct SearchResult: Codable {
     let id: Int?
+    let slug: String?
     let name: String?
     let latitude, longitude: Double?
     let imageURL: String?
@@ -49,9 +51,8 @@ struct SearchResult: Codable {
     let gender: String?
     let reviewsAvg: String?
     let instituteFacility: [SearchInstituteFacility]?
-
     enum CodingKeys: String, CodingKey {
-        case id, name, latitude, longitude
+        case id, name, latitude, longitude, slug
         case imageURL = "image_url"
         case country, region, city, type, curriculam
         case educationLevel = "education_level"

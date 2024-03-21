@@ -110,7 +110,7 @@
                                                                                         <rect key="frame" x="15" y="0.0" width="168" height="10.666666666666666"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location: Abi Sufiyan Bin Harb Saudi Arabia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5S-tc-8yY">
-                                                                                                <rect key="frame" x="0.0" y="-1.6666666666666643" width="206.33333333333334" height="14"/>
+                                                                                                <rect key="frame" x="0.0" y="-0.3333333333333357" width="197" height="11.666666666666666"/>
                                                                                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="10"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -159,7 +159,7 @@
                                                                                         <rect key="frame" x="15" y="0.0" width="168" height="10.666666666666666"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coeducation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPW-mr-18h">
-                                                                                                <rect key="frame" x="0.0" y="-1.6666666666666714" width="63" height="14"/>
+                                                                                                <rect key="frame" x="0.0" y="-0.33333333333334281" width="57.333333333333336" height="11.666666666666666"/>
                                                                                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="10"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -423,7 +423,7 @@
                                                                         <rect key="frame" x="166" y="0.0" width="20" height="20"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7e3-cF-F4d">
-                                                                                <rect key="frame" x="1" y="2.6666666666666714" width="18.333333333333332" height="16.666666666666668"/>
+                                                                                <rect key="frame" x="1.6666666666666856" y="4" width="17" height="14"/>
                                                                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="12"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -495,6 +495,11 @@
                 <outlet property="ratingLabel" destination="7e3-cF-F4d" id="sNI-aD-1eN"/>
                 <outlet property="transportLabel" destination="CRJ-eR-MZm" id="10g-Hq-peM"/>
                 <outlet property="typeLabel" destination="RPW-mr-18h" id="zsL-0D-A9b"/>
+                <outletCollection property="reviewStars" destination="UOX-oB-FYi" collectionClass="NSMutableArray" id="L7R-JE-PUj"/>
+                <outletCollection property="reviewStars" destination="EuH-O4-D74" collectionClass="NSMutableArray" id="9sT-op-1Kf"/>
+                <outletCollection property="reviewStars" destination="eVr-uy-XrO" collectionClass="NSMutableArray" id="CwS-vL-civ"/>
+                <outletCollection property="reviewStars" destination="oni-Tb-TgV" collectionClass="NSMutableArray" id="1My-Sc-myg"/>
+                <outletCollection property="reviewStars" destination="rVb-a0-a6a" collectionClass="NSMutableArray" id="rDb-I5-2Xk"/>
             </connections>
             <point key="canvasLocation" x="-32.061068702290072" y="19.718309859154932"/>
         </tableViewCell>

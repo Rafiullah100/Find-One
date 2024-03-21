@@ -38,7 +38,7 @@ class SearchViewModel {
     }
     
     func getCurriculamType(){
-        URLSession.shared.request(route: .curriculam, method: .get, parameters: [:], model: InstitutetypeModel.self) { result in
+        URLSession.shared.request(route: .type, method: .get, parameters: [:], model: InstitutetypeModel.self) { result in
             switch result {
             case .success(let curriculam):
                 self.curriculam.value = curriculam.result

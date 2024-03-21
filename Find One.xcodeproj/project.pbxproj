@@ -33,6 +33,13 @@
 		520538FB2B7A29E900D81267 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520538FA2B7A29E900D81267 /* Home.storyboard */; };
 		520538FF2B7A2A2200D81267 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520538FE2B7A2A2200D81267 /* HomeViewController.swift */; };
 		520539012B7A2E0C00D81267 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520539002B7A2E0C00D81267 /* Menu.storyboard */; };
+		52246BCF2BAACBD90085CCC9 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52246BCE2BAACBD90085CCC9 /* Settings.storyboard */; };
+		52246BD72BAACD230085CCC9 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52246BD62BAACD230085CCC9 /* SettingsTableViewController.swift */; };
+		52246BD92BAAD5820085CCC9 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52246BD82BAAD5820085CCC9 /* NotificationViewController.swift */; };
+		52246BDC2BABF74E0085CCC9 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52246BDB2BABF74E0085CCC9 /* ProfileModel.swift */; };
+		52246BDF2BABF7670085CCC9 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52246BDE2BABF7670085CCC9 /* ProfileViewModel.swift */; };
+		52246BE32BAC1FB50085CCC9 /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52246BE12BAC1FB50085CCC9 /* SliderCollectionViewCell.swift */; };
+		52246BE42BAC1FB50085CCC9 /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52246BE22BAC1FB50085CCC9 /* SliderCollectionViewCell.xib */; };
 		5234034F2B9EF0D100A93EFE /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5234034E2B9EF0D100A93EFE /* FooterView.swift */; };
 		523403512B9F0E0400A93EFE /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523403502B9F0E0400A93EFE /* Booking.storyboard */; };
 		523403542B9F104E00A93EFE /* Header.png in Resources */ = {isa = PBXBuildFile; fileRef = 523403532B9F104E00A93EFE /* Header.png */; };
@@ -142,6 +149,13 @@
 		520538FA2B7A29E900D81267 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		520538FE2B7A2A2200D81267 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		520539002B7A2E0C00D81267 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		52246BCE2BAACBD90085CCC9 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		52246BD62BAACD230085CCC9 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		52246BD82BAAD5820085CCC9 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		52246BDB2BABF74E0085CCC9 /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		52246BDE2BABF7670085CCC9 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		52246BE12BAC1FB50085CCC9 /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
+		52246BE22BAC1FB50085CCC9 /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
 		5234034E2B9EF0D100A93EFE /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		523403502B9F0E0400A93EFE /* Booking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Booking.storyboard; sourceTree = "<group>"; };
 		523403532B9F104E00A93EFE /* Header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Header.png; sourceTree = "<group>"; };
@@ -268,6 +282,7 @@
 		520538BA2B79EE3B00D81267 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				52246BD02BAACC190085CCC9 /* SettingsModule */,
 				523403522B9F0FDD00A93EFE /* Book */,
 				52F612B82B999EAD00EC1EA9 /* Profile */,
 				528F939C2B8C8DEF00BF0A5F /* SideMenu */,
@@ -352,6 +367,7 @@
 				52987C5E2B7DDAA0006290F6 /* Result.storyboard */,
 				52F612B62B9993E600EC1EA9 /* Profile.storyboard */,
 				523403502B9F0E0400A93EFE /* Booking.storyboard */,
+				52246BCE2BAACBD90085CCC9 /* Settings.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -406,6 +422,7 @@
 				529834A62B7B4B4D00A33DAD /* Setting */,
 				529834A12B7B3A7D00A33DAD /* Tabbar */,
 				520538FD2B7A2A1100D81267 /* home */,
+				52246BD82BAAD5820085CCC9 /* NotificationViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -419,6 +436,47 @@
 				52AD1C0B2B7C959E00E5EA4F /* Cell */,
 			);
 			path = home;
+			sourceTree = "<group>";
+		};
+		52246BD02BAACC190085CCC9 /* SettingsModule */ = {
+			isa = PBXGroup;
+			children = (
+				52246BD12BAACC290085CCC9 /* SettingHome */,
+			);
+			path = SettingsModule;
+			sourceTree = "<group>";
+		};
+		52246BD12BAACC290085CCC9 /* SettingHome */ = {
+			isa = PBXGroup;
+			children = (
+				52246BD62BAACD230085CCC9 /* SettingsTableViewController.swift */,
+			);
+			path = SettingHome;
+			sourceTree = "<group>";
+		};
+		52246BDA2BABF73A0085CCC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52246BDB2BABF74E0085CCC9 /* ProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52246BDD2BABF75B0085CCC9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52246BDE2BABF7670085CCC9 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52246BE02BAC1F930085CCC9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				52246BE12BAC1FB50085CCC9 /* SliderCollectionViewCell.swift */,
+				52246BE22BAC1FB50085CCC9 /* SliderCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		5234034D2B9EE59800A93EFE /* FooterView */ = {
@@ -733,6 +791,7 @@
 		52987C692B7DF9D2006290F6 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				52246BE02BAC1F930085CCC9 /* Cell */,
 				5255299A2B972E3800395676 /* ViewModel */,
 				525529972B972E0900395676 /* Model */,
 				52987C6A2B7DF9E7006290F6 /* DetailViewController.swift */,
@@ -860,6 +919,8 @@
 		52F612B82B999EAD00EC1EA9 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				52246BDD2BABF75B0085CCC9 /* ViewModel */,
+				52246BDA2BABF73A0085CCC9 /* Model */,
 				523FFB372B9AE885005BCFA7 /* Cell */,
 				52F612B92B999EC800EC1EA9 /* ProfileViewController.swift */,
 				523FFB352B9AE6D0005BCFA7 /* PersonalInfoViewController.swift */,
@@ -929,6 +990,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				529834B42B7B612000A33DAD /* manrope-extrabold.otf in Resources */,
+				52246BCF2BAACBD90085CCC9 /* Settings.storyboard in Resources */,
 				528F939B2B8C677F00BF0A5F /* GoogleService-Info.plist in Resources */,
 				523403512B9F0E0400A93EFE /* Booking.storyboard in Resources */,
 				52B638A92B73750B00AE8B7E /* LaunchScreen.storyboard in Resources */,
@@ -938,6 +1000,7 @@
 				52AD1C132B7C997500E5EA4F /* FeatureTableViewCell.xib in Resources */,
 				520538F32B7A23A500D81267 /* Outfit-SemiBold.ttf in Resources */,
 				529834B82B7B612000A33DAD /* manrope-bold.otf in Resources */,
+				52246BE42BAC1FB50085CCC9 /* SliderCollectionViewCell.xib in Resources */,
 				52987C5F2B7DDAA0006290F6 /* Result.storyboard in Resources */,
 				520539012B7A2E0C00D81267 /* Menu.storyboard in Resources */,
 				52B638A42B73750600AE8B7E /* Auth.storyboard in Resources */,
@@ -1051,6 +1114,7 @@
 				520538D32B79EE7600D81267 /* Route.swift in Sources */,
 				520538E22B79EE8000D81267 /* AutoSizingUiTableView.swift in Sources */,
 				52773C6C2BA95A3E0067FD00 /* FilterCollectionViewCell.swift in Sources */,
+				52246BD92BAAD5820085CCC9 /* NotificationViewController.swift in Sources */,
 				529220812B7F6D9B00C0E396 /* MapViewController.swift in Sources */,
 				528F93A42B8CAFB200BF0A5F /* HomeViewModel.swift in Sources */,
 				523FFB3B2B9AE897005BCFA7 /* ProfileTableViewCell.swift in Sources */,
@@ -1068,12 +1132,14 @@
 				520538CE2B79EE7600D81267 /* AppError.swift in Sources */,
 				527F13952B7F46360055F424 /* FeeStructureViewController.swift in Sources */,
 				527F13922B7F3E650055F424 /* ReviewTableViewCell.swift in Sources */,
+				52246BDF2BABF7670085CCC9 /* ProfileViewModel.swift in Sources */,
 				5255299C2B972E4800395676 /* DetailViewModel.swift in Sources */,
 				520538E62B79EE8000D81267 /* Color.swift in Sources */,
 				52687B992BA411E200334BC3 /* AddReviewViewController.swift in Sources */,
 				529834A32B7B3A9800A33DAD /* MyTabBarCtrl.swift in Sources */,
 				52B6389D2B73750600AE8B7E /* AppDelegate.swift in Sources */,
 				527F139A2B7F46670055F424 /* FeeStructureViewTableViewCell.swift in Sources */,
+				52246BD72BAACD230085CCC9 /* SettingsTableViewController.swift in Sources */,
 				52987C662B7DE14F006290F6 /* ResultTableViewCell.swift in Sources */,
 				520538DF2B79EE7F00D81267 /* Switcher.swift in Sources */,
 				52B6389F2B73750600AE8B7E /* SceneDelegate.swift in Sources */,
@@ -1090,7 +1156,9 @@
 				52AD1C1B2B7CC05F00E5EA4F /* CityCollectionViewCell.swift in Sources */,
 				52D4DB212B85C60700059025 /* SustainableViewController.swift in Sources */,
 				520538DE2B79EE7F00D81267 /* Constants.swift in Sources */,
+				52246BE32BAC1FB50085CCC9 /* SliderCollectionViewCell.swift in Sources */,
 				5234034F2B9EF0D100A93EFE /* FooterView.swift in Sources */,
+				52246BDC2BABF74E0085CCC9 /* ProfileModel.swift in Sources */,
 				52C208C92B7E2A0900FA6470 /* GridCollectionViewCell.swift in Sources */,
 				52A4ABF92B886FB800E54458 /* SuccessModel.swift in Sources */,
 				523FFB362B9AE6D0005BCFA7 /* PersonalInfoViewController.swift in Sources */,

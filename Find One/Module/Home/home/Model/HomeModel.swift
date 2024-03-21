@@ -96,12 +96,16 @@ struct FeatureResult: Codable {
     let name, imageURL: String?
     let gender: String?
     let slug: String?
+    let reviewsAvg: String?
+    let fee: Int?
 
     enum CodingKeys: String, CodingKey {
         case id, name
         case imageURL = "image_url"
         case gender
         case slug
+        case reviewsAvg = "reviews_avg"
+        case fee
     }
 }
 

@@ -20,7 +20,8 @@ class FeatureCollectionViewCell: UICollectionViewCell {
             nameLabel.text = institute?.name
             imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (institute?.imageURL ?? "") ), placeholderImage: UIImage(named: "Rectangle 405"))
             educationLabel.text = institute?.gender
-//            feeLabel.text = institu
+            ratingLabel.text = institute?.reviewsAvg ?? "0"
+            feeLabel.attributedText = Helper.attributedText(text1: "Fee starting from \(institute?.fee ?? 0)", text2: "SAR", text1Font: 12, text2Font: 10)
         }
     }
     

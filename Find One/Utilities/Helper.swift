@@ -19,14 +19,14 @@ open class Helper{
         return CGSize(width: width, height: width * 0.8)
     }
     
-    class func attributedText(text1: String, text2: String)-> NSMutableAttributedString{
+    class func attributedText(text1: String, text2: String, text1Font: CGFloat? = 17, text2Font: CGFloat? = 14)-> NSMutableAttributedString{
         let text1Attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont(name: Constants.fontRegular, size: 17) ?? UIFont(),
+            .font: UIFont(name: Constants.fontRegular, size: text1Font ?? 17) ?? UIFont(),
             .foregroundColor: UIColor.label
         ]
 
         let text2Attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont(name: Constants.fontRegular, size: 14) ?? UIFont(),
+            .font: UIFont(name: Constants.fontRegular, size: text2Font ?? 14) ?? UIFont(),
             .foregroundColor: UIColor.label
         ]
 
