@@ -93,6 +93,9 @@
 		52987C672B7DE14F006290F6 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52987C652B7DE14F006290F6 /* ResultTableViewCell.xib */; };
 		52987C6B2B7DF9E7006290F6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52987C6A2B7DF9E7006290F6 /* DetailViewController.swift */; };
 		52987C6E2B7E08A5006290F6 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52987C6D2B7E08A5006290F6 /* CustomPageControl.swift */; };
+		52A185AE2BAD584A00FC2CB0 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A185AC2BAD584A00FC2CB0 /* ChangePasswordViewModel.swift */; };
+		52A185AF2BAD584A00FC2CB0 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A185AD2BAD584A00FC2CB0 /* ChangePasswordViewController.swift */; };
+		52A185B22BAD590300FC2CB0 /* ChangePasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A185B12BAD590300FC2CB0 /* ChangePasswordModel.swift */; };
 		52A4ABF92B886FB800E54458 /* SuccessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4ABF82B886FB800E54458 /* SuccessModel.swift */; };
 		52A4ABFB2B88700C00E54458 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4ABFA2B88700C00E54458 /* SignupViewModel.swift */; };
 		52A4ABFE2B887F9D00E54458 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4ABFD2B887F9D00E54458 /* LoginViewModel.swift */; };
@@ -209,6 +212,9 @@
 		52987C652B7DE14F006290F6 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
 		52987C6A2B7DF9E7006290F6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		52987C6D2B7E08A5006290F6 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
+		52A185AC2BAD584A00FC2CB0 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
+		52A185AD2BAD584A00FC2CB0 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		52A185B12BAD590300FC2CB0 /* ChangePasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordModel.swift; sourceTree = "<group>"; };
 		52A4ABF82B886FB800E54458 /* SuccessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessModel.swift; sourceTree = "<group>"; };
 		52A4ABFA2B88700C00E54458 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		52A4ABFD2B887F9D00E54458 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -297,6 +303,7 @@
 		520538BB2B79EE3B00D81267 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				52A185AA2BAD584A00FC2CB0 /* ChangePasswordScreen */,
 				520538EB2B7A0B3F00D81267 /* Signup */,
 				520538BC2B79EE3B00D81267 /* Login */,
 			);
@@ -807,6 +814,32 @@
 			path = CustomPageControl;
 			sourceTree = "<group>";
 		};
+		52A185AA2BAD584A00FC2CB0 /* ChangePasswordScreen */ = {
+			isa = PBXGroup;
+			children = (
+				52A185B02BAD58EC00FC2CB0 /* Model */,
+				52A185AB2BAD584A00FC2CB0 /* ViewModel */,
+				52A185AD2BAD584A00FC2CB0 /* ChangePasswordViewController.swift */,
+			);
+			path = ChangePasswordScreen;
+			sourceTree = "<group>";
+		};
+		52A185AB2BAD584A00FC2CB0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52A185AC2BAD584A00FC2CB0 /* ChangePasswordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52A185B02BAD58EC00FC2CB0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52A185B12BAD590300FC2CB0 /* ChangePasswordModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		52A4ABF62B886CFB00E54458 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -1108,6 +1141,7 @@
 				528F939E2B8C8E0300BF0A5F /* SideMenuViewController.swift in Sources */,
 				52F612BA2B999EC800EC1EA9 /* ProfileViewController.swift in Sources */,
 				523403582B9F10DA00A93EFE /* ParentBookingViewController.swift in Sources */,
+				52A185B22BAD590300FC2CB0 /* ChangePasswordModel.swift in Sources */,
 				529834A82B7B4B5B00A33DAD /* SettingsViewController.swift in Sources */,
 				523FFB422B9B0FB5005BCFA7 /* SearchViewModel.swift in Sources */,
 				529220852B7F720D00C0E396 /* LocationViewController.swift in Sources */,
@@ -1138,6 +1172,7 @@
 				52687B992BA411E200334BC3 /* AddReviewViewController.swift in Sources */,
 				529834A32B7B3A9800A33DAD /* MyTabBarCtrl.swift in Sources */,
 				52B6389D2B73750600AE8B7E /* AppDelegate.swift in Sources */,
+				52A185AF2BAD584A00FC2CB0 /* ChangePasswordViewController.swift in Sources */,
 				527F139A2B7F46670055F424 /* FeeStructureViewTableViewCell.swift in Sources */,
 				52246BD72BAACD230085CCC9 /* SettingsTableViewController.swift in Sources */,
 				52987C662B7DE14F006290F6 /* ResultTableViewCell.swift in Sources */,
@@ -1146,6 +1181,7 @@
 				5234035A2B9F10F900A93EFE /* StudentBookingViewController.swift in Sources */,
 				52A4ABFE2B887F9D00E54458 /* LoginViewModel.swift in Sources */,
 				52A4AC012B88809600E54458 /* LoginModel.swift in Sources */,
+				52A185AE2BAD584A00FC2CB0 /* ChangePasswordViewModel.swift in Sources */,
 				52A4ABFB2B88700C00E54458 /* SignupViewModel.swift in Sources */,
 				529220882B7F758F00C0E396 /* GalleryViewController.swift in Sources */,
 				529834AB2B7B5C8100A33DAD /* CustomSearchViewController.swift in Sources */,

@@ -20,5 +20,4 @@ class SliderCollectionViewCell: UICollectionViewCell {
             imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (gallery?.imageURL ?? "") ), placeholderImage: UIImage(named: "Rectangle 405"))
         }
     }
-
 }

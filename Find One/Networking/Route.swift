@@ -35,6 +35,8 @@ enum Route {
     case type
     case myProfile
     case updateProfile
+    case changePassword
+    case deleteAccount
     var description: String {
         switch self {
         case .signup:
@@ -83,6 +85,10 @@ enum Route {
             return "mobile/auth/me"
         case .updateProfile:
             return "mobile/user/profile-update"
+        case .changePassword:
+            return "mobile/user/password-update"
+        case .deleteAccount:
+            return "mobile/user/profile-delete"
         }
     }
 }

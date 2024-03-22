@@ -67,6 +67,7 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(UserDefaults.standard.uuid)
         type = .home
         self.animateSpinner()
         viewModel.instituteList.bind { institute in

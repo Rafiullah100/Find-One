@@ -39,7 +39,16 @@ class PersonalInfoViewController: BaseViewController {
         viewControllerTitle = "Personal Information"
         
         self.animateSpinner()
-        viewModel.editProfile.bind { _ in
+        viewModel.editProfile.bind { updateProfile in
+            DispatchQueue.main.async {
+                guard let updateProfile = updateProfile else { return }
+                self.stopAnimation()
+                self.viewModel.getMyProfile()
+                self.view.makeToast(updateProfile.message)
+            }
+        }
+        
+        viewModel.myProfile.bind { _ in
             DispatchQueue.main.async {
                 self.stopAnimation()
                 self.updateUI()
@@ -56,6 +65,12 @@ class PersonalInfoViewController: BaseViewController {
         countryTextField.text = viewModel.getCountry()
         cityTextField.text = viewModel.getCity()
         aboutTextField.text = viewModel.getAbout()
+        gender = viewModel.getGender()
+        for (index, item) in genderArr.enumerated() {
+            if item.lowercased() == gender.lowercased() {
+                segmentView.selectedSegmentIndex = index
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -114,6 +129,10 @@ class PersonalInfoViewController: BaseViewController {
         else{
             showAlert(message: validationResponse.message)
         }
+    }
+    
+    @IBAction func updateBtnAction(_ sender: Any) {
+        Switcher.gotoUpdatePassword(delegate: self)
     }
 }
 

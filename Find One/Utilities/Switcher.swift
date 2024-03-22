@@ -141,4 +141,11 @@ class Switcher {
         // 4
         delegate.present(nav, animated: true)
     }
+    
+    static func gotoUpdatePassword(delegate: UIViewController){
+        let vc = UIStoryboard(name: Storyboard.auth.rawValue, bundle: nil).instantiateViewController(withIdentifier: "ChangePasswordViewController") as! ChangePasswordViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.hidesBottomBarWhenPushed = false
+        delegate.navigationController?.pushViewController(vc, animated: true)
+    }
 }

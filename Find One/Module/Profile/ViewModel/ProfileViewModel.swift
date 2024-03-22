@@ -13,7 +13,7 @@ class ProfileViewModel {
     var errorMessage: Observable<String> = Observable("")
     var parameters: [String: Any]?
     var editProfile: Observable<EditProfileModel> = Observable(nil)
-//    var deleteAccount: Observable<DeleteModel> = Observable(nil)
+//    var deleteAccount: Observable/*<DeleteModel>*/ = Observable(nil)
 
     func getMyProfile(){
         URLSession.shared.request(route: .myProfile, method: .get, parameters: [:], model: ProfileModel.self) { result in
@@ -21,6 +21,7 @@ class ProfileViewModel {
             case .success(let myProfile):
                 print(myProfile)
                 self.myProfile.value = myProfile
+                self.saveUser()
             case .failure(let error):
                 self.errorMessage.value = error.localizedDescription
             }
@@ -67,6 +68,7 @@ class ProfileViewModel {
             return ValidationResponse(isValid: false, message: "Please enter a valid email!")
         }
         else{
+            print(user)
             parameters = ["name": user.name, "email": user.email, "contact_no": user.mobile, "profile": user.image ?? UIImage(), "country": user.country, "city": user.city, "gender": user.gender, "about": user.about]
             return ValidationResponse(isValid: true, message: "")
         }
@@ -85,8 +87,8 @@ class ProfileViewModel {
         }
     }
 //    
-//    func delete(){
-//        URLSession.shared.request(route: .deleteAccount, method: .post, parameters: [:], model: DeleteModel.self) { result in
+    func delete(){
+//        URLSession.shared.request(route: .deleteAccount, method: .post, parameters: ["uuid": UserDefaults.standard.uuid], model: DeleteModel.self) { result in
 //            switch result {
 //            case .success(let delete):
 //                self.deleteAccount.value = delete
@@ -94,11 +96,11 @@ class ProfileViewModel {
 //                self.errorMessage.value = error.localizedDescription
 //            }
 //        }
-//    }
+    }
     
-//    private func saveUser(){
-//        UserDefaults.standard.profileImage = self.editProfile.value?.user?.profileImage
-//        UserDefaults.standard.email = self.editProfile.value?.user?.email
-//        UserDefaults.standard.name = self.editProfile.value?.user?.name
-//    }
+    private func saveUser(){
+        UserDefaults.standard.profileImage = self.myProfile.value?.user?.profileImage
+        UserDefaults.standard.email = self.myProfile.value?.user?.email
+        UserDefaults.standard.name = self.myProfile.value?.user?.name
+    }
 }
