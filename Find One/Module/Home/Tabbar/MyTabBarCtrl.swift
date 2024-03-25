@@ -17,6 +17,7 @@ class MyTabBarCtrl: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
         self.delegate = self
         UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: CustomColor.appColor.color], for: .selected)
+        tabBar.items?[0].title = LocalizationKeys.home.rawValue.localizeString()
         setupMiddleButton()
    }
     
@@ -58,15 +59,15 @@ class MyTabBarCtrl: UITabBarController, UITabBarControllerDelegate {
                 if index == selectedIndex {
                     switch index {
                     case 0:
-                        tabBarItem.title = "Home"
+                        tabBarItem.title = LocalizationKeys.home.rawValue.localizeString()
                     case 1:
-                        tabBarItem.title = "Settings"
+                        tabBarItem.title = LocalizationKeys.settings.rawValue.localizeString()
                     case 2:
                         tabBarItem.title = ""
                     case 3:
-                        tabBarItem.title = "Notifications"
+                        tabBarItem.title = LocalizationKeys.notifications.rawValue.localizeString()
                     case 4:
-                        tabBarItem.title = "Profile"
+                        tabBarItem.title = LocalizationKeys.profile.rawValue.localizeString()
                     default:
                         break
                     }

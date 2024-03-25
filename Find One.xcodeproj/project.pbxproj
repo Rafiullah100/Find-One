@@ -57,6 +57,10 @@
 		525529962B971C5E00395676 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525529952B971C5E00395676 /* ResultViewModel.swift */; };
 		525529992B972E1800395676 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525529982B972E1800395676 /* DetailModel.swift */; };
 		5255299C2B972E4800395676 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255299B2B972E4800395676 /* DetailViewModel.swift */; };
+		525975F42BB141B600BD9141 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525975F32BB141B600BD9141 /* ForgotPasswordViewController.swift */; };
+		525975F62BB1473600BD9141 /* ForgetResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525975F52BB1473600BD9141 /* ForgetResetViewController.swift */; };
+		5259760A2BB1616400BD9141 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5259760C2BB1616400BD9141 /* Localizable.strings */; };
+		5259760F2BB1619300BD9141 /* LocalizationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5259760E2BB1619300BD9141 /* LocalizationKeys.swift */; };
 		52687B992BA411E200334BC3 /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52687B982BA411E200334BC3 /* AddReviewViewController.swift */; };
 		52773C6C2BA95A3E0067FD00 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52773C6A2BA95A3E0067FD00 /* FilterCollectionViewCell.swift */; };
 		52773C6D2BA95A3E0067FD00 /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52773C6B2BA95A3E0067FD00 /* FilterCollectionViewCell.xib */; };
@@ -121,6 +125,7 @@
 		52E4E50E2B8DC8A6001529AF /* TypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4E50D2B8DC8A6001529AF /* TypeCollectionViewCell.swift */; };
 		52F612B72B9993E600EC1EA9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F612B62B9993E600EC1EA9 /* Profile.storyboard */; };
 		52F612BA2B999EC800EC1EA9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F612B92B999EC800EC1EA9 /* ProfileViewController.swift */; };
+		52FC7F1C2BAD86C10053EB56 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC7F1B2BAD86C10053EB56 /* LanguageViewController.swift */; };
 		79C29CD0D1DE5E8578D2885B /* Pods_Find_One.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B29EAB32F0B37ECF44AD097 /* Pods_Find_One.framework */; };
 /* End PBXBuildFile section */
 
@@ -176,6 +181,13 @@
 		525529952B971C5E00395676 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		525529982B972E1800395676 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		5255299B2B972E4800395676 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		525975F32BB141B600BD9141 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		525975F52BB1473600BD9141 /* ForgetResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetResetViewController.swift; sourceTree = "<group>"; };
+		525976062BB1614100BD9141 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Auth.strings; sourceTree = "<group>"; };
+		525976072BB1614200BD9141 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5259760B2BB1616400BD9141 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5259760D2BB1616600BD9141 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5259760E2BB1619300BD9141 /* LocalizationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationKeys.swift; sourceTree = "<group>"; };
 		52687B982BA411E200334BC3 /* AddReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
 		52773C6A2BA95A3E0067FD00 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		52773C6B2BA95A3E0067FD00 /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -243,6 +255,7 @@
 		52E4E50D2B8DC8A6001529AF /* TypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		52F612B62B9993E600EC1EA9 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		52F612B92B999EC800EC1EA9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		52FC7F1B2BAD86C10053EB56 /* LanguageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		7B29EAB32F0B37ECF44AD097 /* Pods_Find_One.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Find_One.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B7DA2D5124F7DEBAD8FE21 /* Pods-Find One.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Find One.debug.xcconfig"; path = "Target Support Files/Pods-Find One/Pods-Find One.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -288,6 +301,7 @@
 		520538BA2B79EE3B00D81267 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				52FC7F1A2BAD86890053EB56 /* Settings */,
 				52246BD02BAACC190085CCC9 /* SettingsModule */,
 				523403522B9F0FDD00A93EFE /* Book */,
 				52F612B82B999EAD00EC1EA9 /* Profile */,
@@ -303,6 +317,7 @@
 		520538BB2B79EE3B00D81267 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				525975F22BB1416700BD9141 /* ForgetPassword */,
 				52A185AA2BAD584A00FC2CB0 /* ChangePasswordScreen */,
 				520538EB2B7A0B3F00D81267 /* Signup */,
 				520538BC2B79EE3B00D81267 /* Login */,
@@ -584,6 +599,24 @@
 				5255299B2B972E4800395676 /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		525975F22BB1416700BD9141 /* ForgetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				525975F32BB141B600BD9141 /* ForgotPasswordViewController.swift */,
+				525975F52BB1473600BD9141 /* ForgetResetViewController.swift */,
+			);
+			path = ForgetPassword;
+			sourceTree = "<group>";
+		};
+		525975F72BB15D1500BD9141 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				5259760C2BB1616400BD9141 /* Localizable.strings */,
+				5259760E2BB1619300BD9141 /* LocalizationKeys.swift */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		52773C682BA959DF0067FD00 /* FilterModule */ = {
@@ -909,6 +942,7 @@
 		52B6389B2B73750600AE8B7E /* Find One */ = {
 			isa = PBXGroup;
 			children = (
+				525975F72BB15D1500BD9141 /* Localization */,
 				52A4AC022B88988A00E54458 /* Find One.entitlements */,
 				520538B92B79EE1600D81267 /* AppDelegate */,
 				520538BA2B79EE3B00D81267 /* Module */,
@@ -961,6 +995,14 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		52FC7F1A2BAD86890053EB56 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				52FC7F1B2BAD86C10053EB56 /* LanguageViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1006,6 +1048,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 52B638902B73750600AE8B7E;
 			productRefGroup = 52B6389A2B73750600AE8B7E /* Products */;
@@ -1035,6 +1078,7 @@
 				529834B82B7B612000A33DAD /* manrope-bold.otf in Resources */,
 				52246BE42BAC1FB50085CCC9 /* SliderCollectionViewCell.xib in Resources */,
 				52987C5F2B7DDAA0006290F6 /* Result.storyboard in Resources */,
+				5259760A2BB1616400BD9141 /* Localizable.strings in Resources */,
 				520539012B7A2E0C00D81267 /* Menu.storyboard in Resources */,
 				52B638A42B73750600AE8B7E /* Auth.storyboard in Resources */,
 				523FFB3A2B9AE897005BCFA7 /* ProfileTableViewCell.xib in Resources */,
@@ -1136,6 +1180,7 @@
 				520538E12B79EE8000D81267 /* Storyboard.swift in Sources */,
 				520538F92B7A27EC00D81267 /* BaseViewController.swift in Sources */,
 				525529922B97100700395676 /* ResultModel.swift in Sources */,
+				52FC7F1C2BAD86C10053EB56 /* LanguageViewController.swift in Sources */,
 				520538C62B79EE6300D81267 /* Observable.swift in Sources */,
 				520538FF2B7A2A2200D81267 /* HomeViewController.swift in Sources */,
 				528F939E2B8C8E0300BF0A5F /* SideMenuViewController.swift in Sources */,
@@ -1143,11 +1188,13 @@
 				523403582B9F10DA00A93EFE /* ParentBookingViewController.swift in Sources */,
 				52A185B22BAD590300FC2CB0 /* ChangePasswordModel.swift in Sources */,
 				529834A82B7B4B5B00A33DAD /* SettingsViewController.swift in Sources */,
+				5259760F2BB1619300BD9141 /* LocalizationKeys.swift in Sources */,
 				523FFB422B9B0FB5005BCFA7 /* SearchViewModel.swift in Sources */,
 				529220852B7F720D00C0E396 /* LocationViewController.swift in Sources */,
 				520538D32B79EE7600D81267 /* Route.swift in Sources */,
 				520538E22B79EE8000D81267 /* AutoSizingUiTableView.swift in Sources */,
 				52773C6C2BA95A3E0067FD00 /* FilterCollectionViewCell.swift in Sources */,
+				525975F42BB141B600BD9141 /* ForgotPasswordViewController.swift in Sources */,
 				52246BD92BAAD5820085CCC9 /* NotificationViewController.swift in Sources */,
 				529220812B7F6D9B00C0E396 /* MapViewController.swift in Sources */,
 				528F93A42B8CAFB200BF0A5F /* HomeViewModel.swift in Sources */,
@@ -1195,6 +1242,7 @@
 				52246BE32BAC1FB50085CCC9 /* SliderCollectionViewCell.swift in Sources */,
 				5234034F2B9EF0D100A93EFE /* FooterView.swift in Sources */,
 				52246BDC2BABF74E0085CCC9 /* ProfileModel.swift in Sources */,
+				525975F62BB1473600BD9141 /* ForgetResetViewController.swift in Sources */,
 				52C208C92B7E2A0900FA6470 /* GridCollectionViewCell.swift in Sources */,
 				52A4ABF92B886FB800E54458 /* SuccessModel.swift in Sources */,
 				523FFB362B9AE6D0005BCFA7 /* PersonalInfoViewController.swift in Sources */,
@@ -1211,10 +1259,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		5259760C2BB1616400BD9141 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5259760B2BB1616400BD9141 /* en */,
+				5259760D2BB1616600BD9141 /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		52B638A22B73750600AE8B7E /* Auth.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				52B638A32B73750600AE8B7E /* Base */,
+				525976062BB1614100BD9141 /* ar */,
 			);
 			name = Auth.storyboard;
 			sourceTree = "<group>";
@@ -1223,6 +1281,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				52B638A82B73750B00AE8B7E /* Base */,
+				525976072BB1614200BD9141 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1234,6 +1293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1294,6 +1354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

@@ -1,0 +1,120 @@
+/* 
+  Localizable.strings
+  Find One
+
+  Created by MacBook Pro on 3/25/24.
+  
+*/
+
+
+
+"skipLogin" = "تخطي تسجيل الدخول";
+"emailAddress" = "عنوان البريد الإلكتروني";
+"signup" = "اشتراك";
+"signin" = "تسجيل الدخول";
+"password" = "كلمة المرور";
+"google" = "جوجل";
+"facebook" = "فيسبوك";
+"noAccount" = "ليس لديك حساب؟";
+"orSignin" = "أو تسجيل الدخول باستخدام";
+"name" = "الاسم الكامل";
+"alreadyAccount" = "هل لديك حساب؟";
+"confirmPassword" = "تأكيد كلمة المرور";
+
+"home" = "بيت";
+"profile" = "حساب تعريفي";
+"category" = "فئات";
+"settings" = "إعدادات";
+"notifications" = "إشعارات";
+"viewAll" = "عرض الكل";
+"search" = "يبحث";
+"price" = "سعر:";
+"compare" = "يقارن";
+"about" = "عن";
+"location" = "موقع";
+"alerts" = "التنبيهات";
+"description" = "وصف";
+"reviews" = "التعليقات";
+"priceDropped" = "أعلمني عندما ينخفض ​​السعر";
+"createAlert" = "إنشاء تنبيه";
+"receiveAlert" = "أدخل البريد الإلكتروني لتلقي التنبيهات";
+"locationType" = "نوع الموقع:";
+"nearest5Km" = "أقرب 5 كيلومترات:";
+"reviewWithColon" = "التعليقات:";
+"ratingsAndReviews" = "التقييم والمراجعات";
+"helpful" = "متعاون";
+"sar" = "ريال سعودي";
+"priceRange" = "نطاق السعر:";
+"addReview" = "إضافة مراجعة+";
+"rating" = "تقييم";
+"viewFull" = "عرض كامل";
+"nearestLocation" = "عرض كامل";
+"allCategories" = "جميع الفئات";
+"allSources" = "جميع المصادر";
+
+"personalInformation" = "معلومات شخصية";
+"mySources" = "مصادري";
+"myCategories" = "فئاتي";
+"wishlist" = "قائمة الرغبات";
+"edit" = "يحرر";
+"save" = "يحفظ";
+
+"selectedCategories" = "الفئات المختارة";
+"selectedSources" = "المصادر المختارة";
+"browseAll" = "تصفح الكل";
+
+"categories" = "فئات";
+"sources" = "مصادر";
+"continueTitle" = "يكمل";
+
+"pushNotification" = "دفع الإخطارات";
+"muteNotification" = "كتم كافة الإخطارات";
+
+"english" = "إنجليزي";
+"arabic" = "عربي";
+"languageSelection" = "اختيار اللغة";
+
+"email" = "بريد إلكتروني";
+"policy" = "سياسة الخصوصية";
+"language" = "لغة";
+"mode" = "الوضع المظلم";
+"aboutQaaren" = "عن قارين";
+"selectPriceRange" = "حدد نطاق السعر";
+"applyFilter" = "تطبيق الفلتر";
+"addaReview" = "إضافة إلى استعراض";
+"submitReview" = "إرسال المراجعة";
+
+"watching" = "مشاهدة";
+"logout" = "تسجيل خروج";
+"delete" = "حذف الحساب";
+"deleteAccountMessage" = "هل انت متأكد انك تريد حذف حسابك؟";
+"cancel" = "يلغي";
+"yes" = "نعم";
+"updatePassword" = "تطوير كلمة السر؟";
+"forgetpassword" = "هل نسيت كلمة السر؟";
+
+"keepMeLogin" = "استمر في تسجيل الدخول";
+
+"createAccount" = "إنشاء حساب";
+"needHelp" = "تحتاج مساعدة؟";
+"login" = "تسجيل الدخول";
+"contactNumber" = "رقم الاتصال";
+"getStarted" = "البدء";
+"currentPassword" = "كلمة السر الحالية";
+"newPassword" = "كلمة المرور الجديدة";
+
+"city" = "مدينة";
+"country" = "دولة";
+
+"male" = "ذكر";
+"female" = "أنثى";
+"other" = "آخر";
+"lookingFor" = "ما الذي تبحث عنه؟";
+"region" = "منطقة";
+"selectRegion" = "اختر المنطقة";
+"selectCity" = "اختر مدينة";
+"type" = "نوع المؤسسة";
+"selectType" = "حدد نوع المؤسسة";
+"gender" = "جنس";
+"range" = "نطاق الرسوم";
+"browseResult" = "تصفح النتيجة";

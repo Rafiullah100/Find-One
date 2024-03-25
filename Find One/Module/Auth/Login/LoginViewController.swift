@@ -11,18 +11,37 @@ import GoogleSignIn
 import Firebase
 class LoginViewController: BaseViewController {
    
+    @IBOutlet weak var helpLabel: UIButton!
+    @IBOutlet weak var createLabel: UIButton!
+    @IBOutlet weak var orLabel: UILabel!
+    @IBOutlet weak var forgetPasswordButton: UIButton!
+    @IBOutlet weak var keepMeLabel: UILabel!
+    @IBOutlet weak var languageButton: UIButton!
     @IBOutlet weak var keepMeButton: UIImageView!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var appleSigninView: UIView!
+    @IBOutlet weak var forgetBtn: UILabel!
 
+    @IBOutlet weak var loginButton: UIButton!
     private var viewModel = LoginViewModel()
     private let appleSignInButton = ASAuthorizationAppleIDButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.textAlignment = Helper.isRTL() ? .right : .left
+        passwordTextField.textAlignment = Helper.isRTL() ? .right : .left
+        emailTextField.placeholder = LocalizationKeys.email.rawValue.localizeString()
+        passwordTextField.placeholder = LocalizationKeys.password.rawValue.localizeString()
+        orLabel.text = LocalizationKeys.orSignin.rawValue.localizeString()
+        forgetBtn.text = LocalizationKeys.forgetPassword.rawValue.localizeString()
+        keepMeLabel.text = LocalizationKeys.keepMeLogin.rawValue.localizeString()
+        helpLabel.setTitle(LocalizationKeys.needHelp.rawValue.localizeString(), for: .normal)
+        createLabel.setTitle(LocalizationKeys.createAccount.rawValue.localizeString(), for: .normal)
+        loginButton.setTitle(LocalizationKeys.login.rawValue.localizeString(), for: .normal)
+
         emailTextField.text = "rafiullah@codeforpakistan.org"
-        passwordTextField.text = "12345"
+        passwordTextField.text = "1234"
         viewModel.login.bind { [weak self] login in
             guard let self = self else{return}
             self.stopAnimation()
@@ -119,6 +138,8 @@ class LoginViewController: BaseViewController {
         keepMeButton.image = sender.isSelected == true ? UIImage(named: "remember-me") : UIImage(named: "not-remember")
         UserDefaults.standard.rememberMe = sender.isSelected
     }
+    
+    
 }
 
 extension  LoginViewController: ASAuthorizationControllerDelegate{

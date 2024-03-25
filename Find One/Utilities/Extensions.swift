@@ -236,6 +236,13 @@ extension String{
 //        let bundle = Bundle(path: path!)
 //        return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
 //    }
+    
+    func localizeString() -> String {
+        let loc = UserDefaults.standard.selectedLanguage == AppLanguage.arabic.rawValue ? "ar" : "en"
+        let path = Bundle.main.path(forResource: loc, ofType: "lproj")
+        let bundle = Bundle(path: path!)
+        return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
+    }
 }
 
 extension UICollectionViewFlowLayout {

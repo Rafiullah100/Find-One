@@ -92,7 +92,7 @@ class DetailViewController: BaseViewController {
     }
     
     func setupAutoScroll() {
-        self.autoScrollTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.autoScroll), userInfo: nil, repeats: true)
+//        self.autoScrollTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.autoScroll), userInfo: nil, repeats: true)
     }
     
     @objc func autoScroll() {

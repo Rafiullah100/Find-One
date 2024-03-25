@@ -45,9 +45,9 @@ open class Helper{
         return emailPredicate.evaluate(with: email)
     }
     
-//   class func isRTL() -> Bool{
-//        return UserDefaults.standard.selectedLanguage == AppLanguage.arabic.rawValue ? true : false
-//    }
+   class func isRTL() -> Bool{
+        return UserDefaults.standard.selectedLanguage == AppLanguage.arabic.rawValue ? true : false
+    }
 //
 //    class func isLogin() -> Bool {
 //        guard let login = UserDefaults.standard.isLogin else { return false }

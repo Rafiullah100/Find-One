@@ -14,11 +14,28 @@ class SignupViewController: BaseViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     
+    @IBOutlet weak var alreadyLabel: UILabel!
     private var viewModel = SignupViewModel()
-
+    @IBOutlet weak var getStartedButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        nameTextField.textAlignment = Helper.isRTL() ? .right : .left
+        emailTextField.textAlignment = Helper.isRTL() ? .right : .left
+        mobileTextField.textAlignment = Helper.isRTL() ? .right : .left
+        passwordTextfield.textAlignment = Helper.isRTL() ? .right : .left
+        confirmTextField.textAlignment = Helper.isRTL() ? .right : .left
+
+        nameTextField.placeholder = LocalizationKeys.name.rawValue.localizeString()
+        emailTextField.placeholder = LocalizationKeys.email.rawValue.localizeString()
+        mobileTextField.placeholder = LocalizationKeys.contactNumber.rawValue.localizeString()
+        passwordTextfield.placeholder = LocalizationKeys.password.rawValue.localizeString()
+        confirmTextField.placeholder = LocalizationKeys.confirmPassword.rawValue.localizeString()
+        alreadyLabel.text = LocalizationKeys.alreadyAccount.rawValue.localizeString()
+        loginButton.setTitle(LocalizationKeys.login.rawValue.localizeString(), for: .normal)
+        getStartedButton.setTitle(LocalizationKeys.getStarted.rawValue.localizeString(), for: .normal)
+
         nameTextField.text = "Rafiullah"
         emailTextField.text = "rafiullah@gmail.com"
         mobileTextField.text = "04037867876"

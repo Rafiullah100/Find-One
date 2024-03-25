@@ -1,0 +1,122 @@
+/* 
+  Localizable.strings
+  Find One
+
+  Created by MacBook Pro on 3/25/24.
+  
+*/
+
+
+"skipLogin" = "Skip Login";
+"emailAddress" = "Email Address";
+"signup" = "Sign up";
+"signin" = "Sign in";
+"password" = "Password";
+"google" = "Google";
+"facebook" = "Facebook";
+"noAccount" = "Don't have an account?";
+"orSignin" = "or sign in using";
+"name" = "Full Name";
+"alreadyAccount" = "Already have an account?";
+"confirmPassword" = "Confirm Password";
+
+"home" = "Home";
+"profile" = "Profile";
+"category" = "Categories";
+"settings" = "Settings";
+"notifications" = "Notifications";
+"viewAll" = "View all";
+"search" = "Search";
+"price" = "Price:";
+"compare" = "Compare";
+"about" = "About";
+"location" = "Location";
+"alerts" = "Alerts";
+"alerts" = "Alerts";
+"description" = "Description";
+"reviews" = "Reviews";
+"priceDropped" = "Notify me when the price has dropped";
+"createAlert" = "Create Alert";
+"receiveAlert" = "Enter email to receive alerts ";
+"locationType" = "Location Type:";
+"nearest5Km" = "Nearest 5 KM:";
+"reviewWithColon" = "Reviews:";
+"ratingsAndReviews" = "Ratings & Reviews";
+"helpful" = "Helpful";
+"sar" = "SAR";
+"priceRange" = "Price Range:";
+"addReview" = "Add a Review";
+"rating" = "Rating";
+"viewFull" = "View Full";
+"nearestLocation" = "Nearest Location";
+"allCategories" = "All Categories";
+"allSources" = "All Sources";
+
+"personalInformation" = "Personal Information";
+"mySources" = "My Sources";
+"myCategories" = "My Categories";
+"wishlist" = "Wishlist";
+"edit" = "Edit";
+"save" = "Save";
+
+"selectedCategories" = "Selected Categories";
+"selectedSources" = "Selected Sources";
+"browseAll" = "Browse All";
+
+"categories" = "Categories";
+"sources" = "Sources";
+"continueTitle" = "Continue";
+
+"pushNotification" = "Push Notifications";
+"muteNotification" = "Mute All Notification";
+
+"english" = "English";
+"arabic" = "Arabic";
+"languageSelection" = "Language Selection";
+
+"email" = "Email";
+"policy" = "Privacy Policy";
+"language" = "Language";
+"mode" = "Dark Mode";
+"aboutQaaren" = "About Qaaren";
+
+"selectPriceRange" = "Select Price Range";
+"applyFilter" = "Apply Filter";
+"addaReview" = "Add Review";
+"submitReview" = "Submit Review";
+
+"watching" = "Watching";
+"logout" = "Logout";
+"delete" = "Delete Account";
+"deleteAccountMessage" = "Are you sure you want to delete your account?";
+"cancel" = "Cancel";
+"yes" = "Yes";
+"updatePassword" = "Update Password";
+
+"forgetpassword" = "Forgot Password?";
+
+"keepMeLogin" = "Keep Logged in";
+"createAccount" = "Create Account";
+ "needHelp" = "Need Help?";
+"login" = "LOGIN";
+"contactNumber" = "Contact Number";
+"getStarted" = "Get Started";
+"currentPassword" = "Current Password";
+"newPassword" = "New Password";
+
+"city" = "City";
+"country" = "Country";
+"male" = "Male";
+"female" = "Female";
+"other" = "Other";
+"lookingFor" = "What are you looking for?";
+"region" = "Region";
+"selectRegion" = "Select Region";
+"selectCity" = "Select City";
+"type" = "Institution Type";
+"selectType" = "Select Institution Type";
+"gender" = "gender";
+"range" = "Fee Range";
+"browseResult" = "Browse Result";
+
+

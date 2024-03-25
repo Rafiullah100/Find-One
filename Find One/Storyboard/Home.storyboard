@@ -1142,15 +1142,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="oBI-KS-hkT"/>
                     <connections>
+                        <outlet property="browseButton" destination="LbZ-oz-lLh" id="Eja-sv-x9K"/>
+                        <outlet property="cityLabel" destination="5FM-kU-ozz" id="1aS-rO-Gc5"/>
                         <outlet property="cityTextField" destination="I2X-eH-9WQ" id="HQD-Yv-qJd"/>
+                        <outlet property="genderLabel" destination="BPL-cc-pH5" id="dIb-e9-N68"/>
                         <outlet property="instituteTextField" destination="o83-3J-NGx" id="4nF-Ii-xVA"/>
                         <outlet property="maxLabel" destination="Sai-O0-zUG" id="TJ1-hw-jfc"/>
                         <outlet property="minLabel" destination="ukl-4K-T0b" id="9HP-hi-OoS"/>
+                        <outlet property="rangeLabel" destination="KOS-VU-o38" id="2d0-xR-mV4"/>
                         <outlet property="rangeSlider" destination="PIl-21-Y44" id="RIu-EM-uWu"/>
+                        <outlet property="regionLabel" destination="psg-Ez-bK3" id="lit-Nw-qyu"/>
                         <outlet property="regionTextField" destination="ytc-oF-WXJ" id="o2k-Ii-xrX"/>
                         <outlet property="scrollView" destination="MbD-jR-PNX" id="W3S-id-Tai"/>
                         <outlet property="segmentView" destination="IgJ-Wu-pym" id="DBQ-0e-S6f"/>
                         <outlet property="sliderValueLabel" destination="ayI-Vo-4VT" id="SJx-5O-nxn"/>
+                        <outlet property="topLabel" destination="YdI-nn-Xlk" id="cP1-Mm-I2s"/>
+                        <outlet property="typeLabel" destination="ga3-z7-a5d" id="7Th-aU-CmS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V4o-zp-Xhj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

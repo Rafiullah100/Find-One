@@ -9,6 +9,13 @@ import UIKit
 import WARangeSlider
 class CustomSearchViewController: BaseViewController {
 
+    @IBOutlet weak var browseButton: UIButton!
+    @IBOutlet weak var rangeLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var regionLabel: UILabel!
+    @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var maxLabel: UILabel!
     @IBOutlet weak var minLabel: UILabel!
     @IBOutlet weak var rangeSlider: RangeSlider!
@@ -58,6 +65,24 @@ class CustomSearchViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .home
+        regionTextField.textAlignment = Helper.isRTL() ? .right : .left
+        cityTextField.textAlignment = Helper.isRTL() ? .right : .left
+        instituteTextField.textAlignment = Helper.isRTL() ? .right : .left
+       
+        regionTextField.placeholder = LocalizationKeys.selectRegion.rawValue.localizeString()
+        cityTextField.placeholder = LocalizationKeys.selectCity.rawValue.localizeString()
+        instituteTextField.placeholder = LocalizationKeys.selectType.rawValue.localizeString()
+
+        
+        topLabel.text = LocalizationKeys.lookingFor.rawValue.localizeString()
+        regionLabel.text = LocalizationKeys.region.rawValue.localizeString()
+        cityLabel.text = LocalizationKeys.city.rawValue.localizeString()
+        typeLabel.text = LocalizationKeys.type.rawValue.localizeString()
+        genderLabel.text = LocalizationKeys.gender.rawValue.localizeString()
+        rangeLabel.text = LocalizationKeys.range.rawValue.localizeString()
+        
+        browseButton.setTitle(LocalizationKeys.browseResult.rawValue.localizeString(), for: .normal)
+
         
         rangeSlider.addTarget(self, action: #selector(CustomSearchViewController.rangeSliderValueChanged(_:)), for: .valueChanged)
         updateLabel()
@@ -127,8 +152,8 @@ class CustomSearchViewController: BaseViewController {
     }
     
     private func updateLabel(){
-        minLabel.attributedText = Helper.attributedText(text1: "\(minPrice) ", text2: "SAR")
-        maxLabel.attributedText = Helper.attributedText(text1: "\(maxPrice) ", text2: "SAR")
+        minLabel.attributedText = Helper.attributedText(text1: "\(minPrice) ", text2: LocalizationKeys.sar.rawValue.localizeString())
+        maxLabel.attributedText = Helper.attributedText(text1: "\(maxPrice) ", text2: LocalizationKeys.sar.rawValue.localizeString())
     }
 }
 

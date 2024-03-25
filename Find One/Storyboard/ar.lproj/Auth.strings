@@ -1,0 +1,102 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "6zg-Mm-S4p"; */
+"6zg-Mm-S4p.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "New Password"; ObjectID = "7XV-tf-CnQ"; */
+"7XV-tf-CnQ.placeholder" = "New Password";
+
+/* Class = "UILabel"; text = "Google"; ObjectID = "7wJ-Qp-fxz"; */
+"7wJ-Qp-fxz.text" = "Google";
+
+/* Class = "UIButton"; normalTitle = "LOGIN"; ObjectID = "8Cp-Fy-0Nc"; */
+"8Cp-Fy-0Nc.normalTitle" = "LOGIN";
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "8kj-Y0-8Gy"; */
+"8kj-Y0-8Gy.normalTitle" = "Reset";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "9HN-Pv-617"; */
+"9HN-Pv-617.placeholder" = "Email";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "9ZL-97-CuR"; */
+"9ZL-97-CuR.placeholder" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Social LOGIN"; ObjectID = "ADq-3r-sFt"; */
+"ADq-3r-sFt.normalTitle" = "Social LOGIN";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "AKW-8W-2pr"; */
+"AKW-8W-2pr.placeholder" = "Email";
+
+/* Class = "UITextField"; placeholder = "Contact Number"; ObjectID = "BlS-PZ-Nq5"; */
+"BlS-PZ-Nq5.placeholder" = "Contact Number";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "FkE-uX-nzS"; */
+"FkE-uX-nzS.placeholder" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "NYj-8s-Yom"; */
+"NYj-8s-Yom.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Confirm New Password"; ObjectID = "Ogb-g7-jzu"; */
+"Ogb-g7-jzu.placeholder" = "Confirm New Password";
+
+/* Class = "UITextField"; placeholder = "Current Password"; ObjectID = "PQp-1O-uEe"; */
+"PQp-1O-uEe.placeholder" = "Current Password";
+
+/* Class = "UILabel"; text = "ENG"; ObjectID = "Tqz-uv-PMk"; */
+"Tqz-uv-PMk.text" = "ENG";
+
+/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "Wug-4S-ctj"; */
+"Wug-4S-ctj.placeholder" = "Full Name";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "Zym-uf-Np0"; */
+"Zym-uf-Np0.placeholder" = "Confirm Password";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "c8Q-Pk-hFc"; */
+"c8Q-Pk-hFc.normalTitle" = "Edit";
+
+/* Class = "UIButton"; normalTitle = "Get Started"; ObjectID = "cnw-tA-iR1"; */
+"cnw-tA-iR1.normalTitle" = "Get Started";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "dNg-Vq-FSE"; */
+"dNg-Vq-FSE.normalTitle" = "Send";
+
+/* Class = "UIButton"; normalTitle = "Create Account"; ObjectID = "fFJ-iH-aBG"; */
+"fFJ-iH-aBG.normalTitle" = "Create Account";
+
+/* Class = "UIButton"; normalTitle = "Need Help?"; ObjectID = "g6R-wj-gau"; */
+"g6R-wj-gau.normalTitle" = "Need Help?";
+
+/* Class = "UILabel"; text = "ENG"; ObjectID = "gck-WZ-7sb"; */
+"gck-WZ-7sb.text" = "ENG";
+
+/* Class = "UIButton"; normalTitle = "LOGIN"; ObjectID = "iHr-JB-Yxz"; */
+"iHr-JB-Yxz.normalTitle" = "LOGIN";
+
+/* Class = "UILabel"; text = "Forgot password"; ObjectID = "iqc-lX-Yvk"; */
+"iqc-lX-Yvk.text" = "Forgot password";
+
+/* Class = "UILabel"; text = "or sign in using"; ObjectID = "kHU-eW-Wcu"; */
+"kHU-eW-Wcu.text" = "or sign in using";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mQT-Da-sZD"; */
+"mQT-Da-sZD.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Already have an account?"; ObjectID = "nNZ-IL-D4u"; */
+"nNZ-IL-D4u.text" = "Already have an account?";
+
+/* Class = "UILabel"; text = "Keep logged in "; ObjectID = "p89-J7-I9r"; */
+"p89-J7-I9r.text" = "Keep logged in ";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "pyQ-gr-hk5"; */
+"pyQ-gr-hk5.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "r6K-FW-yXc"; */
+"r6K-FW-yXc.placeholder" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Update Password"; ObjectID = "rEX-Om-Wd8"; */
+"rEX-Om-Wd8.normalTitle" = "Update Password";
+
+/* Class = "UILabel"; text = "Try"; ObjectID = "sIq-aA-W3r"; */
+"sIq-aA-W3r.text" = "Try";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "ye4-9L-xtx"; */
+"ye4-9L-xtx.placeholder" = "Confirm Password";

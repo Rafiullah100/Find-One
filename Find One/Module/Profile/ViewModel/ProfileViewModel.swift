@@ -13,7 +13,7 @@ class ProfileViewModel {
     var errorMessage: Observable<String> = Observable("")
     var parameters: [String: Any]?
     var editProfile: Observable<EditProfileModel> = Observable(nil)
-//    var deleteAccount: Observable/*<DeleteModel>*/ = Observable(nil)
+    var deleteAccount: Observable<DeleteModel> = Observable(nil)
 
     func getMyProfile(){
         URLSession.shared.request(route: .myProfile, method: .get, parameters: [:], model: ProfileModel.self) { result in
@@ -88,14 +88,14 @@ class ProfileViewModel {
     }
 //    
     func delete(){
-//        URLSession.shared.request(route: .deleteAccount, method: .post, parameters: ["uuid": UserDefaults.standard.uuid], model: DeleteModel.self) { result in
-//            switch result {
-//            case .success(let delete):
-//                self.deleteAccount.value = delete
-//            case .failure(let error):
-//                self.errorMessage.value = error.localizedDescription
-//            }
-//        }
+        URLSession.shared.request(route: .deleteAccount, method: .post, parameters: ["uuid": UserDefaults.standard.uuid ?? ""], model: DeleteModel.self) { result in
+            switch result {
+            case .success(let delete):
+                self.deleteAccount.value = delete
+            case .failure(let error):
+                self.errorMessage.value = error.localizedDescription
+            }
+        }
     }
     
     private func saveUser(){

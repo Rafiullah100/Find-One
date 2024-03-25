@@ -12,12 +12,12 @@ enum ImageSource {
 }
 class PersonalInfoViewController: BaseViewController {
 
+    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var segmentView: UISegmentedControl!
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet var editButtons: [UIButton]!
-    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var mobileTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -29,14 +29,36 @@ class PersonalInfoViewController: BaseViewController {
     var imagePicker: UIImagePickerController!
     private var viewModel = ProfileViewModel()
 
-    var genderArr = ["Male", "Female", "Other"]
-    var gender = "Male"
+    var genderArr = [LocalizationKeys.male.rawValue.localizeString(), LocalizationKeys.female.rawValue.localizeString(), LocalizationKeys.other.rawValue.localizeString()]
+    var gender = LocalizationKeys.male.rawValue.localizeString()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .back
         viewControllerTitle = "Personal Information"
+        
+        nameTextField.textAlignment = Helper.isRTL() ? .right : .left
+        emailTextField.textAlignment = Helper.isRTL() ? .right : .left
+        mobileTextField.textAlignment = Helper.isRTL() ? .right : .left
+        countryTextField.textAlignment = Helper.isRTL() ? .right : .left
+        cityTextField.textAlignment = Helper.isRTL() ? .right : .left
+        aboutTextField.textAlignment = Helper.isRTL() ? .right : .left
+
+        nameTextField.placeholder = LocalizationKeys.name.rawValue.localizeString()
+        emailTextField.placeholder = LocalizationKeys.email.rawValue.localizeString()
+        mobileTextField.placeholder = LocalizationKeys.contactNumber.rawValue.localizeString()
+        countryTextField.placeholder = LocalizationKeys.country.rawValue.localizeString()
+        cityTextField.placeholder = LocalizationKeys.city.rawValue.localizeString()
+        aboutTextField.placeholder = LocalizationKeys.about.rawValue.localizeString()
+        saveButton.setTitle(LocalizationKeys.save.rawValue.localizeString(), for: .normal)
+        updateButton.setTitle(LocalizationKeys.updatePassword.rawValue.localizeString(), for: .normal)
+        
+        segmentView.removeAllSegments()
+        for i in 0..<(self.genderArr.count){
+            self.segmentView.insertSegment(withTitle: self.genderArr[i], at: i, animated: true)
+            self.segmentView.selectedSegmentIndex = 0
+        }
         
         self.animateSpinner()
         viewModel.editProfile.bind { updateProfile in

@@ -19,6 +19,7 @@ target 'Find One' do
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
     pod "WARangeSlider"
+    pod 'OTPFieldView'
 
 end
 

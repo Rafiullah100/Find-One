@@ -61,3 +61,8 @@ struct EditProfileModel: Codable {
     let message: String?
 }
 
+
+struct DeleteModel: Codable {
+    let success: Bool?
+    let message: String?
+}

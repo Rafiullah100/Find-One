@@ -21,12 +21,16 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var nameLabell: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
-    var arr = ["Personal Information", "Delete Account"]
+    var arr = [LocalizationKeys.personalInformation.rawValue.localizeString(), LocalizationKeys.delete.rawValue.localizeString()]
     var viewModel = ProfileViewModel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        viewModel.deleteAccount.bind { delete in
+            if delete?.success == true{
+                self.logoutUser()
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,7 +73,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         //            Switcher.gotoWishlist(delegate: self)
         //        }
         else {
-//            showAlert(message: "Are you sure you want to delete your account?")
+            //            showAlert(message: "Are you sure you want to delete your account?")
             Helper.showAlertWithButtons(message: "Are you sure you want to delete your account?", buttonTitles: ["Cancel", "Ok"]) { response in
                 if response == "Ok"{
                     self.viewModel.delete()
@@ -78,9 +82,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    //    func logoutUser() {
-    //        UserDefaults.clean(exceptKeys: [UserDefaults.userdefaultsKey.selectedLanguage.rawValue,  UserDefaults.userdefaultsKey.isRTL.rawValue, UserDefaults.userdefaultsKey.appleUserData.rawValue])
-    //        Switcher.logout(delegate: self)
-    //    }
+    func logoutUser() {
+        UserDefaults.clean(exceptKeys: [UserDefaults.userdefaultsKey.selectedLanguage.rawValue, UserDefaults.userdefaultsKey.appleUserData.rawValue])
+        Switcher.logout(delegate: self)
+    }
 }
 

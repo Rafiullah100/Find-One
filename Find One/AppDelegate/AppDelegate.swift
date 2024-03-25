@@ -14,7 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        UserDefaults.standard.selectedLanguage = AppLanguage.arabic.rawValue
+        UIView.appearance().semanticContentAttribute = .forceRightToLeft
 //        let window = UIWindow(frame: UIScreen.main.bounds)
 //        if UserDefaults.standard.isLogin == true && UserDefaults.standard.rememberMe == true{
 //            Switcher.setInitialScreen(vc: .home)

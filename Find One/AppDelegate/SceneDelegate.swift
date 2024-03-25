@@ -31,7 +31,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         else{
             let loginViewController = UIStoryboard(name: Storyboard.auth.rawValue, bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-            window.rootViewController = loginViewController
+            let nav = UINavigationController(rootViewController: loginViewController)
+            
+            window.rootViewController = nav
         }
         
         self.window = window

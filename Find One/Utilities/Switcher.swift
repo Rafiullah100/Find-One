@@ -85,13 +85,23 @@ class Switcher {
         else{
             let loginVC = UIStoryboard(name: Storyboard.auth.rawValue, bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             let window = UIWindow(frame: UIScreen.main.bounds)
-            window.rootViewController = loginVC
+            let nav = UINavigationController(rootViewController: loginVC)
+            window.rootViewController = nav
             window.makeKeyAndVisible()
         }
     }
     
+    
     static func gotoInformation(delegate: UIViewController){
         let vc = UIStoryboard(name: Storyboard.profile.rawValue, bundle: nil).instantiateViewController(withIdentifier: "PersonalInfoViewController") as! PersonalInfoViewController
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        nav.hidesBottomBarWhenPushed = false
+        delegate.present(nav, animated: false, completion: nil)
+    }
+    
+    static func gotoLanguage(delegate: UIViewController){
+        let vc = UIStoryboard(name: Storyboard.settings.rawValue, bundle: nil).instantiateViewController(withIdentifier: "LanguageViewController") as! LanguageViewController
         let nav = UINavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .fullScreen
         nav.hidesBottomBarWhenPushed = false
@@ -148,4 +158,5 @@ class Switcher {
         vc.hidesBottomBarWhenPushed = false
         delegate.navigationController?.pushViewController(vc, animated: true)
     }
+    
 }
