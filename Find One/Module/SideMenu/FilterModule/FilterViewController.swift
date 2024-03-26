@@ -13,6 +13,12 @@ protocol FilterProtocol {
 
 class FilterViewController: UIViewController {
     
+    @IBOutlet weak var filterButton: UIButton!
+    @IBOutlet weak var schoolTypeLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var stageLabel: UILabel!
+    @IBOutlet weak var regionLabel: UILabel!
+    @IBOutlet weak var districtLabel: UILabel!
     @IBOutlet weak var typeCollectionView: UICollectionView!{
         didSet{
             typeCollectionView.delegate = self
@@ -84,6 +90,20 @@ class FilterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        districtLabel.text = LocalizationKeys.district.rawValue.localizeString()
+        regionLabel.text = LocalizationKeys.region.rawValue.localizeString()
+        stageLabel.text = LocalizationKeys.stage.rawValue.localizeString()
+        genderLabel.text = LocalizationKeys.gender.rawValue.localizeString()
+        schoolTypeLabel.text = LocalizationKeys.schoolType.rawValue.localizeString()
+        filterButton.setTitle(LocalizationKeys.filterResult.rawValue.localizeString(), for: .normal)
+        cityTextField.textAlignment = Helper.isRTL() ? .right : .left
+        regionTextField.textAlignment = Helper.isRTL() ? .right : .left
+        cityTextField.placeholder = LocalizationKeys.city.rawValue.localizeString()
+        regionTextField.placeholder = LocalizationKeys.allDistrict.rawValue.localizeString()
+        curriculumTextField.textAlignment = Helper.isRTL() ? .right : .left
+        curriculumTextField.placeholder = LocalizationKeys.curriculum.rawValue.localizeString()
+
         regionPicker = UIPickerView()
         CityPicker = UIPickerView()
         curriculumPicker = UIPickerView()

@@ -9,15 +9,16 @@ import UIKit
 import Toast_Swift
 class AddReviewViewController: BaseViewController {
 
-    @IBOutlet var ratingImageView: [UIImageView]!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var addReviewLabel: UILabel!
+    @IBOutlet weak var reviewLabel: UILabel!
+    @IBOutlet var ratingImageView: [UIImageView]!
     @IBOutlet weak var textView: UITextView!{
         didSet{
             textView.delegate = self
         }
     }
     
-    @IBOutlet weak var reviewLabel: UILabel!
     var rating: Int?
     let viewModel = DetailViewModel()
     var institudeID: Int?
@@ -26,7 +27,11 @@ class AddReviewViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textView.text = "Add a review"
+        textView.text = LocalizationKeys.addaReview.rawValue.localizeString()
+        addReviewLabel.text = LocalizationKeys.addaReview.rawValue.localizeString()
+        submitButton.setTitle(LocalizationKeys.submitReview.rawValue.localizeString(), for: .normal)
+        textView.textAlignment = Helper.isRTL() ? .right : .left
+
         textView.textColor = UIColor.lightGray
 
         viewModel.addReview.bind { [unowned self] review in
@@ -95,7 +100,7 @@ extension AddReviewViewController: UITextViewDelegate{
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = "Add a review"
+            textView.text = LocalizationKeys.addaReview.rawValue.localizeString()
             textView.textColor = UIColor.lightGray
         }
     }

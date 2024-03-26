@@ -25,7 +25,10 @@ class ReviewTableViewCell: UITableViewCell {
             nameLabel.text = review?.user?.name
             timeLabel.text = review?.createdAt
             reviewLabel.text = review?.reviewText
-            
+            reviewLabel.textAlignment = Helper.isRTL() ? .right : .left
+            timeLabel.textAlignment = Helper.isRTL() ? .left : .right
+            timeLabel.text = Helper.timeAgoSince(review?.createdAt ?? "")
+
             for i in 0..<starsImgView.count {
                 if i < review?.rating ?? 0 {
                     starsImgView[i].image = UIImage(named: "star")

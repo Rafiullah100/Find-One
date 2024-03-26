@@ -35,9 +35,9 @@ class LanguageViewController: BaseViewController {
         super.viewDidLoad()
         type = .detail
 //        viewControllerTitle = LocalizationKeys.languageSelection.rawValue.localizeString()
-        englishLabel.text = "English"
-        arabicLabel.text = "Arabic"
-        saveButton.setTitle("Save", for: .normal)
+        englishLabel.text =  LocalizationKeys.english.rawValue.localizeString()
+        arabicLabel.text =  LocalizationKeys.arabic.rawValue.localizeString()
+        saveButton.setTitle( LocalizationKeys.save.rawValue.localizeString(), for: .normal)
 //        print(UserDefaults.standard.selectedLanguage)
         if UserDefaults.standard.selectedLanguage != AppLanguage.arabic.rawValue{
             selectedRadioButton = englishButton

@@ -538,6 +538,7 @@
                         <outlet property="emailLabel" destination="mnB-6n-ysg" id="qHV-xO-y6Y"/>
                         <outlet property="howToLabel" destination="cVO-aB-8Mm" id="y2q-AT-TmA"/>
                         <outlet property="imageView" destination="2Ww-gV-FIT" id="esm-q3-cVx"/>
+                        <outlet property="logoutLabel" destination="Hor-h1-Cmk" id="RtE-Ue-ypd"/>
                         <outlet property="nameLabel" destination="HYa-Q1-N5Y" id="A7R-Gm-f7S"/>
                     </connections>
                 </viewController>
@@ -1426,9 +1427,15 @@
                     <connections>
                         <outlet property="cityTextField" destination="pwV-jy-ayD" id="gQV-hb-chR"/>
                         <outlet property="curriculumTextField" destination="lsR-rj-80c" id="X10-yO-gMc"/>
+                        <outlet property="districtLabel" destination="NNz-au-myc" id="OMc-rc-wQg"/>
+                        <outlet property="filterButton" destination="0rx-fi-Cit" id="ame-vb-WiI"/>
                         <outlet property="genderCollectionView" destination="ckC-p2-KXO" id="SYs-yz-Osw"/>
+                        <outlet property="genderLabel" destination="ejg-hG-1cG" id="pKH-RR-7la"/>
+                        <outlet property="regionLabel" destination="YwM-R4-bBI" id="Wng-wL-FUo"/>
                         <outlet property="regionTextField" destination="nHy-lz-vwj" id="QTf-4h-wVe"/>
+                        <outlet property="schoolTypeLabel" destination="TMJ-Sf-b1o" id="3qh-w8-17c"/>
                         <outlet property="stageCollectionView" destination="AOJ-EI-b0P" id="PSQ-lw-AZe"/>
+                        <outlet property="stageLabel" destination="g3j-fE-jui" id="X50-AH-AHE"/>
                         <outlet property="typeCollectionView" destination="YyI-EA-ItM" id="AoV-CJ-pFL"/>
                     </connections>
                 </viewController>

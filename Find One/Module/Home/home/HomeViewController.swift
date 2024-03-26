@@ -15,6 +15,10 @@ enum CellType {
 
 class HomeViewController: BaseViewController {
     
+    @IBOutlet weak var sustainableLabel: UILabel!
+    @IBOutlet weak var regionLabel: UILabel!
+    @IBOutlet weak var browseLabel: UILabel!
+    @IBOutlet weak var featureLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var sustainableCollectionView: UICollectionView!{
         didSet{
@@ -67,7 +71,15 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(UserDefaults.standard.uuid)
+        
+        featureLabel.text = LocalizationKeys.feature.rawValue.localizeString()
+        browseLabel.text = LocalizationKeys.browseCity.rawValue.localizeString()
+        regionLabel.text = LocalizationKeys.browseRegion.rawValue.localizeString()
+        sustainableLabel.text = LocalizationKeys.sustainableInst.rawValue.localizeString()
+        browseLabel.textAlignment = Helper.isRTL() ? .right : .left
+        regionLabel.textAlignment = Helper.isRTL() ? .right : .left
+        sustainableLabel.textAlignment = Helper.isRTL() ? .right : .left
+
         type = .home
         self.animateSpinner()
         viewModel.instituteList.bind { institute in

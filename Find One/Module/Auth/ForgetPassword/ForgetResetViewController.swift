@@ -9,9 +9,9 @@ import UIKit
 import OTPFieldView
 class ForgetResetViewController: BaseViewController {
 
+    @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var otpField: OTPFieldView!
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var confirmTextField: UITextField!
     @IBOutlet weak var newPasswordTextField: UITextField!
     
@@ -34,11 +34,11 @@ class ForgetResetViewController: BaseViewController {
     
     private func updateUI(){
         messageLabel.text = "OTP code sent to your email: \(email ?? "")"
-//        newPasswordTextField.placeholder = LocalizationKeys.newPassword.rawValue.localizeString()
-//        confirmTextField.placeholder = LocalizationKeys.confirmPassword.rawValue.localizeString()
-//        resetButton.setTitle(LocalizationKeys.reset.rawValue.localizeString(), for: .normal)
-//        newPasswordTextField.textAlignment = Helper.shared.isRTL() ? .right : .left
-//        confirmTextField.textAlignment = Helper.shared.isRTL() ? .right : .left
+        newPasswordTextField.placeholder = LocalizationKeys.newPassword.rawValue.localizeString()
+        confirmTextField.placeholder = LocalizationKeys.confirmPassword.rawValue.localizeString()
+        resetButton.setTitle(LocalizationKeys.reset.rawValue.localizeString(), for: .normal)
+        newPasswordTextField.textAlignment = Helper.isRTL() ? .right : .left
+        confirmTextField.textAlignment = Helper.isRTL() ? .right : .left
     }
     
     func setupOtpView(){

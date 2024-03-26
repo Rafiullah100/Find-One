@@ -30,7 +30,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aHM-kn-Q6H">
                                                 <rect key="frame" x="0.0" y="0.0" width="338" height="40"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gT-ze-LuX">
+                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gT-ze-LuX">
                                                         <rect key="frame" x="0.0" y="0.0" width="38" height="40"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sana" translatesAutoresizingMaskIntoConstraints="NO" id="esw-2R-uya">
@@ -47,6 +47,11 @@
                                                             <constraint firstItem="esw-2R-uya" firstAttribute="centerY" secondItem="9gT-ze-LuX" secondAttribute="centerY" id="EYX-7s-0pA"/>
                                                             <constraint firstItem="esw-2R-uya" firstAttribute="centerX" secondItem="9gT-ze-LuX" secondAttribute="centerX" id="q9p-lD-dGF"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6W3-on-3yv">
                                                         <rect key="frame" x="46" y="0.0" width="292" height="40"/>
@@ -80,10 +85,10 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="292" height="16"/>
                                                                                 <subviews>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIM-5j-fP3">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="16"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="16"/>
                                                                                         <subviews>
-                                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9Lg-8s-qbe">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="110" height="16"/>
+                                                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Lg-8s-qbe">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="16"/>
                                                                                                 <subviews>
                                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQd-4s-vMj">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="18" height="16"/>
@@ -104,7 +109,7 @@
                                                                                                         </constraints>
                                                                                                     </view>
                                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VpK-RR-Fsz">
-                                                                                                        <rect key="frame" x="23" y="0.0" width="18" height="16"/>
+                                                                                                        <rect key="frame" x="18" y="0.0" width="18" height="16"/>
                                                                                                         <subviews>
                                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="P05-6m-dex">
                                                                                                                 <rect key="frame" x="1" y="0.0" width="16" height="16"/>
@@ -122,7 +127,7 @@
                                                                                                         </constraints>
                                                                                                     </view>
                                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zap-Ap-nla">
-                                                                                                        <rect key="frame" x="46" y="0.0" width="18" height="16"/>
+                                                                                                        <rect key="frame" x="36" y="0.0" width="18" height="16"/>
                                                                                                         <subviews>
                                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="nWC-RN-Ovd">
                                                                                                                 <rect key="frame" x="1" y="0.0" width="16" height="16"/>
@@ -140,7 +145,7 @@
                                                                                                         </constraints>
                                                                                                     </view>
                                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2iK-SO-mNh">
-                                                                                                        <rect key="frame" x="69" y="0.0" width="18" height="16"/>
+                                                                                                        <rect key="frame" x="54" y="0.0" width="18" height="16"/>
                                                                                                         <subviews>
                                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="P0B-kT-ksy">
                                                                                                                 <rect key="frame" x="1" y="0.0" width="16" height="16"/>
@@ -158,7 +163,7 @@
                                                                                                         </constraints>
                                                                                                     </view>
                                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOK-wz-Xoi">
-                                                                                                        <rect key="frame" x="92" y="0.0" width="18" height="16"/>
+                                                                                                        <rect key="frame" x="72" y="0.0" width="18" height="16"/>
                                                                                                         <subviews>
                                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="enZ-ku-LKU">
                                                                                                                 <rect key="frame" x="1" y="0.0" width="16" height="16"/>
@@ -188,10 +193,10 @@
                                                                                         </constraints>
                                                                                     </view>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1o-IR-Eai">
-                                                                                        <rect key="frame" x="110" y="0.0" width="182" height="16"/>
+                                                                                        <rect key="frame" x="90" y="0.0" width="202" height="16"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 mins ago" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdA-rt-Pgt">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="182" height="16"/>
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="202" height="16"/>
                                                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
                                                                                                 <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                 <nil key="highlightedColor"/>

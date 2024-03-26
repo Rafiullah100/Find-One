@@ -9,6 +9,7 @@ import UIKit
 
 class FeeStructureViewController: BaseViewController {
 
+    @IBOutlet weak var feeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!{
         didSet{
             tableView.delegate = self
@@ -28,7 +29,8 @@ class FeeStructureViewController: BaseViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44.0
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
-        
+        feeLabel.text = LocalizationKeys.feeStructure.rawValue.localizeString()
+
         viewModel.feeDetails.bind { feeDetail in
             self.stopAnimation()
             self.feeDetail = feeDetail

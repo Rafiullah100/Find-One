@@ -11,10 +11,20 @@ class InformationViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var levelLabel: UILabel!
     
+    @IBOutlet weak var informationLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var curriculamLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
+    
+    @IBOutlet weak var schoolType: UILabel!
+    @IBOutlet weak var curriculum: UILabel!
+    @IBOutlet weak var educationLevel: UILabel!
+    
+    @IBOutlet weak var gender: UILabel!
+    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var browseLabel: UILabel!
+    
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet{
             collectionView.delegate = self
@@ -24,7 +34,7 @@ class InformationViewController: UIViewController {
     }
     
     @IBOutlet weak var viewhieght: NSLayoutConstraint!
-    let arr = [Grid(name: "Sustainability", image: "sustainability"), Grid(name: "Fee Structure", image: "cash"), Grid(name: "Gallery", image: "gallery"), Grid(name: "Reviews", image: "review"), Grid(name: "Location", image: "locate")]
+    let arr = [Grid(name: LocalizationKeys.sustainability.rawValue.localizeString(), image: "sustainability"), Grid(name: LocalizationKeys.feeStructure.rawValue.localizeString(), image: "cash"), Grid(name: LocalizationKeys.gallery.rawValue.localizeString(), image: "gallery"), Grid(name: LocalizationKeys.reviews.rawValue.localizeString(), image: "review"), Grid(name: LocalizationKeys.location.rawValue.localizeString(), image: "locate")]
     
     var delegate: BrowseDelegate?
     
@@ -40,6 +50,15 @@ class InformationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        informationLabel.text = LocalizationKeys.information.rawValue.localizeString()
+        schoolType.text = LocalizationKeys.schoolType.rawValue.localizeString()
+        curriculum.text = LocalizationKeys.curriculum.rawValue.localizeString()
+        gender.text = LocalizationKeys.gender.rawValue.localizeString()
+        educationLevel.text = LocalizationKeys.educationLevel.rawValue.localizeString()
+        headerLabel.text = LocalizationKeys.qualityEducation.rawValue.localizeString()
+        browseLabel.text = LocalizationKeys.browse.rawValue.localizeString()
+        textView.textAlignment = Helper.isRTL() ? .right : .left
+
         scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
     }
     

@@ -1474,10 +1474,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="browseLabel" destination="VZp-Vz-lMC" id="0JO-AN-Cd8"/>
                         <outlet property="collectionView" destination="3kg-BV-GmI" id="0q9-qe-j8q"/>
                         <outlet property="curriculamLabel" destination="Hk8-EP-NM5" id="TxZ-MT-8i1"/>
+                        <outlet property="curriculum" destination="VDG-pI-8mm" id="bYb-dT-hCp"/>
+                        <outlet property="educationLevel" destination="bjg-nH-GMW" id="QCt-J5-9l7"/>
+                        <outlet property="gender" destination="h2l-Xn-GFh" id="UGz-zA-Jzc"/>
                         <outlet property="genderLabel" destination="sjR-V9-9a6" id="pqc-hz-A2c"/>
+                        <outlet property="headerLabel" destination="ZLS-Ql-RJ4" id="wqi-Zv-nj3"/>
+                        <outlet property="informationLabel" destination="HeU-nC-yQa" id="oAv-vw-USp"/>
                         <outlet property="levelLabel" destination="dEu-mI-Cb6" id="lPP-vB-FY3"/>
+                        <outlet property="schoolType" destination="eea-5L-9KS" id="sqF-h0-dcW"/>
                         <outlet property="scrollView" destination="g5B-ta-laN" id="C1J-ta-2Ro"/>
                         <outlet property="textView" destination="8Wf-Tb-pn5" id="Xyb-F4-828"/>
                         <outlet property="typeLabel" destination="gFH-D1-dex" id="E5I-7g-zSt"/>
@@ -1594,6 +1601,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addReviewButton" destination="feD-rt-Fmp" id="g3a-FH-bNw"/>
+                        <outlet property="reviewLabel" destination="LFI-fu-nW9" id="adt-si-rsS"/>
                         <outlet property="tableView" destination="OVd-mi-NrW" id="me5-nS-gt3"/>
                     </connections>
                 </viewController>
@@ -1737,6 +1746,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="feeLabel" destination="AUR-Mu-1uq" id="ngf-Bt-rbN"/>
                         <outlet property="tableView" destination="LFi-VH-RGo" id="WK7-DT-YAf"/>
                     </connections>
                 </viewController>
@@ -1830,6 +1840,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="FNW-Xh-Bon" id="UbT-1p-CDg"/>
+                        <outlet property="galleryLabel" destination="JVy-Wr-h0R" id="n53-h3-No2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gih-vK-qea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2040,8 +2051,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUD-G4-0ii">
                                                 <rect key="frame" x="0.0" y="35" width="333" height="25"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BbX-wo-39c">
-                                                        <rect key="frame" x="0.0" y="0.0" width="145" height="25"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="BbX-wo-39c">
+                                                        <rect key="frame" x="0.0" y="0.0" width="133" height="25"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LHU-ZY-fB9">
                                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -2071,7 +2082,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuI-Qz-dgE">
-                                                                <rect key="frame" x="30" y="0.0" width="25" height="25"/>
+                                                                <rect key="frame" x="27" y="0.0" width="25" height="25"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-unfil" translatesAutoresizingMaskIntoConstraints="NO" id="JRl-gm-Ug8">
                                                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -2098,7 +2109,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c44-qv-8PT">
-                                                                <rect key="frame" x="60" y="0.0" width="25" height="25"/>
+                                                                <rect key="frame" x="54" y="0.0" width="25" height="25"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-unfil" translatesAutoresizingMaskIntoConstraints="NO" id="RoU-2v-lma">
                                                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -2125,7 +2136,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UoC-Dh-g7U">
-                                                                <rect key="frame" x="90" y="0.0" width="25" height="25"/>
+                                                                <rect key="frame" x="81" y="0.0" width="25" height="25"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-unfil" translatesAutoresizingMaskIntoConstraints="NO" id="vtr-s2-pg9">
                                                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -2152,7 +2163,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4sp-Fd-gh9">
-                                                                <rect key="frame" x="120" y="0.0" width="25" height="25"/>
+                                                                <rect key="frame" x="108" y="0.0" width="25" height="25"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-unfil" translatesAutoresizingMaskIntoConstraints="NO" id="Y1M-6z-N0p">
                                                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -2298,8 +2309,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="reviewLabel" destination="Rnb-zT-pwQ" id="QJG-0w-gGn"/>
-                        <outlet property="submitButton" destination="OtJ-h4-ZPh" id="4Vk-Kl-U24"/>
+                        <outlet property="addReviewLabel" destination="Rnb-zT-pwQ" id="D2E-JA-mBz"/>
+                        <outlet property="submitButton" destination="OtJ-h4-ZPh" id="wkO-E5-6ld"/>
                         <outlet property="textView" destination="LgU-zJ-7PE" id="YvK-id-sM1"/>
                         <outletCollection property="ratingImageView" destination="qS6-ZT-WWm" collectionClass="NSMutableArray" id="hFa-Ia-shl"/>
                         <outletCollection property="ratingImageView" destination="JRl-gm-Ug8" collectionClass="NSMutableArray" id="Uvb-DI-8f1"/>

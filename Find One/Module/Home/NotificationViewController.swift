@@ -8,11 +8,14 @@
 import UIKit
 
 class NotificationViewController: UIViewController {
-
+    @IBOutlet weak var notificationLabel: UILabel!
+    
+    @IBOutlet weak var muteLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.notificationLabel.text = LocalizationKeys.pushNotification.rawValue.localizeString()
+        self.muteLabel.text = LocalizationKeys.muteNotification.rawValue.localizeString()
+        self.title = LocalizationKeys.notifications.rawValue.localizeString()
     }
     
 

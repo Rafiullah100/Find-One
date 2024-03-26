@@ -67,6 +67,8 @@ extension URLSession{
         var urlRequest = URLRequest(url: url)
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.addValue(UserDefaults.standard.token ?? "", forHTTPHeaderField: "x-access-token")
+        let langCode = UserDefaults.standard.selectedLanguage == AppLanguage.arabic.rawValue ? "ar" : "en"
+        urlRequest.addValue(langCode, forHTTPHeaderField: "lang-code")
 //        urlRequest.addValue(UserDefaults.standard.languageCode ?? "", forHTTPHeaderField: "lang-code")
         print(UserDefaults.standard.token ?? "")
         urlRequest.httpMethod = method.rawValue

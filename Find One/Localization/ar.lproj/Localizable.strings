@@ -78,7 +78,7 @@
 "policy" = "سياسة الخصوصية";
 "language" = "لغة";
 "mode" = "الوضع المظلم";
-"aboutQaaren" = "عن قارين";
+"aboutQaaren" = "عن Find 1";
 "selectPriceRange" = "حدد نطاق السعر";
 "applyFilter" = "تطبيق الفلتر";
 "addaReview" = "إضافة إلى استعراض";
@@ -118,3 +118,57 @@
 "gender" = "جنس";
 "range" = "نطاق الرسوم";
 "browseResult" = "تصفح النتيجة";
+
+"feature" = "المؤسسات المميزة";
+
+"browseCity" = "تصفح حسب المدن";
+"browseRegion" = "تصفح حسب المنطقة";
+"sustainableInst" = "المؤسسات المستدامة";
+
+"startingFrom" = "الرسوم تبدأ من";
+"sustainablePercentage" = "نسبة المعهد المستدامة";
+
+"information" = "معلومات";
+"curriculum" = "المنهاج الدراسي";
+"schoolType" = "نوع المدرسة";
+"educationLevel" = "مستوى التعليم";
+"qualityEducation" = "الحصول على تعليم ذو جودة";
+"browse" = "تصفح";
+
+"sustainability" = "الاستدامة";
+"feeStructure" = "هيكل الرسوم";
+"gallery" = "المعرض";
+
+"yearsAgo" = "سنين مضت";
+"lastYear" = "العام الماضي";
+"monthsAgo" = "منذ أشهر";
+"lastMonth" = "الشهر الماضي";
+"weeksAgo" = "منذ أسابيع";
+"lastWeek" = "الأسبوع الماضي";
+"yesterday" = "أمس";
+"hoursAgo" = "منذ ساعات";
+"anhourAgo" = "منذ ساعة";
+"minutesAgo" = "دقائق مضت";
+"aMinuteAgo" = "منذ دقيقة واحدة";
+"secondsAgo" = "منذ ثوانى";
+"JustNow" = "الآن";
+"daysAgo" = "أيام مضت";
+
+"displayingResult" = "عرض الكل";
+"result" = "نتائج";
+
+"district" = "الحي";
+"allDistrict" = "جميع الأحياء";
+"stage" = "المرحلة";
+"filterResult" = "تصفية النتائج";
+
+
+"howTo" = "كيفية";
+"aboutUs" = "من نحن";
+"reset" = "إعادة تعيين";
+
+
+
+
+
+

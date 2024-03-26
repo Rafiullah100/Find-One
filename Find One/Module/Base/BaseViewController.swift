@@ -163,7 +163,13 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
     
     func addDetailButtons(isWhite: Bool = true) {
         let leftButton = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(backButtonAction))
-        leftButton.image = type == .back ? UIImage(named: "back") : UIImage(named: "detail-back")
+        if type == .back {
+            leftButton.image = Helper.isRTL() == true ? UIImage(named: "detail-back-ar") : UIImage(named: "detail-back")
+        }
+        else{
+            leftButton.image = Helper.isRTL() == true ? UIImage(named: "detail-back-ar") : UIImage(named: "detail-back")
+        }
+//        leftButton.image = type == .back ? UIImage(named: "back") : UIImage(named: "detail-back")
         self.navigationController?.navigationItem.hidesBackButton = true
         self.navigationItem.leftBarButtonItem = leftButton
     }
@@ -191,7 +197,7 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
         let menu = UIStoryboard(name: Storyboard.menu.rawValue, bundle: nil).instantiateViewController(withIdentifier: "SideMenuNavigationController") as! SideMenuNavigationController
 
         menu.delegate = self
-//        menu.leftSide = Helper.shared.semantic(AppLanguage(rawValue: UserDefaults.standard.selectedLanguage ?? "") ?? .english) == .forceRightToLeft ? false : true
+        menu.leftSide = Helper.semantic(AppLanguage(rawValue: UserDefaults.standard.selectedLanguage ?? "") ?? .english) == .forceRightToLeft ? false : true
 
         menu.menuWidth = self.view.frame.size.width * 0.80
         present(menu, animated: true, completion: nil)

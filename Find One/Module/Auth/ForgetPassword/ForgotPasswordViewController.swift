@@ -17,8 +17,7 @@ class ForgotPasswordViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .back
-        viewControllerTitle = "Forgot Password"
-//        viewControllerTitle = LocalizationKeys.forgotPassword.rawValue.localizeString()
+        viewControllerTitle = LocalizationKeys.forgetPassword.rawValue.localizeString()
         updateUI()
     }
     

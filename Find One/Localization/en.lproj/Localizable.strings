@@ -78,7 +78,7 @@
 "policy" = "Privacy Policy";
 "language" = "Language";
 "mode" = "Dark Mode";
-"aboutQaaren" = "About Qaaren";
+"aboutQaaren" = "About Find 1";
 
 "selectPriceRange" = "Select Price Range";
 "applyFilter" = "Apply Filter";
@@ -118,5 +118,49 @@
 "gender" = "gender";
 "range" = "Fee Range";
 "browseResult" = "Browse Result";
+"feature" = "Featured Institutions";
 
+"browseCity" = "Browse by Cities";
+"browseRegion" = "Browse by region";
+"sustainableInst" = "sustainable Institutions";
 
+"startingFrom" = "Fee starting from";
+"sustainablePercentage" = "sustainable Institute";
+
+"information" = "Information";
+"curriculum" = "Curriculum";
+"schoolType" = "School Type";
+"educationLevel" = "Education Level";
+"qualityEducation" = "Get Quality Education";
+"browse" = "Browse";
+
+"sustainability" = "Sustainability";
+"feeStructure" = "Fee Structure";
+"gallery" = "Gallery";
+
+"yearsAgo" = "years ago";
+"lastYear" = "Last year";
+"monthsAgo" = "months ago";
+"lastMonth" = "Last month";
+"weeksAgo" = "weeks Ago";
+"lastWeek" = "Last week";
+"yesterday" = "yesterday";
+"hoursAgo" = "hours ago";
+"anhourAgo" = "An hour ago";
+"minutesAgo" = "minutes ago";
+"aMinuteAgo" = "A minute ago";
+"secondsAgo" = "seconds ago";
+"JustNow" = "Just Now";
+"daysAgo" = "days ago";
+
+"displayingResult" = "Displaying all";
+"result" = "results";
+
+"district" = "District";
+"allDistrict" = "All District";
+"stage" = "Stage";
+"filterResult" = "Filter Results";
+
+"howTo" = "How to";
+"aboutUs" = "About us";
+ "reset" = "Reset";

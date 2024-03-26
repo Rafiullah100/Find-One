@@ -9,6 +9,7 @@ import UIKit
 
 class SideMenuViewController: UIViewController {
 
+    @IBOutlet weak var logoutLabel: UILabel!
     @IBOutlet weak var aboutUsLabel: UILabel!
     @IBOutlet weak var howToLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -17,8 +18,9 @@ class SideMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        aboutUsLabel.text = LocalizationKeys.about.rawValue.localizeString()
-//        howToLabel.text = LocalizationKeys.home.rawValue.localizeString()
+        aboutUsLabel.text = LocalizationKeys.aboutUs.rawValue.localizeString()
+        howToLabel.text = LocalizationKeys.howTo.rawValue.localizeString()
+        logoutLabel.text = LocalizationKeys.logout.rawValue.localizeString()
 
         nameLabel.text = UserDefaults.standard.name
         emailLabel.text = UserDefaults.standard.email

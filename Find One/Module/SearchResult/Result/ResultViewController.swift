@@ -45,7 +45,7 @@ class ResultViewController: BaseViewController {
         tableView.showsVerticalScrollIndicator = false
         viewModel.instituteList.bind { result in
             self.stopAnimation()
-            self.displayLabel.text = "Displaying all \(result?.count ?? 0) results"
+            self.displayLabel.text = "\( LocalizationKeys.displayingResult.rawValue.localizeString()) \(result?.count ?? 0) \( LocalizationKeys.result.rawValue.localizeString())"
             self.instituteList = result
             self.tableView.reloadData()
         }

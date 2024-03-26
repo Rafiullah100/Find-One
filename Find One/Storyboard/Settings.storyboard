@@ -280,6 +280,9 @@
                                                                                 <constraint firstAttribute="width" constant="49" id="4RS-Fu-7i1"/>
                                                                                 <constraint firstAttribute="height" constant="31" id="hUo-Zz-YmD"/>
                                                                             </constraints>
+                                                                            <connections>
+                                                                                <action selector="changeAppAppearance:" destination="Bpi-XE-8iw" eventType="valueChanged" id="ZaF-KJ-1x9"/>
+                                                                            </connections>
                                                                         </switch>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -318,6 +321,16 @@
                     <tabBarItem key="tabBarItem" title="" image="Settings" selectedImage="Settings-selected" id="9G6-2W-kwc"/>
                     <navigationItem key="navigationItem" title="Settings" id="Qpa-Rr-bgM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="aboutLabel" destination="glN-PJ-cwj" id="CIP-m6-oCM"/>
+                        <outlet property="languageLabel" destination="vpv-hj-Joe" id="9GQ-44-NOZ"/>
+                        <outlet property="modeLabel" destination="rn5-I5-ak7" id="nXM-gE-xT3"/>
+                        <outlet property="policyLabel" destination="lco-If-L29" id="HUV-9L-A3e"/>
+                        <outlet property="switchView" destination="ITm-He-63Y" id="2wv-Pw-xFk"/>
+                        <outletCollection property="arrowIcons" destination="9Wh-pa-JXy" collectionClass="NSMutableArray" id="f74-PW-sEr"/>
+                        <outletCollection property="arrowIcons" destination="Mem-NU-Iwk" collectionClass="NSMutableArray" id="Ga6-Sq-cAu"/>
+                        <outletCollection property="arrowIcons" destination="sX4-3G-MUQ" collectionClass="NSMutableArray" id="c34-gv-DEY"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sqk-22-xDQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

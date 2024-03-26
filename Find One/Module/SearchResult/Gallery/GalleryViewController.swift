@@ -9,6 +9,7 @@ import UIKit
 
 class GalleryViewController: BaseViewController {
     
+    @IBOutlet weak var galleryLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet{
             collectionView.delegate = self
@@ -23,7 +24,8 @@ class GalleryViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 30.0, right: 0)
-        
+        galleryLabel.text = LocalizationKeys.gallery.rawValue.localizeString()
+
         viewModel.galleryDetails.bind { galleryDetail in
             self.stopAnimation()
             self.galleryDetail = galleryDetail

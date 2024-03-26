@@ -1583,12 +1583,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="fF9-Ef-SjB"/>
                     <connections>
+                        <outlet property="browseLabel" destination="9cJ-84-2L7" id="Xfd-fj-3s5"/>
                         <outlet property="cityCollectionView" destination="7NG-I9-mBb" id="kCK-7y-WC2"/>
                         <outlet property="collectionView" destination="AOf-1L-1r2" id="1Ra-xV-AnV"/>
                         <outlet property="featureCollectionView" destination="tbz-R2-54I" id="tIQ-Ss-qse"/>
+                        <outlet property="featureLabel" destination="CKJ-VN-zkl" id="0UN-PT-Qas"/>
                         <outlet property="regionCollectionView" destination="cak-rx-XUm" id="IXS-f0-dgb"/>
+                        <outlet property="regionLabel" destination="Mjn-w1-FCq" id="dlx-o9-UMP"/>
                         <outlet property="scrollView" destination="uxe-4B-3aT" id="V0o-Tu-5cO"/>
                         <outlet property="sustainableCollectionView" destination="Hxe-RE-zXb" id="Ov4-vS-vSA"/>
+                        <outlet property="sustainableLabel" destination="yVS-cb-az6" id="NIs-lf-I5q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1646,7 +1650,7 @@
         <!--Notifications-->
         <scene sceneID="LFu-aY-VEF">
             <objects>
-                <viewController id="gmq-BV-m21" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotificationViewController" id="gmq-BV-m21" customClass="NotificationViewController" customModule="Find_One" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ObA-eu-FUJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1777,6 +1781,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Notifications" id="AuV-ap-u3j"/>
+                    <connections>
+                        <outlet property="muteLabel" destination="3Sd-mj-FzN" id="Aj1-iX-V9Q"/>
+                        <outlet property="notificationLabel" destination="nTn-QT-KLa" id="b4e-bd-vdG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SE8-8r-hKc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -6,11 +6,13 @@
 //
 
 import UIKit
-
+enum AppTheme: String {
+    case dark = "dark"
+    case light = "light"
+}
 class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var modeLabel: UILabel!
     @IBOutlet weak var languageLabel: UILabel!
-    @IBOutlet weak var wishlistLabel: UILabel!
     @IBOutlet weak var policyLabel: UILabel!
     @IBOutlet weak var aboutLabel: UILabel!
     @IBOutlet weak var switchView: UISwitch!
@@ -23,35 +25,34 @@ class SettingsTableViewController: UITableViewController {
     }
 
     @IBAction func changeAppAppearance(_ sender: Any) {
-//        if switchView.isOn {
-//            UIWindow.key?.overrideUserInterfaceStyle = .dark
-//            UserDefaults.standard.appTheme = AppTheme.dark.rawValue
-//        }
-//        else{
-//            UIWindow.key?.overrideUserInterfaceStyle = .light
-//            UserDefaults.standard.appTheme = AppTheme.light.rawValue
-//        }
+        if switchView.isOn {
+            UIWindow.key?.overrideUserInterfaceStyle = .dark
+            UserDefaults.standard.appTheme = AppTheme.dark.rawValue
+        }
+        else{
+            UIWindow.key?.overrideUserInterfaceStyle = .light
+            UserDefaults.standard.appTheme = AppTheme.light.rawValue
+        }
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.title = ""
-//        switchView.isOn = UserDefaults.standard.appTheme == AppTheme.dark.rawValue ? true : false
-//        UIWindow.key?.overrideUserInterfaceStyle = UserDefaults.standard.appTheme == AppTheme.dark.rawValue ? .dark : .light
+        switchView.isOn = UserDefaults.standard.appTheme == AppTheme.dark.rawValue ? true : false
+        UIWindow.key?.overrideUserInterfaceStyle = UserDefaults.standard.appTheme == AppTheme.dark.rawValue ? .dark : .light
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        aboutLabel.text = LocalizationKeys.aboutQaaren.rawValue.localizeString()
-//        policyLabel.text = LocalizationKeys.policy.rawValue.localizeString()
-//        wishlistLabel.text = LocalizationKeys.wishlist.rawValue.localizeString()
-//        languageLabel.text = LocalizationKeys.language.rawValue.localizeString()
-//        modeLabel.text = LocalizationKeys.mode.rawValue.localizeString()
+        aboutLabel.text = LocalizationKeys.aboutQaaren.rawValue.localizeString()
+        policyLabel.text = LocalizationKeys.policy.rawValue.localizeString()
+        languageLabel.text = LocalizationKeys.language.rawValue.localizeString()
+        modeLabel.text = LocalizationKeys.mode.rawValue.localizeString()
 //        
-//        arrowIcons.forEach { imageView in
-//            imageView.image = UserDefaults.standard.selectedLanguage == AppLanguage.arabic.rawValue ? UIImage(named: "arrow-rtl") : UIImage(named: "arrow-ltr")
-//        }
+        arrowIcons.forEach { imageView in
+            imageView.image = UserDefaults.standard.selectedLanguage == AppLanguage.arabic.rawValue ? UIImage(named: "arrow-rtl") : UIImage(named: "arrow-ltr")
+        }
     }
     
     // MARK: - Table view data source

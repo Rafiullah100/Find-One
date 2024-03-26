@@ -16,6 +16,8 @@ class ReviewViewController: BaseViewController {
             tableView.register(UINib(nibName: "ReviewTableViewCell", bundle: nil), forCellReuseIdentifier: ReviewTableViewCell.cellReuseIdentifier())
         }
     }
+    @IBOutlet weak var reviewLabel: UILabel!
+    @IBOutlet weak var addReviewButton: UIButton!
     
     var viewModel = DetailViewModel()
     var reviewsDetail: [ReviewResult]?
@@ -24,6 +26,9 @@ class ReviewViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        reviewLabel.text = LocalizationKeys.reviews.rawValue.localizeString()
+        addReviewButton.setTitle(LocalizationKeys.addaReview.rawValue.localizeString(), for: .normal)
+
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44.0
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)

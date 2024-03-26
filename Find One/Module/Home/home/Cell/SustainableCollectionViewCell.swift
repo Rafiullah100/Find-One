@@ -19,7 +19,7 @@ class SustainableCollectionViewCell: UICollectionViewCell {
         didSet{
             label.text = sustainable?.name
             imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (sustainable?.imageURL ?? "") ), placeholderImage: UIImage(named: "Rectangle 405"))
-            susLabel.text = "\(sustainable?.sustainable ?? 0)% Sustainable Institute"
+            susLabel.text = "\(sustainable?.sustainable ?? 0)% \(LocalizationKeys.sustainablePercentage.rawValue.localizeString())"
         }
     }
     

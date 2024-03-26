@@ -99,6 +99,106 @@ open class Helper{
 
         UIApplication.topViewController()?.present(alertController, animated: true, completion: nil)
     }
+    
+    class func timeAgoSince(_ strDate: String, langCode: String? = "") -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+
+        // Parse the string to a Date object
+        guard let date = dateFormatter.date(from: strDate) else { return "" }
+                 
+        let calendar = Calendar.current
+        let now = Date()
+        let unitFlags: NSCalendar.Unit = [.second, .minute, .hour, .day, .weekOfYear, .month, .year]
+        let components = (calendar as NSCalendar).components(unitFlags, from: date, to: now, options: [])
+
+        if let year = components.year, year >= 2 {
+                return "\(year) \(LocalizationKeys.yearsAgo.rawValue.localizeString())"
+            
+        }
+
+        if let year = components.year, year >= 1 {
+                return "\(year) \(LocalizationKeys.lastYear.rawValue.localizeString())"
+            
+        }
+
+        if let month = components.month, month >= 2 {
+                return "\(month) \(LocalizationKeys.monthsAgo.rawValue.localizeString())"
+           
+        }
+
+        if let month = components.month, month >= 1 {
+                return "\(month) \(LocalizationKeys.lastMonth.rawValue.localizeString())"
+            
+        }
+
+        if let week = components.weekOfYear, week >= 2 {
+                return "\(week) \(LocalizationKeys.weeksAgo.rawValue.localizeString())"
+            
+        }
+
+        if let week = components.weekOfYear, week >= 1 {
+            return "\(LocalizationKeys.lastWeek.rawValue.localizeString())"
+            
+        }
+
+        if let day = components.day, day >= 2 {
+            return "\(day) \(LocalizationKeys.daysAgo.rawValue.localizeString())"
+            
+        }
+
+        if let day = components.day, day >= 1 {
+            return "\(LocalizationKeys.yesterday.rawValue.localizeString())"
+            
+        }
+
+        if let hour = components.hour, hour >= 2 {
+            return "\(hour) \(LocalizationKeys.hoursAgo.rawValue.localizeString())"
+            
+        }
+
+        if let hour = components.hour, hour >= 1 {
+            return "\(LocalizationKeys.anhourAgo.rawValue.localizeString())"
+            
+        }
+
+        if let minute = components.minute, minute >= 2 {
+            return " \(minute) \(LocalizationKeys.minutesAgo.rawValue.localizeString())"
+           
+        }
+
+        if let minute = components.minute, minute >= 1 {
+            return "\(LocalizationKeys.aMinuteAgo.rawValue.localizeString())"
+        }
+
+        if let second = components.second, second >= 3 {
+            return "\(second) \(LocalizationKeys.secondsAgo.rawValue.localizeString())"
+            
+        }
+        else{
+            return "\(LocalizationKeys.JustNow.rawValue.localizeString())"
+        }
+        
+//        if langCode == "" {
+//            return "\(LocalizationKeys.JustNow.rawValue.localizeString())"
+//        }
+//        else{
+//            return "\(LocalizationKeys.JustNow.rawValue.localizeStringForLink(langCode: langCode ?? "en"))"
+//        }
+    }
+    
+class    func semantic(_ language: AppLanguage) -> UISemanticContentAttribute{
+//        let language: AppLanguage = AppLanguage(rawValue: UserDefaults.standard.selectedLanguage ?? "") ?? .english
+        print(language)
+        switch language {
+        case .english:
+            return .forceLeftToRight
+        case .arabic:
+            return .forceRightToLeft
+        }
+    }
+
 }
 
 

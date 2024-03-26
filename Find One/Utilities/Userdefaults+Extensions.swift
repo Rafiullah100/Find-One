@@ -22,6 +22,16 @@ extension UserDefaults{
         case isLogin
         case appleUserData
         case rememberMe
+        case appTheme
+    }
+    
+    var appTheme: String?  {
+        get {
+            value(forKey: userdefaultsKey.appTheme.rawValue) as? String
+        }
+        set {
+            set(newValue, forKey: userdefaultsKey.appTheme.rawValue)
+        }
     }
     
     var selectedLanguage: String?  {

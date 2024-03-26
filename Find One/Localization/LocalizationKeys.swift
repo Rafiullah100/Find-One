@@ -115,4 +115,50 @@ enum LocalizationKeys: String {
     case gender = "gender"
 case range = "range"
 case browseResult = "browseResult"
+    case feature = "feature"
+    case browseCity = "browseCity"
+    case browseRegion = "browseRegion"
+    case sustainableInst = "sustainableInst"
+    case startingFrom = "startingFrom"
+    case sustainablePercentage = "sustainablePercentage"
+    
+    case information = "information"
+    case curriculum = "curriculum"
+    case schoolType = "schoolType"
+    case educationLevel = "educationLevel"
+    case qualityEducation = "qualityEducation"
+    case browse = "browse"
+
+    case sustainability = "sustainability"
+    case feeStructure = "feeStructure"
+    case gallery = "gallery"
+
+    
+    case yearsAgo = "yearsAgo"
+    case lastYear = "lastYear"
+    case monthsAgo = "monthsAgo"
+    case lastMonth = "lastMonth"
+    case weeksAgo = "weeksAgo"
+    case lastWeek = "lastWeek"
+    case yesterday = "yesterday"
+    case hoursAgo = "hoursAgo"
+    case anhourAgo = "anhourAgo"
+    case minutesAgo = "minutesAgo"
+    case aMinuteAgo = "aMinuteAgo"
+    case secondsAgo = "secondsAgo"
+    case JustNow = "JustNow"
+    case daysAgo = "daysAgo"
+    
+    case displayingResult = "displayingResult"
+    case result = "result"
+    
+    case district = "district"
+    case allDistrict = "allDistrict"
+    case stage = "stage"
+    case filterResult = "filterResult"
+    
+    case howTo = "howTo"
+    case aboutUs = "aboutUs"
+    case reset = "reset"
 }
+

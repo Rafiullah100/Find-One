@@ -91,7 +91,6 @@ class Switcher {
         }
     }
     
-    
     static func gotoInformation(delegate: UIViewController){
         let vc = UIStoryboard(name: Storyboard.profile.rawValue, bundle: nil).instantiateViewController(withIdentifier: "PersonalInfoViewController") as! PersonalInfoViewController
         let nav = UINavigationController(rootViewController: vc)
