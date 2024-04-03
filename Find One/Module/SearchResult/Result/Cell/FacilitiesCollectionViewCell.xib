@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="manrope-regular.otf">
+            <string>Manrope-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FacilitiesCollectionViewCell" customModule="Find_One" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="133" height="40"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="133" height="40"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5zr-jR-Sbr">
+                        <rect key="frame" x="0.0" y="0.0" width="133" height="40"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="DJT-5M-fG5">
+                                <rect key="frame" x="0.0" y="0.0" width="133" height="40"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Agk-Bw-dka">
+                                        <rect key="frame" x="0.0" y="0.0" width="12" height="40"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="ohS-vB-pLH">
+                                                <rect key="frame" x="0.0" y="0.0" width="12" height="40"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="AlG-ul-XVO"/>
+                                            <constraint firstAttribute="trailing" secondItem="ohS-vB-pLH" secondAttribute="trailing" id="Hbd-Yx-USq"/>
+                                            <constraint firstAttribute="bottom" secondItem="ohS-vB-pLH" secondAttribute="bottom" id="PsR-bw-gfM"/>
+                                            <constraint firstItem="ohS-vB-pLH" firstAttribute="leading" secondItem="Agk-Bw-dka" secondAttribute="leading" id="amG-I3-UPQ"/>
+                                            <constraint firstItem="ohS-vB-pLH" firstAttribute="top" secondItem="Agk-Bw-dka" secondAttribute="top" id="pE4-nj-ffh"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jtl-6e-3YG">
+                                        <rect key="frame" x="15" y="0.0" width="118" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWr-Ig-cgO">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="40"/>
+                                                <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="vWr-Ig-cgO" secondAttribute="trailing" id="PAh-8C-bPD"/>
+                                            <constraint firstAttribute="bottom" secondItem="vWr-Ig-cgO" secondAttribute="bottom" id="e6P-Xm-FeU"/>
+                                            <constraint firstItem="vWr-Ig-cgO" firstAttribute="top" secondItem="Jtl-6e-3YG" secondAttribute="top" id="i8F-sd-RnE"/>
+                                            <constraint firstAttribute="width" priority="250" constant="168" id="mH4-CD-75q"/>
+                                            <constraint firstItem="vWr-Ig-cgO" firstAttribute="leading" secondItem="Jtl-6e-3YG" secondAttribute="leading" id="vBg-rp-dLE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="DJT-5M-fG5" secondAttribute="bottom" id="CtN-hm-eDR"/>
+                            <constraint firstItem="DJT-5M-fG5" firstAttribute="top" secondItem="5zr-jR-Sbr" secondAttribute="top" id="V7K-My-wWz"/>
+                            <constraint firstAttribute="trailing" secondItem="DJT-5M-fG5" secondAttribute="trailing" id="afw-6D-zvo"/>
+                            <constraint firstItem="DJT-5M-fG5" firstAttribute="leading" secondItem="5zr-jR-Sbr" secondAttribute="leading" id="dHi-Ti-jvE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5zr-jR-Sbr" secondAttribute="trailing" id="4Q2-4C-UJB"/>
+                <constraint firstItem="5zr-jR-Sbr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="VZk-YS-RuD"/>
+                <constraint firstAttribute="bottom" secondItem="5zr-jR-Sbr" secondAttribute="bottom" id="YxC-17-mb3"/>
+                <constraint firstItem="5zr-jR-Sbr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lJY-hk-b8B"/>
+            </constraints>
+            <size key="customSize" width="133" height="40"/>
+            <connections>
+                <outlet property="label" destination="vWr-Ig-cgO" id="hdH-vd-T3f"/>
+            </connections>
+            <point key="canvasLocation" x="-52.671755725190835" y="16.197183098591552"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="check" width="9" height="10"/>
+    </resources>
+</document>

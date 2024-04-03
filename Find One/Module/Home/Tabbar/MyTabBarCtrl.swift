@@ -43,6 +43,10 @@ class MyTabBarCtrl: UITabBarController, UITabBarControllerDelegate {
     // Menu Button Touch Action
     @objc func menuButtonAction(sender: UIButton) {
         self.selectedIndex = 2   //to select the middle tab. use "1" if you have only 3 tabs.
+        
+        tabBar.items?.forEach({ tabbar in
+            tabbar.title = ""
+        })
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {

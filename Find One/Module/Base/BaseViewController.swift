@@ -53,22 +53,19 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
         searchView = UIView()
         searchView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: (self.navigationController?.navigationBar.frame.width ?? 0.0) - 115, height: self.navigationController?.navigationBar.frame.height ?? 0.0))
         searchView.layer.cornerRadius = (self.navigationController?.navigationBar.frame.height ?? 0.0) / 2.0
-        searchView.layer.borderWidth = 1.0
-        searchView.layer.borderColor = UIColor.label.cgColor
-        searchView.backgroundColor = .systemBackground
+        searchView.backgroundColor = .white
         self.navigationItem.titleView = searchView
         
 //        textField?.theme.
-        textField.placeholder = "Search"
+        textField.placeholder = LocalizationKeys.search.rawValue.localizeString()
         textField.placeHolderColor = UIColor.lightGray
+        textField.textColor = .black
         textField.clearButtonMode = .never
         textField.delegate = self
-//        textField?.textAlignment = Helper.shared.isRTL() ? .right : .left
+        textField.textAlignment = Helper.isRTL() ? .right : .left
         searchView.addSubview(textField)
         searchView.isHidden = true
-        textField.frame = searchView.bounds
-//        textField = UITextField(frame: CGRect(x: 0, y: 0, width: searchView.frame.width - 10, height: searchView.frame.height))
-//        textField.center = searchView.center
+        textField.frame = CGRectMake(searchView.frame.origin.x + 10 , searchView.frame.origin.y, searchView.frame.size.width - 20, searchView.frame.size.height)
         
         titleLabel = UILabel()
         if let titleLabel = titleLabel {

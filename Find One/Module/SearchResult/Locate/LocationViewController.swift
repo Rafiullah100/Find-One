@@ -10,6 +10,8 @@ import GoogleMaps
 import CoreLocation
 class LocationViewController: BaseViewController {
 
+    @IBOutlet weak var userLocation: UILabel!
+    @IBOutlet weak var location: UILabel!
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var instituteLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -28,7 +30,9 @@ class LocationViewController: BaseViewController {
         type = .detail
         view.bringSubviewToFront(bottomView)
         
-        
+        location.text = LocalizationKeys.schoolLocation.rawValue.localizeString()
+        userLocation.text = LocalizationKeys.yourLocation.rawValue.localizeString()
+
         viewModel.locationDetails.bind { locationDetail in
             self.stopAnimation()
             self.locationDetail = locationDetail

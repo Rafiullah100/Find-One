@@ -27,7 +27,7 @@ extension CustomColor {
         case .appColor:
             return UIColor(hex: 0x72B54D, alpha: 1.0)
         case .tabTextColor:
-            return UIColor(hex: 0xBCBCBC, alpha: 0.6)
+            return UIColor(hex: 0xA0A0A0, alpha: 0.6)
         case .shadowColor:
             return UIColor(hex: 0xE33333, alpha: 0.4)
         case .tabBGColor:

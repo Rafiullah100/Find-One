@@ -29,6 +29,10 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        view.overrideUserInterfaceStyle = .dark
+//        UIWindow.key?.overrideUserInterfaceStyle = .dark
+
         emailTextField.textAlignment = Helper.isRTL() ? .right : .left
         passwordTextField.textAlignment = Helper.isRTL() ? .right : .left
         emailTextField.placeholder = LocalizationKeys.email.rawValue.localizeString()

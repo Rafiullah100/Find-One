@@ -20,8 +20,8 @@ class FeatureCollectionViewCell: UICollectionViewCell {
             nameLabel.text = institute?.name
             imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (institute?.imageURL ?? "") ), placeholderImage: UIImage(named: "Rectangle 405"))
             educationLabel.text = institute?.gender
-            ratingLabel.text = institute?.reviewsAvg ?? "0"
-            feeLabel.attributedText = Helper.attributedText(text1: "\(LocalizationKeys.orSignin.rawValue.localizeString()) \(institute?.fee ?? 0)", text2: "\(LocalizationKeys.sar.rawValue.localizeString())", text1Font: 12, text2Font: 10)
+            ratingLabel.text = "(\(institute?.reviewsAvg ?? "0"))"
+            feeLabel.attributedText = Helper.attributedText(text1: "\(LocalizationKeys.startingFrom.rawValue.localizeString()) \(institute?.fee ?? 0)", text2: "\(LocalizationKeys.sar.rawValue.localizeString())", text1Font: 12, text2Font: 10)
         }
     }
     

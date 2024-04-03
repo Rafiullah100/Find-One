@@ -104,6 +104,8 @@
 		52A4ABFB2B88700C00E54458 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4ABFA2B88700C00E54458 /* SignupViewModel.swift */; };
 		52A4ABFE2B887F9D00E54458 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4ABFD2B887F9D00E54458 /* LoginViewModel.swift */; };
 		52A4AC012B88809600E54458 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4AC002B88809600E54458 /* LoginModel.swift */; };
+		52A4BFC32BBD347800DCA4A1 /* FacilitiesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4BFC12BBD347800DCA4A1 /* FacilitiesCollectionViewCell.swift */; };
+		52A4BFC42BBD347800DCA4A1 /* FacilitiesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A4BFC22BBD347800DCA4A1 /* FacilitiesCollectionViewCell.xib */; };
 		52AD1C0E2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD1C0C2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift */; };
 		52AD1C0F2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AD1C0D2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib */; };
 		52AD1C122B7C997500E5EA4F /* FeatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD1C102B7C997500E5EA4F /* FeatureTableViewCell.swift */; };
@@ -232,6 +234,8 @@
 		52A4ABFD2B887F9D00E54458 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		52A4AC002B88809600E54458 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		52A4AC022B88988A00E54458 /* Find One.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Find One.entitlements"; sourceTree = "<group>"; };
+		52A4BFC12BBD347800DCA4A1 /* FacilitiesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesCollectionViewCell.swift; sourceTree = "<group>"; };
+		52A4BFC22BBD347800DCA4A1 /* FacilitiesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacilitiesCollectionViewCell.xib; sourceTree = "<group>"; };
 		52AD1C0C2B7C97C100E5EA4F /* FeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCollectionViewCell.swift; sourceTree = "<group>"; };
 		52AD1C0D2B7C97C100E5EA4F /* FeatureCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureCollectionViewCell.xib; sourceTree = "<group>"; };
 		52AD1C102B7C997500E5EA4F /* FeatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTableViewCell.swift; sourceTree = "<group>"; };
@@ -824,6 +828,8 @@
 			children = (
 				52987C642B7DE14F006290F6 /* ResultTableViewCell.swift */,
 				52987C652B7DE14F006290F6 /* ResultTableViewCell.xib */,
+				52A4BFC12BBD347800DCA4A1 /* FacilitiesCollectionViewCell.swift */,
+				52A4BFC22BBD347800DCA4A1 /* FacilitiesCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1098,6 +1104,7 @@
 				52C208CA2B7E2A0900FA6470 /* GridCollectionViewCell.xib in Resources */,
 				52773C6D2BA95A3E0067FD00 /* FilterCollectionViewCell.xib in Resources */,
 				527F13932B7F3E650055F424 /* ReviewTableViewCell.xib in Resources */,
+				52A4BFC42BBD347800DCA4A1 /* FacilitiesCollectionViewCell.xib in Resources */,
 				529834B62B7B612000A33DAD /* manrope-light.otf in Resources */,
 				52F612B72B9993E600EC1EA9 /* Profile.storyboard in Resources */,
 				52AD1C1C2B7CC05F00E5EA4F /* CityCollectionViewCell.xib in Resources */,
@@ -1243,6 +1250,7 @@
 				5234034F2B9EF0D100A93EFE /* FooterView.swift in Sources */,
 				52246BDC2BABF74E0085CCC9 /* ProfileModel.swift in Sources */,
 				525975F62BB1473600BD9141 /* ForgetResetViewController.swift in Sources */,
+				52A4BFC32BBD347800DCA4A1 /* FacilitiesCollectionViewCell.swift in Sources */,
 				52C208C92B7E2A0900FA6470 /* GridCollectionViewCell.swift in Sources */,
 				52A4ABF92B886FB800E54458 /* SuccessModel.swift in Sources */,
 				523FFB362B9AE6D0005BCFA7 /* PersonalInfoViewController.swift in Sources */,

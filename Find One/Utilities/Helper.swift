@@ -198,6 +198,15 @@ class    func semantic(_ language: AppLanguage) -> UISemanticContentAttribute{
             return .forceRightToLeft
         }
     }
+    
+    class func cellSize(ipad: CGFloat, iphone: CGFloat) -> CGFloat{
+        if UIDevice.current.userInterfaceIdiom == .pad{
+            return ipad
+        }
+        else{
+            return iphone
+        }
+    }
 
 }
 

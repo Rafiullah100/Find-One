@@ -57,7 +57,7 @@ class InformationViewController: UIViewController {
         educationLevel.text = LocalizationKeys.educationLevel.rawValue.localizeString()
         headerLabel.text = LocalizationKeys.qualityEducation.rawValue.localizeString()
         browseLabel.text = LocalizationKeys.browse.rawValue.localizeString()
-        textView.textAlignment = Helper.isRTL() ? .right : .left
+//        textView.textAlignment = .justified
 
         scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
     }

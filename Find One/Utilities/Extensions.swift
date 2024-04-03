@@ -313,7 +313,7 @@ extension UICollectionView{
         titleLabel.font = UIFont(name: "Poppins-regular", size: 16)
         messageLabel.textColor = .label
         messageLabel.font = UIFont(name: "Poppins-regular", size: 14)
-        titleLabel.text = message ?? "No Data Found!"
+        titleLabel.text = message ?? LocalizationKeys.notFound.rawValue.localizeString()
         messageLabel.text = ""
         messageLabel.numberOfLines = 0
         messageLabel.textAlignment = .center
@@ -397,5 +397,30 @@ extension String {
     
     var htmlToString: String {
         return htmlToAttributedString?.string ?? ""
+    }
+}
+
+extension UITextField {
+    func setInsetForText(insets: UIEdgeInsets) {
+        guard let text = self.text else { return }
+
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = self.textAlignment
+
+        let attributedText = NSMutableAttributedString(string: text)
+        attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.length))
+        attributedText.addAttribute(NSAttributedString.Key.font, value: self.font ?? UIFont.systemFont(ofSize: 12), range: NSMakeRange(0, attributedText.length))
+        attributedText.addAttribute(NSAttributedString.Key.foregroundColor, value: self.textColor ?? UIColor.black, range: NSMakeRange(0, attributedText.length))
+
+        let attributes = [
+            NSAttributedString.Key.font: self.font ?? UIFont.systemFont(ofSize: 12),
+            NSAttributedString.Key.foregroundColor: self.textColor ?? UIColor.black,
+            NSAttributedString.Key.paragraphStyle: paragraphStyle
+        ]
+
+        let paddedText = NSAttributedString(string: " ", attributes: attributes).string.padding(toLength: Int(self.frame.width), withPad: " ", startingAt: 0)
+        attributedText.replaceCharacters(in: NSMakeRange(0, text.count), with: paddedText)
+
+        self.attributedText = attributedText
     }
 }

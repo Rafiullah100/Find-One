@@ -125,6 +125,7 @@ class Switcher {
         vc.genderID = genderID
         vc.instType = .search
         vc.q = q
+   
         delegate.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -158,4 +159,10 @@ class Switcher {
         delegate.navigationController?.pushViewController(vc, animated: true)
     }
     
+    static func gotoHomeVC(delegate: UIViewController){
+        let vc = UIStoryboard(name: Storyboard.home.rawValue, bundle: nil).instantiateViewController(withIdentifier: "MyTabBarCtrl") as! MyTabBarCtrl
+//        vc.selectedIndex = Constants.selectedTabbarIndex
+        UIWindow.key.rootViewController = vc
+        UIWindow.key.makeKeyAndVisible()
+    }
 }

@@ -52,7 +52,7 @@ class ResultViewController: BaseViewController {
         
         viewModel.searchResultList.bind { result in
             self.stopAnimation()
-            self.displayLabel.text = "Displaying all \(result?.count ?? 0) results"
+            self.displayLabel.text = "\( LocalizationKeys.displayingResult.rawValue.localizeString()) \(result?.count ?? 0) \( LocalizationKeys.result.rawValue.localizeString())"
             self.searchList = result
             self.tableView.reloadData()
         }
@@ -64,7 +64,7 @@ class ResultViewController: BaseViewController {
         case .region:
             viewModel.getInstituteListByRegion(id: id ?? 0)
         case .search:
-            viewModel.getSearchResult(regionID: regionID ?? 0, cityID: cityID ?? 0, typeID: typeID ?? 0, genderID: regionID ?? 0, minFee: minFee ?? 0, maxFee: maxFee ?? 0, q: q)
+            viewModel.getSearchResult(regionID: regionID ?? 0, cityID: cityID ?? 0, typeID: typeID ?? 0, genderID: genderID ?? 0, minFee: minFee ?? 0, maxFee: maxFee ?? 0, q: q)
         case nil:
             break
         }

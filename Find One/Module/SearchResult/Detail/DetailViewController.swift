@@ -9,7 +9,9 @@ import UIKit
 
 class DetailViewController: BaseViewController {
 
-//    lazy var browseVC: BrowseViewController = {
+    @IBOutlet weak var sliderLabel: UILabel!
+    @IBOutlet weak var topViewHeight: NSLayoutConstraint!
+    //    lazy var browseVC: BrowseViewController = {
 //        return UIStoryboard(name: Storyboard.result.rawValue, bundle: nil).instantiateViewController(withIdentifier: "BrowseViewController") as! BrowseViewController
 //    }()
     lazy var informationVC: InformationViewController = {
@@ -58,11 +60,31 @@ class DetailViewController: BaseViewController {
         super.viewDidLoad()
         type = .detail
         informationVC.delegate = self
-
         childVC = informationVC
         addChildVC()
-        custompageContrl()
-        self.loadData()
+
+        viewModel.details.bind { detail in
+            DispatchQueue.main.async {
+                guard let detail = detail else{return}
+                self.stopAnimation()
+                self.details = detail
+                self.reloadView()
+                self.galleryCollectionView.reloadData()
+                self.custompageContrl()
+                self.setupAutoScroll()
+            }
+        }
+        self.animateSpinner()
+        viewModel.getInstituteDetails(id: id ?? 0, slug: slug ?? "")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+//        topViewHeight.constant = Helper.cellSize(ipad: 500.0, iphone: 300.0)
     }
     
     private func addChildVC(){
@@ -74,10 +96,10 @@ class DetailViewController: BaseViewController {
     }
 
     private func custompageContrl(){
+        pageControl.numberOfPages = details?.result?.instituteGallery?.count ?? 0
+        pageControl.currentPage = currentPage
         pageControl.inactiveImage = UIImage(named: "dot")
         pageControl.activeImage = UIImage(named: "ellipse")
-        pageControl.numberOfPages = 6
-        pageControl.currentPage = 0
     }
     
     override func backButtonAction() {
@@ -92,29 +114,21 @@ class DetailViewController: BaseViewController {
     }
     
     func setupAutoScroll() {
-//        self.autoScrollTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.autoScroll), userInfo: nil, repeats: true)
+        self.autoScrollTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.autoScroll), userInfo: nil, repeats: true)
     }
     
     @objc func autoScroll() {
-        if currentPage >= (details?.result?.instituteGallery?.count ?? 0) - 1 {
-            currentPage = 0
+        guard details?.result?.instituteGallery?.count ?? 0 > 0 else {
+            return
         }
-        else{
-            currentPage = currentPage + 1
-        }
-        galleryCollectionView.scrollToItem(at: IndexPath(row: currentPage, section: 0), at: .centeredHorizontally, animated: true)
-    }
-    
-    private func loadData(){
-        viewModel.details.bind { detail in
-            self.stopAnimation()
-            self.details = detail
-            self.reloadView()
-            self.setupAutoScroll()
-            self.galleryCollectionView.reloadData()
-        }
-        self.animateSpinner()
-        viewModel.getInstituteDetails(id: id ?? 0, slug: slug ?? "")
+        let nextPage = (currentPage + 1) % (details?.result?.instituteGallery?.count ?? 0)
+        let indexPath = IndexPath(item: nextPage, section: 0)
+        galleryCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        currentPage = nextPage
+        pageControl.currentPage = currentPage
+        pageControl.setNeedsDisplay()
+        print(currentPage)
+        sliderLabel.text = "\(currentPage + 1)  / \(details?.result?.instituteGallery?.count ?? 0)"
     }
     
     private func reloadView(){
@@ -172,10 +186,4 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//        currentPage1 = indexPath.row
-//        customPage()
-//        pageController.setNeedsDisplay()
-//    }
 }

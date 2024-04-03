@@ -36,6 +36,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.rootViewController = nav
         }
         
+        if #available(iOS 13.0, *) {
+            window.overrideUserInterfaceStyle = UserDefaults.standard.appTheme == AppTheme.dark.rawValue ? .dark : .light
+            }
+        
         self.window = window
         window.makeKeyAndVisible()
     }

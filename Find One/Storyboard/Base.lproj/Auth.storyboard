@@ -48,7 +48,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ip2-V8-2J1">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HhP-QZ-Y24">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
@@ -84,7 +84,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqz-uv-PMk">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="20"/>
                                                                                 <fontDescription key="fontDescription" name="Outfit-Regular" family="Outfit" pointSize="16"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
@@ -194,6 +194,7 @@
                                                                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wug-4S-ctj">
                                                                                                                         <rect key="frame" x="0.0" y="0.0" width="260" height="40"/>
                                                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                                         <fontDescription key="fontDescription" name="Outfit-Regular" family="Outfit" pointSize="15"/>
                                                                                                                         <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                                                                                                                     </textField>
@@ -253,6 +254,7 @@
                                                                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FkE-uX-nzS">
                                                                                                                         <rect key="frame" x="0.0" y="0.0" width="260" height="40"/>
                                                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                                         <fontDescription key="fontDescription" name="Outfit-Regular" family="Outfit" pointSize="15"/>
                                                                                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                                                                                     </textField>
@@ -312,6 +314,7 @@
                                                                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contact Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BlS-PZ-Nq5">
                                                                                                                         <rect key="frame" x="0.0" y="0.0" width="260" height="40"/>
                                                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                                         <fontDescription key="fontDescription" name="Outfit-Regular" family="Outfit" pointSize="15"/>
                                                                                                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                                                                                         <userDefinedRuntimeAttributes>
@@ -375,6 +378,7 @@
                                                                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ZL-97-CuR">
                                                                                                                         <rect key="frame" x="0.0" y="0.0" width="260" height="40"/>
                                                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                                         <fontDescription key="fontDescription" name="Outfit-Regular" family="Outfit" pointSize="15"/>
                                                                                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                                                                     </textField>
@@ -413,7 +417,7 @@
                                                                                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
                                                                                                                 <subviews>
                                                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_lock_24px" translatesAutoresizingMaskIntoConstraints="NO" id="Cyi-yo-Pgo">
-                                                                                                                        <rect key="frame" x="7.3333333333333357" y="12.666666666666686" width="15" height="15"/>
+                                                                                                                        <rect key="frame" x="7.3333333333333357" y="12.666666666666629" width="15" height="15"/>
                                                                                                                         <constraints>
                                                                                                                             <constraint firstAttribute="height" constant="15" id="JRJ-xY-65z"/>
                                                                                                                             <constraint firstAttribute="width" constant="15" id="YXn-gv-P3n"/>
@@ -433,6 +437,7 @@
                                                                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zym-uf-Np0">
                                                                                                                         <rect key="frame" x="0.0" y="0.0" width="260" height="40"/>
                                                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                                         <fontDescription key="fontDescription" name="Outfit-Regular" family="Outfit" pointSize="15"/>
                                                                                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                                                                     </textField>
@@ -486,7 +491,7 @@
                                                                                         <fontDescription key="fontDescription" name="Outfit-Medium" family="Outfit" pointSize="18"/>
                                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                         <state key="normal" title="Get Started">
-                                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                            <color key="titleColor" name="textReverseColor"/>
                                                                                         </state>
                                                                                         <userDefinedRuntimeAttributes>
                                                                                             <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
@@ -524,7 +529,7 @@
                                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNZ-IL-D4u">
                                                                                                                         <rect key="frame" x="0.0" y="0.0" width="318.33333333333331" height="20"/>
                                                                                                                         <fontDescription key="fontDescription" name="Outfit-Light" family="Outfit" pointSize="17"/>
-                                                                                                                        <nil key="textColor"/>
+                                                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                                         <nil key="highlightedColor"/>
                                                                                                                     </label>
                                                                                                                 </subviews>
@@ -547,6 +552,9 @@
                                                                                                                         <state key="normal" title="LOGIN">
                                                                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                                         </state>
+                                                                                                                        <connections>
+                                                                                                                            <segue destination="hbl-3r-CEz" kind="push" id="5tr-zA-Ll8"/>
+                                                                                                                        </connections>
                                                                                                                     </button>
                                                                                                                 </subviews>
                                                                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -763,7 +771,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gck-WZ-7sb">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="20"/>
                                                                                 <fontDescription key="fontDescription" name="Outfit-Regular" family="Outfit" pointSize="16"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
@@ -866,6 +874,7 @@
                                                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AKW-8W-2pr">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="260" height="40"/>
                                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                         <fontDescription key="fontDescription" name="Outfit-Regular" family="Outfit" pointSize="15"/>
                                                                                                         <textInputTraits key="textInputTraits"/>
                                                                                                     </textField>
@@ -925,6 +934,7 @@
                                                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r6K-FW-yXc">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="260" height="40"/>
                                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                         <fontDescription key="fontDescription" name="Outfit-Regular" family="Outfit" pointSize="15"/>
                                                                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                                                     </textField>
@@ -981,7 +991,7 @@
                                                                                         <fontDescription key="fontDescription" name="Outfit-Medium" family="Outfit" pointSize="18"/>
                                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                         <state key="normal" title="LOGIN">
-                                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                            <color key="titleColor" name="textReverseColor"/>
                                                                                         </state>
                                                                                         <userDefinedRuntimeAttributes>
                                                                                             <userDefinedRuntimeAttribute type="number" keyPath="ibcornerRadius">
@@ -1036,7 +1046,7 @@
                                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep logged in " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p89-J7-I9r">
                                                                                                                         <rect key="frame" x="0.0" y="0.0" width="172" height="18"/>
                                                                                                                         <fontDescription key="fontDescription" name="Outfit-Light" family="Outfit" pointSize="13"/>
-                                                                                                                        <nil key="textColor"/>
+                                                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                                         <nil key="highlightedColor"/>
                                                                                                                     </label>
                                                                                                                 </subviews>
@@ -1079,7 +1089,7 @@
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqc-lX-Yvk">
                                                                                                         <rect key="frame" x="2.6666666666666856" y="0.66666666666674246" width="97.333333333333329" height="16.666666666666668"/>
                                                                                                         <fontDescription key="fontDescription" name="Outfit-Light" family="Outfit" pointSize="13"/>
-                                                                                                        <nil key="textColor"/>
+                                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                         <nil key="highlightedColor"/>
                                                                                                     </label>
                                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90T-g5-I3R">
@@ -1168,7 +1178,7 @@
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or sign in using" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHU-eW-Wcu">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="101.33333333333333" height="20"/>
                                                                                                         <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="14"/>
-                                                                                                        <nil key="textColor"/>
+                                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                         <nil key="highlightedColor"/>
                                                                                                     </label>
                                                                                                 </subviews>
@@ -1495,7 +1505,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" name="cellBGColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="owX-gg-oiz" secondAttribute="trailing" id="VB7-G5-5ey"/>
                                                             <constraint firstItem="owX-gg-oiz" firstAttribute="top" secondItem="SRR-kX-dGf" secondAttribute="top" id="aKd-Er-MMK"/>
@@ -1513,7 +1523,6 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="aRr-yR-hrX" firstAttribute="top" secondItem="hyn-2s-3TB" secondAttribute="top" constant="15" id="NEW-4i-Eou"/>
                                             <constraint firstAttribute="bottom" secondItem="aRr-yR-hrX" secondAttribute="bottom" id="kj3-EZ-Jy9"/>
@@ -1701,7 +1710,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PAH-dX-emX"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Sd-vx-6ek" firstAttribute="leading" secondItem="PAH-dX-emX" secondAttribute="leading" constant="30" id="1ey-nZ-ztA"/>
                             <constraint firstItem="PAH-dX-emX" firstAttribute="trailing" secondItem="6Sd-vx-6ek" secondAttribute="trailing" constant="30" id="Egg-S6-BCV"/>
@@ -1733,7 +1742,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQS-R2-DM7">
-                                <rect key="frame" x="40" y="379" width="313" height="94"/>
+                                <rect key="frame" x="40" y="391.66666666666669" width="313" height="94"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Djw-IC-ZY1">
                                         <rect key="frame" x="0.0" y="0.0" width="313" height="94"/>
@@ -2203,6 +2212,9 @@
             <point key="canvasLocation" x="5104.580152671756" y="667.6056338028169"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5tr-zA-Ll8"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Google (1)" width="21" height="21"/>
         <image name="bg" width="390" height="844"/>
@@ -2213,13 +2225,19 @@
         <image name="logo" width="186" height="176"/>
         <image name="not-remember" width="14" height="14"/>
         <namedColor name="backgroundColor">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="blueishColor">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.1803921568627451" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="cellBGColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="shadowColor">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textReverseColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

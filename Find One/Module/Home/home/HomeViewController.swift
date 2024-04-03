@@ -15,6 +15,7 @@ enum CellType {
 
 class HomeViewController: BaseViewController {
     
+    @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var sustainableLabel: UILabel!
     @IBOutlet weak var regionLabel: UILabel!
     @IBOutlet weak var browseLabel: UILabel!
@@ -67,6 +68,7 @@ class HomeViewController: BaseViewController {
 
     var indexRow: Int?
     var levelID: Int?
+    var isFiltered = false
     
     
     override func viewDidLoad() {
@@ -142,7 +144,14 @@ class HomeViewController: BaseViewController {
         scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
     }
     @IBAction func filterBtnAction(_ sender: Any) {
-        Switcher.showFilter(delegate: self)
+        if isFiltered == true {
+            isFiltered = false
+            self.viewModel.getFeatureList(levelID: self.instituteList?[0].id ?? 0)
+            filterButton.setImage(UIImage(named: "filter"), for: .normal)
+        }
+        else{
+            Switcher.showFilter(delegate: self)
+        }
     }
 }
 
@@ -192,13 +201,12 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             let cell: TypeCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "id", for: indexPath) as! TypeCollectionViewCell
             cell.instituteType = instituteList?[indexPath.row]
             if indexRow == indexPath.row {
-                cell.label.textColor = .black
+                cell.label.textColor = .label
                 cell.dotView.isHidden = false
             }
             else{
-                cell.label.textColor = .darkGray
+                cell.label.textColor = CustomColor.tabTextColor.color
                 cell.dotView.isHidden = true
-
             }
             return cell
         }
@@ -244,6 +252,8 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
 
 extension HomeViewController: FilterProtocol{
     func filter(cityID: Int, regionID: Int, curriculumID: Int, stageID: Int, genderID: Int, instituteType: Int) {
+        isFiltered = true
+        filterButton.setImage(UIImage(named: "reload"), for: .normal)
         viewModel.getFeatureList(levelID: levelID ?? 0, regionID: regionID, cityID: cityID, typeID: instituteType, genderID: genderID, gradeID: stageID, curriculumID: curriculumID)
     }
 }

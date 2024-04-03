@@ -58,8 +58,8 @@ class CustomSearchViewController: BaseViewController {
     var instituteTypeID: Int?
     var genderID: Int?
 
-    var maxPrice = 5000
-    var minPrice = 500
+    var maxPrice = 0
+    var minPrice = 0
     
     
     override func viewDidLoad() {
@@ -139,8 +139,8 @@ class CustomSearchViewController: BaseViewController {
     
     @IBAction func browseResultAction(_ sender: Any) {
         let gID = genderList?[segmentView.selectedSegmentIndex].id
-        guard let regionID = regionID, let cityID = cityID, let instituteTypeID = instituteTypeID, let genderID = gID else { return }
-        Switcher.gotoSerachResult(delegate: self, regionID: regionID, cityID: cityID, typeID: instituteTypeID, minFee: minPrice, maxFee: maxPrice, genderID: genderID)
+//        guard let regionID = regionID, let cityID = cityID, let instituteTypeID = instituteTypeID, let genderID = gID else { return }
+        Switcher.gotoSerachResult(delegate: self, regionID: regionID, cityID: cityID, typeID: instituteTypeID, minFee: minPrice, maxFee: maxPrice, genderID: gID)
     }
     
     @objc func rangeSliderValueChanged(_ rangeSlider: RangeSlider) {

@@ -66,8 +66,8 @@ class LanguageViewController: BaseViewController {
     }
     
     @IBAction func saveBtnAction(_ sender: Any) {
-        Switcher.logout(delegate: self)
-//        Switcher.gotoHome(delegate: self)
+//        Switcher.logout(delegate: self)
+        Switcher.gotoHomeVC(delegate: self)
     }
     
     func radioButtonTapped(_ sender: UIButton) {

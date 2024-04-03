@@ -59,24 +59,24 @@ enum LocalizationKeys: String {
     case selectedCategories = "selectedCategories"
     case selectedSources = "selectedSources"
     case browseAll = "browseAll"
-
+    
     case categories = "categories"
     case sources = "sources"
     case continueTitle = "continueTitle"
     
     case pushNotification = "pushNotification"
     case muteNotification = "muteNotification"
-
+    
     case english = "english"
     case arabic = "arabic"
     case languageSelection = "languageSelection"
-
+    
     case email = "email"
     case policy = "policy"
     case language = "language"
     case mode = "mode"
     case aboutQaaren = "aboutQaaren"
-
+    
     case selectPriceRange = "selectPriceRange";
     case applyFilter = "applyFilter";
     case addaReview = "addaReview";
@@ -113,8 +113,8 @@ enum LocalizationKeys: String {
     case type = "type"
     case selectType = "selectType"
     case gender = "gender"
-case range = "range"
-case browseResult = "browseResult"
+    case range = "range"
+    case browseResult = "browseResult"
     case feature = "feature"
     case browseCity = "browseCity"
     case browseRegion = "browseRegion"
@@ -128,11 +128,11 @@ case browseResult = "browseResult"
     case educationLevel = "educationLevel"
     case qualityEducation = "qualityEducation"
     case browse = "browse"
-
+    
     case sustainability = "sustainability"
     case feeStructure = "feeStructure"
     case gallery = "gallery"
-
+    
     
     case yearsAgo = "yearsAgo"
     case lastYear = "lastYear"
@@ -160,5 +160,14 @@ case browseResult = "browseResult"
     case howTo = "howTo"
     case aboutUs = "aboutUs"
     case reset = "reset"
+    
+    case boysFee = "boysFee"
+    case girlsFee = "girlsFee"
+    case reservation = "reservation"
+    
+    case yourLocation = "yourLocation"
+    case schoolLocation = "schoolLocation"
+    
+    case notFound = "notFound"
 }
 

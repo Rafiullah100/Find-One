@@ -9,6 +9,9 @@ import UIKit
 
 class FeeStructureViewTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var reservation: UILabel!
+    @IBOutlet weak var girlsFee: UILabel!
+    @IBOutlet weak var boysFee: UILabel!
     @IBOutlet weak var reservationLabel: UILabel!
     @IBOutlet weak var girlsFeeLabel: UILabel!
     @IBOutlet weak var boysFeeLabel: UILabel!
@@ -19,9 +22,13 @@ class FeeStructureViewTableViewCell: UITableViewCell {
     
     var fee: FeeResult?{
         didSet{
+            boysFee.text = LocalizationKeys.boysFee.rawValue.localizeString()
+            girlsFee.text = LocalizationKeys.girlsFee.rawValue.localizeString()
+            reservation.text = LocalizationKeys.reservation.rawValue.localizeString()
+
             nameLabel.text = fee?.name
-            boysFeeLabel.text = "\(fee?.fee ?? 0) SAR"
-            girlsFeeLabel.text = "\(fee?.fee ?? 0) SAR"
+            boysFeeLabel.text = "\(fee?.fee ?? 0) \(LocalizationKeys.sar.rawValue.localizeString())"
+            girlsFeeLabel.text = "\(fee?.fee ?? 0) \(LocalizationKeys.sar.rawValue.localizeString())"
         }
     }
     

@@ -168,7 +168,13 @@
 "reset" = "إعادة تعيين";
 
 
+"boysFee" = "رسوم الأولاد";
+"girlsFee" = "رسوم البنات";
+"reservation" = "متاح للحجز";
 
 
 
+"yourLocation" = "موقعك";
+"schoolLocation" = "موقع المدرسة";
 
+"notFound" = "لم يتم العثور على سجلات!";

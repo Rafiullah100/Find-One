@@ -122,10 +122,10 @@
 
 "browseCity" = "Browse by Cities";
 "browseRegion" = "Browse by region";
-"sustainableInst" = "sustainable Institutions";
+"sustainableInst" = "Sustainable Institutions";
 
 "startingFrom" = "Fee starting from";
-"sustainablePercentage" = "sustainable Institute";
+"sustainablePercentage" = "Sustainable Institute";
 
 "information" = "Information";
 "curriculum" = "Curriculum";
@@ -164,3 +164,12 @@
 "howTo" = "How to";
 "aboutUs" = "About us";
  "reset" = "Reset";
+
+"boysFee" = "Boys Fee";
+"girlsFee" = "Girls Fee";
+"reservation" = "Available for Reservation";
+
+"yourLocation" = "Your Location";
+"schoolLocation" = "School Location";
+
+"notFound" = "No Records Found!";
