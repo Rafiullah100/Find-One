@@ -16,6 +16,23 @@ enum InititialViewController {
 }
 
 class Switcher {
+    
+    static func refreshLoginView(delegate: UIViewController){
+        let vc = UIStoryboard(name: Storyboard.auth.rawValue, bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+//        vc.modalPresentationStyle = .fullScreen
+        vc.hidesBottomBarWhenPushed = false
+        vc.modalPresentationStyle = .fullScreen
+        delegate.present(vc, animated: false)
+    }
+    
+    static func refreshSignupView(delegate: UIViewController){
+        let vc = UIStoryboard(name: Storyboard.auth.rawValue, bundle: nil).instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
+//        vc.modalPresentationStyle = .fullScreen
+        vc.hidesBottomBarWhenPushed = false
+        vc.modalPresentationStyle = .fullScreen
+        delegate.present(vc, animated: false)
+    }
+    
     static func gotoHome(delegate: UIViewController){
         let vc = UIStoryboard(name: Storyboard.home.rawValue, bundle: nil).instantiateViewController(withIdentifier: "MyTabBarCtrl") as! MyTabBarCtrl
 //        vc.modalPresentationStyle = .fullScreen

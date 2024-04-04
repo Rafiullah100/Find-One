@@ -15,7 +15,7 @@ class SustainableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupChart()
-        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 35, right: 0)
+        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 70, right: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {

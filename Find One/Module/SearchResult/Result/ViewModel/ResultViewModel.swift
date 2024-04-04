@@ -51,10 +51,10 @@ class ResultViewModel {
             params["gender_id"] = genderID
         }
         if maxFee != 0 && maxFee != nil {
-//            params["max_fee"] = maxFee
+            params["max_fee"] = maxFee
         }
         if minFee != 0 && minFee != nil {
-//            params["min_fee"] = minFee
+            params["min_fee"] = minFee
         }
         
         if q != "" && q != nil {

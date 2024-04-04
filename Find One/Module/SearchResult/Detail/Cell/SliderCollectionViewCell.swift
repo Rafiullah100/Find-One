@@ -17,7 +17,7 @@ class SliderCollectionViewCell: UICollectionViewCell {
     
     var gallery: InstituteGallery? {
         didSet{
-            imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (gallery?.imageURL ?? "") ), placeholderImage: UIImage(named: "Rectangle 405"))
+            imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (gallery?.imageURL ?? "") ), placeholderImage: UIImage(named: "placeholder"))
         }
     }
 }

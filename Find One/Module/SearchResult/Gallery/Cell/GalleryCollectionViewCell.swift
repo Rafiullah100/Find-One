@@ -17,7 +17,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     
     var gallery: GalleryResult? {
         didSet{
-            imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (gallery?.images ?? "") ), placeholderImage: UIImage(named: "Rectangle 405"))
+            imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (gallery?.images ?? "") ), placeholderImage: UIImage(named: "placeholder"))
 
         }
     }

@@ -11,6 +11,7 @@ import GoogleSignIn
 import Firebase
 class LoginViewController: BaseViewController {
    
+    @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var helpLabel: UIButton!
     @IBOutlet weak var createLabel: UIButton!
     @IBOutlet weak var orLabel: UILabel!
@@ -33,6 +34,7 @@ class LoginViewController: BaseViewController {
 //        view.overrideUserInterfaceStyle = .dark
 //        UIWindow.key?.overrideUserInterfaceStyle = .dark
 
+        languageLabel.text = LocalizationKeys.selectedLanguage.rawValue.localizeString()
         emailTextField.textAlignment = Helper.isRTL() ? .right : .left
         passwordTextField.textAlignment = Helper.isRTL() ? .right : .left
         emailTextField.placeholder = LocalizationKeys.email.rawValue.localizeString()
@@ -143,7 +145,17 @@ class LoginViewController: BaseViewController {
         UserDefaults.standard.rememberMe = sender.isSelected
     }
     
-    
+    @IBAction func languageBtnAction(_ sender: Any) {
+        if UserDefaults.standard.selectedLanguage == AppLanguage.arabic.rawValue {
+            UserDefaults.standard.selectedLanguage = AppLanguage.english.rawValue
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+        }
+        else{
+            UserDefaults.standard.selectedLanguage = AppLanguage.arabic.rawValue
+            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+        }
+        Switcher.refreshLoginView(delegate: self)
+    }
 }
 
 extension  LoginViewController: ASAuthorizationControllerDelegate{

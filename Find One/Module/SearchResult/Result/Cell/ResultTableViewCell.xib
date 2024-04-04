@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -36,7 +35,7 @@
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhm-R6-HsF">
                                         <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 405" translatesAutoresizingMaskIntoConstraints="NO" id="a8E-Xo-CR1">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="a8E-Xo-CR1">
                                                 <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
                                             </imageView>
                                         </subviews>
@@ -108,7 +107,7 @@
                                                                                         <rect key="frame" x="15" y="0.0" width="173" height="10.666666666666666"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location: Abi Sufiyan Bin Harb Saudi Arabia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5S-tc-8yY">
-                                                                                                <rect key="frame" x="0.0" y="-1.6666666666666643" width="206.33333333333334" height="14"/>
+                                                                                                <rect key="frame" x="0.0" y="-0.3333333333333357" width="197" height="11.666666666666666"/>
                                                                                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="10"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -154,7 +153,7 @@
                                                                                         <rect key="frame" x="15" y="0.0" width="173" height="10.666666666666666"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coeducation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPW-mr-18h">
-                                                                                                <rect key="frame" x="0.0" y="-1.6666666666666714" width="63" height="14"/>
+                                                                                                <rect key="frame" x="0.0" y="-0.33333333333334281" width="57.333333333333336" height="11.666666666666666"/>
                                                                                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="10"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -310,7 +309,7 @@
                                                                         <rect key="frame" x="166" y="0.0" width="20" height="20"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7e3-cF-F4d">
-                                                                                <rect key="frame" x="1" y="2.6666666666666714" width="18.333333333333332" height="16.666666666666668"/>
+                                                                                <rect key="frame" x="1.6666666666666856" y="4" width="17" height="14"/>
                                                                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="12"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -389,9 +388,9 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Rectangle 405" width="105" height="92"/>
         <image name="gender" width="21" height="20"/>
         <image name="location" width="9" height="10"/>
+        <image name="placeholder" width="128" height="128"/>
         <image name="star" width="13" height="12"/>
         <namedColor name="cellBGColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

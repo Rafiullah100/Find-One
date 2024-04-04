@@ -37,7 +37,7 @@ class ProfileViewController: UIViewController {
         super.viewWillAppear(animated)
         print(Route.imageBaseUrl + (UserDefaults.standard.profileImage ?? ""))
         imageView.layer.cornerRadius = imageView.frame.size.width * 0.5
-        imageView.sd_setImage(with: URL(string: UserDefaults.standard.profileImage ?? "" ), placeholderImage: UIImage(named: "Rectangle 405"))
+        imageView.sd_setImage(with: URL(string: UserDefaults.standard.profileImage ?? "" ), placeholderImage: UIImage(named: "placeholder"))
         nameLabell.text = UserDefaults.standard.name?.capitalized
         usernameLabel.text = UserDefaults.standard.email
     }

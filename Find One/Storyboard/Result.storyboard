@@ -1876,7 +1876,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssa-wu-AJV">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="832"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CsL-nq-bKT">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -1913,6 +1913,9 @@
                                                                         <subviews>
                                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCw-I1-mdy">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="540"/>
+                                                                                <string key="text">“We are the beginning of the end of the Universe”. 🪐
+Recently, I started studying about the cosmos. It's unbelievable and amazing. I wish I had started studying about it earlier. 🌻
+Unfortunately, our teachers taught us physics just for exams. 😕</string>
                                                                                 <color key="textColor" systemColor="labelColor"/>
                                                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1986,7 +1989,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ssa-wu-AJV" firstAttribute="top" secondItem="Z47-Q7-5Ss" secondAttribute="top" id="YQk-hT-5wC"/>
-                            <constraint firstAttribute="bottom" secondItem="Ssa-wu-AJV" secondAttribute="bottom" id="dGq-xo-Z4I"/>
+                            <constraint firstAttribute="bottom" secondItem="Ssa-wu-AJV" secondAttribute="bottom" constant="20" id="dGq-xo-Z4I"/>
                             <constraint firstAttribute="trailing" secondItem="Ssa-wu-AJV" secondAttribute="trailing" id="duk-fG-YxG"/>
                             <constraint firstItem="Ssa-wu-AJV" firstAttribute="leading" secondItem="Z47-Q7-5Ss" secondAttribute="leading" id="fX8-aS-xWO"/>
                         </constraints>

@@ -21,7 +21,7 @@ class ReviewTableViewCell: UITableViewCell {
     
     var review: ReviewResult? {
         didSet{
-            imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (review?.user?.profileImage ?? "") ), placeholderImage: UIImage(named: "Rectangle 405"))
+            imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (review?.user?.profileImage ?? "") ), placeholderImage: UIImage(named: "placeholder"))
             nameLabel.text = review?.user?.name
             timeLabel.text = review?.createdAt
             reviewLabel.text = review?.reviewText

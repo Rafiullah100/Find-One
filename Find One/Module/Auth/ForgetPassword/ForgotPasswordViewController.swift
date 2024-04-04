@@ -17,6 +17,10 @@ class ForgotPasswordViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         type = .back
+        
+        emailTextField.textAlignment = Helper.isRTL() == true ? .right : .left
+        emailTextField.placeholder = LocalizationKeys.email.rawValue.localizeString()
+        sendButton.setTitle(LocalizationKeys.send.rawValue.localizeString(), for: .normal)
         viewControllerTitle = LocalizationKeys.forgetPassword.rawValue.localizeString()
         updateUI()
     }

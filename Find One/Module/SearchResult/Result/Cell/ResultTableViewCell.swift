@@ -37,7 +37,7 @@ class ResultTableViewCell: UITableViewCell {
     
     var institute: Results? {
         didSet{
-            imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (institute?.imageURL ?? "") ), placeholderImage: UIImage(named: "Rectangle 405"))
+            imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (institute?.imageURL ?? "") ), placeholderImage: UIImage(named: "placeholder"))
             nameLabel.text = institute?.name ?? ""
             ratingLabel.text = institute?.reviewsAverage ?? "0"
             locationLabel.text = "\(LocalizationKeys.location.rawValue.localizeString()):"
@@ -55,7 +55,7 @@ class ResultTableViewCell: UITableViewCell {
         didSet{
             collectionView.semanticContentAttribute = Helper.isRTL() == true ? .forceRightToLeft : .forceLeftToRight
             collectionView.reloadData()
-            imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (searchInstitute?.imageURL ?? "") ), placeholderImage: UIImage(named: "Rectangle 405"))
+            imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (searchInstitute?.imageURL ?? "") ), placeholderImage: UIImage(named: "placeholder"))
             nameLabel.text = searchInstitute?.name ?? ""
             ratingLabel.text = searchInstitute?.reviewsAvg ?? "0"
             typeLabel.text = searchInstitute?.gender

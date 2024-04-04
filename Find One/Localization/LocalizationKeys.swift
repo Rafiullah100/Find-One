@@ -169,5 +169,7 @@ enum LocalizationKeys: String {
     case schoolLocation = "schoolLocation"
     
     case notFound = "notFound"
+    case send = "send"
+    case selectedLanguage = "selectedLanguage"
 }
 

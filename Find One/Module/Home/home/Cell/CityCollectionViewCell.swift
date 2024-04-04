@@ -16,7 +16,7 @@ class CityCollectionViewCell: UICollectionViewCell {
         didSet{
             label.text = city?.name
             countLabel.text = "\(city?.instituteCount ?? 0)+"
-            imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (city?.imageURL ?? "") ), placeholderImage: UIImage(named: "Rectangle 405"))
+            imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (city?.imageURL ?? "") ), placeholderImage: UIImage(named: "placeholder"))
         }
     }
     
@@ -24,7 +24,7 @@ class CityCollectionViewCell: UICollectionViewCell {
         didSet{
             label.text = region?.name
             countLabel.text = "\(region?.instituteCount ?? 0)+"
-            imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (region?.imageURL ?? "") ), placeholderImage: UIImage(named: "Rectangle 405"))
+            imgView.sd_setImage(with: URL(string: Route.imageBaseUrl + (region?.imageURL ?? "") ), placeholderImage: UIImage(named: "placeholder"))
         }
     }
     

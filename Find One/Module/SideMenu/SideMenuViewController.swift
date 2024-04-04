@@ -24,7 +24,7 @@ class SideMenuViewController: UIViewController {
 
         nameLabel.text = UserDefaults.standard.name
         emailLabel.text = UserDefaults.standard.email
-        imageView.sd_setImage(with: URL(string: UserDefaults.standard.profileImage ?? "" ), placeholderImage: UIImage(named: "Rectangle 405"))
+        imageView.sd_setImage(with: URL(string: UserDefaults.standard.profileImage ?? "" ), placeholderImage: UIImage(named: "placeholder"))
     }
 
     @IBAction func logoutBtnAction(_ sender: Any) {

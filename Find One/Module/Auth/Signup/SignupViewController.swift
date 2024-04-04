@@ -18,7 +18,8 @@ class SignupViewController: BaseViewController {
     private var viewModel = SignupViewModel()
     @IBOutlet weak var getStartedButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
-    
+    @IBOutlet weak var languageLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.textAlignment = Helper.isRTL() ? .right : .left
@@ -26,6 +27,8 @@ class SignupViewController: BaseViewController {
         mobileTextField.textAlignment = Helper.isRTL() ? .right : .left
         passwordTextfield.textAlignment = Helper.isRTL() ? .right : .left
         confirmTextField.textAlignment = Helper.isRTL() ? .right : .left
+
+        languageLabel.text = LocalizationKeys.selectedLanguage.rawValue.localizeString()
 
         nameTextField.placeholder = LocalizationKeys.name.rawValue.localizeString()
         emailTextField.placeholder = LocalizationKeys.email.rawValue.localizeString()
@@ -64,5 +67,17 @@ class SignupViewController: BaseViewController {
         else{
             showAlert(message: validationResponse.message)
         }
+    }
+    
+    @IBAction func languageBtnAction(_ sender: Any) {
+        if UserDefaults.standard.selectedLanguage == AppLanguage.arabic.rawValue {
+            UserDefaults.standard.selectedLanguage = AppLanguage.english.rawValue
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+        }
+        else{
+            UserDefaults.standard.selectedLanguage = AppLanguage.arabic.rawValue
+            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+        }
+        Switcher.refreshSignupView(delegate: self)
     }
 }

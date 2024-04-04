@@ -127,7 +127,6 @@ class DetailViewController: BaseViewController {
         currentPage = nextPage
         pageControl.currentPage = currentPage
         pageControl.setNeedsDisplay()
-        print(currentPage)
         sliderLabel.text = "\(currentPage + 1)  / \(details?.result?.instituteGallery?.count ?? 0)"
     }
     
